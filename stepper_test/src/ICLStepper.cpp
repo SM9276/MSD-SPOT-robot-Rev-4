@@ -88,6 +88,9 @@ int ICLStepper::jog(bool clockwise) {
 }
 
 int ICLStepper::set_jog_acceleration(int acc) {
+    modbus_set_slave(ctx_, slave_id_);
+    usleep(delay_us_);
+
     // set jog acceleration/deceleration
     if (modbus_write_register(ctx_, 0x01E7, acc) == -1) {
         std::cerr << "[Slave " << slave_id_ << "] Failed to set jog acc/dec: "
@@ -116,4 +119,31 @@ int ICLStepper::set_slave_id(int slave_id) {
     modbus_set_slave(ctx_, slave_id_);
     usleep(delay_us_);
     return 0;
+}
+
+/*
+bit0: Fault
+bit1: Enable
+bit2: Running
+bit4: Command Completed
+bit5: Path Completed
+bit6: Homing Completed
+*/
+uint16_t ICLStepper::read_motion_status() {
+    uint16_t status;
+    if (modbus_read_registers(ctx_, 0x1003, 1, &status) == -1) {
+        std::cerr << "[Slave " << slave_id_ << "] Failed to read motion status: "
+                  << modbus_strerror(errno) << std::endl;
+        return 0;
+    }
+    usleep(delay_us_);
+
+    std::cout   << "Fault: " << (status & 1) << "\n"
+                << "Enable: " << ((status >> 1) & 1) << "\n"
+                << "In Motion: " << ((status >> 2) & 1) << "\n"
+                << "Command Done: " << ((status >> 4) & 1) << "\n"
+                << "Path Done: " << ((status >> 5) & 1) << "\n"
+                << "Homing Done: " << ((status >> 6) & 1) << "\n";
+
+    return static_cast<uint16_t>(status & 0xFF);
 }

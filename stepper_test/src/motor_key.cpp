@@ -134,7 +134,12 @@ int main() {
                     }
                 }
 
-                if (ch == 'q') {
+                else if (ch == 'w') {
+                    std::cout << "Read motion status.\n";
+                    stepper.read_motion_status();
+                }
+
+                else if (ch == 'q') {
                     std::cout << "Quit.\n";
                     return 0;
                 }

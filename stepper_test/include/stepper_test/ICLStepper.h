@@ -14,6 +14,7 @@ public:
     int set_jog_velocity(int velocity_rpm);
     int set_slave_id(int slave_id);
     int set_jog_acceleration(int acc);
+    uint16_t read_motion_status();
 
 private:
     int slave_id_;
