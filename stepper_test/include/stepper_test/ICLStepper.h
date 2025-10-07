@@ -15,6 +15,8 @@ public:
     int set_slave_id(int slave_id);
     int set_jog_acceleration(int acc);
     uint16_t read_motion_status();
+    int home(int position_after_homing = 0);
+    int configure_io_for_homing();
 
 private:
     int slave_id_;

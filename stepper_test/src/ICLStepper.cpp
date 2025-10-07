@@ -147,3 +147,77 @@ uint16_t ICLStepper::read_motion_status() {
 
     return static_cast<uint16_t>(status & 0xFF);
 }
+
+/*
+0x600A: Homing mode
+    bit0: homing direction = 0: CCW, 1: CW
+    bit1: move to specificed point after homing = 0: no, 1: yes
+    bit2: homing type = 0: limit switch signal, 1: home switch signal
+0x600B: Home Switch position high bits
+0x600C: Home Switch position low bits
+0x600D: Homing stop position high bits
+0x600E: Homing stop position low bits
+0x600F: Homing high velocity rpm
+0x6010: Homing low velocity rpm
+0x6011: Homing acceleration ms/1000rpm
+0x6012: Homing decceleration ms/1000rpm
+*/
+int ICLStepper::home(int position_after_homing) {
+    modbus_set_slave(ctx_, slave_id_);
+    usleep(delay_us_);
+
+    uint16_t pos_high = static_cast<uint16_t>((position_after_homing >> 16) & 0xFFFF);
+    uint16_t pos_low  = static_cast<uint16_t>(position_after_homing & 0xFFFF);
+
+    // Configure homing parameters
+    uint16_t homing_params[] = {
+        0b0111, // Homing mode
+        pos_high, // Home Switch position high bits
+        pos_low, // Home Switch position low bits
+        0x0000, // Homing stop position high bits
+        0x1000, // Homing stop position low bits
+        100,    // Homing high velocity
+        50,      // Homing low velocity
+        50,     // Homing acceleration
+        50      // Homing deceleration
+    };
+    if (modbus_write_registers(ctx_, 0x600A, sizeof(homing_params) / sizeof(homing_params[0]), homing_params) == -1) {
+        std::cerr << "[Slave " << slave_id_ << "] Failed to configure homing parameters: "
+                    << modbus_strerror(errno) << std::endl;
+        return -1;
+    }
+    usleep(delay_us_);
+
+    // Trigger homing
+    if (modbus_write_register(ctx_, 0x6002, 0x0020) == -1) {
+        std::cerr << "[Slave " << slave_id_ << "] Failed to trigger homing: "
+                    << modbus_strerror(errno) << std::endl;
+        return -1;
+    }
+    usleep(delay_us_);
+
+    return 0;
+}
+
+int ICLStepper::configure_io_for_homing() {
+    modbus_set_slave(ctx_, slave_id_);
+    usleep(delay_us_);
+
+    // Configure digital input 2 as home switch
+    if (modbus_write_register(ctx_, 0x0147, 0x0027) == -1) {
+        std::cerr << "[Slave " << slave_id_ << "] Failed to configure digital input for homing: "
+                  << modbus_strerror(errno) << std::endl;
+        return -1;
+    }
+    usleep(delay_us_);
+
+    // Not sure if needed:
+    // save IO mapping to EEPROM (then power-cycle once)
+    if (modbus_write_register(ctx_, 0x1801, 0x2244) == -1) {
+        std::cerr << "[Slave " << slave_id_ << "] Failed to save IO mapping to EEPROM: "
+                  << modbus_strerror(errno) << std::endl;
+        return -1;
+    }
+
+    return 0;
+}

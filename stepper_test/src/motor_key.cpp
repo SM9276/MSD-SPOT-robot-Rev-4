@@ -139,11 +139,16 @@ int main() {
                     stepper.read_motion_status();
                 }
 
+                else if (ch == 'e') {
+                    std::cout << "Triggering homing.\n";
+                    stepper.configure_io_for_homing();
+                    stepper.home();
+                }
+
                 else if (ch == 'q') {
                     std::cout << "Quit.\n";
                     return 0;
                 }
-
             }
         }
         if (jogging){
