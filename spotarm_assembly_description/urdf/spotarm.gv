@@ -1,0 +1,17 @@
+digraph G {
+node [shape=box];
+"base_link" [label="base_link"];
+"link_2" [label="link_2"];
+"link_3" [label="link_3"];
+"link_4" [label="link_4"];
+"link_5" [label="link_5"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"base_link" -> "Revolute1" [label="xyz: 0.02835 -0.011972 0.033179 \nrpy: 0 -0 0"]
+"Revolute1" -> "link_2"
+"link_2" -> "Revolute2" [label="xyz: 0.046008 0 0.076206 \nrpy: 0 -0 0"]
+"Revolute2" -> "link_3"
+"link_3" -> "Revolute3" [label="xyz: -0.07256 -0.31369 0 \nrpy: 0 -0 0"]
+"Revolute3" -> "link_4"
+"link_4" -> "Revolute4" [label="xyz: -0.012461 -0.2118 0 \nrpy: 0 -0 0"]
+"Revolute4" -> "link_5"
+}
