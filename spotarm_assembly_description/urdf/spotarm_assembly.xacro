@@ -110,26 +110,83 @@
   </collision>
 </link>
 
-<link name="stub_link">
+<link name="link_6_fake">
   <inertial>
-    <origin xyz="0.011 0 0" rpy="0 0 0"/>
+    <origin xyz="0.011 -0.09 0" rpy="0 0 0"/>
     <mass value="0.2"/>
     <inertia ixx="1.3333333333333334e-05" iyy="4.8333333333333334e-05" izz="4.8333333333333334e-05" ixy="0.0" iyz="0.0" ixz="0.0"/>
   </inertial>
   <visual>
-    <origin xyz="0.011 -0.14 0" rpy="0 0 0"/>
+    <origin xyz="0.011 -0.09 0" rpy="0 0 0"/>
     <geometry>
-      <box size="0.02 0.3 0.02"/>
+      <box size="0.02 0.2 0.02"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
-    <origin xyz="0.011 0 0" rpy="0 0 0"/>
+    <origin xyz="0.011 -0.09 0" rpy="0 0 0"/>
     <geometry>
-      <box size="0.02 0.05 0.02"/>
+      <box size="0.02 0.2 0.02"/>
     </geometry>
   </collision>
 </link>
+
+<link name="link_7_fake">
+  <inertial>
+    <origin xyz="0 -0.1 0" rpy="0 0 0"/>
+    <mass value="0.2"/>
+    <inertia ixx="1.3333333333333334e-05" iyy="4.8333333333333334e-05" izz="4.8333333333333334e-05" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 -0.05 0" rpy="0 0 0"/>
+    <geometry>
+      <box size="0.02 0.1 0.02"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 -0.1 0" rpy="0 0 0"/>
+    <geometry>
+      <box size="0.02 0.2 0.02"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="fake_gripper">
+  <inertial>
+    <origin xyz="0 -0.04 0" rpy="0 0 0"/>
+    <mass value="0.05"/>
+    <inertia ixx="3.333333333333334e-05" iyy="1.3333333333333334e-05" izz="3.333333333333334e-05" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 -0.01 0" rpy="0 0 0"/>
+    <geometry>
+      <box size="0.04 0.02 0.04"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <visual>
+    <origin xyz="0.015 -0.05 0" rpy="0 0 0"/>
+    <geometry>
+      <box size="0.01 0.06 0.01"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <visual>
+    <origin xyz="-0.015 -0.05 0" rpy="0 0 0"/>
+    <geometry>
+      <box size="0.01 0.06 0.01"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 -0.04 0" rpy="0 0 0"/>
+    <geometry>
+      <box size="0.04 0.08 0.04"/>
+    </geometry>
+  </collision>
+</link>
+
 
 <joint name="Revolute1" type="continuous">
   <origin xyz="0.02835 -0.011972 0.033179" rpy="0 0 0"/>
@@ -162,8 +219,21 @@
 <joint name="Revolute5" type="continuous">
   <origin xyz="0.07 -0.144 0" rpy="0 0 0"/>
   <parent link="link_5"/>
-  <child link="stub_link"/>
+  <child link="link_6_fake"/>
   <axis xyz="1.0 0.0 0.0"/>
+</joint>
+
+<joint name="Revolute6" type="continuous">
+  <origin xyz="0.011 -0.19 0" rpy="0 0 0"/>
+  <parent link="link_6_fake"/>
+  <child link="link_7_fake"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="fake_gripper_fixed" type="fixed">
+  <origin xyz="0 -0.1 0" rpy="0 0 0"/>
+  <parent link="link_7_fake"/>
+  <child link="fake_gripper"/>
 </joint>
 
 </robot>
