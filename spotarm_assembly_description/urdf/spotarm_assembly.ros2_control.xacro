@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <ros2_control name="Arm" type="system">
+      <hardware>
+          <!-- By default, set up controllers for simulation. This won't work on real hardware -->
+          <plugin>mock_components/GenericSystem</plugin>
+      </hardware>
+      <joint name="Revolute1">
+          <command_interface name="position"/>
+          <state_interface name="position">
+            <param name="initial_value">0.0</param>
+          </state_interface>
+          <state_interface name="velocity"/>
+      </joint>
+      <joint name="Revolute2">
+          <command_interface name="position"/>
+          <state_interface name="position">
+            <param name="initial_value">0.0</param>
+          </state_interface>
+          <state_interface name="velocity"/>
+      </joint>
+      <joint name="Revolute3">
+          <command_interface name="position"/>
+          <state_interface name="position">
+            <param name="initial_value">0.0</param>
+          </state_interface>
+          <state_interface name="velocity"/>
+      </joint>
+      <joint name="Revolute4">
+          <command_interface name="position"/>
+          <state_interface name="position">
+            <param name="initial_value">0.0</param>
+          </state_interface>
+          <state_interface name="velocity"/>
+      </joint>
+      <joint name="Revolute5">
+          <command_interface name="position"/>
+          <state_interface name="position">
+            <param name="initial_value">0.0</param>
+          </state_interface>
+          <state_interface name="velocity"/>
+      </joint>
+
+  </ros2_control>
+</robot>
