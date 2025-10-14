@@ -18,6 +18,7 @@ arm_controller:
       - Revolute3
       - Revolute4
       - Revolute5
+      - Revolute6
     command_interfaces:
       - position
     state_interfaces:

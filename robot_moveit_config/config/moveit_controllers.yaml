@@ -14,5 +14,6 @@ moveit_simple_controller_manager:
       - Revolute3
       - Revolute4
       - Revolute5
+      - Revolute6
     action_ns: follow_joint_trajectory
     default: true

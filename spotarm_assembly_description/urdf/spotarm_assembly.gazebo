@@ -3,8 +3,11 @@
 
 <xacro:property name="body_color" value="Gazebo/Silver" />
 
+<!-- Gazebo-specific configuration: loads ros2_control plugin and visuals -->
 <gazebo>
-  <plugin name="control" filename="libgazebo_ros_control.so"/>
+  <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
+    <parameters>$(find robot_bringup)/config/ros2_controllers.yaml</parameters>
+  </plugin>
 </gazebo>
 <gazebo reference="base_link">
   <material>${body_color}</material>
@@ -42,7 +45,7 @@
   <self_collide>true</self_collide>
 </gazebo>
 
-<gazebo reference="stub_link">
+<gazebo reference="fake_gripper">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>

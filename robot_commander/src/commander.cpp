@@ -38,13 +38,13 @@ public:
         arm_->setStartStateToCurrentState();
         arm_->setGoalPositionTolerance(0.01);
         arm_->setGoalOrientationTolerance(2 * M_PI);
-        arm_->setPositionTarget(x, y, z, "stub_link");
+        arm_->setPositionTarget(x, y, z, "fake_gripper");
         planAndExecute(arm_);
     }
 
     void goToPositionTargetCartesian(double x, double y, double z){
         arm_->setStartStateToCurrentState();
-        auto target_pose = arm_->getCurrentPose("stub_link");
+        auto target_pose = arm_->getCurrentPose("fake_gripper");
         target_pose.pose.position.x = x;
         target_pose.pose.position.y = y;
         target_pose.pose.position.z = z;
