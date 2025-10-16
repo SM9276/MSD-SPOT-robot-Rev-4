@@ -1,0 +1,9 @@
+<library path="robot_controllers">
+  <class name="robot_controllers/ArmSystemHardware"
+         type="robot_controllers::ArmSystemHardware"
+         base_class_type="hardware_interface::SystemInterface">
+    <description>
+      The ros2_control interface for the arm hardware.
+    </description>
+  </class>
+</library>
