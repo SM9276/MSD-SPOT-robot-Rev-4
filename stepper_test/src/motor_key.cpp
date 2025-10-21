@@ -44,7 +44,7 @@ int main() {
     int target_velocity = 100;
     bool jogging = false;
     bool clockwise = true;
-    modbus_t* ctx = modbus_new_rtu("/dev/ttyUSB0", 115200, 'N', 8, 1);
+    modbus_t* ctx = modbus_new_rtu("/dev/ttyUSB1", 115200, 'N', 8, 1);
     if (ctx == nullptr) {
         std::cerr << "Unable to create the libmodbus context" << std::endl;
         return -1;
@@ -118,19 +118,19 @@ int main() {
                 else if (ch == 'z' || ch == 'x' || ch == 'c' || ch == 'v' || ch == 'b' || ch == 'n' || ch == 'm') {
                     std::cout << "Key '" << static_cast<char>(ch) << "' pressed, move to position.\n";
                     if (ch == 'v') {
-                        stepper.set_position(0, target_velocity);
+                        stepper.set_position_radians(0, 3.14);
                     } else if (ch == 'b') {
-                        stepper.set_position(10000, target_velocity);
+                        stepper.set_position_radians(3.14, 3.14);
                     } else if (ch == 'n') {
-                        stepper.set_position(20000, target_velocity);
+                        stepper.set_position_radians(3.14*2, 3.14);
                     } else if (ch == 'm') {
-                        stepper.set_position(30000, target_velocity);
+                        stepper.set_position_radians(3.14*3, 3.14);
                     } else if (ch == 'c') {
-                        stepper.set_position(-10000, target_velocity);
+                        stepper.set_position_radians(-3.14, 3.14);
                     } else if (ch == 'x') {
-                        stepper.set_position(-20000, target_velocity);
+                        stepper.set_position_radians(-3.14*2, 3.14);
                     } else if (ch == 'z') {
-                        stepper.set_position(-30000, target_velocity);
+                        stepper.set_position_radians(-3.14*3, 3.14);
                     }
                 }
 
@@ -143,6 +143,14 @@ int main() {
                     std::cout << "Triggering homing.\n";
                     stepper.configure_io_for_homing();
                     stepper.home();
+                }
+
+                else if (ch == 'r') {
+                    std::cout << "Reading position.\n";
+                    int32_t pos = stepper.read_position();
+                    std::cout << "Current position (pulses): " << pos << "\n";
+                    double pos_rad = stepper.get_position_radians();
+                    std::cout << "Current position (radians): " << pos_rad << "\n";
                 }
 
                 else if (ch == 'q') {

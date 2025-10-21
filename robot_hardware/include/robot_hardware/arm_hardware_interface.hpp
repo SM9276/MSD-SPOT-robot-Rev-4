@@ -41,7 +41,7 @@ private:
     std::vector<int> gear_ratios_;
     std::vector<double> pos_, vel_;
     std::vector<double> cmd_pos_;
-
+    std::vector<int> is_flipped_;
 }; // class ArmHardwareInterface
 
 } // namespace robot_hardware

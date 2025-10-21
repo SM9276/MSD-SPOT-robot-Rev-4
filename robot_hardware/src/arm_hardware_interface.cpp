@@ -1,5 +1,6 @@
 #include "robot_hardware/arm_hardware_interface.hpp"
 #include "hardware_interface/types/hardware_interface_type_values.hpp"
+#include <modbus/modbus.h>
 
 namespace robot_hardware {
 
@@ -12,15 +13,25 @@ namespace robot_hardware {
 
         const size_t n = info_.joints.size();
         joint_names_.resize(n);
+        joint_names_ = {
+            "Revolute1",
+            "Revolute2",
+            "Revolute3",
+            "Revolute4",
+            "Revolute5",
+            "Revolute6"
+        };
         pos_.assign(n, 0.0);
         vel_.assign(n, 0.0);
         cmd_pos_.assign(n, 0.0);
-        motor_ids_ = {1, 2, 3, 4, 5, 6};
-        port_ = "/dev/ttyUSB0";
+        motor_ids_ = {1, 2, 3, 4, 5, 10}; // Default motor IDs, 10 means unconfigured
+        port_ = "/dev/ttyUSB1";
         baudrate_ = 115200;
         steppers_.resize(n);
         pulses_per_revolution_ = {10000, 10000, 10000, 10000, 10000, 10000};
-        gear_ratios_ = {100, 100, 120, 100, 100, 100};
+        // {51.2, 100, 120, 100, 100, 100}
+        gear_ratios_ = {51, 100, 120, 100, 100, 100};
+        is_flipped_ = {-1, -1, -1, -1, -1, 1}; // Direction multipliers for each joint
         modbus_ctx_ = modbus_new_rtu(port_.c_str(), baudrate_, 'N', 8, 1);
         if (modbus_connect(modbus_ctx_) == -1) {
             modbus_free(modbus_ctx_);
@@ -34,6 +45,7 @@ namespace robot_hardware {
         (void)previous_state;
         // Initialize Motors
         for (int i=0; i < motor_ids_.size(); i++){
+            if (motor_ids_[i] == 10) continue; // Skip unconfigured motors
             steppers_[i] = std::make_unique<ICLStepper>(motor_ids_[i], modbus_ctx_, pulses_per_revolution_[i], gear_ratios_[i]);
             if (steppers_[i]->initialize() != 0){
                 return hardware_interface::CallbackReturn::ERROR;
@@ -78,7 +90,8 @@ namespace robot_hardware {
         (void)time;
         // Update state from hardware
         for (size_t i = 0; i < joint_names_.size(); ++i) {
-            const double p = steppers_[i]->get_position_radians();
+            if (motor_ids_[i] == 10) continue; // Skip unconfigured motors
+            const double p = steppers_[i]->get_position_radians() * is_flipped_[i];
             pos_[i] = p;
         }
         return hardware_interface::return_type::OK;
@@ -87,8 +100,9 @@ namespace robot_hardware {
     hardware_interface::return_type ArmHardwareInterface::write(const rclcpp::Time & time, const rclcpp::Duration & period){
         // Send target positions to hardware
         for (size_t i = 0; i < joint_names_.size(); ++i) {
+            if (motor_ids_[i] == 10) continue; // Skip unconfigured motors
             // Add limits/safety as needed
-            steppers_[i]->set_position_radians(cmd_pos_[i], 0.1);
+            steppers_[i]->set_position_radians(cmd_pos_[i]*is_flipped_[i], 0.2);
         }
         return hardware_interface::return_type::OK;
     }

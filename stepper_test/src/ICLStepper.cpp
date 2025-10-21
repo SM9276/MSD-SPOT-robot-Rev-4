@@ -4,11 +4,13 @@
 #include <unistd.h>
 #include <cerrno>
 #include <modbus/modbus.h>
+#include <cmath>
 
-ICLStepper::ICLStepper(int slave_id, modbus_t* ctx)
+ICLStepper::ICLStepper(int slave_id, modbus_t* ctx, int pulses_per_revolution, int gear_ratio)
     : slave_id_(slave_id),
       ctx_(ctx),
-      current_position_(0),
+      pulses_per_revolution_(pulses_per_revolution),
+      gear_ratio_(gear_ratio),
       delay_us_(10) {}
 
 int ICLStepper::initialize() {
@@ -68,9 +70,45 @@ int ICLStepper::set_position(int position, int velocity_rpm, int acc, int dec) {
     return 0;
 }
 
-int ICLStepper::get_position() const {
-    // Placeholder: in a real implementation, read back from the drive’s position registers.
-    return current_position_;
+int ICLStepper::set_position_radians(double position_radians, double radians_per_second) {
+    double revolutions = position_radians / (2.0 * M_PI);
+    int target_position = static_cast<int>(revolutions * pulses_per_revolution_ * gear_ratio_);
+    int velocity_rpm = static_cast<int>((radians_per_second * 60.0) / (2.0 * M_PI));
+    return set_position(target_position, velocity_rpm, 50, 50);
+}
+
+int32_t ICLStepper::read_position() {
+    modbus_set_slave(ctx_, slave_id_);
+    usleep(delay_us_);
+
+    uint16_t pos_high;
+    uint16_t pos_low;
+
+    if (modbus_read_registers(ctx_, 0x602C, 1, &pos_high) == -1) {
+        std::cerr << "[Slave " << slave_id_ << "] Failed to read position high bits: "
+                  << modbus_strerror(errno) << std::endl;
+        return INT32_MIN;
+    }
+    usleep(delay_us_);
+
+    if (modbus_read_registers(ctx_, 0x602D, 1, &pos_low) == -1) {
+        std::cerr << "[Slave " << slave_id_ << "] Failed to read position low bits: "
+                  << modbus_strerror(errno) << std::endl;
+        return INT32_MIN;
+    }
+    usleep(delay_us_);
+
+    int32_t high = static_cast<int32_t>(static_cast<int16_t>(pos_high));
+    return (high << 16) | static_cast<int32_t>(pos_low);
+}
+
+double ICLStepper::get_position_radians(){
+    int32_t position = read_position();
+    if (position == INT32_MIN){
+        return 0.0; // Error reading position
+    }
+    double revolutions = static_cast<double>(position) / (static_cast<double>(pulses_per_revolution_) * gear_ratio_);
+    return revolutions * 2.0 * M_PI;
 }
 
 int ICLStepper::jog(bool clockwise) {
@@ -220,28 +258,4 @@ int ICLStepper::configure_io_for_homing() {
     }
 
     return 0;
-}
-
-int ICLStepper::read_position() {
-    modbus_set_slave(ctx_, slave_id_);
-    usleep(delay_us_);
-
-    uint16_t pos_high;
-    uint16_t pos_low;
-
-    if (modbus_read_registers(ctx_, 0x602C, 1, &pos_high) == -1) {
-        std::cerr << "[Slave " << slave_id_ << "] Failed to read position high bits: "
-                  << modbus_strerror(errno) << std::endl;
-        return -1;
-    }
-    usleep(delay_us_);
-
-    if (modbus_read_registers(ctx_, 0x602D, 1, &pos_low) == -1) {
-        std::cerr << "[Slave " << slave_id_ << "] Failed to read position low bits: "
-                  << modbus_strerror(errno) << std::endl;
-        return -1;
-    }
-    usleep(delay_us_);
-
-    return (static_cast<int>(pos_high) << 16) | static_cast<int>(pos_low);
 }
