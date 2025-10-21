@@ -33,12 +33,12 @@ based on whether the robot is moving or static.
 
 4. Run:
    ```bash
-   ros2 run robot_status_leds robot_status_led_node
+   ros2 run robot_status_leds led_status_node
    ```
 
    Example with parameters:
    ```bash
-   ros2 run robot_status_leds robot_status_led_node --ros-args \
+   ros2 run robot_status_leds led_status_node --ros-args \
      -p led_backend:=rpi_neopixel \
      -p led_count:=60 \
      -p led_pin:=18 \
