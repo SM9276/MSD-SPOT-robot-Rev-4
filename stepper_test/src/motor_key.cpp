@@ -44,7 +44,7 @@ int main() {
     int target_velocity = 100;
     bool jogging = false;
     bool clockwise = true;
-    modbus_t* ctx = modbus_new_rtu("/dev/ttyUSB1", 115200, 'N', 8, 1);
+    modbus_t* ctx = modbus_new_rtu("/dev/ttyUSB0", 115200, 'N', 8, 1);
     if (ctx == nullptr) {
         std::cerr << "Unable to create the libmodbus context" << std::endl;
         return -1;

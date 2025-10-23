@@ -25,7 +25,7 @@ namespace robot_hardware {
         vel_.assign(n, 0.0);
         cmd_pos_.assign(n, 0.0);
         motor_ids_ = {1, 2, 3, 4, 5, 10}; // Default motor IDs, 10 means unconfigured
-        port_ = "/dev/ttyUSB1";
+        port_ = "/dev/ttyUSB0";
         baudrate_ = 115200;
         steppers_.resize(n);
         pulses_per_revolution_ = {10000, 10000, 10000, 10000, 10000, 10000};
