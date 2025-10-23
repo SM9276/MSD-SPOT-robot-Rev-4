@@ -14,8 +14,8 @@ class LEDStateNode(Node):
         self.declare_parameter('led_count', 30)
         self.declare_parameter('led_pin', 18)                  # GPIO number (e.g., 18 -> board.D18)
         self.declare_parameter('brightness', 0.5)              # 0.0 .. 1.0
-        self.declare_parameter('static_color', '#0000FF')
-        self.declare_parameter('moving_color', '#00FF00')
+        self.declare_parameter('static_color', '#00FF00')
+        self.declare_parameter('moving_color', '#FF0000')
         self.declare_parameter('velocity_threshold', 0.01)
         self.declare_parameter('moving_timeout_ms', 500)
         self.declare_parameter('update_rate_hz', 10.0)
