@@ -2,6 +2,7 @@
 #include "hardware_interface/types/hardware_interface_type_values.hpp"
 #include <modbus/modbus.h>
 #include <cstdlib>
+#include <limits>
 
 namespace robot_hardware {
 
@@ -26,6 +27,11 @@ namespace robot_hardware {
         vel_.assign(n, 0.0);
         cmd_pos_.resize(n);
         joint_offsets_.resize(n);
+        joint_position_min_.assign(n, -std::numeric_limits<double>::infinity());
+        joint_position_max_.assign(n, std::numeric_limits<double>::infinity());
+        if (motor_speeds_.size() != n) {
+            motor_speeds_.assign(n, 0.2); // Fallback speed if no per-joint value supplied
+        }
         for (size_t i = 0; i < n; ++i) {
             double initial_position = 0.0;
             for (const auto & state_interface : info_.joints[i].state_interfaces) {
@@ -41,6 +47,30 @@ namespace robot_hardware {
             pos_[i] = initial_position;
             cmd_pos_[i] = initial_position;
             joint_offsets_[i] = initial_position;
+            const auto min_it = info_.joints[i].parameters.find("min_position");
+            if (min_it != info_.joints[i].parameters.end()) {
+                char *endptr = nullptr;
+                const double parsed = std::strtod(min_it->second.c_str(), &endptr);
+                if (endptr != min_it->second.c_str()) {
+                    joint_position_min_[i] = parsed;
+                }
+            }
+            const auto max_it = info_.joints[i].parameters.find("max_position");
+            if (max_it != info_.joints[i].parameters.end()) {
+                char *endptr = nullptr;
+                const double parsed = std::strtod(max_it->second.c_str(), &endptr);
+                if (endptr != max_it->second.c_str()) {
+                    joint_position_max_[i] = parsed;
+                }
+            }
+            const auto speed_it = info_.joints[i].parameters.find("default_velocity");
+            if (speed_it != info_.joints[i].parameters.end()) {
+                char *endptr = nullptr;
+                const double parsed = std::strtod(speed_it->second.c_str(), &endptr);
+                if (endptr != speed_it->second.c_str()) {
+                    motor_speeds_[i] = parsed;
+                }
+            }
         }
         motor_ids_ = {1, 2, 3, 4, 5, 10}; // Default motor IDs, 10 means unconfigured
         port_ = "/dev/ttyUSB0";
@@ -119,9 +149,17 @@ namespace robot_hardware {
         // Send target positions to hardware
         for (size_t i = 0; i < joint_names_.size(); ++i) {
             if (motor_ids_[i] == 10) continue; // Skip unconfigured motors
-            // Add limits/safety as needed
-            const double target = (cmd_pos_[i] - joint_offsets_[i]) * is_flipped_[i];
-            steppers_[i]->set_position_radians(target, 0.2);
+            // limits/safety as needed
+            double command = cmd_pos_[i];
+            if (command > joint_position_max_[i]) {
+                command = joint_position_max_[i];
+            }
+            if (command < joint_position_min_[i]) {
+                command = joint_position_min_[i];
+            }
+            cmd_pos_[i] = command;
+            const double target = (command - joint_offsets_[i]) * is_flipped_[i];
+            steppers_[i]->set_position_radians(target, motor_speeds_[i]);
         }
         return hardware_interface::return_type::OK;
     }

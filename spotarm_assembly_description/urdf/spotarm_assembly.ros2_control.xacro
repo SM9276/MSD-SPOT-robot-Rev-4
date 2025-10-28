@@ -12,6 +12,7 @@
             <param name="initial_value">0.4745</param>
           </state_interface>
           <state_interface name="velocity"/>
+          <param name="default_velocity">0.2</param>
       </joint>
       <joint name="Revolute2">
           <command_interface name="position"/>
@@ -19,6 +20,7 @@
             <param name="initial_value">-1.5707</param>
           </state_interface>
           <state_interface name="velocity"/>
+          <param name="default_velocity">0.2</param>
       </joint>
       <joint name="Revolute3">
           <command_interface name="position"/>
@@ -26,6 +28,7 @@
             <param name="initial_value">0.0</param>
           </state_interface>
           <state_interface name="velocity"/>
+          <param name="default_velocity">0.3</param>
       </joint>
       <joint name="Revolute4">
           <command_interface name="position"/>
@@ -33,6 +36,7 @@
             <param name="initial_value">0.0</param>
           </state_interface>
           <state_interface name="velocity"/>
+          <param name="default_velocity">0.2</param>
       </joint>
       <joint name="Revolute5">
           <command_interface name="position"/>
@@ -40,6 +44,7 @@
             <param name="initial_value">0.0</param>
           </state_interface>
           <state_interface name="velocity"/>
+          <param name="default_velocity">0.2</param>
       </joint>
       <joint name="Revolute6">
           <command_interface name="position"/>
@@ -47,6 +52,7 @@
             <param name="initial_value">0.0</param>
           </state_interface>
           <state_interface name="velocity"/>
+          <param name="default_velocity">0.2</param>
       </joint>
 
   </ros2_control>

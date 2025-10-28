@@ -42,7 +42,10 @@ private:
     std::vector<double> pos_, vel_;
     std::vector<double> cmd_pos_;
     std::vector<double> joint_offsets_;
+    std::vector<double> joint_position_min_;
+    std::vector<double> joint_position_max_;
     std::vector<int> is_flipped_;
+    std::vector<double> motor_speeds_;
 }; // class ArmHardwareInterface
 
 } // namespace robot_hardware

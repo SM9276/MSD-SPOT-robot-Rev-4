@@ -74,7 +74,7 @@ int ICLStepper::set_position_radians(double position_radians, double radians_per
     double revolutions = position_radians / (2.0 * M_PI);
     int target_position = static_cast<int>(revolutions * pulses_per_revolution_ * gear_ratio_);
     int velocity_rpm = static_cast<int>(gear_ratio_*(radians_per_second * 60.0) / (2.0 * M_PI));
-    return set_position(target_position, velocity_rpm, 10, 10);
+    return set_position(target_position, velocity_rpm, 4000, 4000);
 }
 
 int32_t ICLStepper::read_position() {
