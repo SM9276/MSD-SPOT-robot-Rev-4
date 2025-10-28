@@ -1,6 +1,7 @@
 #include "robot_hardware/arm_hardware_interface.hpp"
 #include "hardware_interface/types/hardware_interface_type_values.hpp"
 #include <modbus/modbus.h>
+#include <cstdlib>
 
 namespace robot_hardware {
 
@@ -21,9 +22,26 @@ namespace robot_hardware {
             "Revolute5",
             "Revolute6"
         };
-        pos_.assign(n, 0.0);
+        pos_.resize(n);
         vel_.assign(n, 0.0);
-        cmd_pos_.assign(n, 0.0);
+        cmd_pos_.resize(n);
+        joint_offsets_.resize(n);
+        for (size_t i = 0; i < n; ++i) {
+            double initial_position = 0.0;
+            for (const auto & state_interface : info_.joints[i].state_interfaces) {
+                if (state_interface.name == hardware_interface::HW_IF_POSITION && !state_interface.initial_value.empty()) {
+                    char *endptr = nullptr;
+                    initial_position = std::strtod(state_interface.initial_value.c_str(), &endptr);
+                    if (endptr == state_interface.initial_value.c_str()) {
+                        initial_position = 0.0;
+                    }
+                    break;
+                }
+            }
+            pos_[i] = initial_position;
+            cmd_pos_[i] = initial_position;
+            joint_offsets_[i] = initial_position;
+        }
         motor_ids_ = {1, 2, 3, 4, 5, 10}; // Default motor IDs, 10 means unconfigured
         port_ = "/dev/ttyUSB0";
         baudrate_ = 115200;
@@ -92,7 +110,7 @@ namespace robot_hardware {
         for (size_t i = 0; i < joint_names_.size(); ++i) {
             if (motor_ids_[i] == 10) continue; // Skip unconfigured motors
             const double p = steppers_[i]->get_position_radians() * is_flipped_[i];
-            pos_[i] = p;
+            pos_[i] = p + joint_offsets_[i];
         }
         return hardware_interface::return_type::OK;
     }
@@ -102,7 +120,8 @@ namespace robot_hardware {
         for (size_t i = 0; i < joint_names_.size(); ++i) {
             if (motor_ids_[i] == 10) continue; // Skip unconfigured motors
             // Add limits/safety as needed
-            steppers_[i]->set_position_radians(cmd_pos_[i]*is_flipped_[i], 0.2);
+            const double target = (cmd_pos_[i] - joint_offsets_[i]) * is_flipped_[i];
+            steppers_[i]->set_position_radians(target, 0.2);
         }
         return hardware_interface::return_type::OK;
     }

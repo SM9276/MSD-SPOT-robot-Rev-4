@@ -44,7 +44,7 @@
         <joint name="Revolute5" value="0"/>
         <joint name="Revolute6" value="0"/>
     </group_state>
-    <group_state name="default" group="arm">
+    <group_state name="start" group="arm">
         <joint name="Revolute1" value="0"/>
         <joint name="Revolute2" value="0"/>
         <joint name="Revolute3" value="0"/>

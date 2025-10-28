@@ -1,8 +1,8 @@
 # Default initial positions for spotarm_assembly's ros2_control fake system
 
 initial_positions:
-  Revolute1: 0
-  Revolute2: 0
+  Revolute1: 0.4745
+  Revolute2: -1.5707
   Revolute3: 0
   Revolute4: 0
   Revolute5: 0
