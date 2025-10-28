@@ -25,9 +25,16 @@ int ICLStepper::initialize() {
     }
     usleep(delay_us_);
 
-    // Example: set a target speed (100)
-    if (modbus_write_register(ctx_, 0x01E1, 100) == -1) {
-        std::cerr << "[Slave " << slave_id_ << "] Failed to set target speed: "
+    return 0;
+}
+
+int ICLStepper::disable_motor() {
+    modbus_set_slave(ctx_, slave_id_);
+    usleep(delay_us_);
+
+    // Disable motor
+    if (modbus_write_register(ctx_, 0x000F, 0) == -1) {
+        std::cerr << "[Slave " << slave_id_ << "] Failed to disable motor: "
                   << modbus_strerror(errno) << std::endl;
         return -1;
     }
@@ -73,8 +80,8 @@ int ICLStepper::set_position(int position, int velocity_rpm, int acc, int dec) {
 int ICLStepper::set_position_radians(double position_radians, double radians_per_second) {
     double revolutions = position_radians / (2.0 * M_PI);
     int target_position = static_cast<int>(revolutions * pulses_per_revolution_ * gear_ratio_);
-    int velocity_rpm = static_cast<int>((radians_per_second * 60.0) / (2.0 * M_PI));
-    return set_position(target_position, velocity_rpm, 50, 50);
+    int velocity_rpm = static_cast<int>(gear_ratio_*(radians_per_second * 60.0) / (2.0 * M_PI));
+    return set_position(target_position, velocity_rpm, 10, 10);
 }
 
 int32_t ICLStepper::read_position() {
@@ -200,24 +207,28 @@ uint16_t ICLStepper::read_motion_status() {
 0x6011: Homing acceleration ms/1000rpm
 0x6012: Homing decceleration ms/1000rpm
 */
-int ICLStepper::home(int position_after_homing) {
+int ICLStepper::home(int position_after_homing, bool clockwise, double radians_per_second) {
     modbus_set_slave(ctx_, slave_id_);
     usleep(delay_us_);
 
     uint16_t pos_high = static_cast<uint16_t>((position_after_homing >> 16) & 0xFFFF);
     uint16_t pos_low  = static_cast<uint16_t>(position_after_homing & 0xFFFF);
 
+    // Convert radians per second to RPM
+    uint high_velocity_rpm = static_cast<int>(gear_ratio_ * (radians_per_second * 60.0) / (2.0 * M_PI));
+    uint low_velocity_rpm = high_velocity_rpm / 2; // low velocity is half of high velocity
+
     // Configure homing parameters
     uint16_t homing_params[] = {
-        0b0111, // Homing mode
+        (clockwise ? 0b111 : 0b110), // Homing mode
         pos_high, // Home Switch position high bits
         pos_low, // Home Switch position low bits
         0x0000, // Homing stop position high bits
         0x1000, // Homing stop position low bits
-        100,    // Homing high velocity
-        50,      // Homing low velocity
-        50,     // Homing acceleration
-        50      // Homing deceleration
+        high_velocity_rpm,    // Homing high velocity
+        low_velocity_rpm,      // Homing low velocity
+        20,     // Homing acceleration
+        20      // Homing deceleration
     };
     if (modbus_write_registers(ctx_, 0x600A, sizeof(homing_params) / sizeof(homing_params[0]), homing_params) == -1) {
         std::cerr << "[Slave " << slave_id_ << "] Failed to configure homing parameters: "
@@ -258,4 +269,16 @@ int ICLStepper::configure_io_for_homing() {
     }
 
     return 0;
+}
+
+int ICLStepper::set_as_home() {
+    modbus_set_slave(ctx_, slave_id_);
+    usleep(delay_us_);
+
+    // Set current position as home (zero) position
+    if (modbus_write_register(ctx_, 0x6002, 0x21) == -1) {
+        std::cerr << "[Slave " << slave_id_ << "] Failed to set current position as home: "
+                  << modbus_strerror(errno) << std::endl;
+        return -1;
+    }
 }

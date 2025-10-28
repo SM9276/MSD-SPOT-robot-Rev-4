@@ -29,7 +29,14 @@ struct RawTerm {
 };
 
 int main() {
-    std::cout << "Real-time key capture (Linux). Press 'q' or Esc to quit.\n";
+    std::cout << R"(Stepper control ready.
+Digits [0-9]: select motor slave ID.
+Arrow keys: toggle jogging (left/right) and adjust speed ±100 (up/down).
+Keys [a-;]: apply preset jog velocities (low to high).
+Keys [z-m]: move to preset absolute positions.
+w: read motion status; e: home; r: read position; t: set current position as home.
+Press 'q' or Esc to quit.
+)";
     RawTerm rt;
     rt.enable();
 
@@ -57,7 +64,7 @@ int main() {
         return -1;
     }
     usleep(10'000);  // Wait 10 ms
-    ICLStepper stepper(motor_slave_id, ctx);
+    ICLStepper stepper(motor_slave_id, ctx, 10000, 100);
     stepper.initialize();
     stepper.set_jog_velocity(target_velocity);
 
@@ -151,6 +158,11 @@ int main() {
                     std::cout << "Current position (pulses): " << pos << "\n";
                     double pos_rad = stepper.get_position_radians();
                     std::cout << "Current position (radians): " << pos_rad << "\n";
+                }
+
+                else if (ch == 't') {
+                    std::cout << "Setting current position as home (zero) position.\n";
+                    stepper.set_as_home();
                 }
 
                 else if (ch == 'q') {
