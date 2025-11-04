@@ -37,6 +37,7 @@ Source the workspace:
 
 ```bash
 source install/setup.bash
+source /opt/ros/humble/setup.bash
 ```
 
 ## Usage
