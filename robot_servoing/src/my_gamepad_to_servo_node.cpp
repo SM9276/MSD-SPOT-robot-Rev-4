@@ -133,7 +133,7 @@ public:
   {
     // Setup pub/sub
     joy_sub_ = this->create_subscription<sensor_msgs::msg::Joy>(
-        JOY_TOPIC, rclcpp::SystemDefaultsQoS(),
+        JOY_TOPIC, rclcpp::SensorDataQoS(),
         [this](const sensor_msgs::msg::Joy::ConstSharedPtr& msg) { return joyCB(msg); });
 
     twist_pub_ = this->create_publisher<geometry_msgs::msg::TwistStamped>(TWIST_TOPIC, rclcpp::SystemDefaultsQoS());

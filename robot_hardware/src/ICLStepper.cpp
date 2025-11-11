@@ -56,7 +56,7 @@ int ICLStepper::set_position(int position, int velocity_rpm, int acc, int dec) {
                   << modbus_strerror(errno) << std::endl;
         return -1;
     }
-    std::cout << "Configured PR0 registers (mode, position, velocity, acc/dec)" << std::endl;
+    // std::cout << "Configured PR0 registers (mode, position, velocity, acc/dec)" << std::endl;
     usleep(delay_us_);
 
     // Trigger PR0 motion
@@ -65,7 +65,7 @@ int ICLStepper::set_position(int position, int velocity_rpm, int acc, int dec) {
                   << modbus_strerror(errno) << std::endl;
         return -1;
     }
-    std::cout << "Triggering PR0 motion" << std::endl;
+    // std::cout << "Triggering PR0 motion" << std::endl;
 
     return 0;
 }

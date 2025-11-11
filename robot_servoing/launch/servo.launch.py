@@ -34,7 +34,9 @@ def load_yaml(package_name, file_path):
 
 def generate_launch_description():
     moveit_config = (
-        MoveItConfigsBuilder("spotarm_assembly")
+        MoveItConfigsBuilder(
+            "spotarm_assembly", package_name="robot_moveit_config"
+        )
         .robot_description(file_path="config/spotarm_assembly.urdf.xacro")
         .to_moveit_configs()
     )
@@ -44,19 +46,21 @@ def generate_launch_description():
     servo_params = {"moveit_servo": servo_yaml}
 
     # RViz
-    rviz_config_file = (
-        get_package_share_directory("moveit_servo") + "/config/demo_rviz_config.rviz"
-    )
+    robot_bringup_share_dir = get_package_share_directory('robot_bringup')
+    rviz_config_file = os.path.join(robot_bringup_share_dir, 'config', 'robot_moveit.rviz')
+    # rviz_config_file = (
+    #     get_package_share_directory("moveit_servo") + "/config/demo_rviz_config.rviz"
+    # )
     rviz_node = Node(
         package="rviz2",
         executable="rviz2",
         name="rviz2",
-        output="log",
+        output="screen",
         arguments=["-d", rviz_config_file],
-        parameters=[
-            moveit_config.robot_description,
-            moveit_config.robot_description_semantic,
-        ],
+        # parameters=[
+        #     moveit_config.robot_description,
+        #     moveit_config.robot_description_semantic,
+        # ],
     )
 
     # ros2_control using FakeSystem as hardware
@@ -112,7 +116,7 @@ def generate_launch_description():
             ),
             ComposableNode(
                 package="robot_servoing",
-                plugin="robot_servoing::my_joy_to_twist_publisher",
+                plugin="robot_servoing::MyJoyToServoPub",
                 name="controller_to_servo_node",
             ),
             ComposableNode(
