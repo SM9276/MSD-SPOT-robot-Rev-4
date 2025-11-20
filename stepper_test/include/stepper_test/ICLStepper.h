@@ -18,7 +18,7 @@ public:
     int set_slave_id(int slave_id);
     int set_jog_acceleration(int acc);
     uint16_t read_motion_status();
-    int home(int position_after_homing = 0, bool clockwise = true, double radians_per_second = 0.5);
+    int home(double home_switch_position = 0.0, double position_after_homing_radians = 0.0, bool clockwise = true, double radians_per_second = 0.5);
     int configure_io_for_homing();
     int set_as_home();
 private:
