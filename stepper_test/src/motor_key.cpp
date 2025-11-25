@@ -67,6 +67,7 @@ Press 'q' or Esc to quit.
     ICLStepper stepper(motor_slave_id, ctx, 10000, 100);
     stepper.initialize();
     stepper.set_jog_velocity(target_velocity);
+    stepper.set_jog_acceleration(4000);
 
     while (true) {
         fd_set set;
@@ -86,6 +87,7 @@ Press 'q' or Esc to quit.
                     std::cout << "Selected motor slave ID: " << motor_slave_id << "\n";
                     stepper.set_slave_id(motor_slave_id);
                     stepper.set_jog_velocity(target_velocity);
+                    stepper.set_jog_acceleration(4000);
                 }
 
                 else if (ch == '\033') { // Escape sequence

@@ -233,8 +233,8 @@ int ICLStepper::home(double home_switch_position, double position_after_homing_r
         pos_low_stop,  // Homing stop position low bits
         high_velocity_rpm,    // Homing high velocity
         low_velocity_rpm,      // Homing low velocity
-        200,     // Homing acceleration
-        200      // Homing deceleration
+        2000,     // Homing acceleration
+        2000      // Homing deceleration
     };
     if (modbus_write_registers(ctx_, 0x600A, sizeof(homing_params) / sizeof(homing_params[0]), homing_params) == -1) {
         std::cerr << "[Slave " << slave_id_ << "] Failed to configure homing parameters: "
