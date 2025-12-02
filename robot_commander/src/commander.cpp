@@ -42,6 +42,19 @@ public:
         planAndExecute(arm_);
     }
 
+    void goToRelativeTarget(double dx, double dy, double dz){
+        arm_->setStartStateToCurrentState();
+        auto current_pose = arm_->getCurrentPose("fake_gripper");
+        geometry_msgs::msg::Pose target_pose = current_pose.pose;
+        target_pose.position.x += dx;
+        target_pose.position.y += dy;
+        target_pose.position.z += dz;
+        arm_->setGoalPositionTolerance(0.01);
+        arm_->setGoalOrientationTolerance(2 * M_PI);
+        arm_->setPoseTarget(target_pose, "fake_gripper");
+        planAndExecute(arm_);
+    }
+
     void goToPositionTargetCartesian(double x, double y, double z){
         arm_->setStartStateToCurrentState();
         auto target_pose = arm_->getCurrentPose("fake_gripper");
@@ -96,6 +109,7 @@ int main(int argc, char **argv){
         std::cout << "  named <target>               - Move to a named target\n";
         std::cout << "  joint <v1> ... <vN>          - Move to joint values (expected count: " << commander.jointCount() << ")\n";
         std::cout << "  position <x> <y> <z> [mode]  - Move to position; mode optional: cartesian\n";
+        std::cout << "  relative <dx> <dy> <dz>       - Move relative to current position\n";
         std::cout << "  exit                         - Shutdown commander\n";
     };
 
@@ -165,6 +179,15 @@ int main(int argc, char **argv){
             else {
                 commander.goToPositionTarget(x, y, z);
             }
+        } else if (command == "relative"){
+            double dx = 0.0;
+            double dy = 0.0;
+            double dz = 0.0;
+            if (!(iss >> dx >> dy >> dz)){
+                std::cout << "Usage: relative <dx> <dy> <dz>\n";
+                continue;
+            }
+            commander.goToRelativeTarget(dx, dy, dz);
         } else {
             std::cout << "Unknown command. Type 'help' for available commands.\n";
         }
