@@ -9,25 +9,11 @@ This is a ROS 2 MoveIt configuration package for the MSD Robot Arm. It contains 
 - `urdf/`: The robot's Unified Robot Description Format files (URDF/XACRO).
 - `srdf/`: Semantic Robot Description Format file (`robot.srdf`) describing planning groups and robot semantics.
 
-## Usage
-
-To launch MoveIt for this robot arm, use the provided launch files. For example:
-
-```bash
-ros2 launch robot_moveit_config moveit.launch.py
-```
-
-Make sure to source your ROS 2 workspace before launching:
-
-```bash
-source install/setup.bash
-source /opt/ros/humble/setup.bash
-```
-
 ## Requirements
 
 - ROS 2 Humble
 - MoveIt 2
+- ros2_control
 - The robot's dependencies
 
 ## Features
