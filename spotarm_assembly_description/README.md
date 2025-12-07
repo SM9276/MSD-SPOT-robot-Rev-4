@@ -19,20 +19,6 @@ cd ~/ros2_ws
 colcon build
 ```
 
-## Usage
-
-To launch visualization in RViz:
-
-```bash
-ros2 launch spotarm_assembly_description view_robot.launch.py
-```
-
-Or to display robot model:
-
-```bash
-ros2 run robot_state_publisher robot_state_publisher --ros-args --param robot_description:="$(cat src/msd_robot_arm_2/spotarm_assembly_description/urdf/spotarm.xacro)"
-```
-
 ## Folder Structure
 
 - `urdf/`: Contains robot URDF/Xacro files.
