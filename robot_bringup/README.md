@@ -26,14 +26,15 @@ To bring up the robot:
 ```bash
 source /opt/ros/humble/setup.bash
 source install/setup.bash
-ros2 launch robot_bringup <your_launch_file>.launch.py
+source <your_moveit_ws>/install/setup.bash
+ros2 launch robot_bringup robot.launch.py
 ```
-
-Replace `<your_launch_file>.launch.py` with the desired launch file you wish to run.
 
 ## Requirements
 
 - ROS2 Humble
+- ros2_control
+- MoveIt
 - Other dependencies as listed in `package.xml` and `setup.py`
 
 ## Directory Structure
