@@ -1,0 +1,24 @@
+[0.284s] Invoking command in '/home/msd/MSD2/REV4/build/robot_commander': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/msd/MSD2/REV4/install/spotarm_assembly_description:/home/msd/MSD2/REV4/install/robot_status_leds:/opt/ros/humble /usr/bin/cmake --build /home/msd/MSD2/REV4/build/robot_commander -- -j8 -l8
+[0.347s] [100%] Built target commander
+[0.368s] Invoked command in '/home/msd/MSD2/REV4/build/robot_commander' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/msd/MSD2/REV4/install/spotarm_assembly_description:/home/msd/MSD2/REV4/install/robot_status_leds:/opt/ros/humble /usr/bin/cmake --build /home/msd/MSD2/REV4/build/robot_commander -- -j8 -l8
+[0.369s] Invoking command in '/home/msd/MSD2/REV4/build/robot_commander': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/msd/MSD2/REV4/install/spotarm_assembly_description:/home/msd/MSD2/REV4/install/robot_status_leds:/opt/ros/humble /usr/bin/cmake --install /home/msd/MSD2/REV4/build/robot_commander
+[0.377s] -- Install configuration: ""
+[0.377s] -- Execute custom install script
+[0.377s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_commander/lib/robot_commander//commander
+[0.377s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/launch/commander.launch.py
+[0.377s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_commander/share/ament_index/resource_index/package_run_dependencies/robot_commander
+[0.378s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_commander/share/ament_index/resource_index/parent_prefix_path/robot_commander
+[0.378s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/environment/ament_prefix_path.sh
+[0.378s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/environment/ament_prefix_path.dsv
+[0.378s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/environment/path.sh
+[0.378s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/environment/path.dsv
+[0.379s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/local_setup.bash
+[0.379s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/local_setup.sh
+[0.379s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/local_setup.zsh
+[0.379s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/local_setup.dsv
+[0.379s] -- Symlinking: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/package.dsv
+[0.388s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_commander/share/ament_index/resource_index/packages/robot_commander
+[0.388s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/cmake/robot_commanderConfig.cmake
+[0.388s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/cmake/robot_commanderConfig-version.cmake
+[0.388s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/package.xml
+[0.409s] Invoked command in '/home/msd/MSD2/REV4/build/robot_commander' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/msd/MSD2/REV4/install/spotarm_assembly_description:/home/msd/MSD2/REV4/install/robot_status_leds:/opt/ros/humble /usr/bin/cmake --install /home/msd/MSD2/REV4/build/robot_commander

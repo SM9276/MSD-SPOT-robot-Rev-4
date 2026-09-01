@@ -1,0 +1,6 @@
+Invoking command in '/home/msd/MSD2/REV4/build/robot_hardware': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/msd/MSD2/REV4/src/robot_hardware -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/msd/MSD2/REV4/install/robot_hardware
+Invoked command in '/home/msd/MSD2/REV4/build/robot_hardware' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/msd/MSD2/REV4/src/robot_hardware -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/msd/MSD2/REV4/install/robot_hardware
+Invoking command in '/home/msd/MSD2/REV4/build/robot_hardware': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/msd/MSD2/REV4/build/robot_hardware -- -j8 -l8
+Invoked command in '/home/msd/MSD2/REV4/build/robot_hardware' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/msd/MSD2/REV4/build/robot_hardware -- -j8 -l8
+Invoking command in '/home/msd/MSD2/REV4/build/robot_hardware': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/msd/MSD2/REV4/build/robot_hardware
+Invoked command in '/home/msd/MSD2/REV4/build/robot_hardware' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/msd/MSD2/REV4/build/robot_hardware

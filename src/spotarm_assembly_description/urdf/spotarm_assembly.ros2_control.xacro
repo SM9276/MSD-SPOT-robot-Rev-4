@@ -1,63 +1,184 @@
 <?xml version="1.0"?>
+
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
-  <ros2_control name="Arm" type="system">
+
+  <!--
+    Real ros2_control hardware definition for the SPOT arm.
+
+    This file defines a Xacro macro only.
+    It does NOT instantiate ros2_control until another Xacro calls:
+
+        <xacro:spotarm_real_ros2_control name="Arm"/>
+
+    This lets us keep simulation FakeSystem and real hardware separate.
+  -->
+
+  <xacro:macro
+    name="spotarm_real_ros2_control"
+    params="name">
+
+    <ros2_control name="${name}" type="system">
+
+      <!-- =============================================== -->
+      <!-- REAL HARDWARE PLUGIN                            -->
+      <!-- =============================================== -->
+
       <hardware>
-          <plugin>robot_hardware/ArmHardwareInterface</plugin>
-          <!-- By default, set up controllers for simulation. This won't work on real hardware -->
-          <!-- <plugin>mock_components/GenericSystem</plugin> -->
+        <plugin>robot_hardware/ArmHardwareInterface</plugin>
+        <param name="port">/dev/ttyUSB0</param>
+        <param name="baudrate">115200</param>
       </hardware>
+
+
+      <!-- =============================================== -->
+      <!-- REVOLUTE 1                                      -->
+      <!-- =============================================== -->
+
       <joint name="Revolute1">
-          <command_interface name="position"/>
-          <state_interface name="position">
-            <param name="initial_value">0.4745</param>
-            <!-- <param name="initial_value">0.608</param> -->
-          </state_interface>
-          <state_interface name="velocity"/>
-          <param name="default_velocity">0.2</param>
-      </joint>
-      <joint name="Revolute2">
-          <command_interface name="position"/>
-          <state_interface name="position">
-            <param name="initial_value">-1.5707</param>
-            <!-- <param name="initial_value">-1.8241</param> -->
-          </state_interface>
-          <state_interface name="velocity"/>
-          <param name="default_velocity">0.2</param>
-      </joint>
-      <joint name="Revolute3">
-          <command_interface name="position"/>
-          <state_interface name="position">
-            <param name="initial_value">0.0</param>
-            <!-- <param name="initial_value">-1.7228</param> -->
-          </state_interface>
-          <state_interface name="velocity"/>
-          <param name="default_velocity">0.3</param>
-      </joint>
-      <joint name="Revolute4">
-          <command_interface name="position"/>
-          <state_interface name="position">
-            <param name="initial_value">0.0</param>
-          </state_interface>
-          <state_interface name="velocity"/>
-          <param name="default_velocity">0.2</param>
-      </joint>
-      <joint name="Revolute5">
-          <command_interface name="position"/>
-          <state_interface name="position">
-            <param name="initial_value">0.0</param>
-            <!-- <param name="initial_value">0.9627</param> -->
-          </state_interface>
-          <state_interface name="velocity"/>
-          <param name="default_velocity">0.2</param>
-      </joint>
-      <joint name="Revolute6">
-          <command_interface name="position"/>
-          <state_interface name="position">
-            <param name="initial_value">0.0</param>
-          </state_interface>
-          <state_interface name="velocity"/>
-          <param name="default_velocity">0.2</param>
+
+        <command_interface name="position"/>
+
+        <state_interface name="position">
+          <param name="initial_value">0.4745</param>
+        </state_interface>
+
+        <state_interface name="velocity"/>
+
+        <param name="motor_id">1</param>
+        <param name="pulses_per_revolution">10000</param>
+        <param name="gear_ratio">51</param>
+        <param name="direction">-1</param>
+        <param name="default_velocity">0.05</param>
+
+        <param name="min_position">-0.436</param>
+        <param name="max_position">2.13</param>
+
       </joint>
 
-  </ros2_control>
+
+      <!-- =============================================== -->
+      <!-- REVOLUTE 2                                      -->
+      <!-- =============================================== -->
+
+      <joint name="Revolute2">
+
+        <command_interface name="position"/>
+
+        <state_interface name="position">
+          <param name="initial_value">-1.5707</param>
+        </state_interface>
+
+        <state_interface name="velocity"/>
+
+        <param name="motor_id">2</param>
+        <param name="pulses_per_revolution">10000</param>
+        <param name="gear_ratio">100</param>
+        <param name="direction">-1</param>
+        <param name="default_velocity">0.05</param>
+
+      </joint>
+
+
+      <!-- =============================================== -->
+      <!-- REVOLUTE 3                                      -->
+      <!-- =============================================== -->
+
+      <joint name="Revolute3">
+
+        <command_interface name="position"/>
+
+        <state_interface name="position">
+          <param name="initial_value">0.0</param>
+        </state_interface>
+
+        <state_interface name="velocity"/>
+
+        <param name="motor_id">3</param>
+        <param name="pulses_per_revolution">10000</param>
+        <param name="gear_ratio">120</param>
+        <param name="direction">-1</param>
+        <param name="default_velocity">0.05</param>
+
+      </joint>
+
+
+      <!-- =============================================== -->
+      <!-- REVOLUTE 4                                      -->
+      <!-- =============================================== -->
+
+      <joint name="Revolute4">
+
+        <command_interface name="position"/>
+
+        <state_interface name="position">
+          <param name="initial_value">0.0</param>
+        </state_interface>
+
+        <state_interface name="velocity"/>
+
+        <param name="motor_id">4</param>
+        <param name="pulses_per_revolution">10000</param>
+        <param name="gear_ratio">100</param>
+        <param name="direction">-1</param>
+        <param name="default_velocity">0.05</param>
+
+      </joint>
+
+
+      <!-- =============================================== -->
+      <!-- REVOLUTE 5                                      -->
+      <!-- =============================================== -->
+
+      <joint name="Revolute5">
+
+        <command_interface name="position"/>
+
+        <state_interface name="position">
+          <param name="initial_value">0.0</param>
+        </state_interface>
+
+        <state_interface name="velocity"/>
+
+        <param name="motor_id">5</param>
+        <param name="pulses_per_revolution">10000</param>
+        <param name="gear_ratio">100</param>
+        <param name="direction">-1</param>
+        <param name="default_velocity">0.05</param>
+
+      </joint>
+
+
+      <!-- =============================================== -->
+      <!-- REVOLUTE 6                                      -->
+      <!-- =============================================== -->
+
+      <joint name="Revolute6">
+
+        <command_interface name="position"/>
+
+        <state_interface name="position">
+          <param name="initial_value">0.0</param>
+        </state_interface>
+
+        <state_interface name="velocity"/>
+
+        <!--
+          motor_id 10 currently means this motor is not configured.
+
+          If Revolute6 has a physical motor, replace 10 with its
+          actual Modbus slave ID.
+        -->
+        <param name="motor_id">10</param>
+
+        <param name="pulses_per_revolution">10000</param>
+        <param name="gear_ratio">100</param>
+        <param name="direction">1</param>
+        <param name="default_velocity">0.05</param>
+
+      </joint>
+
+    </ros2_control>
+
+  </xacro:macro>
+
 </robot>

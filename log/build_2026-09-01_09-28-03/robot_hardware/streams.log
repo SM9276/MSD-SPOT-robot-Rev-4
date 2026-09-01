@@ -1,0 +1,56 @@
+[0.010s] Invoking command in '/home/msd/MSD2/REV4/build/robot_hardware': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/msd/MSD2/REV4/install/spotarm_assembly_description:/home/msd/MSD2/REV4/install/robot_status_leds:/opt/ros/humble /usr/bin/cmake --build /home/msd/MSD2/REV4/build/robot_hardware -- -j8 -l8
+[0.059s] [35m[1mConsolidate compiler generated dependencies of target robot_hardware_arm[0m
+[0.077s] [ 33%] [32mBuilding CXX object CMakeFiles/robot_hardware_arm.dir/src/ICLStepper.cpp.o[0m
+[0.410s] In file included from [01m[K/home/msd/MSD2/REV4/src/robot_hardware/src/ICLStepper.cpp:1[m[K:
+[0.411s] [01m[K/home/msd/MSD2/REV4/src/robot_hardware/include/robot_hardware/ICLStepper.h:[m[K In constructor ‘[01m[KICLStepper::ICLStepper(int, modbus_t*, int, int)[m[K’:
+[0.411s] [01m[K/home/msd/MSD2/REV4/src/robot_hardware/include/robot_hardware/ICLStepper.h:30:9:[m[K [01;35m[Kwarning: [m[K‘[01m[KICLStepper::gear_ratio_[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[0.411s]    30 |     int [01;35m[Kgear_ratio_[m[K;
+[0.411s]       |         [01;35m[K^~~~~~~~~~~[m[K
+[0.411s] [01m[K/home/msd/MSD2/REV4/src/robot_hardware/include/robot_hardware/ICLStepper.h:28:9:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kint ICLStepper::delay_us_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[0.411s]    28 |     int [01;35m[Kdelay_us_[m[K;
+[0.411s]       |         [01;35m[K^~~~~~~~~[m[K
+[0.411s] [01m[K/home/msd/MSD2/REV4/src/robot_hardware/src/ICLStepper.cpp:9:1:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[0.411s]     9 | [01;35m[KICLStepper[m[K::ICLStepper(int slave_id, modbus_t* ctx, int pulses_per_revolution, int gear_ratio)
+[0.411s]       | [01;35m[K^~~~~~~~~~[m[K
+[0.416s] [01m[K/home/msd/MSD2/REV4/src/robot_hardware/src/ICLStepper.cpp:[m[K In member function ‘[01m[Kint ICLStepper::home(double, double, bool, double)[m[K’:
+[0.416s] [01m[K/home/msd/MSD2/REV4/src/robot_hardware/src/ICLStepper.cpp:229:20:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K(clockwise ? 7 : 6)[m[K’ from ‘[01m[Kint[m[K’ to ‘[01m[Kuint16_t[m[K’ {aka ‘[01m[Kshort unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[0.416s]   229 |         [01;35m[K(clockwise ? 0b111 : 0b110)[m[K, // Homing mode
+[0.416s]       |         [01;35m[K~~~~~~~~~~~^~~~~~~~~~~~~~~~[m[K
+[0.416s] [01m[K/home/msd/MSD2/REV4/src/robot_hardware/src/ICLStepper.cpp:234:9:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[Khigh_velocity_rpm[m[K’ from ‘[01m[Kuint[m[K’ {aka ‘[01m[Kunsigned int[m[K’} to ‘[01m[Kuint16_t[m[K’ {aka ‘[01m[Kshort unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[0.416s]   234 |         [01;35m[Khigh_velocity_rpm[m[K,    // Homing high velocity
+[0.416s]       |         [01;35m[K^~~~~~~~~~~~~~~~~[m[K
+[0.416s] [01m[K/home/msd/MSD2/REV4/src/robot_hardware/src/ICLStepper.cpp:235:9:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[Klow_velocity_rpm[m[K’ from ‘[01m[Kuint[m[K’ {aka ‘[01m[Kunsigned int[m[K’} to ‘[01m[Kuint16_t[m[K’ {aka ‘[01m[Kshort unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[0.416s]   235 |         [01;35m[Klow_velocity_rpm[m[K,      // Homing low velocity
+[0.416s]       |         [01;35m[K^~~~~~~~~~~~~~~~[m[K
+[0.485s] [01m[K/home/msd/MSD2/REV4/src/robot_hardware/src/ICLStepper.cpp:[m[K In member function ‘[01m[Kint ICLStepper::set_as_home()[m[K’:
+[0.485s] [01m[K/home/msd/MSD2/REV4/src/robot_hardware/src/ICLStepper.cpp:290:1:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+[0.485s]   290 | [01;35m[K}[m[K
+[0.485s]       | [01;35m[K^[m[K
+[0.524s] [ 66%] [32m[1mLinking CXX shared library librobot_hardware_arm.so[0m
+[0.704s] [100%] Built target robot_hardware_arm
+[0.715s] Invoked command in '/home/msd/MSD2/REV4/build/robot_hardware' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/msd/MSD2/REV4/install/spotarm_assembly_description:/home/msd/MSD2/REV4/install/robot_status_leds:/opt/ros/humble /usr/bin/cmake --build /home/msd/MSD2/REV4/build/robot_hardware -- -j8 -l8
+[0.724s] Invoking command in '/home/msd/MSD2/REV4/build/robot_hardware': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/msd/MSD2/REV4/install/spotarm_assembly_description:/home/msd/MSD2/REV4/install/robot_status_leds:/opt/ros/humble /usr/bin/cmake --install /home/msd/MSD2/REV4/build/robot_hardware
+[0.731s] -- Install configuration: ""
+[0.732s] -- Execute custom install script
+[0.732s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_hardware/share/robot_hardware//robot_hardware_plugin.xml
+[0.733s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_hardware/lib/librobot_hardware_arm.so
+[0.733s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_hardware/include/robot_hardware/ICLStepper.h
+[0.734s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_hardware/include/robot_hardware/arm_hardware_interface.hpp
+[0.734s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_hardware/share/robot_hardware/robot_hardware_plugin.xml
+[0.734s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_hardware/share/ament_index/resource_index/package_run_dependencies/robot_hardware
+[0.734s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_hardware/share/ament_index/resource_index/parent_prefix_path/robot_hardware
+[0.734s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_hardware/share/robot_hardware/environment/ament_prefix_path.sh
+[0.735s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_hardware/share/robot_hardware/environment/ament_prefix_path.dsv
+[0.735s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_hardware/share/robot_hardware/environment/path.sh
+[0.735s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_hardware/share/robot_hardware/environment/path.dsv
+[0.735s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_hardware/share/robot_hardware/local_setup.bash
+[0.735s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_hardware/share/robot_hardware/local_setup.sh
+[0.736s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_hardware/share/robot_hardware/local_setup.zsh
+[0.736s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_hardware/share/robot_hardware/local_setup.dsv
+[0.736s] -- Symlinking: /home/msd/MSD2/REV4/install/robot_hardware/share/robot_hardware/package.dsv
+[0.746s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_hardware/share/ament_index/resource_index/packages/robot_hardware
+[0.746s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_hardware/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/robot_hardware
+[0.746s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_hardware/share/robot_hardware/cmake/robot_hardwareConfig.cmake
+[0.746s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_hardware/share/robot_hardware/cmake/robot_hardwareConfig-version.cmake
+[0.747s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_hardware/share/robot_hardware/package.xml
+[0.748s] Invoked command in '/home/msd/MSD2/REV4/build/robot_hardware' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/msd/MSD2/REV4/install/spotarm_assembly_description:/home/msd/MSD2/REV4/install/robot_status_leds:/opt/ros/humble /usr/bin/cmake --install /home/msd/MSD2/REV4/build/robot_hardware

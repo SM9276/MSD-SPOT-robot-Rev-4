@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<robot
+  xmlns:xacro="http://www.ros.org/wiki/xacro"
+  name="spotarm_assembly">
+
+  <!-- Robot links / joints / meshes -->
+  <xacro:include
+    filename="$(find spotarm_assembly_description)/urdf/spotarm_assembly.xacro"/>
+
+  <!-- Real ros2_control macro -->
+  <xacro:include
+    filename="$(find spotarm_assembly_description)/urdf/spotarm_assembly.ros2_control.xacro"/>
+
+  <!-- Instantiate ONLY the real hardware -->
+  <xacro:spotarm_real_ros2_control name="Arm"/>
+
+</robot>

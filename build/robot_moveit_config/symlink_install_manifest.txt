@@ -13,7 +13,9 @@
 /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/cmake/robot_moveit_configConfig.cmake
 /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/cmake/robot_moveit_configConfig-version.cmake
 /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/package.xml
+/home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/launch/__pycache__/hardware.launch.cpython-310.pyc
 /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/launch/demo.launch.py
+/home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/launch/hardware.launch.py
 /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/launch/move_group.launch.py
 /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/launch/moveit_rviz.launch.py
 /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/launch/rsp.launch.py
@@ -21,6 +23,7 @@
 /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/launch/spawn_controllers.launch.py
 /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/launch/static_virtual_joint_tfs.launch.py
 /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/launch/warehouse_db.launch.py
+/home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/config/arm_controller_params.yaml
 /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/config/initial_positions.yaml
 /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/config/joint_limits.yaml
 /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/config/kinematics.yaml
@@ -28,7 +31,9 @@
 /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/config/moveit_controllers.yaml
 /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/config/pilz_cartesian_limits.yaml
 /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/config/ros2_controllers.yaml
+/home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/config/ros2_controllers_hardware.yaml
 /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/config/sensors_3d.yaml
+/home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/config/spotarm_assembly.hardware.urdf.xacro
 /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/config/spotarm_assembly.ros2_control.xacro
 /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/config/spotarm_assembly.srdf
 /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/config/spotarm_assembly.urdf.xacro

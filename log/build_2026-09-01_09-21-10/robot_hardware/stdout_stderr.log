@@ -1,0 +1,51 @@
+[ 33%] [32mBuilding CXX object CMakeFiles/robot_hardware_arm.dir/src/ICLStepper.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/robot_hardware_arm.dir/src/arm_hardware_interface.cpp.o[0m
+In file included from [01m[K/home/msd/MSD2/REV4/src/robot_hardware/src/ICLStepper.cpp:1[m[K:
+[01m[K/home/msd/MSD2/REV4/src/robot_hardware/include/robot_hardware/ICLStepper.h:[m[K In constructor ‘[01m[KICLStepper::ICLStepper(int, modbus_t*, int, int)[m[K’:
+[01m[K/home/msd/MSD2/REV4/src/robot_hardware/include/robot_hardware/ICLStepper.h:30:9:[m[K [01;35m[Kwarning: [m[K‘[01m[KICLStepper::gear_ratio_[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+   30 |     int [01;35m[Kgear_ratio_[m[K;
+      |         [01;35m[K^~~~~~~~~~~[m[K
+[01m[K/home/msd/MSD2/REV4/src/robot_hardware/include/robot_hardware/ICLStepper.h:28:9:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kint ICLStepper::delay_us_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+   28 |     int [01;35m[Kdelay_us_[m[K;
+      |         [01;35m[K^~~~~~~~~[m[K
+[01m[K/home/msd/MSD2/REV4/src/robot_hardware/src/ICLStepper.cpp:11:1:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+   11 | [01;35m[KICLStepper[m[K::ICLStepper(int slave_id, modbus_t* ctx, int pulses_per_revolution, int gear_ratio)
+      | [01;35m[K^~~~~~~~~~[m[K
+[01m[K/home/msd/MSD2/REV4/src/robot_hardware/src/ICLStepper.cpp:[m[K In member function ‘[01m[Kint ICLStepper::home(double, double, bool, double)[m[K’:
+[01m[K/home/msd/MSD2/REV4/src/robot_hardware/src/ICLStepper.cpp:241:20:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K(clockwise ? 7 : 6)[m[K’ from ‘[01m[Kint[m[K’ to ‘[01m[Kuint16_t[m[K’ {aka ‘[01m[Kshort unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+  241 |         [01;35m[K(clockwise ? 0b111 : 0b110)[m[K, // Homing mode
+      |         [01;35m[K~~~~~~~~~~~^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/msd/MSD2/REV4/src/robot_hardware/src/ICLStepper.cpp:246:9:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[Khigh_velocity_rpm[m[K’ from ‘[01m[Kuint[m[K’ {aka ‘[01m[Kunsigned int[m[K’} to ‘[01m[Kuint16_t[m[K’ {aka ‘[01m[Kshort unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+  246 |         [01;35m[Khigh_velocity_rpm[m[K,    // Homing high velocity
+      |         [01;35m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/msd/MSD2/REV4/src/robot_hardware/src/ICLStepper.cpp:247:9:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[Klow_velocity_rpm[m[K’ from ‘[01m[Kuint[m[K’ {aka ‘[01m[Kunsigned int[m[K’} to ‘[01m[Kuint16_t[m[K’ {aka ‘[01m[Kshort unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+  247 |         [01;35m[Klow_velocity_rpm[m[K,      // Homing low velocity
+      |         [01;35m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/msd/MSD2/REV4/src/robot_hardware/src/ICLStepper.cpp:[m[K In member function ‘[01m[Kint ICLStepper::set_as_home()[m[K’:
+[01m[K/home/msd/MSD2/REV4/src/robot_hardware/src/ICLStepper.cpp:302:1:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+  302 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[01m[K/home/msd/MSD2/REV4/src/robot_hardware/src/arm_hardware_interface.cpp:[m[K In member function ‘[01m[Kvirtual hardware_interface::CallbackReturn robot_hardware::ArmHardwareInterface::on_init(const hardware_interface::HardwareInfo&)[m[K’:
+[01m[K/home/msd/MSD2/REV4/src/robot_hardware/src/arm_hardware_interface.cpp:189:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kdefault_velociies_[m[K’ was not declared in this scope; did you mean ‘[01m[Kdefault_velocities_[m[K’?
+  189 |       [01;31m[Kdefault_velociies_[m[K[i] =
+      |       [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+      |       [32m[Kdefault_velocities_[m[K
+[01m[K/home/msd/MSD2/REV4/src/robot_hardware/src/arm_hardware_interface.cpp:[m[K In member function ‘[01m[Kvirtual std::vector<hardware_interface::StateInterface> robot_hardware::ArmHardwareInterface::export_state_interfaces()[m[K’:
+[01m[K/home/msd/MSD2/REV4/src/robot_hardware/src/arm_hardware_interface.cpp:264:27:[m[K [01;31m[Kerror: [m[K‘[01m[KHW_IF_POSITION[m[K’ is not a member of ‘[01m[Khardware_interface[m[K’
+  264 |       hardware_interface::[01;31m[KHW_IF_POSITION[m[K,
+      |                           [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/msd/MSD2/REV4/src/robot_hardware/src/arm_hardware_interface.cpp:269:27:[m[K [01;31m[Kerror: [m[K‘[01m[KHW_IF_VELOCITY[m[K’ is not a member of ‘[01m[Khardware_interface[m[K’
+  269 |       hardware_interface::[01;31m[KHW_IF_VELOCITY[m[K,
+      |                           [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/msd/MSD2/REV4/src/robot_hardware/src/arm_hardware_interface.cpp:[m[K In member function ‘[01m[Kvirtual std::vector<hardware_interface::CommandInterface> robot_hardware::ArmHardwareInterface::export_command_interfaces()[m[K’:
+[01m[K/home/msd/MSD2/REV4/src/robot_hardware/src/arm_hardware_interface.cpp:290:27:[m[K [01;31m[Kerror: [m[K‘[01m[KHW_IF_POSITION[m[K’ is not a member of ‘[01m[Khardware_interface[m[K’
+  290 |       hardware_interface::[01;31m[KHW_IF_POSITION[m[K,
+      |                           [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/msd/MSD2/REV4/src/robot_hardware/src/arm_hardware_interface.cpp:[m[K At global scope:
+[01m[K/home/msd/MSD2/REV4/src/robot_hardware/src/arm_hardware_interface.cpp:913:39:[m[K [01;31m[Kerror: [m[K‘[01m[Kt[m[K’ does not name a type; did you mean ‘[01m[Ktm[m[K’?
+  913 |   hardware_interface::SystemInterface)[01;31m[Kt[m[K
+      |                                       [01;31m[K^[m[K
+      |                                       [32m[Ktm[m[K
+gmake[2]: *** [CMakeFiles/robot_hardware_arm.dir/build.make:76: CMakeFiles/robot_hardware_arm.dir/src/arm_hardware_interface.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/robot_hardware_arm.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
