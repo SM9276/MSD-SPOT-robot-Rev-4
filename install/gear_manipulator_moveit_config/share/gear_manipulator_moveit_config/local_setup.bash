@@ -1,0 +1,1 @@
+/home/msd/MSD2/REV4/build/gear_manipulator_moveit_config/ament_cmake_environment_hooks/local_setup.bash

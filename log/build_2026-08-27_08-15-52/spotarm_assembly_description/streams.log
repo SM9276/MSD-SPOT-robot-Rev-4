@@ -1,0 +1,22 @@
+[1.093s] Invoking command in '/home/msd/MSD2/REV4/src/spotarm_assembly_description': PYTHONPATH=/home/msd/MSD2/REV4/build/spotarm_assembly_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/msd/MSD2/REV4/install/spotarm_assembly_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/spotarm_assembly_description build --build-base /home/msd/MSD2/REV4/build/spotarm_assembly_description/build install --record /home/msd/MSD2/REV4/build/spotarm_assembly_description/install.log --install-scripts $base/lib/spotarm_assembly_description --single-version-externally-managed install_data
+[1.326s] /usr/lib/python3/dist-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[1.327s]   warnings.warn(
+[1.336s] running egg_info
+[1.337s] writing ../../build/spotarm_assembly_description/spotarm_assembly_description.egg-info/PKG-INFO
+[1.338s] writing dependency_links to ../../build/spotarm_assembly_description/spotarm_assembly_description.egg-info/dependency_links.txt
+[1.338s] writing entry points to ../../build/spotarm_assembly_description/spotarm_assembly_description.egg-info/entry_points.txt
+[1.338s] writing requirements to ../../build/spotarm_assembly_description/spotarm_assembly_description.egg-info/requires.txt
+[1.338s] writing top-level names to ../../build/spotarm_assembly_description/spotarm_assembly_description.egg-info/top_level.txt
+[1.340s] reading manifest file '../../build/spotarm_assembly_description/spotarm_assembly_description.egg-info/SOURCES.txt'
+[1.341s] writing manifest file '../../build/spotarm_assembly_description/spotarm_assembly_description.egg-info/SOURCES.txt'
+[1.342s] running build
+[1.342s] running build_py
+[1.342s] running install
+[1.342s] running install_lib
+[1.344s] running install_data
+[1.345s] running install_egg_info
+[1.348s] removing '/home/msd/MSD2/REV4/install/spotarm_assembly_description/lib/python3.10/site-packages/spotarm_assembly_description-0.0.0-py3.10.egg-info' (and everything under it)
+[1.348s] Copying ../../build/spotarm_assembly_description/spotarm_assembly_description.egg-info to /home/msd/MSD2/REV4/install/spotarm_assembly_description/lib/python3.10/site-packages/spotarm_assembly_description-0.0.0-py3.10.egg-info
+[1.349s] running install_scripts
+[1.370s] writing list of installed files to '/home/msd/MSD2/REV4/build/spotarm_assembly_description/install.log'
+[1.410s] Invoked command in '/home/msd/MSD2/REV4/src/spotarm_assembly_description' returned '0': PYTHONPATH=/home/msd/MSD2/REV4/build/spotarm_assembly_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/msd/MSD2/REV4/install/spotarm_assembly_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/spotarm_assembly_description build --build-base /home/msd/MSD2/REV4/build/spotarm_assembly_description/build install --record /home/msd/MSD2/REV4/build/spotarm_assembly_description/install.log --install-scripts $base/lib/spotarm_assembly_description --single-version-externally-managed install_data

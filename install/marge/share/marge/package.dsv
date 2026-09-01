@@ -1,0 +1,11 @@
+source;share/marge/hook/cmake_prefix_path.ps1
+source;share/marge/hook/cmake_prefix_path.dsv
+source;share/marge/hook/cmake_prefix_path.sh
+source;share/marge/hook/ld_library_path_lib.ps1
+source;share/marge/hook/ld_library_path_lib.dsv
+source;share/marge/hook/ld_library_path_lib.sh
+source;share/marge/local_setup.bash
+source;share/marge/local_setup.dsv
+source;share/marge/local_setup.ps1
+source;share/marge/local_setup.sh
+source;share/marge/local_setup.zsh

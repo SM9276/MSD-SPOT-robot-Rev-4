@@ -1,0 +1,22 @@
+running develop
+running egg_info
+creating robot_status_leds.egg-info
+writing robot_status_leds.egg-info/PKG-INFO
+writing dependency_links to robot_status_leds.egg-info/dependency_links.txt
+writing entry points to robot_status_leds.egg-info/entry_points.txt
+writing requirements to robot_status_leds.egg-info/requires.txt
+writing top-level names to robot_status_leds.egg-info/top_level.txt
+writing manifest file 'robot_status_leds.egg-info/SOURCES.txt'
+reading manifest file 'robot_status_leds.egg-info/SOURCES.txt'
+writing manifest file 'robot_status_leds.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/msd/MSD2/REV4/install/robot_status_leds/lib/python3.10/site-packages/robot-status-leds.egg-link (link to .)
+Installing led_state_node script to /home/msd/MSD2/REV4/install/robot_status_leds/lib/robot_status_leds
+
+Installed /home/msd/MSD2/REV4/build/robot_status_leds
+running symlink_data
+creating /home/msd/MSD2/REV4/install/robot_status_leds/share/ament_index
+creating /home/msd/MSD2/REV4/install/robot_status_leds/share/ament_index/resource_index
+creating /home/msd/MSD2/REV4/install/robot_status_leds/share/ament_index/resource_index/packages
+symbolically linking /home/msd/MSD2/REV4/build/robot_status_leds/resource/robot_status_leds -> /home/msd/MSD2/REV4/install/robot_status_leds/share/ament_index/resource_index/packages
+symbolically linking /home/msd/MSD2/REV4/build/robot_status_leds/package.xml -> /home/msd/MSD2/REV4/install/robot_status_leds/share/robot_status_leds

@@ -1,0 +1,22 @@
+[0.270s] Invoking command in '/home/msd/MSD2/REV4/src/build/marge': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/msd/MSD2/REV4/src/marge -DCMAKE_INSTALL_PREFIX=/home/msd/MSD2/REV4/src/install/marge
+[0.774s] -- The C compiler identification is GNU 11.4.0
+[0.775s] -- The CXX compiler identification is GNU 11.4.0
+[0.775s] -- Detecting C compiler ABI info
+[0.775s] -- Detecting C compiler ABI info - done
+[0.776s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.776s] -- Detecting C compile features
+[0.776s] -- Detecting C compile features - done
+[0.776s] -- Detecting CXX compiler ABI info
+[0.776s] -- Detecting CXX compiler ABI info - done
+[0.777s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.777s] -- Detecting CXX compile features
+[0.777s] -- Detecting CXX compile features - done
+[0.777s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.003s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.175s] -- Configuring incomplete, errors occurred!
+[1.175s] [31mCMake Error at CMakeLists.txt:14 (message):
+[1.175s]   modbus/modbus.h not found.  Please install libmodbus development headers.
+[1.175s] 
+[1.175s] [0m
+[1.175s] See also "/home/msd/MSD2/REV4/src/build/marge/CMakeFiles/CMakeOutput.log".
+[1.194s] Invoked command in '/home/msd/MSD2/REV4/src/build/marge' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/msd/MSD2/REV4/src/marge -DCMAKE_INSTALL_PREFIX=/home/msd/MSD2/REV4/src/install/marge

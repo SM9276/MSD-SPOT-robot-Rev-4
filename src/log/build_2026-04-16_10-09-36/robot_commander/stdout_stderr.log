@@ -1,0 +1,20 @@
+[35m[1mConsolidate compiler generated dependencies of target commander[0m
+[100%] Built target commander
+-- Install configuration: ""
+-- Installing: /home/msd/MSD2/REV4/src/install/robot_commander/lib/robot_commander/commander
+-- Set runtime path of "/home/msd/MSD2/REV4/src/install/robot_commander/lib/robot_commander/commander" to ""
+-- Installing: /home/msd/MSD2/REV4/src/install/robot_commander/share/ament_index/resource_index/package_run_dependencies/robot_commander
+-- Installing: /home/msd/MSD2/REV4/src/install/robot_commander/share/ament_index/resource_index/parent_prefix_path/robot_commander
+-- Installing: /home/msd/MSD2/REV4/src/install/robot_commander/share/robot_commander/environment/ament_prefix_path.sh
+-- Installing: /home/msd/MSD2/REV4/src/install/robot_commander/share/robot_commander/environment/ament_prefix_path.dsv
+-- Installing: /home/msd/MSD2/REV4/src/install/robot_commander/share/robot_commander/environment/path.sh
+-- Installing: /home/msd/MSD2/REV4/src/install/robot_commander/share/robot_commander/environment/path.dsv
+-- Installing: /home/msd/MSD2/REV4/src/install/robot_commander/share/robot_commander/local_setup.bash
+-- Installing: /home/msd/MSD2/REV4/src/install/robot_commander/share/robot_commander/local_setup.sh
+-- Installing: /home/msd/MSD2/REV4/src/install/robot_commander/share/robot_commander/local_setup.zsh
+-- Installing: /home/msd/MSD2/REV4/src/install/robot_commander/share/robot_commander/local_setup.dsv
+-- Installing: /home/msd/MSD2/REV4/src/install/robot_commander/share/robot_commander/package.dsv
+-- Installing: /home/msd/MSD2/REV4/src/install/robot_commander/share/ament_index/resource_index/packages/robot_commander
+-- Installing: /home/msd/MSD2/REV4/src/install/robot_commander/share/robot_commander/cmake/robot_commanderConfig.cmake
+-- Installing: /home/msd/MSD2/REV4/src/install/robot_commander/share/robot_commander/cmake/robot_commanderConfig-version.cmake
+-- Installing: /home/msd/MSD2/REV4/src/install/robot_commander/share/robot_commander/package.xml

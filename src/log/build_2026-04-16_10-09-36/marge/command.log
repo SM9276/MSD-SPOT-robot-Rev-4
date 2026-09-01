@@ -1,0 +1,2 @@
+Invoking command in '/home/msd/MSD2/REV4/src/build/marge': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/msd/MSD2/REV4/src/marge -DCMAKE_INSTALL_PREFIX=/home/msd/MSD2/REV4/src/install/marge
+Invoked command in '/home/msd/MSD2/REV4/src/build/marge' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/msd/MSD2/REV4/src/marge -DCMAKE_INSTALL_PREFIX=/home/msd/MSD2/REV4/src/install/marge

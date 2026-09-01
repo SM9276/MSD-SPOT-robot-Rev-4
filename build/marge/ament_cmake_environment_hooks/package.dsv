@@ -1,0 +1,4 @@
+source;share/marge/local_setup.bash
+source;share/marge/local_setup.dsv
+source;share/marge/local_setup.sh
+source;share/marge/local_setup.zsh

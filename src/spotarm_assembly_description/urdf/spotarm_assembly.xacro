@@ -1,0 +1,249 @@
+<?xml version="1.0" ?>
+<robot name="spotarm_assembly" xmlns:xacro="http://www.ros.org/wiki/xacro">
+<xacro:include filename="$(find spotarm_assembly_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find spotarm_assembly_description)/urdf/spotarm_assembly.trans" />
+<xacro:include filename="$(find spotarm_assembly_description)/urdf/spotarm_assembly.gazebo" />
+
+<!--
+Real ros2_control hardware is intentionally NOT included here.
+
+MoveIt's spotarm_assembly.urdf.xacro adds mock_components/GenericSystem
+for simulation.
+
+The real ArmHardwareInterface will be loaded separately by the
+physical-hardware bringup configuration.
+-->
+<!-- <xacro:include filename="spotarm_assembly.ros2_control.xacro"/> -->
+<link name="base_link">
+  <inertial>
+    <origin xyz="-0.0010206433535600843 0.05102477807067246 0.07813725800807331" rpy="0 0 0"/>
+    <mass value="3.2658781369547176"/>
+    <inertia ixx="0.017479" iyy="0.012386" izz="0.01115" ixy="0.003033" iyz="-0.005858" ixz="0.002731"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find spotarm_assembly_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find spotarm_assembly_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_2">
+  <inertial>
+    <origin xyz="-0.012527874109626764 -0.0005474727478518779 0.05618235883344737" rpy="0 0 0"/>
+    <mass value="7.133736370057803"/>
+    <inertia ixx="0.013679" iyy="0.018159" izz="0.014137" ixy="0.000278" iyz="-0.000219" ixz="0.002124"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.02835 0.011972 -0.033179" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find spotarm_assembly_description)/meshes/Joint_2_Component_v2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.02835 0.011972 -0.033179" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find spotarm_assembly_description)/meshes/Joint_2_Component_v2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_3">
+  <inertial>
+    <origin xyz="-0.0023570645830831988 -0.2070530002719938 0.00014934365865988675" rpy="0 0 0"/>
+    <mass value="9.269532978574247"/>
+    <inertia ixx="0.160341" iyy="0.013913" izz="0.160804" ixy="-1.4e-05" iyz="1.2e-05" ixz="-0.00018"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.074358 0.011972 -0.109385" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find spotarm_assembly_description)/meshes/Joint_3_Component_v2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.074358 0.011972 -0.109385" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find spotarm_assembly_description)/meshes/Joint_3_Component_v2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_4">
+  <inertial>
+    <origin xyz="-0.014428046075399614 -0.08611675195042084 -0.0016741934805408476" rpy="0 0 0"/>
+    <mass value="7.656189719749854"/>
+    <inertia ixx="0.044687" iyy="0.011252" izz="0.043172" ixy="0.000767" iyz="-0.000125" ixz="1.1e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.001798 0.325662 -0.109385" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find spotarm_assembly_description)/meshes/Joint_4_Component_v2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.001798 0.325662 -0.109385" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find spotarm_assembly_description)/meshes/Joint_4_Component_v2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_5">
+  <inertial>
+    <origin xyz="-8.830559206677441e-05 -0.10284977811786078 -0.00047877688390274287" rpy="0 0 0"/>
+    <mass value="6.8508373998013345"/>
+    <inertia ixx="0.031632" iyy="0.012107" izz="0.032684" ixy="0.000268" iyz="-7.5e-05" ixz="3.9e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.010663 0.537462 -0.109385" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find spotarm_assembly_description)/meshes/Joint_5_Component_v2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.010663 0.537462 -0.109385" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find spotarm_assembly_description)/meshes/Joint_5_Component_v2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_6_fake">
+  <inertial>
+    <origin xyz="0.011 -0.09 0" rpy="0 0 0"/>
+    <mass value="0.2"/>
+    <inertia ixx="1.3333333333333334e-05" iyy="4.8333333333333334e-05" izz="4.8333333333333334e-05" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.011 -0.09 0" rpy="0 0 0"/>
+    <geometry>
+      <box size="0.02 0.2 0.02"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.011 -0.09 0" rpy="0 0 0"/>
+    <geometry>
+      <box size="0.02 0.2 0.02"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_7_fake">
+  <inertial>
+    <origin xyz="0 -0.1 0" rpy="0 0 0"/>
+    <mass value="0.2"/>
+    <inertia ixx="1.3333333333333334e-05" iyy="4.8333333333333334e-05" izz="4.8333333333333334e-05" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 -0.05 0" rpy="0 0 0"/>
+    <geometry>
+      <box size="0.02 0.1 0.02"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 -0.1 0" rpy="0 0 0"/>
+    <geometry>
+      <box size="0.02 0.2 0.02"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="fake_gripper">
+  <inertial>
+    <origin xyz="0 -0.04 0" rpy="0 0 0"/>
+    <mass value="0.05"/>
+    <inertia ixx="3.333333333333334e-05" iyy="1.3333333333333334e-05" izz="3.333333333333334e-05" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 -0.01 0" rpy="0 0 0"/>
+    <geometry>
+      <box size="0.04 0.02 0.04"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <visual>
+    <origin xyz="0.015 -0.05 0" rpy="0 0 0"/>
+    <geometry>
+      <box size="0.01 0.06 0.01"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <visual>
+    <origin xyz="-0.015 -0.05 0" rpy="0 0 0"/>
+    <geometry>
+      <box size="0.01 0.06 0.01"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 -0.04 0" rpy="0 0 0"/>
+    <geometry>
+      <box size="0.04 0.08 0.04"/>
+    </geometry>
+  </collision>
+</link>
+
+
+<joint name="Revolute1" type="revolute">
+  <origin xyz="0.02835 -0.011972 0.033179" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="link_2"/>
+  <axis xyz="-0.0 0.0 1.0"/>
+  <limit lower="-0.436" upper="2.13" effort="30.0" velocity="1.0"/>
+</joint>
+
+<joint name="Revolute2" type="continuous">
+  <origin xyz="0.046008 0.0 0.076206" rpy="0 0 0"/>
+  <parent link="link_2"/>
+  <child link="link_3"/>
+  <axis xyz="1.0 -0.0 -0.0"/>
+</joint>
+
+<joint name="Revolute3" type="continuous">
+  <origin xyz="-0.07256 -0.31369 0.0" rpy="0 0 0"/>
+  <parent link="link_3"/>
+  <child link="link_4"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+</joint>
+
+<joint name="Revolute4" type="continuous">
+  <origin xyz="-0.012461 -0.2118 0.0" rpy="0 0 0"/>
+  <parent link="link_4"/>
+  <child link="link_5"/>
+  <axis xyz="-0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="Revolute5" type="continuous">
+  <origin xyz="0.07 -0.144 0" rpy="0 0 0"/>
+  <parent link="link_5"/>
+  <child link="link_6_fake"/>
+  <axis xyz="1.0 0.0 0.0"/>
+</joint>
+
+<joint name="Revolute6" type="continuous">
+  <origin xyz="0.011 -0.19 0" rpy="0 0 0"/>
+  <parent link="link_6_fake"/>
+  <child link="link_7_fake"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="fake_gripper_fixed" type="fixed">
+  <origin xyz="0 -0.1 0" rpy="0 0 0"/>
+  <parent link="link_7_fake"/>
+  <child link="fake_gripper"/>
+</joint>
+
+</robot>

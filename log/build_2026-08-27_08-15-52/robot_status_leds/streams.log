@@ -1,0 +1,22 @@
+[1.055s] Invoking command in '/home/msd/MSD2/REV4/src/robot_status_leds': PYTHONPATH=/home/msd/MSD2/REV4/build/robot_status_leds/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/msd/MSD2/REV4/install/robot_status_leds/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/robot_status_leds build --build-base /home/msd/MSD2/REV4/build/robot_status_leds/build install --record /home/msd/MSD2/REV4/build/robot_status_leds/install.log --single-version-externally-managed install_data
+[1.299s] running egg_info
+[1.300s] writing ../../build/robot_status_leds/robot_status_leds.egg-info/PKG-INFO
+[1.301s] writing dependency_links to ../../build/robot_status_leds/robot_status_leds.egg-info/dependency_links.txt
+[1.302s] writing entry points to ../../build/robot_status_leds/robot_status_leds.egg-info/entry_points.txt
+[1.302s] writing requirements to ../../build/robot_status_leds/robot_status_leds.egg-info/requires.txt
+[1.302s] writing top-level names to ../../build/robot_status_leds/robot_status_leds.egg-info/top_level.txt
+[1.306s] reading manifest file '../../build/robot_status_leds/robot_status_leds.egg-info/SOURCES.txt'
+[1.306s] adding license file 'LICENSE'
+[1.307s] writing manifest file '../../build/robot_status_leds/robot_status_leds.egg-info/SOURCES.txt'
+[1.307s] running build
+[1.307s] running build_py
+[1.308s] running install
+[1.308s] running install_lib
+[1.310s] running install_data
+[1.310s] running install_egg_info
+[1.312s] removing '/home/msd/MSD2/REV4/install/robot_status_leds/lib/python3.10/site-packages/robot_status_leds-0.0.0-py3.10.egg-info' (and everything under it)
+[1.313s] Copying ../../build/robot_status_leds/robot_status_leds.egg-info to /home/msd/MSD2/REV4/install/robot_status_leds/lib/python3.10/site-packages/robot_status_leds-0.0.0-py3.10.egg-info
+[1.314s] running install_scripts
+[1.335s] Installing led_state_node script to /home/msd/MSD2/REV4/install/robot_status_leds/lib/robot_status_leds
+[1.336s] writing list of installed files to '/home/msd/MSD2/REV4/build/robot_status_leds/install.log'
+[1.369s] Invoked command in '/home/msd/MSD2/REV4/src/robot_status_leds' returned '0': PYTHONPATH=/home/msd/MSD2/REV4/build/robot_status_leds/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/msd/MSD2/REV4/install/robot_status_leds/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/robot_status_leds build --build-base /home/msd/MSD2/REV4/build/robot_status_leds/build install --record /home/msd/MSD2/REV4/build/robot_status_leds/install.log --single-version-externally-managed install_data

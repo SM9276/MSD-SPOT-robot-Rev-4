@@ -1,0 +1,1 @@
+Invoking command in '/home/msd/MSD2/REV4/src/build/stepper_test': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/msd/MSD2/REV4/src/build/stepper_test -- -j8 -l8

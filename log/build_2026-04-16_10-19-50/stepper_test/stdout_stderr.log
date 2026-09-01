@@ -1,0 +1,81 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+-- Found FastRTPS: /opt/ros/humble/include  
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/msd/MSD2/REV4/build/stepper_test
+[ 33%] [32mBuilding CXX object CMakeFiles/motor_key.dir/src/motor_key.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/motor_key.dir/src/ICLStepper.cpp.o[0m
+In file included from [01m[K/home/msd/MSD2/REV4/src/stepper_test/src/ICLStepper.cpp:1[m[K:
+[01m[K/home/msd/MSD2/REV4/src/stepper_test/include/stepper_test/ICLStepper.h:[m[K In constructor ‘[01m[KICLStepper::ICLStepper(int, modbus_t*, int, int)[m[K’:
+[01m[K/home/msd/MSD2/REV4/src/stepper_test/include/stepper_test/ICLStepper.h:30:9:[m[K [01;35m[Kwarning: [m[K‘[01m[KICLStepper::gear_ratio_[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+   30 |     int [01;35m[Kgear_ratio_[m[K;
+      |         [01;35m[K^~~~~~~~~~~[m[K
+[01m[K/home/msd/MSD2/REV4/src/stepper_test/include/stepper_test/ICLStepper.h:28:9:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kint ICLStepper::delay_us_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+   28 |     int [01;35m[Kdelay_us_[m[K;
+      |         [01;35m[K^~~~~~~~~[m[K
+[01m[K/home/msd/MSD2/REV4/src/stepper_test/src/ICLStepper.cpp:9:1:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+    9 | [01;35m[KICLStepper[m[K::ICLStepper(int slave_id, modbus_t* ctx, int pulses_per_revolution, int gear_ratio)
+      | [01;35m[K^~~~~~~~~~[m[K
+[01m[K/home/msd/MSD2/REV4/src/stepper_test/src/ICLStepper.cpp:[m[K In member function ‘[01m[Kint ICLStepper::home(double, double, bool, double)[m[K’:
+[01m[K/home/msd/MSD2/REV4/src/stepper_test/src/ICLStepper.cpp:229:20:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K(clockwise ? 7 : 6)[m[K’ from ‘[01m[Kint[m[K’ to ‘[01m[Kuint16_t[m[K’ {aka ‘[01m[Kshort unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+  229 |         [01;35m[K(clockwise ? 0b111 : 0b110)[m[K, // Homing mode
+      |         [01;35m[K~~~~~~~~~~~^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/msd/MSD2/REV4/src/stepper_test/src/ICLStepper.cpp:234:9:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[Khigh_velocity_rpm[m[K’ from ‘[01m[Kuint[m[K’ {aka ‘[01m[Kunsigned int[m[K’} to ‘[01m[Kuint16_t[m[K’ {aka ‘[01m[Kshort unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+  234 |         [01;35m[Khigh_velocity_rpm[m[K,    // Homing high velocity
+      |         [01;35m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/msd/MSD2/REV4/src/stepper_test/src/ICLStepper.cpp:235:9:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[Klow_velocity_rpm[m[K’ from ‘[01m[Kuint[m[K’ {aka ‘[01m[Kunsigned int[m[K’} to ‘[01m[Kuint16_t[m[K’ {aka ‘[01m[Kshort unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+  235 |         [01;35m[Klow_velocity_rpm[m[K,      // Homing low velocity
+      |         [01;35m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/msd/MSD2/REV4/src/stepper_test/src/ICLStepper.cpp:[m[K In member function ‘[01m[Kint ICLStepper::set_as_home()[m[K’:
+[01m[K/home/msd/MSD2/REV4/src/stepper_test/src/ICLStepper.cpp:290:1:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+  290 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[100%] [32m[1mLinking CXX executable motor_key[0m
+[100%] Built target motor_key
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/msd/MSD2/REV4/install/stepper_test/lib/stepper_test/motor_key
+-- Symlinking: /home/msd/MSD2/REV4/install/stepper_test/share/ament_index/resource_index/package_run_dependencies/stepper_test
+-- Symlinking: /home/msd/MSD2/REV4/install/stepper_test/share/ament_index/resource_index/parent_prefix_path/stepper_test
+-- Symlinking: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/environment/ament_prefix_path.sh
+-- Symlinking: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/environment/ament_prefix_path.dsv
+-- Symlinking: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/environment/path.sh
+-- Symlinking: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/environment/path.dsv
+-- Symlinking: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/local_setup.bash
+-- Symlinking: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/local_setup.sh
+-- Symlinking: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/local_setup.zsh
+-- Symlinking: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/local_setup.dsv
+-- Symlinking: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/package.dsv
+-- Symlinking: /home/msd/MSD2/REV4/install/stepper_test/share/ament_index/resource_index/packages/stepper_test
+-- Symlinking: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/cmake/stepper_testConfig.cmake
+-- Symlinking: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/cmake/stepper_testConfig-version.cmake
+-- Symlinking: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/package.xml

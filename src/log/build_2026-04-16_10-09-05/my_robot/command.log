@@ -1,0 +1,3 @@
+Invoking command in '/home/msd/MSD2/REV4/src/build/my_robot': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/msd/MSD2/REV4/src/build/my_robot -- -j8 -l8
+Invoked command in '/home/msd/MSD2/REV4/src/build/my_robot' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/msd/MSD2/REV4/src/build/my_robot -- -j8 -l8
+Invoking command in '/home/msd/MSD2/REV4/src/build/my_robot': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/msd/MSD2/REV4/src/build/my_robot

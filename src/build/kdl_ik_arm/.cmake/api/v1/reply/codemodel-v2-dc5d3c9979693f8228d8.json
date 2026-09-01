@@ -1,0 +1,88 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-bfca35e80c84bc89f371.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "kdl_ik_arm",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "kdl_ik_arm_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-kdl_ik_arm_uninstall-90dd6a9da745ac26b4fe.json",
+					"name" : "kdl_ik_arm_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "kdl_ik_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-kdl_ik_node-5851c18a9dd7c06e91bd.json",
+					"name" : "kdl_ik_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "motor_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-motor_node-18e274dc9b47d2f4fd7e.json",
+					"name" : "motor_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-ebda8d9587decfdd7343.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/msd/MSD2/REV4/src/build/kdl_ik_arm",
+		"source" : "/home/msd/MSD2/REV4/src/kdl_ik_arm"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

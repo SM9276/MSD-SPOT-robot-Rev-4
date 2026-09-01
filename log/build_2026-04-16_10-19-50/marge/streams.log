@@ -1,0 +1,79 @@
+[0.303s] Invoking command in '/home/msd/MSD2/REV4/build/marge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/msd/MSD2/REV4/install/my_robot:/opt/ros/humble /usr/bin/cmake /home/msd/MSD2/REV4/src/marge -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/msd/MSD2/REV4/install/marge
+[0.765s] -- The C compiler identification is GNU 11.4.0
+[0.765s] -- The CXX compiler identification is GNU 11.4.0
+[0.765s] -- Detecting C compiler ABI info
+[0.765s] -- Detecting C compiler ABI info - done
+[0.765s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.765s] -- Detecting C compile features
+[0.765s] -- Detecting C compile features - done
+[0.765s] -- Detecting CXX compiler ABI info
+[0.765s] -- Detecting CXX compiler ABI info - done
+[0.766s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.766s] -- Detecting CXX compile features
+[0.766s] -- Detecting CXX compile features - done
+[0.766s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.020s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.150s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.333s] -- Configuring done
+[1.343s] -- Generating done
+[1.348s] -- Build files have been written to: /home/msd/MSD2/REV4/build/marge
+[1.368s] Invoked command in '/home/msd/MSD2/REV4/build/marge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/msd/MSD2/REV4/install/my_robot:/opt/ros/humble /usr/bin/cmake /home/msd/MSD2/REV4/src/marge -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/msd/MSD2/REV4/install/marge
+[1.369s] Invoking command in '/home/msd/MSD2/REV4/build/marge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/msd/MSD2/REV4/install/my_robot:/opt/ros/humble /usr/bin/cmake --build /home/msd/MSD2/REV4/build/marge -- -j8 -l8
+[1.440s] [ 25%] [32mBuilding CXX object CMakeFiles/icl_stepper.dir/src/ICLStepper.cpp.o[0m
+[1.986s] In file included from [01m[K/home/msd/MSD2/REV4/src/marge/src/ICLStepper.cpp:1[m[K:
+[1.987s] [01m[K/home/msd/MSD2/REV4/src/marge/include/marge/ICLStepper.h:[m[K In constructor ‘[01m[KICLStepper::ICLStepper(int, modbus_t*, int, int)[m[K’:
+[1.987s] [01m[K/home/msd/MSD2/REV4/src/marge/include/marge/ICLStepper.h:30:9:[m[K [01;35m[Kwarning: [m[K‘[01m[KICLStepper::gear_ratio_[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[1.987s]    30 |     int [01;35m[Kgear_ratio_[m[K;
+[1.987s]       |         [01;35m[K^~~~~~~~~~~[m[K
+[1.987s] [01m[K/home/msd/MSD2/REV4/src/marge/include/marge/ICLStepper.h:28:9:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kint ICLStepper::delay_us_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[1.987s]    28 |     int [01;35m[Kdelay_us_[m[K;
+[1.987s]       |         [01;35m[K^~~~~~~~~[m[K
+[1.987s] [01m[K/home/msd/MSD2/REV4/src/marge/src/ICLStepper.cpp:9:1:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[1.988s]     9 | [01;35m[KICLStepper[m[K::ICLStepper(int slave_id, modbus_t* ctx, int pulses_per_revolution, int gear_ratio)
+[1.988s]       | [01;35m[K^~~~~~~~~~[m[K
+[1.998s] [01m[K/home/msd/MSD2/REV4/src/marge/src/ICLStepper.cpp:[m[K In member function ‘[01m[Kint ICLStepper::home(double, double, bool, double)[m[K’:
+[1.999s] [01m[K/home/msd/MSD2/REV4/src/marge/src/ICLStepper.cpp:229:20:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K(clockwise ? 7 : 6)[m[K’ from ‘[01m[Kint[m[K’ to ‘[01m[Kuint16_t[m[K’ {aka ‘[01m[Kshort unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[1.999s]   229 |         [01;35m[K(clockwise ? 0b111 : 0b110)[m[K, // Homing mode
+[1.999s]       |         [01;35m[K~~~~~~~~~~~^~~~~~~~~~~~~~~~[m[K
+[1.999s] [01m[K/home/msd/MSD2/REV4/src/marge/src/ICLStepper.cpp:234:9:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[Khigh_velocity_rpm[m[K’ from ‘[01m[Kuint[m[K’ {aka ‘[01m[Kunsigned int[m[K’} to ‘[01m[Kuint16_t[m[K’ {aka ‘[01m[Kshort unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[1.999s]   234 |         [01;35m[Khigh_velocity_rpm[m[K,    // Homing high velocity
+[1.999s]       |         [01;35m[K^~~~~~~~~~~~~~~~~[m[K
+[2.000s] [01m[K/home/msd/MSD2/REV4/src/marge/src/ICLStepper.cpp:235:9:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[Klow_velocity_rpm[m[K’ from ‘[01m[Kuint[m[K’ {aka ‘[01m[Kunsigned int[m[K’} to ‘[01m[Kuint16_t[m[K’ {aka ‘[01m[Kshort unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[2.000s]   235 |         [01;35m[Klow_velocity_rpm[m[K,      // Homing low velocity
+[2.000s]       |         [01;35m[K^~~~~~~~~~~~~~~~[m[K
+[2.121s] [01m[K/home/msd/MSD2/REV4/src/marge/src/ICLStepper.cpp:[m[K In member function ‘[01m[Kint ICLStepper::set_as_home()[m[K’:
+[2.121s] [01m[K/home/msd/MSD2/REV4/src/marge/src/ICLStepper.cpp:290:1:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+[2.121s]   290 | [01;35m[K}[m[K
+[2.121s]       | [01;35m[K^[m[K
+[2.188s] [ 50%] [32m[1mLinking CXX shared library libicl_stepper.so[0m
+[2.348s] [ 50%] Built target icl_stepper
+[2.379s] [ 75%] [32mBuilding CXX object CMakeFiles/homer.dir/src/homer.cpp.o[0m
+[3.044s] [100%] [32m[1mLinking CXX executable homer[0m
+[3.204s] [100%] Built target homer
+[3.219s] Invoked command in '/home/msd/MSD2/REV4/build/marge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/msd/MSD2/REV4/install/my_robot:/opt/ros/humble /usr/bin/cmake --build /home/msd/MSD2/REV4/build/marge -- -j8 -l8
+[3.226s] Invoking command in '/home/msd/MSD2/REV4/build/marge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/msd/MSD2/REV4/install/my_robot:/opt/ros/humble /usr/bin/cmake --install /home/msd/MSD2/REV4/build/marge
+[3.241s] -- Install configuration: ""
+[3.242s] -- Execute custom install script
+[3.244s] -- Symlinking: /home/msd/MSD2/REV4/install/marge/lib/libicl_stepper.so
+[3.273s] -- Symlinking: /home/msd/MSD2/REV4/install/marge/lib/marge/homer
+[3.317s] -- Symlinking: /home/msd/MSD2/REV4/install/marge/include/marge/ICLStepper.h
+[3.388s] -- Symlinking: /home/msd/MSD2/REV4/install/marge/share/marge/environment/library_path.sh
+[3.421s] -- Symlinking: /home/msd/MSD2/REV4/install/marge/share/marge/environment/library_path.dsv
+[3.458s] -- Symlinking: /home/msd/MSD2/REV4/install/marge/share/ament_index/resource_index/package_run_dependencies/marge
+[3.491s] -- Symlinking: /home/msd/MSD2/REV4/install/marge/share/ament_index/resource_index/parent_prefix_path/marge
+[3.522s] -- Symlinking: /home/msd/MSD2/REV4/install/marge/share/marge/environment/ament_prefix_path.sh
+[3.549s] -- Symlinking: /home/msd/MSD2/REV4/install/marge/share/marge/environment/ament_prefix_path.dsv
+[3.582s] -- Symlinking: /home/msd/MSD2/REV4/install/marge/share/marge/environment/path.sh
+[3.613s] -- Symlinking: /home/msd/MSD2/REV4/install/marge/share/marge/environment/path.dsv
+[3.648s] -- Symlinking: /home/msd/MSD2/REV4/install/marge/share/marge/local_setup.bash
+[3.681s] -- Symlinking: /home/msd/MSD2/REV4/install/marge/share/marge/local_setup.sh
+[3.713s] -- Symlinking: /home/msd/MSD2/REV4/install/marge/share/marge/local_setup.zsh
+[3.740s] -- Symlinking: /home/msd/MSD2/REV4/install/marge/share/marge/local_setup.dsv
+[3.760s] -- Symlinking: /home/msd/MSD2/REV4/install/marge/share/marge/package.dsv
+[3.784s] -- Symlinking: /home/msd/MSD2/REV4/install/marge/share/ament_index/resource_index/packages/marge
+[3.802s] -- Symlinking: /home/msd/MSD2/REV4/install/marge/share/marge/cmake/ament_cmake_export_include_directories-extras.cmake
+[3.822s] -- Symlinking: /home/msd/MSD2/REV4/install/marge/share/marge/cmake/ament_cmake_export_libraries-extras.cmake
+[3.836s] -- Symlinking: /home/msd/MSD2/REV4/install/marge/share/marge/cmake/margeConfig.cmake
+[3.855s] -- Symlinking: /home/msd/MSD2/REV4/install/marge/share/marge/cmake/margeConfig-version.cmake
+[3.873s] -- Symlinking: /home/msd/MSD2/REV4/install/marge/share/marge/package.xml
+[3.897s] Invoked command in '/home/msd/MSD2/REV4/build/marge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/msd/MSD2/REV4/install/my_robot:/opt/ros/humble /usr/bin/cmake --install /home/msd/MSD2/REV4/build/marge

@@ -1,0 +1,6 @@
+[0.009s] Invoking command in '/home/msd/MSD2/REV4/build/robot_commander': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/msd/MSD2/REV4/build/robot_commander -- -j8 -l8
+[0.074s] [ 50%] [32mBuilding CXX object CMakeFiles/commander.dir/src/commander.cpp.o[0m
+[19.342s] gmake[2]: *** [CMakeFiles/commander.dir/build.make:76: CMakeFiles/commander.dir/src/commander.cpp.o] Interrupt
+[19.343s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/commander.dir/all] Interrupt
+[19.343s] gmake: *** [Makefile:146: all] Interrupt
+[19.413s] Invoked command in '/home/msd/MSD2/REV4/build/robot_commander' returned '-2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/msd/MSD2/REV4/build/robot_commander -- -j8 -l8

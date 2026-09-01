@@ -1,0 +1,26 @@
+[35m[1mConsolidate compiler generated dependencies of target servo_controller_input[0m
+[100%] Built target servo_controller_input
+-- Install configuration: ""
+-- Installing: /home/msd/MSD2/REV4/src/install/robot_servoing/lib/libservo_controller_input.so
+-- Set runtime path of "/home/msd/MSD2/REV4/src/install/robot_servoing/lib/libservo_controller_input.so" to ""
+-- Installing: /home/msd/MSD2/REV4/src/install/robot_servoing/share/robot_servoing/launch
+-- Installing: /home/msd/MSD2/REV4/src/install/robot_servoing/share/robot_servoing/launch/servo.launch.py
+-- Installing: /home/msd/MSD2/REV4/src/install/robot_servoing/share/robot_servoing/launch/servo2.launch.py
+-- Installing: /home/msd/MSD2/REV4/src/install/robot_servoing/share/robot_servoing/config
+-- Installing: /home/msd/MSD2/REV4/src/install/robot_servoing/share/robot_servoing/config/robot_simulated_config.yaml
+-- Installing: /home/msd/MSD2/REV4/src/install/robot_servoing/share/ament_index/resource_index/package_run_dependencies/robot_servoing
+-- Installing: /home/msd/MSD2/REV4/src/install/robot_servoing/share/ament_index/resource_index/parent_prefix_path/robot_servoing
+-- Installing: /home/msd/MSD2/REV4/src/install/robot_servoing/share/robot_servoing/environment/ament_prefix_path.sh
+-- Installing: /home/msd/MSD2/REV4/src/install/robot_servoing/share/robot_servoing/environment/ament_prefix_path.dsv
+-- Installing: /home/msd/MSD2/REV4/src/install/robot_servoing/share/robot_servoing/environment/path.sh
+-- Installing: /home/msd/MSD2/REV4/src/install/robot_servoing/share/robot_servoing/environment/path.dsv
+-- Installing: /home/msd/MSD2/REV4/src/install/robot_servoing/share/robot_servoing/local_setup.bash
+-- Installing: /home/msd/MSD2/REV4/src/install/robot_servoing/share/robot_servoing/local_setup.sh
+-- Installing: /home/msd/MSD2/REV4/src/install/robot_servoing/share/robot_servoing/local_setup.zsh
+-- Installing: /home/msd/MSD2/REV4/src/install/robot_servoing/share/robot_servoing/local_setup.dsv
+-- Installing: /home/msd/MSD2/REV4/src/install/robot_servoing/share/robot_servoing/package.dsv
+-- Installing: /home/msd/MSD2/REV4/src/install/robot_servoing/share/ament_index/resource_index/packages/robot_servoing
+-- Installing: /home/msd/MSD2/REV4/src/install/robot_servoing/share/ament_index/resource_index/rclcpp_components/robot_servoing
+-- Installing: /home/msd/MSD2/REV4/src/install/robot_servoing/share/robot_servoing/cmake/robot_servoingConfig.cmake
+-- Installing: /home/msd/MSD2/REV4/src/install/robot_servoing/share/robot_servoing/cmake/robot_servoingConfig-version.cmake
+-- Installing: /home/msd/MSD2/REV4/src/install/robot_servoing/share/robot_servoing/package.xml

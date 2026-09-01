@@ -1,0 +1,5 @@
+<library path="robot_hardware_arm">
+  <class name="robot_hardware/ArmHardwareInterface"
+         type="robot_hardware::ArmHardwareInterface"
+         base_class_type="hardware_interface::SystemInterface"/>
+</library>

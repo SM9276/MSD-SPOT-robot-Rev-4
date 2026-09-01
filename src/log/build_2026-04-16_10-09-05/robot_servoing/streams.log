@@ -1,0 +1,4 @@
+[0.275s] Invoking command in '/home/msd/MSD2/REV4/src/build/robot_servoing': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/msd/MSD2/REV4/src/build/robot_servoing -- -j8 -l8
+[0.618s] [ 50%] [32mBuilding CXX object CMakeFiles/servo_controller_input.dir/src/my_gamepad_to_servo_node.cpp.o[0m
+[11.201s] [100%] [32m[1mLinking CXX shared library libservo_controller_input.so[0m
+[12.990s] [100%] Built target servo_controller_input

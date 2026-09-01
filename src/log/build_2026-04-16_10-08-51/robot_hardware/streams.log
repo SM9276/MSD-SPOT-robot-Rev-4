@@ -1,0 +1,45 @@
+[0.270s] Invoking command in '/home/msd/MSD2/REV4/src/build/robot_hardware': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/msd/MSD2/REV4/src/robot_hardware -DCMAKE_INSTALL_PREFIX=/home/msd/MSD2/REV4/src/install/robot_hardware
+[0.775s] -- The C compiler identification is GNU 11.4.0
+[0.776s] -- The CXX compiler identification is GNU 11.4.0
+[0.776s] -- Detecting C compiler ABI info
+[0.776s] -- Detecting C compiler ABI info - done
+[0.776s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.776s] -- Detecting C compile features
+[0.776s] -- Detecting C compile features - done
+[0.776s] -- Detecting CXX compiler ABI info
+[0.776s] -- Detecting CXX compiler ABI info - done
+[0.776s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.777s] -- Detecting CXX compile features
+[0.777s] -- Detecting CXX compile features - done
+[0.779s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.066s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.229s] -- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)
+[1.274s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.279s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.288s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.302s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.325s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.401s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.405s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.516s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.542s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.578s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.585s] -- Looking for pthread.h
+[1.654s] -- Looking for pthread.h - found
+[1.654s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.725s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.727s] -- Found Threads: TRUE  
+[1.784s] -- Found rclcpp_lifecycle: 16.0.19 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)
+[1.806s] -- Found hardware_interface: 2.53.1 (/opt/ros/humble/share/hardware_interface/cmake)
+[1.959s] -- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.2") 
+[1.960s] -- Checking for module 'libmodbus'
+[1.962s] --   No package 'libmodbus' found
+[1.963s] [31mCMake Error at /usr/share/cmake-3.22/Modules/FindPkgConfig.cmake:603 (message):
+[1.963s]   A required package was not found
+[1.963s] Call Stack (most recent call first):
+[1.963s]   /usr/share/cmake-3.22/Modules/FindPkgConfig.cmake:825 (_pkg_check_modules_internal)
+[1.963s]   CMakeLists.txt:17 (pkg_check_modules)
+[1.963s] 
+[1.963s] [0m
+[1.963s] -- Configuring incomplete, errors occurred!
+[1.964s] See also "/home/msd/MSD2/REV4/src/build/robot_hardware/CMakeFiles/CMakeOutput.log".

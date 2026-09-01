@@ -1,0 +1,20 @@
+-- Install configuration: ""
+-- Installing: /home/msd/MSD2/REV4/src/install/my_robot/share/my_robot/urdf
+-- Installing: /home/msd/MSD2/REV4/src/install/my_robot/share/my_robot/urdf/gear_manipulator.urdf
+-- Installing: /home/msd/MSD2/REV4/src/install/my_robot/share/my_robot/launch
+-- Installing: /home/msd/MSD2/REV4/src/install/my_robot/share/my_robot/launch/display.launch.py
+-- Installing: /home/msd/MSD2/REV4/src/install/my_robot/share/ament_index/resource_index/package_run_dependencies/my_robot
+-- Installing: /home/msd/MSD2/REV4/src/install/my_robot/share/ament_index/resource_index/parent_prefix_path/my_robot
+-- Installing: /home/msd/MSD2/REV4/src/install/my_robot/share/my_robot/environment/ament_prefix_path.sh
+-- Installing: /home/msd/MSD2/REV4/src/install/my_robot/share/my_robot/environment/ament_prefix_path.dsv
+-- Installing: /home/msd/MSD2/REV4/src/install/my_robot/share/my_robot/environment/path.sh
+-- Installing: /home/msd/MSD2/REV4/src/install/my_robot/share/my_robot/environment/path.dsv
+-- Installing: /home/msd/MSD2/REV4/src/install/my_robot/share/my_robot/local_setup.bash
+-- Installing: /home/msd/MSD2/REV4/src/install/my_robot/share/my_robot/local_setup.sh
+-- Installing: /home/msd/MSD2/REV4/src/install/my_robot/share/my_robot/local_setup.zsh
+-- Installing: /home/msd/MSD2/REV4/src/install/my_robot/share/my_robot/local_setup.dsv
+-- Installing: /home/msd/MSD2/REV4/src/install/my_robot/share/my_robot/package.dsv
+-- Installing: /home/msd/MSD2/REV4/src/install/my_robot/share/ament_index/resource_index/packages/my_robot
+-- Installing: /home/msd/MSD2/REV4/src/install/my_robot/share/my_robot/cmake/my_robotConfig.cmake
+-- Installing: /home/msd/MSD2/REV4/src/install/my_robot/share/my_robot/cmake/my_robotConfig-version.cmake
+-- Installing: /home/msd/MSD2/REV4/src/install/my_robot/share/my_robot/package.xml

@@ -1,0 +1,2 @@
+source;share/kdl_ik_arm/environment/ament_prefix_path.sh
+source;share/kdl_ik_arm/environment/path.sh

@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<robot name="gear_manipulator">
+
+  <!-- MATERIALS -->
+  <material name="gray"><color rgba="0.5 0.5 0.5 1"/></material>
+  <material name="red"><color rgba="1 0 0 1"/></material>
+  <material name="green"><color rgba="0 1 0 1"/></material>
+  <material name="blue"><color rgba="0 0 1 1"/></material>
+  <material name="yellow"><color rgba="1 1 0 1"/></material>
+  <material name="white"><color rgba="1 1 1 1"/></material>
+
+  <!-- BASE -->
+  <link name="base_link">
+    <visual>
+      <geometry><cylinder radius="0.1" length="0.1"/></geometry>
+      <material name="gray"/>
+    </visual>
+  </link>
+
+  <!-- LINK 1 -->
+  <link name="link1">
+    <visual>
+      <origin xyz="0 0 0.15" rpy="0 0 0"/> <!-- cylinder vertical -->
+      <geometry><cylinder length="0.3" radius="0.05"/></geometry>
+      <material name="red"/>
+    </visual>
+  </link>
+
+  <joint name="joint1" type="revolute">
+    <parent link="base_link"/>
+    <child link="link1"/>
+    <origin xyz="0 0 0.05"/>
+    <axis xyz="0 0 1"/> <!-- base rotates around Z -->
+    <limit lower="0" upper="1.57" effort="10" velocity="1"/>
+  </joint>
+
+  <!-- LINK 2 -->
+  <link name="link2">
+    <visual>
+      <origin xyz="0 0 0.15" rpy="0 0 0"/>
+      <geometry><cylinder length="0.3" radius="0.05"/></geometry>
+      <material name="green"/>
+    </visual>
+  </link>
+
+  <joint name="joint2" type="revolute">
+    <parent link="link1"/>
+    <child link="link2"/>
+    <origin xyz="0 0 0.3"/>   <!-- attached at top of link1 -->
+    <axis xyz="1 0 0"/>      <!-- rotate around X to bend "other way" -->
+    <limit lower="0.0" upper="2.0" effort="10" velocity="1"/>
+  </joint>
+
+  <!-- LINK 3 -->
+  <link name="link3">
+    <visual>
+      <origin xyz="0 0 0.15" rpy="0 0 0"/>
+      <geometry><cylinder length="0.3" radius="0.05"/></geometry>
+      <material name="blue"/>
+    </visual>
+  </link>
+
+  <joint name="joint3" type="revolute">
+    <parent link="link2"/>
+    <child link="link3"/>
+    <origin xyz="0 0 0.3"/>   <!-- attached at top of link2 -->
+    <axis xyz="1 0 0"/>      <!-- rotate around X → opposite bend -->
+    <limit lower="-2.0" upper="2.0" effort="10" velocity="1"/>
+  </joint>
+
+  <!-- LINK 4 -->
+  <link name="link4">
+    <visual>
+      <origin xyz="0 0 0.125" rpy="0 0 0"/>
+      <geometry><cylinder length="0.25" radius="0.04"/></geometry>
+      <material name="yellow"/>
+    </visual>
+  </link>
+
+  <joint name="joint4" type="revolute">
+    <parent link="link3"/>
+    <child link="link4"/>
+    <origin xyz="0 0 0.3"/>  <!-- top of link3 -->
+    <axis xyz="0 0 1"/>      <!-- wrist twist now vertical -->
+    <limit lower="-3.14" upper="3.14" effort="10" velocity="1"/>
+  </joint>
+
+  <!-- LINK 5 (wrist cylinder) -->
+  <link name="link5">
+    <visual>
+      <origin xyz="0 0 0.125" rpy="0 0 0"/>
+      <geometry><cylinder length="0.25" radius="0.04"/></geometry>
+      <material name="yellow"/>
+    </visual>
+  </link>
+
+  <!-- JOINT 5 (like joints 2 & 3) -->
+  <joint name="joint5" type="revolute">
+    <parent link="link4"/>
+    <child link="link5"/>
+    <origin xyz="0 0 0.25"/>  <!-- attached at top of link4 -->
+    <axis xyz="1 0 0"/>       <!-- rotate like joints 2 & 3 -->
+    <limit lower="-3.14" upper="3.14" effort="10" velocity="1"/>
+  </joint>
+
+  <!-- END EFFECTOR (ball) -->
+  <link name="end_effector">
+    <visual>
+      <origin xyz="0 0 0.125"/>
+      <geometry><sphere radius="0.07"/></geometry>
+      <material name="white"/>
+    </visual>
+  </link>
+
+  <!-- Fixed joint connecting cylinder to ball -->
+  <joint name="ee_fixed" type="fixed">
+    <parent link="link5"/>
+    <child link="end_effector"/>
+    <origin xyz="0 0 0.125"/>
+  </joint>
+
+</robot>

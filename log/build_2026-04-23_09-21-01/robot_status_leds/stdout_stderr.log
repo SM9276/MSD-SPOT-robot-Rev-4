@@ -1,0 +1,36 @@
+running develop
+Removing /home/msd/MSD2/REV4/install/robot_status_leds/lib/python3.10/site-packages/robot-status-leds.egg-link (link to .)
+running egg_info
+writing ../../build/robot_status_leds/robot_status_leds.egg-info/PKG-INFO
+writing dependency_links to ../../build/robot_status_leds/robot_status_leds.egg-info/dependency_links.txt
+writing entry points to ../../build/robot_status_leds/robot_status_leds.egg-info/entry_points.txt
+writing requirements to ../../build/robot_status_leds/robot_status_leds.egg-info/requires.txt
+writing top-level names to ../../build/robot_status_leds/robot_status_leds.egg-info/top_level.txt
+reading manifest file '../../build/robot_status_leds/robot_status_leds.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/robot_status_leds/robot_status_leds.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/msd/MSD2/REV4/build/robot_status_leds/build
+creating /home/msd/MSD2/REV4/build/robot_status_leds/build/lib
+creating /home/msd/MSD2/REV4/build/robot_status_leds/build/lib/robot_status_leds
+copying robot_status_leds/led_state_node.py -> /home/msd/MSD2/REV4/build/robot_status_leds/build/lib/robot_status_leds
+copying robot_status_leds/__init__.py -> /home/msd/MSD2/REV4/build/robot_status_leds/build/lib/robot_status_leds
+copying robot_status_leds/led_controller.py -> /home/msd/MSD2/REV4/build/robot_status_leds/build/lib/robot_status_leds
+running install
+running install_lib
+creating /home/msd/MSD2/REV4/install/robot_status_leds/lib/python3.10/site-packages/robot_status_leds
+copying /home/msd/MSD2/REV4/build/robot_status_leds/build/lib/robot_status_leds/led_state_node.py -> /home/msd/MSD2/REV4/install/robot_status_leds/lib/python3.10/site-packages/robot_status_leds
+copying /home/msd/MSD2/REV4/build/robot_status_leds/build/lib/robot_status_leds/__init__.py -> /home/msd/MSD2/REV4/install/robot_status_leds/lib/python3.10/site-packages/robot_status_leds
+copying /home/msd/MSD2/REV4/build/robot_status_leds/build/lib/robot_status_leds/led_controller.py -> /home/msd/MSD2/REV4/install/robot_status_leds/lib/python3.10/site-packages/robot_status_leds
+byte-compiling /home/msd/MSD2/REV4/install/robot_status_leds/lib/python3.10/site-packages/robot_status_leds/led_state_node.py to led_state_node.cpython-310.pyc
+byte-compiling /home/msd/MSD2/REV4/install/robot_status_leds/lib/python3.10/site-packages/robot_status_leds/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/msd/MSD2/REV4/install/robot_status_leds/lib/python3.10/site-packages/robot_status_leds/led_controller.py to led_controller.cpython-310.pyc
+running install_data
+copying resource/robot_status_leds -> /home/msd/MSD2/REV4/install/robot_status_leds/share/ament_index/resource_index/packages
+copying package.xml -> /home/msd/MSD2/REV4/install/robot_status_leds/share/robot_status_leds
+running install_egg_info
+Copying ../../build/robot_status_leds/robot_status_leds.egg-info to /home/msd/MSD2/REV4/install/robot_status_leds/lib/python3.10/site-packages/robot_status_leds-0.0.0-py3.10.egg-info
+running install_scripts
+Installing led_state_node script to /home/msd/MSD2/REV4/install/robot_status_leds/lib/robot_status_leds
+writing list of installed files to '/home/msd/MSD2/REV4/build/robot_status_leds/install.log'

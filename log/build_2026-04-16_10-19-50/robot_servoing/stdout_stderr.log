@@ -1,0 +1,83 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found control_msgs: 4.8.0 (/opt/ros/humble/share/control_msgs/cmake)
+-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found control_toolbox: 3.6.3 (/opt/ros/humble/share/control_toolbox/cmake)
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+-- Found FastRTPS: /opt/ros/humble/include  
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Found moveit_core: 2.5.9 (/opt/ros/humble/share/moveit_core/cmake)
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread 
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: filesystem 
+-- library: /usr/lib/x86_64-linux-gnu/libcurl.so
+-- Found Eigen3: TRUE (found version "3.4.0") 
+-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+-- Found moveit_ros_planning: 2.5.9 (/opt/ros/humble/share/moveit_ros_planning/cmake)
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system filesystem date_time program_options thread chrono 
+-- Found moveit_ros_planning_interface: 2.5.9 (/opt/ros/humble/share/moveit_ros_planning_interface/cmake)
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: date_time filesystem program_options system thread 
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: thread system filesystem regex date_time program_options 
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system filesystem date_time program_options thread 
+-- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: /home/msd/MSD2/REV4/src/robot_servoing/include
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/msd/MSD2/REV4/build/robot_servoing
+[ 50%] [32mBuilding CXX object CMakeFiles/servo_controller_input.dir/src/my_gamepad_to_servo_node.cpp.o[0m
+[100%] [32m[1mLinking CXX shared library libservo_controller_input.so[0m
+[100%] Built target servo_controller_input
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/msd/MSD2/REV4/install/robot_servoing/share/robot_servoing/launch/servo.launch.py
+-- Symlinking: /home/msd/MSD2/REV4/install/robot_servoing/share/robot_servoing/launch/servo2.launch.py
+-- Symlinking: /home/msd/MSD2/REV4/install/robot_servoing/share/robot_servoing/config/robot_simulated_config.yaml
+-- Symlinking: /home/msd/MSD2/REV4/install/robot_servoing/share/ament_index/resource_index/package_run_dependencies/robot_servoing
+-- Symlinking: /home/msd/MSD2/REV4/install/robot_servoing/share/ament_index/resource_index/parent_prefix_path/robot_servoing
+-- Symlinking: /home/msd/MSD2/REV4/install/robot_servoing/share/robot_servoing/environment/ament_prefix_path.sh
+-- Symlinking: /home/msd/MSD2/REV4/install/robot_servoing/share/robot_servoing/environment/ament_prefix_path.dsv
+-- Symlinking: /home/msd/MSD2/REV4/install/robot_servoing/share/robot_servoing/environment/path.sh
+-- Symlinking: /home/msd/MSD2/REV4/install/robot_servoing/share/robot_servoing/environment/path.dsv
+-- Symlinking: /home/msd/MSD2/REV4/install/robot_servoing/share/robot_servoing/local_setup.bash
+-- Symlinking: /home/msd/MSD2/REV4/install/robot_servoing/share/robot_servoing/local_setup.sh
+-- Symlinking: /home/msd/MSD2/REV4/install/robot_servoing/share/robot_servoing/local_setup.zsh
+-- Symlinking: /home/msd/MSD2/REV4/install/robot_servoing/share/robot_servoing/local_setup.dsv
+-- Symlinking: /home/msd/MSD2/REV4/install/robot_servoing/share/robot_servoing/package.dsv
+-- Symlinking: /home/msd/MSD2/REV4/install/robot_servoing/share/ament_index/resource_index/packages/robot_servoing
+-- Symlinking: /home/msd/MSD2/REV4/install/robot_servoing/share/ament_index/resource_index/rclcpp_components/robot_servoing
+-- Symlinking: /home/msd/MSD2/REV4/install/robot_servoing/share/robot_servoing/cmake/robot_servoingConfig.cmake
+-- Symlinking: /home/msd/MSD2/REV4/install/robot_servoing/share/robot_servoing/cmake/robot_servoingConfig-version.cmake
+-- Symlinking: /home/msd/MSD2/REV4/install/robot_servoing/share/robot_servoing/package.xml
+-- Installing: /home/msd/MSD2/REV4/install/robot_servoing/lib/libservo_controller_input.so
+-- Set runtime path of "/home/msd/MSD2/REV4/install/robot_servoing/lib/libservo_controller_input.so" to ""

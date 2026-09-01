@@ -1,0 +1,25 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: spotarm_assembly_description
+    relative_path: urdf/spotarm_assembly.xacro
+  srdf:
+    relative_path: config/spotarm_assembly.srdf
+  package_settings:
+    author_name: Sergio
+    author_email: todo@todo.com
+    generated_timestamp: 1787835175
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity

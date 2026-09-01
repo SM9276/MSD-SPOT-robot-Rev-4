@@ -1,0 +1,30 @@
+[0.303s] Invoking command in '/home/msd/MSD2/REV4/build/marge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/msd/MSD2/msd_robot_arm_rev4/install/spotarm_assembly_description:/home/msd/MSD2/msd_robot_arm_rev4/install/robot_status_leds:/opt/ros/humble /usr/bin/cmake --build /home/msd/MSD2/REV4/build/marge -- -j8 -l8
+[0.603s] [ 50%] Built target icl_stepper
+[0.604s] [100%] Built target homer
+[0.628s] Invoked command in '/home/msd/MSD2/REV4/build/marge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/msd/MSD2/msd_robot_arm_rev4/install/spotarm_assembly_description:/home/msd/MSD2/msd_robot_arm_rev4/install/robot_status_leds:/opt/ros/humble /usr/bin/cmake --build /home/msd/MSD2/REV4/build/marge -- -j8 -l8
+[0.630s] Invoking command in '/home/msd/MSD2/REV4/build/marge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/msd/MSD2/msd_robot_arm_rev4/install/spotarm_assembly_description:/home/msd/MSD2/msd_robot_arm_rev4/install/robot_status_leds:/opt/ros/humble /usr/bin/cmake --install /home/msd/MSD2/REV4/build/marge
+[0.654s] -- Install configuration: ""
+[0.655s] -- Execute custom install script
+[0.656s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/marge/lib/libicl_stepper.so
+[0.656s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/marge/lib/marge/homer
+[0.656s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/marge/include/marge/ICLStepper.h
+[0.656s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/marge/share/marge/environment/library_path.sh
+[0.656s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/marge/share/marge/environment/library_path.dsv
+[0.656s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/marge/share/ament_index/resource_index/package_run_dependencies/marge
+[0.656s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/marge/share/ament_index/resource_index/parent_prefix_path/marge
+[0.656s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/marge/share/marge/environment/ament_prefix_path.sh
+[0.656s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/marge/share/marge/environment/ament_prefix_path.dsv
+[0.657s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/marge/share/marge/environment/path.sh
+[0.657s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/marge/share/marge/environment/path.dsv
+[0.657s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/marge/share/marge/local_setup.bash
+[0.657s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/marge/share/marge/local_setup.sh
+[0.657s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/marge/share/marge/local_setup.zsh
+[0.657s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/marge/share/marge/local_setup.dsv
+[0.657s] -- Symlinking: /home/msd/MSD2/REV4/install/marge/share/marge/package.dsv
+[0.663s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/marge/share/ament_index/resource_index/packages/marge
+[0.663s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/marge/share/marge/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.663s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/marge/share/marge/cmake/ament_cmake_export_libraries-extras.cmake
+[0.664s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/marge/share/marge/cmake/margeConfig.cmake
+[0.664s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/marge/share/marge/cmake/margeConfig-version.cmake
+[0.664s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/marge/share/marge/package.xml
+[0.733s] Invoked command in '/home/msd/MSD2/REV4/build/marge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/msd/MSD2/msd_robot_arm_rev4/install/spotarm_assembly_description:/home/msd/MSD2/msd_robot_arm_rev4/install/robot_status_leds:/opt/ros/humble /usr/bin/cmake --install /home/msd/MSD2/REV4/build/marge

@@ -1,0 +1,1 @@
+Invoking command in '/home/msd/MSD2/REV4/src/build/my_robot': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/msd/MSD2/REV4/src/my_robot -DCMAKE_INSTALL_PREFIX=/home/msd/MSD2/REV4/src/install/my_robot

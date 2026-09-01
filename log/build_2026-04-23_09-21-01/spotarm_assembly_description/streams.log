@@ -1,0 +1,50 @@
+[1.424s] Invoking command in '/home/msd/MSD2/REV4/build/spotarm_assembly_description': PYTHONPATH=/home/msd/MSD2/REV4/build/spotarm_assembly_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/msd/MSD2/REV4/install/spotarm_assembly_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/msd/MSD2/REV4/build/spotarm_assembly_description/build
+[1.701s] /usr/lib/python3/dist-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[1.701s]   warnings.warn(
+[1.732s] running develop
+[1.918s] Removing /home/msd/MSD2/REV4/install/spotarm_assembly_description/lib/python3.10/site-packages/spotarm-assembly-description.egg-link (link to .)
+[1.959s] Invoked command in '/home/msd/MSD2/REV4/build/spotarm_assembly_description' returned '0': PYTHONPATH=/home/msd/MSD2/REV4/build/spotarm_assembly_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/msd/MSD2/REV4/install/spotarm_assembly_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/msd/MSD2/REV4/build/spotarm_assembly_description/build
+[1.960s] Invoking command in '/home/msd/MSD2/REV4/src/spotarm_assembly_description': PYTHONPATH=/home/msd/MSD2/REV4/build/spotarm_assembly_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/msd/MSD2/REV4/install/spotarm_assembly_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/spotarm_assembly_description build --build-base /home/msd/MSD2/REV4/build/spotarm_assembly_description/build install --record /home/msd/MSD2/REV4/build/spotarm_assembly_description/install.log --install-scripts $base/lib/spotarm_assembly_description --single-version-externally-managed install_data --force
+[2.227s] /usr/lib/python3/dist-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[2.228s]   warnings.warn(
+[2.237s] running egg_info
+[2.238s] writing ../../build/spotarm_assembly_description/spotarm_assembly_description.egg-info/PKG-INFO
+[2.238s] writing dependency_links to ../../build/spotarm_assembly_description/spotarm_assembly_description.egg-info/dependency_links.txt
+[2.238s] writing entry points to ../../build/spotarm_assembly_description/spotarm_assembly_description.egg-info/entry_points.txt
+[2.238s] writing requirements to ../../build/spotarm_assembly_description/spotarm_assembly_description.egg-info/requires.txt
+[2.238s] writing top-level names to ../../build/spotarm_assembly_description/spotarm_assembly_description.egg-info/top_level.txt
+[2.240s] reading manifest file '../../build/spotarm_assembly_description/spotarm_assembly_description.egg-info/SOURCES.txt'
+[2.241s] writing manifest file '../../build/spotarm_assembly_description/spotarm_assembly_description.egg-info/SOURCES.txt'
+[2.242s] running build
+[2.242s] running build_py
+[2.242s] creating /home/msd/MSD2/REV4/build/spotarm_assembly_description/build
+[2.242s] creating /home/msd/MSD2/REV4/build/spotarm_assembly_description/build/lib
+[2.242s] creating /home/msd/MSD2/REV4/build/spotarm_assembly_description/build/lib/spotarm_assembly_description
+[2.242s] copying spotarm_assembly_description/__init__.py -> /home/msd/MSD2/REV4/build/spotarm_assembly_description/build/lib/spotarm_assembly_description
+[2.242s] running install
+[2.242s] running install_lib
+[2.243s] creating /home/msd/MSD2/REV4/install/spotarm_assembly_description/lib/python3.10/site-packages/spotarm_assembly_description
+[2.243s] copying /home/msd/MSD2/REV4/build/spotarm_assembly_description/build/lib/spotarm_assembly_description/__init__.py -> /home/msd/MSD2/REV4/install/spotarm_assembly_description/lib/python3.10/site-packages/spotarm_assembly_description
+[2.244s] byte-compiling /home/msd/MSD2/REV4/install/spotarm_assembly_description/lib/python3.10/site-packages/spotarm_assembly_description/__init__.py to __init__.cpython-310.pyc
+[2.244s] running install_data
+[2.244s] copying resource/spotarm_assembly_description -> /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/ament_index/resource_index/packages
+[2.245s] copying package.xml -> /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/spotarm_assembly_description
+[2.245s] copying launch/display.launch.py -> /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/spotarm_assembly_description/launch
+[2.245s] copying launch/gazebo.launch.py -> /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/spotarm_assembly_description/launch
+[2.246s] copying urdf/spotarm_assembly.gazebo -> /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/spotarm_assembly_description/urdf
+[2.246s] copying urdf/materials.xacro -> /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/spotarm_assembly_description/urdf
+[2.246s] copying urdf/spotarm_assembly.xacro -> /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/spotarm_assembly_description/urdf
+[2.247s] copying urdf/spotarm_assembly.ros2_control.xacro -> /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/spotarm_assembly_description/urdf
+[2.248s] copying urdf/spotarm_assembly.trans -> /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/spotarm_assembly_description/urdf
+[2.248s] copying urdf/spotarm_assembly.urdf -> /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/spotarm_assembly_description/urdf
+[2.248s] copying meshes/Joint_2_Component_v2_1.stl -> /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/spotarm_assembly_description/meshes
+[2.255s] copying meshes/Joint_4_Component_v2_1.stl -> /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/spotarm_assembly_description/meshes
+[2.261s] copying meshes/base_link.stl -> /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/spotarm_assembly_description/meshes
+[2.264s] copying meshes/Joint_3_Component_v2_1.stl -> /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/spotarm_assembly_description/meshes
+[2.270s] copying meshes/Joint_5_Component_v2_1.stl -> /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/spotarm_assembly_description/meshes
+[2.276s] copying config/display.rviz -> /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/spotarm_assembly_description/config
+[2.276s] running install_egg_info
+[2.278s] Copying ../../build/spotarm_assembly_description/spotarm_assembly_description.egg-info to /home/msd/MSD2/REV4/install/spotarm_assembly_description/lib/python3.10/site-packages/spotarm_assembly_description-0.0.0-py3.10.egg-info
+[2.279s] running install_scripts
+[2.301s] writing list of installed files to '/home/msd/MSD2/REV4/build/spotarm_assembly_description/install.log'
+[2.328s] Invoked command in '/home/msd/MSD2/REV4/src/spotarm_assembly_description' returned '0': PYTHONPATH=/home/msd/MSD2/REV4/build/spotarm_assembly_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/msd/MSD2/REV4/install/spotarm_assembly_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/spotarm_assembly_description build --build-base /home/msd/MSD2/REV4/build/spotarm_assembly_description/build install --record /home/msd/MSD2/REV4/build/spotarm_assembly_description/install.log --install-scripts $base/lib/spotarm_assembly_description --single-version-externally-managed install_data --force

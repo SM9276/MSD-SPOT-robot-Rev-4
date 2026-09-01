@@ -1,0 +1,24 @@
+[0.280s] Invoking command in '/home/msd/MSD2/REV4/src/build/robot_commander': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/msd/MSD2/REV4/src/build/robot_commander -- -j8 -l8
+[0.584s] [35m[1mConsolidate compiler generated dependencies of target commander[0m
+[0.584s] [100%] Built target commander
+[0.596s] Invoked command in '/home/msd/MSD2/REV4/src/build/robot_commander' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/msd/MSD2/REV4/src/build/robot_commander -- -j8 -l8
+[0.597s] Invoking command in '/home/msd/MSD2/REV4/src/build/robot_commander': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/msd/MSD2/REV4/src/build/robot_commander
+[0.609s] -- Install configuration: ""
+[0.609s] -- Installing: /home/msd/MSD2/REV4/src/install/robot_commander/lib/robot_commander/commander
+[0.609s] -- Set runtime path of "/home/msd/MSD2/REV4/src/install/robot_commander/lib/robot_commander/commander" to ""
+[0.610s] -- Installing: /home/msd/MSD2/REV4/src/install/robot_commander/share/ament_index/resource_index/package_run_dependencies/robot_commander
+[0.610s] -- Installing: /home/msd/MSD2/REV4/src/install/robot_commander/share/ament_index/resource_index/parent_prefix_path/robot_commander
+[0.610s] -- Installing: /home/msd/MSD2/REV4/src/install/robot_commander/share/robot_commander/environment/ament_prefix_path.sh
+[0.610s] -- Installing: /home/msd/MSD2/REV4/src/install/robot_commander/share/robot_commander/environment/ament_prefix_path.dsv
+[0.610s] -- Installing: /home/msd/MSD2/REV4/src/install/robot_commander/share/robot_commander/environment/path.sh
+[0.610s] -- Installing: /home/msd/MSD2/REV4/src/install/robot_commander/share/robot_commander/environment/path.dsv
+[0.610s] -- Installing: /home/msd/MSD2/REV4/src/install/robot_commander/share/robot_commander/local_setup.bash
+[0.610s] -- Installing: /home/msd/MSD2/REV4/src/install/robot_commander/share/robot_commander/local_setup.sh
+[0.611s] -- Installing: /home/msd/MSD2/REV4/src/install/robot_commander/share/robot_commander/local_setup.zsh
+[0.611s] -- Installing: /home/msd/MSD2/REV4/src/install/robot_commander/share/robot_commander/local_setup.dsv
+[0.611s] -- Installing: /home/msd/MSD2/REV4/src/install/robot_commander/share/robot_commander/package.dsv
+[0.611s] -- Installing: /home/msd/MSD2/REV4/src/install/robot_commander/share/ament_index/resource_index/packages/robot_commander
+[0.611s] -- Installing: /home/msd/MSD2/REV4/src/install/robot_commander/share/robot_commander/cmake/robot_commanderConfig.cmake
+[0.613s] -- Installing: /home/msd/MSD2/REV4/src/install/robot_commander/share/robot_commander/cmake/robot_commanderConfig-version.cmake
+[0.613s] -- Installing: /home/msd/MSD2/REV4/src/install/robot_commander/share/robot_commander/package.xml
+[0.659s] Invoked command in '/home/msd/MSD2/REV4/src/build/robot_commander' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/msd/MSD2/REV4/src/build/robot_commander

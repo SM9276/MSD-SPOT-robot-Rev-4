@@ -1,0 +1,40 @@
+In file included from [01m[K/home/msd/MSD2/REV4/src/robot_hardware/src/ICLStepper.cpp:1[m[K:
+[01m[K/home/msd/MSD2/REV4/src/robot_hardware/include/robot_hardware/ICLStepper.h:[m[K In constructor ‘[01m[KICLStepper::ICLStepper(int, modbus_t*, int, int)[m[K’:
+[01m[K/home/msd/MSD2/REV4/src/robot_hardware/include/robot_hardware/ICLStepper.h:30:9:[m[K [01;35m[Kwarning: [m[K‘[01m[KICLStepper::gear_ratio_[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+   30 |     int [01;35m[Kgear_ratio_[m[K;
+      |         [01;35m[K^~~~~~~~~~~[m[K
+[01m[K/home/msd/MSD2/REV4/src/robot_hardware/include/robot_hardware/ICLStepper.h:28:9:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kint ICLStepper::delay_us_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+   28 |     int [01;35m[Kdelay_us_[m[K;
+      |         [01;35m[K^~~~~~~~~[m[K
+[01m[K/home/msd/MSD2/REV4/src/robot_hardware/src/ICLStepper.cpp:9:1:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+    9 | [01;35m[KICLStepper[m[K::ICLStepper(int slave_id, modbus_t* ctx, int pulses_per_revolution, int gear_ratio)
+      | [01;35m[K^~~~~~~~~~[m[K
+[01m[K/home/msd/MSD2/REV4/src/robot_hardware/src/ICLStepper.cpp:[m[K In member function ‘[01m[Kint ICLStepper::home(double, double, bool, double)[m[K’:
+[01m[K/home/msd/MSD2/REV4/src/robot_hardware/src/ICLStepper.cpp:229:20:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K(clockwise ? 7 : 6)[m[K’ from ‘[01m[Kint[m[K’ to ‘[01m[Kuint16_t[m[K’ {aka ‘[01m[Kshort unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+  229 |         [01;35m[K(clockwise ? 0b111 : 0b110)[m[K, // Homing mode
+      |         [01;35m[K~~~~~~~~~~~^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/msd/MSD2/REV4/src/robot_hardware/src/ICLStepper.cpp:234:9:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[Khigh_velocity_rpm[m[K’ from ‘[01m[Kuint[m[K’ {aka ‘[01m[Kunsigned int[m[K’} to ‘[01m[Kuint16_t[m[K’ {aka ‘[01m[Kshort unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+  234 |         [01;35m[Khigh_velocity_rpm[m[K,    // Homing high velocity
+      |         [01;35m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/msd/MSD2/REV4/src/robot_hardware/src/ICLStepper.cpp:235:9:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[Klow_velocity_rpm[m[K’ from ‘[01m[Kuint[m[K’ {aka ‘[01m[Kunsigned int[m[K’} to ‘[01m[Kuint16_t[m[K’ {aka ‘[01m[Kshort unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+  235 |         [01;35m[Klow_velocity_rpm[m[K,      // Homing low velocity
+      |         [01;35m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/msd/MSD2/REV4/src/robot_hardware/src/ICLStepper.cpp:[m[K In member function ‘[01m[Kint ICLStepper::set_as_home()[m[K’:
+[01m[K/home/msd/MSD2/REV4/src/robot_hardware/src/ICLStepper.cpp:290:1:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+  290 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[01m[K/home/msd/MSD2/REV4/src/robot_hardware/src/arm_hardware_interface.cpp:[m[K In member function ‘[01m[Kvirtual hardware_interface::CallbackReturn robot_hardware::ArmHardwareInterface::on_configure(const rclcpp_lifecycle::State&)[m[K’:
+[01m[K/home/msd/MSD2/REV4/src/robot_hardware/src/arm_hardware_interface.cpp:95:25:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<int>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+   95 |         for (int i=0; [01;35m[Ki < motor_ids_.size()[m[K; i++){
+      |                       [01;35m[K~~^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/msd/MSD2/REV4/src/robot_hardware/src/arm_hardware_interface.cpp:[m[K In member function ‘[01m[Kvirtual hardware_interface::return_type robot_hardware::ArmHardwareInterface::read(const rclcpp::Time&, const rclcpp::Duration&)[m[K’:
+[01m[K/home/msd/MSD2/REV4/src/robot_hardware/src/arm_hardware_interface.cpp:137:116:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kperiod[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  137 |     hardware_interface::return_type ArmHardwareInterface::read(const rclcpp::Time & time, [01;35m[Kconst rclcpp::Duration & period[m[K){
+      |                                                                                           [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+[01m[K/home/msd/MSD2/REV4/src/robot_hardware/src/arm_hardware_interface.cpp:[m[K In member function ‘[01m[Kvirtual hardware_interface::return_type robot_hardware::ArmHardwareInterface::write(const rclcpp::Time&, const rclcpp::Duration&)[m[K’:
+[01m[K/home/msd/MSD2/REV4/src/robot_hardware/src/arm_hardware_interface.cpp:148:86:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktime[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  148 |     hardware_interface::return_type ArmHardwareInterface::write([01;35m[Kconst rclcpp::Time & time[m[K, const rclcpp::Duration & period){
+      |                                                                 [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~[m[K
+[01m[K/home/msd/MSD2/REV4/src/robot_hardware/src/arm_hardware_interface.cpp:148:117:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kperiod[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  148 |     hardware_interface::return_type ArmHardwareInterface::write(const rclcpp::Time & time, [01;35m[Kconst rclcpp::Duration & period[m[K){
+      |                                                                                            [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K

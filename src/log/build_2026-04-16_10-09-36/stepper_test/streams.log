@@ -1,0 +1,18 @@
+[0.567s] Invoking command in '/home/msd/MSD2/REV4/src/build/stepper_test': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/msd/MSD2/REV4/src/build/stepper_test -- -j8 -l8
+[0.627s] [ 66%] [32mBuilding CXX object CMakeFiles/motor_key.dir/src/motor_key.cpp.o[0m
+[0.627s] [ 66%] [32mBuilding CXX object CMakeFiles/motor_key.dir/src/ICLStepper.cpp.o[0m
+[0.639s] In file included from [01m[K/home/msd/MSD2/REV4/src/stepper_test/src/ICLStepper.cpp:1[m[K:
+[0.639s] [01m[K/home/msd/MSD2/REV4/src/stepper_test/include/stepper_test/ICLStepper.h:4:10:[m[K [01;31m[Kfatal error: [m[Kmodbus/modbus.h: No such file or directory
+[0.640s]     4 | #include [01;31m[K<modbus/modbus.h>[m[K
+[0.640s]       |          [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[0.640s] compilation terminated.
+[0.640s] gmake[2]: *** [CMakeFiles/motor_key.dir/build.make:90: CMakeFiles/motor_key.dir/src/ICLStepper.cpp.o] Error 1
+[0.640s] gmake[2]: *** Waiting for unfinished jobs....
+[0.704s] In file included from [01m[K/home/msd/MSD2/REV4/src/stepper_test/src/motor_key.cpp:6[m[K:
+[0.704s] [01m[K/home/msd/MSD2/REV4/src/stepper_test/include/stepper_test/ICLStepper.h:4:10:[m[K [01;31m[Kfatal error: [m[Kmodbus/modbus.h: No such file or directory
+[0.704s]     4 | #include [01;31m[K<modbus/modbus.h>[m[K
+[0.704s]       |          [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[0.704s] compilation terminated.
+[0.705s] gmake[2]: *** [CMakeFiles/motor_key.dir/build.make:76: CMakeFiles/motor_key.dir/src/motor_key.cpp.o] Error 1
+[0.705s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/motor_key.dir/all] Error 2
+[0.706s] gmake: *** [Makefile:146: all] Error 2

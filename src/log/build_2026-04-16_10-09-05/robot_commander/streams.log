@@ -1,0 +1,4 @@
+[0.274s] Invoking command in '/home/msd/MSD2/REV4/src/build/robot_commander': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/msd/MSD2/REV4/src/build/robot_commander -- -j8 -l8
+[0.624s] [ 50%] [32mBuilding CXX object CMakeFiles/commander.dir/src/commander.cpp.o[0m
+[8.555s] [100%] [32m[1mLinking CXX executable commander[0m
+[8.928s] [100%] Built target commander

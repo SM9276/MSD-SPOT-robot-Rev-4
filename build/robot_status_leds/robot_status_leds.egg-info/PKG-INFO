@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: robot-status-leds
+Version: 0.0.0
+Summary: Status LEDs controller: set NeoPixel LED colors when robot is moving or static.
+Home-page: UNKNOWN
+Maintainer: kyle-berg
+Maintainer-email: khb120@gmail.com
+License: Apache-2.0
+Platform: UNKNOWN
+Provides-Extra: test
+License-File: LICENSE
+
+UNKNOWN
+

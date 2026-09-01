@@ -1,0 +1,25 @@
+[0.385s] Invoking command in '/home/msd/MSD2/REV4/build/robot_commander': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/msd/MSD2/REV4/install/spotarm_assembly_description:/home/msd/MSD2/REV4/install/robot_status_leds:/home/msd/MSD2/msd_robot_arm_rev4/install/spotarm_assembly_description:/home/msd/MSD2/msd_robot_arm_rev4/install/robot_status_leds:/opt/ros/humble /usr/bin/cmake --build /home/msd/MSD2/REV4/build/robot_commander -- -j8 -l8
+[0.442s] [35m[1mConsolidate compiler generated dependencies of target commander[0m
+[0.465s] [100%] Built target commander
+[0.477s] Invoked command in '/home/msd/MSD2/REV4/build/robot_commander' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/msd/MSD2/REV4/install/spotarm_assembly_description:/home/msd/MSD2/REV4/install/robot_status_leds:/home/msd/MSD2/msd_robot_arm_rev4/install/spotarm_assembly_description:/home/msd/MSD2/msd_robot_arm_rev4/install/robot_status_leds:/opt/ros/humble /usr/bin/cmake --build /home/msd/MSD2/REV4/build/robot_commander -- -j8 -l8
+[0.487s] Invoking command in '/home/msd/MSD2/REV4/build/robot_commander': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/msd/MSD2/REV4/install/spotarm_assembly_description:/home/msd/MSD2/REV4/install/robot_status_leds:/home/msd/MSD2/msd_robot_arm_rev4/install/spotarm_assembly_description:/home/msd/MSD2/msd_robot_arm_rev4/install/robot_status_leds:/opt/ros/humble /usr/bin/cmake --install /home/msd/MSD2/REV4/build/robot_commander
+[0.496s] -- Install configuration: ""
+[0.497s] -- Execute custom install script
+[0.497s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_commander/lib/robot_commander//commander
+[0.497s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/launch/commander.launch.py
+[0.497s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_commander/share/ament_index/resource_index/package_run_dependencies/robot_commander
+[0.497s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_commander/share/ament_index/resource_index/parent_prefix_path/robot_commander
+[0.498s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/environment/ament_prefix_path.sh
+[0.498s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/environment/ament_prefix_path.dsv
+[0.498s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/environment/path.sh
+[0.498s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/environment/path.dsv
+[0.498s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/local_setup.bash
+[0.499s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/local_setup.sh
+[0.499s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/local_setup.zsh
+[0.499s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/local_setup.dsv
+[0.499s] -- Symlinking: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/package.dsv
+[0.509s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_commander/share/ament_index/resource_index/packages/robot_commander
+[0.510s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/cmake/robot_commanderConfig.cmake
+[0.510s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/cmake/robot_commanderConfig-version.cmake
+[0.510s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/package.xml
+[0.512s] Invoked command in '/home/msd/MSD2/REV4/build/robot_commander' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/msd/MSD2/REV4/install/spotarm_assembly_description:/home/msd/MSD2/REV4/install/robot_status_leds:/home/msd/MSD2/msd_robot_arm_rev4/install/spotarm_assembly_description:/home/msd/MSD2/msd_robot_arm_rev4/install/robot_status_leds:/opt/ros/humble /usr/bin/cmake --install /home/msd/MSD2/REV4/build/robot_commander
