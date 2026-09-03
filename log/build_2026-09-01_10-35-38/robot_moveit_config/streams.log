@@ -1,0 +1,46 @@
+[0.012s] Invoking command in '/home/msd/MSD2/REV4/build/robot_moveit_config': AMENT_PREFIX_PATH=/home/msd/MSD2/REV4/install/spotarm_assembly_description:/home/msd/MSD2/REV4/install/stepper_test:/home/msd/MSD2/REV4/install/robot_bringup:/home/msd/MSD2/REV4/install/robot_moveit_config:/home/msd/MSD2/REV4/install/robot_status_leds:/home/msd/MSD2/REV4/install/robot_servoing:/home/msd/MSD2/REV4/install/robot_hardware:/home/msd/MSD2/REV4/install/robot_commander:/home/msd/MSD2/REV4/install/gear_manipulator_moveit_config:/home/msd/MSD2/REV4/install/my_robot:/home/msd/MSD2/REV4/install/marge:/opt/ros/humble CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/msd/MSD2/REV4/install/spotarm_assembly_description:/home/msd/MSD2/REV4/install/robot_status_leds:/opt/ros/humble /usr/bin/cmake --build /home/msd/MSD2/REV4/build/robot_moveit_config -- -j8 -l8
+[0.050s] Invoked command in '/home/msd/MSD2/REV4/build/robot_moveit_config' returned '0': AMENT_PREFIX_PATH=/home/msd/MSD2/REV4/install/spotarm_assembly_description:/home/msd/MSD2/REV4/install/stepper_test:/home/msd/MSD2/REV4/install/robot_bringup:/home/msd/MSD2/REV4/install/robot_moveit_config:/home/msd/MSD2/REV4/install/robot_status_leds:/home/msd/MSD2/REV4/install/robot_servoing:/home/msd/MSD2/REV4/install/robot_hardware:/home/msd/MSD2/REV4/install/robot_commander:/home/msd/MSD2/REV4/install/gear_manipulator_moveit_config:/home/msd/MSD2/REV4/install/my_robot:/home/msd/MSD2/REV4/install/marge:/opt/ros/humble CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/msd/MSD2/REV4/install/spotarm_assembly_description:/home/msd/MSD2/REV4/install/robot_status_leds:/opt/ros/humble /usr/bin/cmake --build /home/msd/MSD2/REV4/build/robot_moveit_config -- -j8 -l8
+[0.058s] Invoking command in '/home/msd/MSD2/REV4/build/robot_moveit_config': AMENT_PREFIX_PATH=/home/msd/MSD2/REV4/install/spotarm_assembly_description:/home/msd/MSD2/REV4/install/stepper_test:/home/msd/MSD2/REV4/install/robot_bringup:/home/msd/MSD2/REV4/install/robot_moveit_config:/home/msd/MSD2/REV4/install/robot_status_leds:/home/msd/MSD2/REV4/install/robot_servoing:/home/msd/MSD2/REV4/install/robot_hardware:/home/msd/MSD2/REV4/install/robot_commander:/home/msd/MSD2/REV4/install/gear_manipulator_moveit_config:/home/msd/MSD2/REV4/install/my_robot:/home/msd/MSD2/REV4/install/marge:/opt/ros/humble CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/msd/MSD2/REV4/install/spotarm_assembly_description:/home/msd/MSD2/REV4/install/robot_status_leds:/opt/ros/humble /usr/bin/cmake --install /home/msd/MSD2/REV4/build/robot_moveit_config
+[0.065s] -- Install configuration: ""
+[0.065s] -- Execute custom install script
+[0.065s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_moveit_config/share/ament_index/resource_index/package_run_dependencies/robot_moveit_config
+[0.065s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_moveit_config/share/ament_index/resource_index/parent_prefix_path/robot_moveit_config
+[0.066s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/environment/ament_prefix_path.sh
+[0.066s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/environment/ament_prefix_path.dsv
+[0.066s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/environment/path.sh
+[0.066s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/environment/path.dsv
+[0.066s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/local_setup.bash
+[0.066s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/local_setup.sh
+[0.066s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/local_setup.zsh
+[0.067s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/local_setup.dsv
+[0.067s] -- Symlinking: /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/package.dsv
+[0.075s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_moveit_config/share/ament_index/resource_index/packages/robot_moveit_config
+[0.075s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/cmake/robot_moveit_configConfig.cmake
+[0.075s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/cmake/robot_moveit_configConfig-version.cmake
+[0.076s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/package.xml
+[0.076s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/launch/__pycache__/hardware.launch.cpython-310.pyc
+[0.076s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/launch/demo.launch.py
+[0.076s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/launch/hardware.launch.py
+[0.076s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/launch/move_group.launch.py
+[0.077s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/launch/moveit_rviz.launch.py
+[0.077s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/launch/rsp.launch.py
+[0.077s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/launch/setup_assistant.launch.py
+[0.077s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/launch/spawn_controllers.launch.py
+[0.077s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/launch/static_virtual_joint_tfs.launch.py
+[0.077s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/launch/warehouse_db.launch.py
+[0.077s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/config/arm_controller_params.yaml
+[0.077s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/config/initial_positions.yaml
+[0.077s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/config/joint_limits.yaml
+[0.078s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/config/kinematics.yaml
+[0.078s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/config/moveit.rviz
+[0.078s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/config/moveit_controllers.yaml
+[0.078s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/config/pilz_cartesian_limits.yaml
+[0.078s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/config/ros2_controllers.yaml
+[0.078s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/config/ros2_controllers_hardware.yaml
+[0.078s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/config/sensors_3d.yaml
+[0.078s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/config/spotarm_assembly.hardware.urdf.xacro
+[0.078s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/config/spotarm_assembly.ros2_control.xacro
+[0.078s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/config/spotarm_assembly.srdf
+[0.079s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/config/spotarm_assembly.urdf.xacro
+[0.079s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/.setup_assistant
+[0.081s] Invoked command in '/home/msd/MSD2/REV4/build/robot_moveit_config' returned '0': AMENT_PREFIX_PATH=/home/msd/MSD2/REV4/install/spotarm_assembly_description:/home/msd/MSD2/REV4/install/stepper_test:/home/msd/MSD2/REV4/install/robot_bringup:/home/msd/MSD2/REV4/install/robot_moveit_config:/home/msd/MSD2/REV4/install/robot_status_leds:/home/msd/MSD2/REV4/install/robot_servoing:/home/msd/MSD2/REV4/install/robot_hardware:/home/msd/MSD2/REV4/install/robot_commander:/home/msd/MSD2/REV4/install/gear_manipulator_moveit_config:/home/msd/MSD2/REV4/install/my_robot:/home/msd/MSD2/REV4/install/marge:/opt/ros/humble CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/msd/MSD2/REV4/install/spotarm_assembly_description:/home/msd/MSD2/REV4/install/robot_status_leds:/opt/ros/humble /usr/bin/cmake --install /home/msd/MSD2/REV4/build/robot_moveit_config

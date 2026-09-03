@@ -5,12 +5,23 @@
   <!--
     Real ros2_control hardware definition for the SPOT arm.
 
-    This file defines a Xacro macro only.
-    It does NOT instantiate ros2_control until another Xacro calls:
+    Calibration reference:
 
-        <xacro:spotarm_real_ros2_control name="Arm"/>
+      SRDF "up" pose:
+        Revolute1 =  0.4745
+        Revolute2 = -1.5707
+        Revolute3 =  0.0
+        Revolute4 =  0.0
+        Revolute5 =  0.0
+        Revolute6 =  0.0
 
-    This lets us keep simulation FakeSystem and real hardware separate.
+    The offsets below were calculated while the physical robot
+    was sitting in that UP position.
+
+    ROS position calculation used by ArmHardwareInterface:
+
+        ros_position =
+            motor_position * direction + offset
   -->
 
   <xacro:macro
@@ -19,20 +30,21 @@
 
     <ros2_control name="${name}" type="system">
 
-      <!-- =============================================== -->
-      <!-- REAL HARDWARE PLUGIN                            -->
-      <!-- =============================================== -->
+      <!-- ================================================== -->
+      <!-- REAL HARDWARE                                      -->
+      <!-- ================================================== -->
 
       <hardware>
         <plugin>robot_hardware/ArmHardwareInterface</plugin>
+
         <param name="port">/dev/ttyUSB0</param>
         <param name="baudrate">115200</param>
       </hardware>
 
 
-      <!-- =============================================== -->
-      <!-- REVOLUTE 1                                      -->
-      <!-- =============================================== -->
+      <!-- ================================================== -->
+      <!-- REVOLUTE 1                                         -->
+      <!-- ================================================== -->
 
       <joint name="Revolute1">
 
@@ -44,10 +56,27 @@
 
         <state_interface name="velocity"/>
 
+        <!-- Physical motor configuration -->
         <param name="motor_id">1</param>
         <param name="pulses_per_revolution">10000</param>
         <param name="gear_ratio">51</param>
         <param name="direction">-1</param>
+
+        <!--
+          Calibration:
+
+          measured while physically UP:
+              -0.026512578002059743
+
+          desired MoveIt UP:
+               0.4745
+
+          offset:
+               0.4745
+             - (-0.026512578002059743)
+             = 0.5010125780020597
+        -->
+	<param name="offset">0.4745369599135717</param>
         <param name="default_velocity">0.05</param>
 
         <param name="min_position">-0.436</param>
@@ -56,9 +85,9 @@
       </joint>
 
 
-      <!-- =============================================== -->
-      <!-- REVOLUTE 2                                      -->
-      <!-- =============================================== -->
+      <!-- ================================================== -->
+      <!-- REVOLUTE 2                                         -->
+      <!-- ================================================== -->
 
       <joint name="Revolute2">
 
@@ -70,18 +99,36 @@
 
         <state_interface name="velocity"/>
 
+        <!-- Physical motor configuration -->
         <param name="motor_id">2</param>
         <param name="pulses_per_revolution">10000</param>
         <param name="gear_ratio">100</param>
         <param name="direction">-1</param>
+
+        <!--
+          Calibration:
+
+          measured while physically UP:
+              -0.00006911503837897544
+
+          desired MoveIt UP:
+              -1.5707
+
+          offset:
+              -1.5707
+            - (-0.00006911503837897544)
+            = -1.570630884961621
+        -->
+        <param name="offset">-1.570630884961621</param>
+
         <param name="default_velocity">0.05</param>
 
       </joint>
 
 
-      <!-- =============================================== -->
-      <!-- REVOLUTE 3                                      -->
-      <!-- =============================================== -->
+      <!-- ================================================== -->
+      <!-- REVOLUTE 3                                         -->
+      <!-- ================================================== -->
 
       <joint name="Revolute3">
 
@@ -93,18 +140,29 @@
 
         <state_interface name="velocity"/>
 
+        <!-- Physical motor configuration -->
         <param name="motor_id">3</param>
         <param name="pulses_per_revolution">10000</param>
         <param name="gear_ratio">120</param>
         <param name="direction">-1</param>
+
+        <!--
+          measured UP:
+              -0.00003141592653589793
+
+          desired UP:
+               0.0
+        -->
+        <param name="offset">0.00003141592653589793</param>
+
         <param name="default_velocity">0.05</param>
 
       </joint>
 
 
-      <!-- =============================================== -->
-      <!-- REVOLUTE 4                                      -->
-      <!-- =============================================== -->
+      <!-- ================================================== -->
+      <!-- REVOLUTE 4                                         -->
+      <!-- ================================================== -->
 
       <joint name="Revolute4">
 
@@ -116,18 +174,29 @@
 
         <state_interface name="velocity"/>
 
+        <!-- Physical motor configuration -->
         <param name="motor_id">4</param>
         <param name="pulses_per_revolution">10000</param>
         <param name="gear_ratio">100</param>
         <param name="direction">-1</param>
+
+        <!--
+          measured UP:
+              -0.000012566370614359173
+
+          desired UP:
+               0.0
+        -->
+        <param name="offset">0.000012566370614359173</param>
+
         <param name="default_velocity">0.05</param>
 
       </joint>
 
 
-      <!-- =============================================== -->
-      <!-- REVOLUTE 5                                      -->
-      <!-- =============================================== -->
+      <!-- ================================================== -->
+      <!-- REVOLUTE 5                                         -->
+      <!-- ================================================== -->
 
       <joint name="Revolute5">
 
@@ -139,18 +208,29 @@
 
         <state_interface name="velocity"/>
 
+        <!-- Physical motor configuration -->
         <param name="motor_id">5</param>
         <param name="pulses_per_revolution">10000</param>
         <param name="gear_ratio">100</param>
         <param name="direction">-1</param>
+
+        <!--
+          measured UP:
+              -0.000025132741228718347
+
+          desired UP:
+               0.0
+        -->
+        <param name="offset">0.000025132741228718347</param>
+
         <param name="default_velocity">0.05</param>
 
       </joint>
 
 
-      <!-- =============================================== -->
-      <!-- REVOLUTE 6                                      -->
-      <!-- =============================================== -->
+      <!-- ================================================== -->
+      <!-- REVOLUTE 6                                         -->
+      <!-- ================================================== -->
 
       <joint name="Revolute6">
 
@@ -163,19 +243,24 @@
         <state_interface name="velocity"/>
 
         <!--
-          motor_id 10 currently means this motor is not configured.
+          ID 10 currently means that Revolute6 has no
+          configured physical motor.
 
-          If Revolute6 has a physical motor, replace 10 with its
-          actual Modbus slave ID.
+          Replace this with its real Modbus slave ID when
+          Revolute6 is connected.
         -->
         <param name="motor_id">10</param>
 
         <param name="pulses_per_revolution">10000</param>
         <param name="gear_ratio">100</param>
         <param name="direction">1</param>
+
+        <param name="offset">0.0</param>
+
         <param name="default_velocity">0.05</param>
 
       </joint>
+
 
     </ros2_control>
 

@@ -1,0 +1,18 @@
+[0.640s] Invoking command in '/home/msd/MSD2/REV4/build/spotarm_assembly_description': PYTHONPATH=/home/msd/MSD2/REV4/build/spotarm_assembly_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/msd/MSD2/REV4/install/spotarm_assembly_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/msd/MSD2/REV4/build/spotarm_assembly_description/build --no-deps symlink_data
+[0.873s] /usr/lib/python3/dist-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[0.873s]   warnings.warn(
+[0.901s] running develop
+[1.067s] running egg_info
+[1.067s] writing spotarm_assembly_description.egg-info/PKG-INFO
+[1.067s] writing dependency_links to spotarm_assembly_description.egg-info/dependency_links.txt
+[1.067s] writing entry points to spotarm_assembly_description.egg-info/entry_points.txt
+[1.068s] writing requirements to spotarm_assembly_description.egg-info/requires.txt
+[1.068s] writing top-level names to spotarm_assembly_description.egg-info/top_level.txt
+[1.069s] reading manifest file 'spotarm_assembly_description.egg-info/SOURCES.txt'
+[1.070s] writing manifest file 'spotarm_assembly_description.egg-info/SOURCES.txt'
+[1.071s] running build_ext
+[1.072s] Creating /home/msd/MSD2/REV4/install/spotarm_assembly_description/lib/python3.10/site-packages/spotarm-assembly-description.egg-link (link to .)
+[1.072s] 
+[1.072s] Installed /home/msd/MSD2/REV4/build/spotarm_assembly_description
+[1.072s] running symlink_data
+[1.099s] Invoked command in '/home/msd/MSD2/REV4/build/spotarm_assembly_description' returned '0': PYTHONPATH=/home/msd/MSD2/REV4/build/spotarm_assembly_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/msd/MSD2/REV4/install/spotarm_assembly_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/msd/MSD2/REV4/build/spotarm_assembly_description/build --no-deps symlink_data

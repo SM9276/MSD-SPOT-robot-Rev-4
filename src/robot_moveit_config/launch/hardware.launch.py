@@ -1,8 +1,14 @@
 import os
 
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument
+from launch.actions import (
+    DeclareLaunchArgument,
+    ExecuteProcess,
+    RegisterEventHandler,
+    TimerAction,
+)
 from launch.conditions import IfCondition
+from launch.event_handlers import OnProcessExit
 from launch.substitutions import LaunchConfiguration
 
 from launch_ros.actions import Node
@@ -13,25 +19,22 @@ from moveit_configs_utils import MoveItConfigsBuilder
 
 def generate_launch_description():
 
-    # --------------------------------------------------
+    # ============================================================
     # Launch arguments
-    # --------------------------------------------------
+    # ============================================================
 
-    start_arm_controller = LaunchConfiguration(
-        "start_arm_controller"
-    )
+    start_rviz = LaunchConfiguration("start_rviz")
+    start_commander = LaunchConfiguration("start_commander")
 
 
-    # --------------------------------------------------
+    # ============================================================
     # MoveIt configuration
-    #
-    # Use the REAL hardware URDF wrapper.
-    # --------------------------------------------------
+    # ============================================================
 
     moveit_config = (
         MoveItConfigsBuilder(
             "spotarm_assembly",
-            package_name="robot_moveit_config"
+            package_name="robot_moveit_config",
         )
         .robot_description(
             file_path="config/spotarm_assembly.hardware.urdf.xacro"
@@ -40,9 +43,9 @@ def generate_launch_description():
     )
 
 
-    # --------------------------------------------------
-    # Package paths
-    # --------------------------------------------------
+    # ============================================================
+    # Paths
+    # ============================================================
 
     package_share = get_package_share_directory(
         "robot_moveit_config"
@@ -51,21 +54,19 @@ def generate_launch_description():
     controllers_file = os.path.join(
         package_share,
         "config",
-        "ros2_controllers_hardware.yaml"
+        "ros2_controllers_hardware.yaml",
     )
 
     rviz_config = os.path.join(
         package_share,
         "config",
-        "moveit.rviz"
+        "moveit.rviz",
     )
 
 
-    # --------------------------------------------------
-    # Static transform
-    #
+    # ============================================================
     # world -> base_link
-    # --------------------------------------------------
+    # ============================================================
 
     static_tf_node = Node(
         package="tf2_ros",
@@ -85,9 +86,9 @@ def generate_launch_description():
     )
 
 
-    # --------------------------------------------------
+    # ============================================================
     # Robot State Publisher
-    # --------------------------------------------------
+    # ============================================================
 
     robot_state_publisher = Node(
         package="robot_state_publisher",
@@ -95,25 +96,22 @@ def generate_launch_description():
         name="robot_state_publisher",
         output="screen",
         parameters=[
-            moveit_config.robot_description
+            moveit_config.robot_description,
         ],
     )
 
 
-    # --------------------------------------------------
+    # ============================================================
     # ros2_control
     #
     # IMPORTANT:
-    # Do NOT set:
+    # Do NOT add:
     #
     #     name="controller_manager"
     #
-    # here.
-    #
-    # ros2_control_node already creates controller_manager.
-    # A global name remap can cause loaded controllers to
-    # inherit the controller_manager name.
-    # --------------------------------------------------
+    # We already discovered that explicitly renaming this process
+    # causes controller nodes to inherit the same node name.
+    # ============================================================
 
     ros2_control_node = Node(
         package="controller_manager",
@@ -126,9 +124,45 @@ def generate_launch_description():
     )
 
 
-    # --------------------------------------------------
+    # ============================================================
+    # Configure real Arm hardware
+    #
+    # unconfigured -> inactive
+    # ============================================================
+
+    configure_arm = ExecuteProcess(
+        cmd=[
+            "ros2",
+            "control",
+            "set_hardware_component_state",
+            "Arm",
+            "inactive",
+        ],
+        output="screen",
+    )
+
+
+    # ============================================================
+    # Activate real Arm hardware
+    #
+    # inactive -> active
+    # ============================================================
+
+    activate_arm = ExecuteProcess(
+        cmd=[
+            "ros2",
+            "control",
+            "set_hardware_component_state",
+            "Arm",
+            "active",
+        ],
+        output="screen",
+    )
+
+
+    # ============================================================
     # Joint State Broadcaster
-    # --------------------------------------------------
+    # ============================================================
 
     joint_state_broadcaster_spawner = Node(
         package="controller_manager",
@@ -143,11 +177,9 @@ def generate_launch_description():
     )
 
 
-    # --------------------------------------------------
-    # Arm trajectory controller
-    #
-    # Disabled by default for real-hardware bring-up.
-    # --------------------------------------------------
+    # ============================================================
+    # Real trajectory controller
+    # ============================================================
 
     arm_controller_spawner = Node(
         package="controller_manager",
@@ -159,32 +191,28 @@ def generate_launch_description():
             "-c",
             "/controller_manager",
         ],
-        condition=IfCondition(
-            start_arm_controller
-        ),
     )
 
 
-    # --------------------------------------------------
+    # ============================================================
     # MoveIt move_group
     #
-    # IMPORTANT:
-    # Do not explicitly remap its node name either.
-    # --------------------------------------------------
+    # Do NOT explicitly set name="move_group".
+    # ============================================================
 
     move_group_node = Node(
         package="moveit_ros_move_group",
         executable="move_group",
         output="screen",
         parameters=[
-            moveit_config.to_dict()
+            moveit_config.to_dict(),
         ],
     )
 
 
-    # --------------------------------------------------
+    # ============================================================
     # RViz
-    # --------------------------------------------------
+    # ============================================================
 
     rviz_node = Node(
         package="rviz2",
@@ -201,30 +229,131 @@ def generate_launch_description():
             moveit_config.planning_pipelines,
             moveit_config.robot_description_kinematics,
         ],
+        condition=IfCondition(start_rviz),
     )
 
 
-    # --------------------------------------------------
-    # Launch Description
-    # --------------------------------------------------
+    # ============================================================
+    # Cartesian commander
+    #
+    # Same parameters as commander.launch.py.
+    # ============================================================
+
+    commander_node = Node(
+        package="robot_commander",
+        executable="commander",
+        name="commander",
+        output="screen",
+        parameters=[
+            moveit_config.to_dict(),
+        ],
+        condition=IfCondition(start_commander),
+    )
+
+
+    # ============================================================
+    # Startup sequence
+    # ============================================================
+
+    # Give controller_manager a moment to start.
+    start_configure_arm = TimerAction(
+        period=2.0,
+        actions=[
+            configure_arm,
+        ],
+    )
+
+
+    # After Arm has been configured:
+    #
+    # inactive -> active
+    configure_to_activate = RegisterEventHandler(
+        OnProcessExit(
+            target_action=configure_arm,
+            on_exit=[
+                activate_arm,
+            ],
+        )
+    )
+
+
+    # After Arm activation, start joint states.
+    activate_to_joint_states = RegisterEventHandler(
+        OnProcessExit(
+            target_action=activate_arm,
+            on_exit=[
+                joint_state_broadcaster_spawner,
+            ],
+        )
+    )
+
+
+    # After joint state broadcaster finishes spawning,
+    # start the trajectory controller.
+    joint_states_to_arm_controller = RegisterEventHandler(
+        OnProcessExit(
+            target_action=joint_state_broadcaster_spawner,
+            on_exit=[
+                arm_controller_spawner,
+            ],
+        )
+    )
+
+
+    # After arm_controller is loaded/configured/activated,
+    # start MoveIt and RViz.
+    controller_to_moveit = RegisterEventHandler(
+        OnProcessExit(
+            target_action=arm_controller_spawner,
+            on_exit=[
+                move_group_node,
+                rviz_node,
+
+                # Give move_group several seconds to become ready
+                # before starting our custom commander.
+                TimerAction(
+                    period=4.0,
+                    actions=[
+                        commander_node,
+                    ],
+                ),
+            ],
+        )
+    )
+
+
+    # ============================================================
+    # Launch description
+    # ============================================================
 
     return LaunchDescription(
         [
             DeclareLaunchArgument(
-                "start_arm_controller",
-                default_value="false",
+                "start_rviz",
+                default_value="true",
+                description="Launch RViz.",
+            ),
+
+            DeclareLaunchArgument(
+                "start_commander",
+                default_value="true",
                 description=(
-                    "Start the real hardware "
-                    "trajectory controller."
+                    "Launch the SpotArm Cartesian commander."
                 ),
             ),
 
+            # Initial processes
             static_tf_node,
             robot_state_publisher,
             ros2_control_node,
-            joint_state_broadcaster_spawner,
-            arm_controller_spawner,
-            move_group_node,
-            rviz_node,
+
+            # Hardware startup sequence
+            start_configure_arm,
+
+            # Event-based sequencing
+            configure_to_activate,
+            activate_to_joint_states,
+            joint_states_to_arm_controller,
+            controller_to_moveit,
         ]
     )
