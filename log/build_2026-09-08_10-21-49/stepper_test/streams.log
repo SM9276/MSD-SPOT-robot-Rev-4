@@ -1,0 +1,24 @@
+[0.105s] Invoking command in '/home/msd/MSD2/REV4/build/stepper_test': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/msd/MSD2/REV4/build/stepper_test -- -j8 -l8
+[0.162s] [35m[1mConsolidate compiler generated dependencies of target motor_key[0m
+[0.184s] [100%] Built target motor_key
+[0.207s] Invoked command in '/home/msd/MSD2/REV4/build/stepper_test' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/msd/MSD2/REV4/build/stepper_test -- -j8 -l8
+[0.209s] Invoking command in '/home/msd/MSD2/REV4/build/stepper_test': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/msd/MSD2/REV4/build/stepper_test
+[0.217s] -- Install configuration: ""
+[0.217s] -- Execute custom install script
+[0.217s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/stepper_test/lib/stepper_test/motor_key
+[0.218s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/stepper_test/share/ament_index/resource_index/package_run_dependencies/stepper_test
+[0.218s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/stepper_test/share/ament_index/resource_index/parent_prefix_path/stepper_test
+[0.218s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/environment/ament_prefix_path.sh
+[0.218s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/environment/ament_prefix_path.dsv
+[0.218s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/environment/path.sh
+[0.219s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/environment/path.dsv
+[0.219s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/local_setup.bash
+[0.219s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/local_setup.sh
+[0.219s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/local_setup.zsh
+[0.219s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/local_setup.dsv
+[0.219s] -- Symlinking: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/package.dsv
+[0.232s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/stepper_test/share/ament_index/resource_index/packages/stepper_test
+[0.232s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/cmake/stepper_testConfig.cmake
+[0.232s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/cmake/stepper_testConfig-version.cmake
+[0.233s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/package.xml
+[0.235s] Invoked command in '/home/msd/MSD2/REV4/build/stepper_test' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/msd/MSD2/REV4/build/stepper_test

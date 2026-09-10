@@ -84,29 +84,62 @@ int ICLStepper::set_position_radians(double position_radians, double radians_per
     return set_position(target_position, velocity_rpm, 4000, 4000);
 }
 
-int32_t ICLStepper::read_position() {
+
+int32_t ICLStepper::read_position()
+{
     modbus_set_slave(ctx_, slave_id_);
     usleep(delay_us_);
 
-    uint16_t pos_high;
-    uint16_t pos_low;
+    uint16_t regs[2] = {0, 0};
 
-    if (modbus_read_registers(ctx_, 0x602C, 1, &pos_high) == -1) {
-        std::cerr << "[Slave " << slave_id_ << "] Failed to read position high bits: "
-                  << modbus_strerror(errno) << std::endl;
+    // Read both 16-bit halves in ONE Modbus transaction.
+    //
+    // regs[0] = 0x602C = high 16 bits
+    // regs[1] = 0x602D = low  16 bits
+    const int rc = modbus_read_registers(
+        ctx_,
+        0x602C,
+        2,
+        regs
+    );
+
+    if (rc != 2)
+    {
+        std::cerr
+            << "[Slave " << slave_id_
+            << "] Failed to read position registers 0x602C-0x602D: "
+            << modbus_strerror(errno)
+            << std::endl;
+
         return INT32_MIN;
     }
+
     usleep(delay_us_);
 
-    if (modbus_read_registers(ctx_, 0x602D, 1, &pos_low) == -1) {
-        std::cerr << "[Slave " << slave_id_ << "] Failed to read position low bits: "
-                  << modbus_strerror(errno) << std::endl;
-        return INT32_MIN;
+    /*
+     * Preserve the EXACT register ordering used by the old code:
+     *
+     *   0x602C = HIGH
+     *   0x602D = LOW
+     *
+     * Construct as unsigned first so negative encoder positions
+     * do not rely on shifting a negative signed integer.
+     */
+    const uint32_t raw =
+        (static_cast<uint32_t>(regs[0]) << 16) |
+         static_cast<uint32_t>(regs[1]);
+
+    /*
+     * Convert the 32-bit two's-complement value explicitly.
+     */
+    int64_t signed_value = static_cast<int64_t>(raw);
+
+    if (raw & 0x80000000u)
+    {
+        signed_value -= 0x100000000LL;
     }
-    usleep(delay_us_);
 
-    int32_t high = static_cast<int32_t>(static_cast<int16_t>(pos_high));
-    return (high << 16) | static_cast<int32_t>(pos_low);
+    return static_cast<int32_t>(signed_value);
 }
 
 double ICLStepper::get_position_radians(){

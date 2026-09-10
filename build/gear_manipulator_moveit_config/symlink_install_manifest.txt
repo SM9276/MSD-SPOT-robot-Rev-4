@@ -30,4 +30,5 @@
 /home/msd/MSD2/REV4/install/gear_manipulator_moveit_config/share/gear_manipulator_moveit_config/config/moveit.rviz
 /home/msd/MSD2/REV4/install/gear_manipulator_moveit_config/share/gear_manipulator_moveit_config/config/moveit_controllers.yaml
 /home/msd/MSD2/REV4/install/gear_manipulator_moveit_config/share/gear_manipulator_moveit_config/config/pilz_cartesian_limits.yaml
+/home/msd/MSD2/REV4/install/gear_manipulator_moveit_config/share/gear_manipulator_moveit_config/config/ros2_controllers_hardware.yaml
 /home/msd/MSD2/REV4/install/gear_manipulator_moveit_config/share/gear_manipulator_moveit_config/.setup_assistant

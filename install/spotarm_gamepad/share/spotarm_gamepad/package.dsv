@@ -1,0 +1,9 @@
+source;share/spotarm_gamepad/hook/pythonpath.ps1
+source;share/spotarm_gamepad/hook/pythonpath.dsv
+source;share/spotarm_gamepad/hook/pythonpath.sh
+source;share/spotarm_gamepad/hook/ament_prefix_path.ps1
+source;share/spotarm_gamepad/hook/ament_prefix_path.dsv
+source;share/spotarm_gamepad/hook/ament_prefix_path.sh
+source;../../build/spotarm_gamepad/share/spotarm_gamepad/hook/pythonpath_develop.ps1
+source;../../build/spotarm_gamepad/share/spotarm_gamepad/hook/pythonpath_develop.dsv
+source;../../build/spotarm_gamepad/share/spotarm_gamepad/hook/pythonpath_develop.sh

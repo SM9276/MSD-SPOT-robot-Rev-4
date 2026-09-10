@@ -1,0 +1,51 @@
+[0.015s] Invoking command in '/home/msd/MSD2/REV4/build/stepper_test': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/msd/MSD2/REV4/build/stepper_test -- -j8 -l8
+[0.131s] [ 33%] [32mBuilding CXX object CMakeFiles/motor_key.dir/src/motor_key.cpp.o[0m
+[0.140s] [ 66%] [32mBuilding CXX object CMakeFiles/motor_key.dir/src/ICLStepper.cpp.o[0m
+[0.830s] In file included from [01m[K/home/msd/MSD2/REV4/src/stepper_test/src/ICLStepper.cpp:1[m[K:
+[0.830s] [01m[K/home/msd/MSD2/REV4/src/stepper_test/include/stepper_test/ICLStepper.h:[m[K In constructor ‘[01m[KICLStepper::ICLStepper(int, modbus_t*, int, int)[m[K’:
+[0.830s] [01m[K/home/msd/MSD2/REV4/src/stepper_test/include/stepper_test/ICLStepper.h:30:9:[m[K [01;35m[Kwarning: [m[K‘[01m[KICLStepper::gear_ratio_[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[0.831s]    30 |     int [01;35m[Kgear_ratio_[m[K;
+[0.831s]       |         [01;35m[K^~~~~~~~~~~[m[K
+[0.831s] [01m[K/home/msd/MSD2/REV4/src/stepper_test/include/stepper_test/ICLStepper.h:28:9:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kint ICLStepper::delay_us_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[0.831s]    28 |     int [01;35m[Kdelay_us_[m[K;
+[0.831s]       |         [01;35m[K^~~~~~~~~[m[K
+[0.831s] [01m[K/home/msd/MSD2/REV4/src/stepper_test/src/ICLStepper.cpp:9:1:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[0.831s]     9 | [01;35m[KICLStepper[m[K::ICLStepper(int slave_id, modbus_t* ctx, int pulses_per_revolution, int gear_ratio)
+[0.832s]       | [01;35m[K^~~~~~~~~~[m[K
+[0.848s] [01m[K/home/msd/MSD2/REV4/src/stepper_test/src/ICLStepper.cpp:[m[K In member function ‘[01m[Kint ICLStepper::home(double, double, bool, double)[m[K’:
+[0.849s] [01m[K/home/msd/MSD2/REV4/src/stepper_test/src/ICLStepper.cpp:229:20:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K(clockwise ? 7 : 6)[m[K’ from ‘[01m[Kint[m[K’ to ‘[01m[Kuint16_t[m[K’ {aka ‘[01m[Kshort unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[0.849s]   229 |         [01;35m[K(clockwise ? 0b111 : 0b110)[m[K, // Homing mode
+[0.849s]       |         [01;35m[K~~~~~~~~~~~^~~~~~~~~~~~~~~~[m[K
+[0.849s] [01m[K/home/msd/MSD2/REV4/src/stepper_test/src/ICLStepper.cpp:234:9:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[Khigh_velocity_rpm[m[K’ from ‘[01m[Kuint[m[K’ {aka ‘[01m[Kunsigned int[m[K’} to ‘[01m[Kuint16_t[m[K’ {aka ‘[01m[Kshort unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[0.849s]   234 |         [01;35m[Khigh_velocity_rpm[m[K,    // Homing high velocity
+[0.849s]       |         [01;35m[K^~~~~~~~~~~~~~~~~[m[K
+[0.849s] [01m[K/home/msd/MSD2/REV4/src/stepper_test/src/ICLStepper.cpp:235:9:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[Klow_velocity_rpm[m[K’ from ‘[01m[Kuint[m[K’ {aka ‘[01m[Kunsigned int[m[K’} to ‘[01m[Kuint16_t[m[K’ {aka ‘[01m[Kshort unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[0.849s]   235 |         [01;35m[Klow_velocity_rpm[m[K,      // Homing low velocity
+[0.850s]       |         [01;35m[K^~~~~~~~~~~~~~~~[m[K
+[0.989s] [01m[K/home/msd/MSD2/REV4/src/stepper_test/src/ICLStepper.cpp:[m[K In member function ‘[01m[Kint ICLStepper::set_as_home()[m[K’:
+[0.989s] [01m[K/home/msd/MSD2/REV4/src/stepper_test/src/ICLStepper.cpp:290:1:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+[0.990s]   290 | [01;35m[K}[m[K
+[0.990s]       | [01;35m[K^[m[K
+[4.261s] [100%] [32m[1mLinking CXX executable motor_key[0m
+[4.363s] [100%] Built target motor_key
+[4.372s] Invoked command in '/home/msd/MSD2/REV4/build/stepper_test' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/msd/MSD2/REV4/build/stepper_test -- -j8 -l8
+[4.375s] Invoking command in '/home/msd/MSD2/REV4/build/stepper_test': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/msd/MSD2/REV4/build/stepper_test
+[4.381s] -- Install configuration: ""
+[4.382s] -- Execute custom install script
+[4.382s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/stepper_test/lib/stepper_test/motor_key
+[4.383s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/stepper_test/share/ament_index/resource_index/package_run_dependencies/stepper_test
+[4.383s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/stepper_test/share/ament_index/resource_index/parent_prefix_path/stepper_test
+[4.384s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/environment/ament_prefix_path.sh
+[4.384s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/environment/ament_prefix_path.dsv
+[4.384s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/environment/path.sh
+[4.384s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/environment/path.dsv
+[4.385s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/local_setup.bash
+[4.385s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/local_setup.sh
+[4.385s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/local_setup.zsh
+[4.385s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/local_setup.dsv
+[4.385s] -- Symlinking: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/package.dsv
+[4.394s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/stepper_test/share/ament_index/resource_index/packages/stepper_test
+[4.395s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/cmake/stepper_testConfig.cmake
+[4.395s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/cmake/stepper_testConfig-version.cmake
+[4.395s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/package.xml
+[4.397s] Invoked command in '/home/msd/MSD2/REV4/build/stepper_test' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/msd/MSD2/REV4/build/stepper_test

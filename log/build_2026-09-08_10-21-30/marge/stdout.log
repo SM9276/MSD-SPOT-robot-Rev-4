@@ -1,0 +1,30 @@
+[ 25%] [32mBuilding CXX object CMakeFiles/icl_stepper.dir/src/ICLStepper.cpp.o[0m
+[ 50%] [32m[1mLinking CXX shared library libicl_stepper.so[0m
+[ 50%] Built target icl_stepper
+[ 75%] [32mBuilding CXX object CMakeFiles/homer.dir/src/homer.cpp.o[0m
+[100%] [32m[1mLinking CXX executable homer[0m
+[100%] Built target homer
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/marge/lib/libicl_stepper.so
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/marge/lib/marge/homer
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/marge/include/marge/ICLStepper.h
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/marge/share/marge/environment/library_path.sh
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/marge/share/marge/environment/library_path.dsv
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/marge/share/ament_index/resource_index/package_run_dependencies/marge
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/marge/share/ament_index/resource_index/parent_prefix_path/marge
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/marge/share/marge/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/marge/share/marge/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/marge/share/marge/environment/path.sh
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/marge/share/marge/environment/path.dsv
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/marge/share/marge/local_setup.bash
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/marge/share/marge/local_setup.sh
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/marge/share/marge/local_setup.zsh
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/marge/share/marge/local_setup.dsv
+-- Symlinking: /home/msd/MSD2/REV4/install/marge/share/marge/package.dsv
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/marge/share/ament_index/resource_index/packages/marge
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/marge/share/marge/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/marge/share/marge/cmake/ament_cmake_export_libraries-extras.cmake
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/marge/share/marge/cmake/margeConfig.cmake
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/marge/share/marge/cmake/margeConfig-version.cmake
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/marge/share/marge/package.xml

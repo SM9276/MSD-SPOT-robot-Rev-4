@@ -1,0 +1,17 @@
+[0.013s] Invoking command in '/home/msd/MSD2/REV4/build/robot_moveit_config': AMENT_PREFIX_PATH=/home/msd/MSD2/REV4/install/spotarm_assembly_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/opt/ros/humble PYTHONPATH=/home/msd/MSD2/REV4/install/spotarm_assembly_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/msd/MSD2/REV4/build/robot_moveit_config -- -j8 -l8
+[0.054s] Invoked command in '/home/msd/MSD2/REV4/build/robot_moveit_config' returned '0': AMENT_PREFIX_PATH=/home/msd/MSD2/REV4/install/spotarm_assembly_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/opt/ros/humble PYTHONPATH=/home/msd/MSD2/REV4/install/spotarm_assembly_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/msd/MSD2/REV4/build/robot_moveit_config -- -j8 -l8
+[0.055s] Invoking command in '/home/msd/MSD2/REV4/build/robot_moveit_config': AMENT_PREFIX_PATH=/home/msd/MSD2/REV4/install/spotarm_assembly_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/opt/ros/humble PYTHONPATH=/home/msd/MSD2/REV4/install/spotarm_assembly_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/msd/MSD2/REV4/build/robot_moveit_config
+[0.063s] -- Install configuration: ""
+[0.064s] -- Execute custom install script
+[0.064s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_moveit_config/share/ament_index/resource_index/package_run_dependencies/robot_moveit_config
+[0.064s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_moveit_config/share/ament_index/resource_index/parent_prefix_path/robot_moveit_config
+[0.064s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/environment/ament_prefix_path.sh
+[0.064s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/environment/ament_prefix_path.dsv
+[0.064s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/environment/path.sh
+[0.064s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/environment/path.dsv
+[0.064s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/local_setup.bash
+[0.065s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/local_setup.sh
+[0.065s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/local_setup.zsh
+[0.065s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/local_setup.dsv
+[0.065s] -- Symlinking: /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/package.dsv
+[0.075s] Invoked command in '/home/msd/MSD2/REV4/build/robot_moveit_config' returned '-2': AMENT_PREFIX_PATH=/home/msd/MSD2/REV4/install/spotarm_assembly_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/opt/ros/humble PYTHONPATH=/home/msd/MSD2/REV4/install/spotarm_assembly_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/msd/MSD2/REV4/build/robot_moveit_config

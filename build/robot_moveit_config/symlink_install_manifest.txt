@@ -19,6 +19,7 @@
 /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/launch/move_group.launch.py
 /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/launch/moveit_rviz.launch.py
 /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/launch/rsp.launch.py
+/home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/launch/servo.launch.py
 /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/launch/setup_assistant.launch.py
 /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/launch/spawn_controllers.launch.py
 /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/launch/static_virtual_joint_tfs.launch.py
@@ -37,4 +38,5 @@
 /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/config/spotarm_assembly.ros2_control.xacro
 /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/config/spotarm_assembly.srdf
 /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/config/spotarm_assembly.urdf.xacro
+/home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/config/spotarm_servo.yaml
 /home/msd/MSD2/REV4/install/robot_moveit_config/share/robot_moveit_config/.setup_assistant

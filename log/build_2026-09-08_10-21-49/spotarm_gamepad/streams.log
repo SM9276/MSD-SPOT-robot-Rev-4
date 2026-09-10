@@ -1,0 +1,21 @@
+[1.347s] Invoking command in '/home/msd/MSD2/REV4/src/spotarm_gamepad': PYTHONPATH=/home/msd/MSD2/REV4/build/spotarm_gamepad/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/msd/MSD2/REV4/install/spotarm_gamepad/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/spotarm_gamepad build --build-base /home/msd/MSD2/REV4/build/spotarm_gamepad/build install --record /home/msd/MSD2/REV4/build/spotarm_gamepad/install.log --single-version-externally-managed install_data
+[1.606s] running egg_info
+[1.607s] writing ../../build/spotarm_gamepad/spotarm_gamepad.egg-info/PKG-INFO
+[1.607s] writing dependency_links to ../../build/spotarm_gamepad/spotarm_gamepad.egg-info/dependency_links.txt
+[1.607s] writing entry points to ../../build/spotarm_gamepad/spotarm_gamepad.egg-info/entry_points.txt
+[1.607s] writing requirements to ../../build/spotarm_gamepad/spotarm_gamepad.egg-info/requires.txt
+[1.608s] writing top-level names to ../../build/spotarm_gamepad/spotarm_gamepad.egg-info/top_level.txt
+[1.609s] reading manifest file '../../build/spotarm_gamepad/spotarm_gamepad.egg-info/SOURCES.txt'
+[1.610s] writing manifest file '../../build/spotarm_gamepad/spotarm_gamepad.egg-info/SOURCES.txt'
+[1.610s] running build
+[1.610s] running build_py
+[1.610s] running install
+[1.611s] running install_lib
+[1.612s] running install_data
+[1.612s] running install_egg_info
+[1.614s] removing '/home/msd/MSD2/REV4/install/spotarm_gamepad/lib/python3.10/site-packages/spotarm_gamepad-0.0.1-py3.10.egg-info' (and everything under it)
+[1.614s] Copying ../../build/spotarm_gamepad/spotarm_gamepad.egg-info to /home/msd/MSD2/REV4/install/spotarm_gamepad/lib/python3.10/site-packages/spotarm_gamepad-0.0.1-py3.10.egg-info
+[1.615s] running install_scripts
+[1.642s] Installing gamepad script to /home/msd/MSD2/REV4/install/spotarm_gamepad/lib/spotarm_gamepad
+[1.642s] writing list of installed files to '/home/msd/MSD2/REV4/build/spotarm_gamepad/install.log'
+[1.698s] Invoked command in '/home/msd/MSD2/REV4/src/spotarm_gamepad' returned '0': PYTHONPATH=/home/msd/MSD2/REV4/build/spotarm_gamepad/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/msd/MSD2/REV4/install/spotarm_gamepad/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/spotarm_gamepad build --build-base /home/msd/MSD2/REV4/build/spotarm_gamepad/build install --record /home/msd/MSD2/REV4/build/spotarm_gamepad/install.log --single-version-externally-managed install_data

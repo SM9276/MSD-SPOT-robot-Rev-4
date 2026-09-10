@@ -1,0 +1,263 @@
+[0.143s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install', '--packages-select', 'spotarm_gamepad']
+[0.143s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['spotarm_gamepad'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7eb2c825ca00>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7eb2c83d21a0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7eb2c83d21a0>>)
+[0.356s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.356s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.356s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.356s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.356s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.356s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.356s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/msd/MSD2/REV4'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.372s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.372s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.372s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.372s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.372s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.372s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.372s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.372s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.372s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) by extensions ['ignore', 'ignore_ament_install']
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) by extension 'ignore'
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) ignored
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(src/gear_manipulator_moveit_config) by extensions ['ignore', 'ignore_ament_install']
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(src/gear_manipulator_moveit_config) by extension 'ignore'
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(src/gear_manipulator_moveit_config) by extension 'ignore_ament_install'
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(src/gear_manipulator_moveit_config) by extensions ['colcon_pkg']
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(src/gear_manipulator_moveit_config) by extension 'colcon_pkg'
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(src/gear_manipulator_moveit_config) by extensions ['colcon_meta']
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(src/gear_manipulator_moveit_config) by extension 'colcon_meta'
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(src/gear_manipulator_moveit_config) by extensions ['ros']
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(src/gear_manipulator_moveit_config) by extension 'ros'
+[0.377s] DEBUG:colcon.colcon_core.package_identification:Package 'src/gear_manipulator_moveit_config' with type 'ros.ament_cmake' and name 'gear_manipulator_moveit_config'
+[0.377s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) by extensions ['ignore', 'ignore_ament_install']
+[0.377s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) by extension 'ignore'
+[0.378s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) ignored
+[0.378s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extensions ['ignore', 'ignore_ament_install']
+[0.378s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extension 'ignore'
+[0.378s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) ignored
+[0.378s] Level 1:colcon.colcon_core.package_identification:_identify(src/marge) by extensions ['ignore', 'ignore_ament_install']
+[0.378s] Level 1:colcon.colcon_core.package_identification:_identify(src/marge) by extension 'ignore'
+[0.378s] Level 1:colcon.colcon_core.package_identification:_identify(src/marge) by extension 'ignore_ament_install'
+[0.378s] Level 1:colcon.colcon_core.package_identification:_identify(src/marge) by extensions ['colcon_pkg']
+[0.378s] Level 1:colcon.colcon_core.package_identification:_identify(src/marge) by extension 'colcon_pkg'
+[0.378s] Level 1:colcon.colcon_core.package_identification:_identify(src/marge) by extensions ['colcon_meta']
+[0.378s] Level 1:colcon.colcon_core.package_identification:_identify(src/marge) by extension 'colcon_meta'
+[0.378s] Level 1:colcon.colcon_core.package_identification:_identify(src/marge) by extensions ['ros']
+[0.378s] Level 1:colcon.colcon_core.package_identification:_identify(src/marge) by extension 'ros'
+[0.379s] DEBUG:colcon.colcon_core.package_identification:Package 'src/marge' with type 'ros.ament_cmake' and name 'marge'
+[0.379s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot) by extensions ['ignore', 'ignore_ament_install']
+[0.379s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot) by extension 'ignore'
+[0.379s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot) by extension 'ignore_ament_install'
+[0.379s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot) by extensions ['colcon_pkg']
+[0.379s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot) by extension 'colcon_pkg'
+[0.379s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot) by extensions ['colcon_meta']
+[0.379s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot) by extension 'colcon_meta'
+[0.379s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot) by extensions ['ros']
+[0.379s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot) by extension 'ros'
+[0.380s] DEBUG:colcon.colcon_core.package_identification:Package 'src/my_robot' with type 'ros.ament_cmake' and name 'my_robot'
+[0.380s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.380s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_bringup) by extension 'ignore'
+[0.380s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_bringup) by extension 'ignore_ament_install'
+[0.380s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_bringup) by extensions ['colcon_pkg']
+[0.380s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_bringup) by extension 'colcon_pkg'
+[0.380s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_bringup) by extensions ['colcon_meta']
+[0.380s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_bringup) by extension 'colcon_meta'
+[0.380s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_bringup) by extensions ['ros']
+[0.380s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_bringup) by extension 'ros'
+[0.381s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robot_bringup' with type 'ros.ament_cmake' and name 'robot_bringup'
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_commander) by extensions ['ignore', 'ignore_ament_install']
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_commander) by extension 'ignore'
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_commander) by extension 'ignore_ament_install'
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_commander) by extensions ['colcon_pkg']
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_commander) by extension 'colcon_pkg'
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_commander) by extensions ['colcon_meta']
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_commander) by extension 'colcon_meta'
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_commander) by extensions ['ros']
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_commander) by extension 'ros'
+[0.382s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robot_commander' with type 'ros.ament_cmake' and name 'robot_commander'
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_hardware) by extensions ['ignore', 'ignore_ament_install']
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_hardware) by extension 'ignore'
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_hardware) by extension 'ignore_ament_install'
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_hardware) by extensions ['colcon_pkg']
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_hardware) by extension 'colcon_pkg'
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_hardware) by extensions ['colcon_meta']
+[0.383s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_hardware) by extension 'colcon_meta'
+[0.383s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_hardware) by extensions ['ros']
+[0.383s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_hardware) by extension 'ros'
+[0.383s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robot_hardware' with type 'ros.ament_cmake' and name 'robot_hardware'
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_moveit_config) by extensions ['ignore', 'ignore_ament_install']
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_moveit_config) by extension 'ignore'
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_moveit_config) by extension 'ignore_ament_install'
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_moveit_config) by extensions ['colcon_pkg']
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_moveit_config) by extension 'colcon_pkg'
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_moveit_config) by extensions ['colcon_meta']
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_moveit_config) by extension 'colcon_meta'
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_moveit_config) by extensions ['ros']
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_moveit_config) by extension 'ros'
+[0.385s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robot_moveit_config' with type 'ros.ament_cmake' and name 'robot_moveit_config'
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_servoing) by extensions ['ignore', 'ignore_ament_install']
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_servoing) by extension 'ignore'
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_servoing) by extension 'ignore_ament_install'
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_servoing) by extensions ['colcon_pkg']
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_servoing) by extension 'colcon_pkg'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_servoing) by extensions ['colcon_meta']
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_servoing) by extension 'colcon_meta'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_servoing) by extensions ['ros']
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_servoing) by extension 'ros'
+[0.390s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robot_servoing' with type 'ros.ament_cmake' and name 'robot_servoing'
+[0.391s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_status_leds) by extensions ['ignore', 'ignore_ament_install']
+[0.391s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_status_leds) by extension 'ignore'
+[0.391s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_status_leds) by extension 'ignore_ament_install'
+[0.392s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_status_leds) by extensions ['colcon_pkg']
+[0.392s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_status_leds) by extension 'colcon_pkg'
+[0.392s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_status_leds) by extensions ['colcon_meta']
+[0.392s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_status_leds) by extension 'colcon_meta'
+[0.392s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_status_leds) by extensions ['ros']
+[0.392s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_status_leds) by extension 'ros'
+[0.394s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robot_status_leds' with type 'ros.ament_python' and name 'robot_status_leds'
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(src/spotarm_assembly_description) by extensions ['ignore', 'ignore_ament_install']
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(src/spotarm_assembly_description) by extension 'ignore'
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(src/spotarm_assembly_description) by extension 'ignore_ament_install'
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(src/spotarm_assembly_description) by extensions ['colcon_pkg']
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(src/spotarm_assembly_description) by extension 'colcon_pkg'
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(src/spotarm_assembly_description) by extensions ['colcon_meta']
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(src/spotarm_assembly_description) by extension 'colcon_meta'
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(src/spotarm_assembly_description) by extensions ['ros']
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(src/spotarm_assembly_description) by extension 'ros'
+[0.395s] DEBUG:colcon.colcon_core.package_identification:Package 'src/spotarm_assembly_description' with type 'ros.ament_python' and name 'spotarm_assembly_description'
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(src/spotarm_gamepad) by extensions ['ignore', 'ignore_ament_install']
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(src/spotarm_gamepad) by extension 'ignore'
+[0.396s] Level 1:colcon.colcon_core.package_identification:_identify(src/spotarm_gamepad) by extension 'ignore_ament_install'
+[0.396s] Level 1:colcon.colcon_core.package_identification:_identify(src/spotarm_gamepad) by extensions ['colcon_pkg']
+[0.396s] Level 1:colcon.colcon_core.package_identification:_identify(src/spotarm_gamepad) by extension 'colcon_pkg'
+[0.396s] Level 1:colcon.colcon_core.package_identification:_identify(src/spotarm_gamepad) by extensions ['colcon_meta']
+[0.396s] Level 1:colcon.colcon_core.package_identification:_identify(src/spotarm_gamepad) by extension 'colcon_meta'
+[0.396s] Level 1:colcon.colcon_core.package_identification:_identify(src/spotarm_gamepad) by extensions ['ros']
+[0.396s] Level 1:colcon.colcon_core.package_identification:_identify(src/spotarm_gamepad) by extension 'ros'
+[0.397s] DEBUG:colcon.colcon_core.package_identification:Package 'src/spotarm_gamepad' with type 'ros.ament_python' and name 'spotarm_gamepad'
+[0.397s] Level 1:colcon.colcon_core.package_identification:_identify(src/stepper_test) by extensions ['ignore', 'ignore_ament_install']
+[0.397s] Level 1:colcon.colcon_core.package_identification:_identify(src/stepper_test) by extension 'ignore'
+[0.397s] Level 1:colcon.colcon_core.package_identification:_identify(src/stepper_test) by extension 'ignore_ament_install'
+[0.397s] Level 1:colcon.colcon_core.package_identification:_identify(src/stepper_test) by extensions ['colcon_pkg']
+[0.397s] Level 1:colcon.colcon_core.package_identification:_identify(src/stepper_test) by extension 'colcon_pkg'
+[0.397s] Level 1:colcon.colcon_core.package_identification:_identify(src/stepper_test) by extensions ['colcon_meta']
+[0.397s] Level 1:colcon.colcon_core.package_identification:_identify(src/stepper_test) by extension 'colcon_meta'
+[0.397s] Level 1:colcon.colcon_core.package_identification:_identify(src/stepper_test) by extensions ['ros']
+[0.397s] Level 1:colcon.colcon_core.package_identification:_identify(src/stepper_test) by extension 'ros'
+[0.398s] DEBUG:colcon.colcon_core.package_identification:Package 'src/stepper_test' with type 'ros.ament_cmake' and name 'stepper_test'
+[0.398s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.398s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.398s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.398s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.398s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.435s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'marge' in 'src/marge'
+[0.435s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'my_robot' in 'src/my_robot'
+[0.435s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'robot_commander' in 'src/robot_commander'
+[0.435s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'robot_hardware' in 'src/robot_hardware'
+[0.436s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'robot_servoing' in 'src/robot_servoing'
+[0.436s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'robot_status_leds' in 'src/robot_status_leds'
+[0.436s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'spotarm_assembly_description' in 'src/spotarm_assembly_description'
+[0.436s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'stepper_test' in 'src/stepper_test'
+[0.436s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'gear_manipulator_moveit_config' in 'src/gear_manipulator_moveit_config'
+[0.436s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'robot_moveit_config' in 'src/robot_moveit_config'
+[0.436s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'robot_bringup' in 'src/robot_bringup'
+[0.436s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.436s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.437s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/msd/MSD2/REV4/install/spotarm_gamepad' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.441s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 11 installed packages in /home/msd/MSD2/REV4/install
+[0.441s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/msd/install
+[0.443s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 357 installed packages in /opt/ros/humble
+[0.445s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.522s] Level 5:colcon.colcon_core.verb:set package 'spotarm_gamepad' build argument 'cmake_args' from command line to 'None'
+[0.522s] Level 5:colcon.colcon_core.verb:set package 'spotarm_gamepad' build argument 'cmake_target' from command line to 'None'
+[0.522s] Level 5:colcon.colcon_core.verb:set package 'spotarm_gamepad' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.523s] Level 5:colcon.colcon_core.verb:set package 'spotarm_gamepad' build argument 'cmake_clean_cache' from command line to 'False'
+[0.523s] Level 5:colcon.colcon_core.verb:set package 'spotarm_gamepad' build argument 'cmake_clean_first' from command line to 'False'
+[0.523s] Level 5:colcon.colcon_core.verb:set package 'spotarm_gamepad' build argument 'cmake_force_configure' from command line to 'False'
+[0.523s] Level 5:colcon.colcon_core.verb:set package 'spotarm_gamepad' build argument 'ament_cmake_args' from command line to 'None'
+[0.523s] Level 5:colcon.colcon_core.verb:set package 'spotarm_gamepad' build argument 'catkin_cmake_args' from command line to 'None'
+[0.523s] Level 5:colcon.colcon_core.verb:set package 'spotarm_gamepad' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.523s] DEBUG:colcon.colcon_core.verb:Building package 'spotarm_gamepad' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/msd/MSD2/REV4/build/spotarm_gamepad', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/msd/MSD2/REV4/install/spotarm_gamepad', 'merge_install': False, 'path': '/home/msd/MSD2/REV4/src/spotarm_gamepad', 'symlink_install': True, 'test_result_base': None}
+[0.523s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.524s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.524s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/msd/MSD2/REV4/src/spotarm_gamepad' with build type 'ament_python'
+[0.524s] Level 1:colcon.colcon_core.shell:create_environment_hook('spotarm_gamepad', 'ament_prefix_path')
+[0.526s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.526s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/msd/MSD2/REV4/install/spotarm_gamepad/share/spotarm_gamepad/hook/ament_prefix_path.ps1'
+[0.527s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/msd/MSD2/REV4/install/spotarm_gamepad/share/spotarm_gamepad/hook/ament_prefix_path.dsv'
+[0.528s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/msd/MSD2/REV4/install/spotarm_gamepad/share/spotarm_gamepad/hook/ament_prefix_path.sh'
+[0.529s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.529s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.889s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/msd/MSD2/REV4/src/spotarm_gamepad'
+[0.889s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.890s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.375s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/msd/MSD2/REV4/build/spotarm_gamepad': PYTHONPATH=/home/msd/MSD2/REV4/build/spotarm_gamepad/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/msd/MSD2/REV4/install/spotarm_gamepad/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/msd/MSD2/REV4/build/spotarm_gamepad/build --no-deps symlink_data
+[2.013s] Level 1:colcon.colcon_core.shell:create_environment_hook('spotarm_gamepad', 'pythonpath_develop')
+[2.014s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/msd/MSD2/REV4/build/spotarm_gamepad/share/spotarm_gamepad/hook/pythonpath_develop.ps1'
+[2.014s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/msd/MSD2/REV4/build/spotarm_gamepad' returned '0': PYTHONPATH=/home/msd/MSD2/REV4/build/spotarm_gamepad/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/msd/MSD2/REV4/install/spotarm_gamepad/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/msd/MSD2/REV4/build/spotarm_gamepad/build --no-deps symlink_data
+[2.015s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/msd/MSD2/REV4/build/spotarm_gamepad/share/spotarm_gamepad/hook/pythonpath_develop.dsv'
+[2.015s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/msd/MSD2/REV4/build/spotarm_gamepad/share/spotarm_gamepad/hook/pythonpath_develop.sh'
+[2.021s] Level 1:colcon.colcon_core.environment:checking '/home/msd/MSD2/REV4/install/spotarm_gamepad' for CMake module files
+[2.022s] Level 1:colcon.colcon_core.environment:checking '/home/msd/MSD2/REV4/install/spotarm_gamepad' for CMake config files
+[2.022s] Level 1:colcon.colcon_core.environment:checking '/home/msd/MSD2/REV4/install/spotarm_gamepad/lib'
+[2.023s] Level 1:colcon.colcon_core.environment:checking '/home/msd/MSD2/REV4/install/spotarm_gamepad/bin'
+[2.023s] Level 1:colcon.colcon_core.environment:checking '/home/msd/MSD2/REV4/install/spotarm_gamepad/lib/pkgconfig/spotarm_gamepad.pc'
+[2.024s] Level 1:colcon.colcon_core.environment:checking '/home/msd/MSD2/REV4/install/spotarm_gamepad/lib/python3.10/site-packages'
+[2.024s] Level 1:colcon.colcon_core.shell:create_environment_hook('spotarm_gamepad', 'pythonpath')
+[2.025s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/msd/MSD2/REV4/install/spotarm_gamepad/share/spotarm_gamepad/hook/pythonpath.ps1'
+[2.026s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/msd/MSD2/REV4/install/spotarm_gamepad/share/spotarm_gamepad/hook/pythonpath.dsv'
+[2.027s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/msd/MSD2/REV4/install/spotarm_gamepad/share/spotarm_gamepad/hook/pythonpath.sh'
+[2.028s] Level 1:colcon.colcon_core.environment:checking '/home/msd/MSD2/REV4/install/spotarm_gamepad/bin'
+[2.028s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(spotarm_gamepad)
+[2.028s] INFO:colcon.colcon_core.shell:Creating package script '/home/msd/MSD2/REV4/install/spotarm_gamepad/share/spotarm_gamepad/package.ps1'
+[2.030s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/msd/MSD2/REV4/install/spotarm_gamepad/share/spotarm_gamepad/package.dsv'
+[2.030s] INFO:colcon.colcon_core.shell:Creating package script '/home/msd/MSD2/REV4/install/spotarm_gamepad/share/spotarm_gamepad/package.sh'
+[2.031s] INFO:colcon.colcon_core.shell:Creating package script '/home/msd/MSD2/REV4/install/spotarm_gamepad/share/spotarm_gamepad/package.bash'
+[2.032s] INFO:colcon.colcon_core.shell:Creating package script '/home/msd/MSD2/REV4/install/spotarm_gamepad/share/spotarm_gamepad/package.zsh'
+[2.033s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/msd/MSD2/REV4/install/spotarm_gamepad/share/colcon-core/packages/spotarm_gamepad)
+[2.033s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[2.034s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[2.034s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[2.034s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[2.039s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[2.039s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[2.039s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[2.063s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[2.064s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/msd/MSD2/REV4/install/local_setup.ps1'
+[2.065s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/msd/MSD2/REV4/install/_local_setup_util_ps1.py'
+[2.068s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/msd/MSD2/REV4/install/setup.ps1'
+[2.070s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/msd/MSD2/REV4/install/local_setup.sh'
+[2.071s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/msd/MSD2/REV4/install/_local_setup_util_sh.py'
+[2.071s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/msd/MSD2/REV4/install/setup.sh'
+[2.073s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/msd/MSD2/REV4/install/local_setup.bash'
+[2.073s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/msd/MSD2/REV4/install/setup.bash'
+[2.077s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/msd/MSD2/REV4/install/local_setup.zsh'
+[2.077s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/msd/MSD2/REV4/install/setup.zsh'

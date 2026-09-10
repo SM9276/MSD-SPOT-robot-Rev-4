@@ -1,0 +1,3 @@
+[console_scripts]
+gamepad = spotarm_gamepad.gamepad_node:main
+

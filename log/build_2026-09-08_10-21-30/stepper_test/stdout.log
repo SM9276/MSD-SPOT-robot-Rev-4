@@ -1,0 +1,22 @@
+[ 33%] [32mBuilding CXX object CMakeFiles/motor_key.dir/src/motor_key.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/motor_key.dir/src/ICLStepper.cpp.o[0m
+[100%] [32m[1mLinking CXX executable motor_key[0m
+[100%] Built target motor_key
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/stepper_test/lib/stepper_test/motor_key
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/stepper_test/share/ament_index/resource_index/package_run_dependencies/stepper_test
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/stepper_test/share/ament_index/resource_index/parent_prefix_path/stepper_test
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/environment/path.sh
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/environment/path.dsv
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/local_setup.bash
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/local_setup.sh
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/local_setup.zsh
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/local_setup.dsv
+-- Symlinking: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/package.dsv
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/stepper_test/share/ament_index/resource_index/packages/stepper_test
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/cmake/stepper_testConfig.cmake
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/cmake/stepper_testConfig-version.cmake
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/package.xml

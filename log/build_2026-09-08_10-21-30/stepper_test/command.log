@@ -1,0 +1,4 @@
+Invoking command in '/home/msd/MSD2/REV4/build/stepper_test': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/msd/MSD2/REV4/build/stepper_test -- -j8 -l8
+Invoked command in '/home/msd/MSD2/REV4/build/stepper_test' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/msd/MSD2/REV4/build/stepper_test -- -j8 -l8
+Invoking command in '/home/msd/MSD2/REV4/build/stepper_test': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/msd/MSD2/REV4/build/stepper_test
+Invoked command in '/home/msd/MSD2/REV4/build/stepper_test' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/msd/MSD2/REV4/build/stepper_test

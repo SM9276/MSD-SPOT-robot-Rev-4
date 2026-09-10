@@ -1,0 +1,48 @@
+[0.000000] (-) TimerEvent: {}
+[0.000184] (-) JobUnselected: {'identifier': 'gear_manipulator_moveit_config'}
+[0.000213] (-) JobUnselected: {'identifier': 'marge'}
+[0.000232] (-) JobUnselected: {'identifier': 'my_robot'}
+[0.000248] (-) JobUnselected: {'identifier': 'robot_bringup'}
+[0.000262] (-) JobUnselected: {'identifier': 'robot_commander'}
+[0.000278] (-) JobUnselected: {'identifier': 'robot_hardware'}
+[0.000294] (-) JobUnselected: {'identifier': 'robot_moveit_config'}
+[0.000310] (-) JobUnselected: {'identifier': 'robot_servoing'}
+[0.000325] (-) JobUnselected: {'identifier': 'robot_status_leds'}
+[0.000340] (-) JobUnselected: {'identifier': 'spotarm_assembly_description'}
+[0.000356] (-) JobUnselected: {'identifier': 'stepper_test'}
+[0.000373] (spotarm_gamepad) JobQueued: {'identifier': 'spotarm_gamepad', 'dependencies': OrderedDict()}
+[0.000392] (spotarm_gamepad) JobStarted: {'identifier': 'spotarm_gamepad'}
+[0.099320] (-) TimerEvent: {}
+[0.199569] (-) TimerEvent: {}
+[0.299805] (-) TimerEvent: {}
+[0.400131] (-) TimerEvent: {}
+[0.500422] (-) TimerEvent: {}
+[0.600795] (-) TimerEvent: {}
+[0.701426] (-) TimerEvent: {}
+[0.801675] (-) TimerEvent: {}
+[0.875813] (spotarm_gamepad) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/msd/MSD2/REV4/build/spotarm_gamepad/build', '--no-deps', 'symlink_data'], 'cwd': '/home/msd/MSD2/REV4/build/spotarm_gamepad', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'msd', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/msd/MSD2/REV4/install/robot_servoing/lib:/home/msd/MSD2/REV4/install/robot_hardware/lib:/home/msd/MSD2/REV4/install/marge/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/msd', 'OLDPWD': '/home/msd/MSD2/REV4', 'DESKTOP_SESSION': 'ubuntu', 'NVM_BIN': '/home/msd/.nvm/versions/node/v20.20.2/bin', 'NVM_INC': '/home/msd/.nvm/versions/node/v20.20.2/include/node', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '27705', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'NVM_DIR': '/home/msd/.nvm', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/msd/MSD2/REV4/install:/home/msd/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'msd', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'msd', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/msd/.nvm/versions/node/v20.20.2/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/msd-ThinkPad-E14:@/tmp/.ICE-unix/1576,unix/msd-ThinkPad-E14:/tmp/.ICE-unix/1576', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/f7e8e7d6_73b6_4f0f_990a_9afbd3106ab9', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.U47WV3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.209', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/msd/MSD2/REV4/install/stepper_test:/home/msd/MSD2/REV4/install/spotarm_gamepad:/home/msd/MSD2/REV4/install/robot_bringup:/home/msd/MSD2/REV4/install/robot_moveit_config:/home/msd/MSD2/REV4/install/spotarm_assembly_description:/home/msd/MSD2/REV4/install/robot_status_leds:/home/msd/MSD2/REV4/install/robot_servoing:/home/msd/MSD2/REV4/install/robot_hardware:/home/msd/MSD2/REV4/install/robot_commander:/home/msd/MSD2/REV4/install/gear_manipulator_moveit_config:/home/msd/MSD2/REV4/install/my_robot:/home/msd/MSD2/REV4/install/marge:/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/msd/MSD2/REV4/build/spotarm_gamepad', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/msd/MSD2/REV4/build/spotarm_gamepad/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/msd/MSD2/REV4/install/spotarm_gamepad/lib/python3.10/site-packages:/home/msd/MSD2/REV4/install/spotarm_gamepad/lib/python3.10/site-packages:/home/msd/MSD2/REV4/install/spotarm_assembly_description/lib/python3.10/site-packages:/home/msd/MSD2/REV4/install/robot_status_leds/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/msd/MSD2/REV4/install/stepper_test:/home/msd/MSD2/REV4/install/robot_bringup:/home/msd/MSD2/REV4/install/robot_moveit_config:/home/msd/MSD2/REV4/install/robot_servoing:/home/msd/MSD2/REV4/install/robot_hardware:/home/msd/MSD2/REV4/install/robot_commander:/home/msd/MSD2/REV4/install/gear_manipulator_moveit_config:/home/msd/MSD2/REV4/install/my_robot:/home/msd/MSD2/REV4/install/marge'}, 'shell': False}
+[0.901803] (-) TimerEvent: {}
+[1.002042] (-) TimerEvent: {}
+[1.102339] (-) TimerEvent: {}
+[1.202575] (-) TimerEvent: {}
+[1.239484] (spotarm_gamepad) StdoutLine: {'line': b'running develop\n'}
+[1.302803] (-) TimerEvent: {}
+[1.403554] (-) TimerEvent: {}
+[1.455430] (spotarm_gamepad) StdoutLine: {'line': b'running egg_info\n'}
+[1.455611] (spotarm_gamepad) StdoutLine: {'line': b'writing spotarm_gamepad.egg-info/PKG-INFO\n'}
+[1.455854] (spotarm_gamepad) StdoutLine: {'line': b'writing dependency_links to spotarm_gamepad.egg-info/dependency_links.txt\n'}
+[1.455986] (spotarm_gamepad) StdoutLine: {'line': b'writing entry points to spotarm_gamepad.egg-info/entry_points.txt\n'}
+[1.456128] (spotarm_gamepad) StdoutLine: {'line': b'writing requirements to spotarm_gamepad.egg-info/requires.txt\n'}
+[1.456207] (spotarm_gamepad) StdoutLine: {'line': b'writing top-level names to spotarm_gamepad.egg-info/top_level.txt\n'}
+[1.458196] (spotarm_gamepad) StdoutLine: {'line': b"reading manifest file 'spotarm_gamepad.egg-info/SOURCES.txt'\n"}
+[1.458948] (spotarm_gamepad) StdoutLine: {'line': b"writing manifest file 'spotarm_gamepad.egg-info/SOURCES.txt'\n"}
+[1.460358] (spotarm_gamepad) StdoutLine: {'line': b'running build_ext\n'}
+[1.460769] (spotarm_gamepad) StdoutLine: {'line': b'Creating /home/msd/MSD2/REV4/install/spotarm_gamepad/lib/python3.10/site-packages/spotarm-gamepad.egg-link (link to .)\n'}
+[1.462035] (spotarm_gamepad) StdoutLine: {'line': b'Installing gamepad script to /home/msd/MSD2/REV4/install/spotarm_gamepad/lib/spotarm_gamepad\n'}
+[1.462484] (spotarm_gamepad) StdoutLine: {'line': b'\n'}
+[1.462677] (spotarm_gamepad) StdoutLine: {'line': b'Installed /home/msd/MSD2/REV4/build/spotarm_gamepad\n'}
+[1.462816] (spotarm_gamepad) StdoutLine: {'line': b'running symlink_data\n'}
+[1.503671] (-) TimerEvent: {}
+[1.504795] (spotarm_gamepad) CommandEnded: {'returncode': 0}
+[1.517691] (spotarm_gamepad) JobEnded: {'identifier': 'spotarm_gamepad', 'rc': 0}
+[1.518315] (-) EventReactorShutdown: {}

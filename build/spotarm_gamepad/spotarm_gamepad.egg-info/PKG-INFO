@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: spotarm-gamepad
+Version: 0.0.1
+Summary: Gamepad teleoperation node for the SPOT robot arm using MoveIt Servo
+Home-page: UNKNOWN
+Maintainer: msd
+Maintainer-email: msd@example.com
+License: Apache-2.0
+Platform: UNKNOWN
+
+UNKNOWN
+

@@ -1,0 +1,28 @@
+[0.299s] Invoking command in '/home/msd/MSD2/REV4/build/robot_servoing': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/msd/MSD2/REV4/build/robot_servoing -- -j8 -l8
+[0.834s] [35m[1mConsolidate compiler generated dependencies of target servo_controller_input[0m
+[0.834s] [100%] Built target servo_controller_input
+[0.852s] Invoked command in '/home/msd/MSD2/REV4/build/robot_servoing' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/msd/MSD2/REV4/build/robot_servoing -- -j8 -l8
+[0.854s] Invoking command in '/home/msd/MSD2/REV4/build/robot_servoing': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/msd/MSD2/REV4/build/robot_servoing
+[0.872s] -- Install configuration: ""
+[0.873s] -- Execute custom install script
+[0.873s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_servoing/share/robot_servoing/launch/servo.launch.py
+[0.873s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_servoing/share/robot_servoing/launch/servo2.launch.py
+[0.873s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_servoing/share/robot_servoing/config/robot_simulated_config.yaml
+[0.873s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_servoing/share/ament_index/resource_index/package_run_dependencies/robot_servoing
+[0.873s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_servoing/share/ament_index/resource_index/parent_prefix_path/robot_servoing
+[0.873s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_servoing/share/robot_servoing/environment/ament_prefix_path.sh
+[0.873s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_servoing/share/robot_servoing/environment/ament_prefix_path.dsv
+[0.877s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_servoing/share/robot_servoing/environment/path.sh
+[0.877s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_servoing/share/robot_servoing/environment/path.dsv
+[0.877s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_servoing/share/robot_servoing/local_setup.bash
+[0.878s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_servoing/share/robot_servoing/local_setup.sh
+[0.879s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_servoing/share/robot_servoing/local_setup.zsh
+[0.879s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_servoing/share/robot_servoing/local_setup.dsv
+[0.881s] -- Symlinking: /home/msd/MSD2/REV4/install/robot_servoing/share/robot_servoing/package.dsv
+[0.883s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_servoing/share/ament_index/resource_index/packages/robot_servoing
+[0.883s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_servoing/share/ament_index/resource_index/rclcpp_components/robot_servoing
+[0.883s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_servoing/share/robot_servoing/cmake/robot_servoingConfig.cmake
+[0.883s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_servoing/share/robot_servoing/cmake/robot_servoingConfig-version.cmake
+[0.883s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_servoing/share/robot_servoing/package.xml
+[0.884s] -- Up-to-date: /home/msd/MSD2/REV4/install/robot_servoing/lib/libservo_controller_input.so
+[0.994s] Invoked command in '/home/msd/MSD2/REV4/build/robot_servoing' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/msd/MSD2/REV4/build/robot_servoing

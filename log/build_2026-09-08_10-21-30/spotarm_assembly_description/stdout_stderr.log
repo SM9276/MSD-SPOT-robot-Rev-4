@@ -1,0 +1,42 @@
+/usr/lib/python3/dist-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+  warnings.warn(
+running develop
+Removing /home/msd/MSD2/REV4/install/spotarm_assembly_description/lib/python3.10/site-packages/spotarm-assembly-description.egg-link (link to .)
+/usr/lib/python3/dist-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+  warnings.warn(
+running egg_info
+writing ../../build/spotarm_assembly_description/spotarm_assembly_description.egg-info/PKG-INFO
+writing dependency_links to ../../build/spotarm_assembly_description/spotarm_assembly_description.egg-info/dependency_links.txt
+writing entry points to ../../build/spotarm_assembly_description/spotarm_assembly_description.egg-info/entry_points.txt
+writing requirements to ../../build/spotarm_assembly_description/spotarm_assembly_description.egg-info/requires.txt
+writing top-level names to ../../build/spotarm_assembly_description/spotarm_assembly_description.egg-info/top_level.txt
+reading manifest file '../../build/spotarm_assembly_description/spotarm_assembly_description.egg-info/SOURCES.txt'
+writing manifest file '../../build/spotarm_assembly_description/spotarm_assembly_description.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+creating /home/msd/MSD2/REV4/install/spotarm_assembly_description/lib/python3.10/site-packages/spotarm_assembly_description
+copying /home/msd/MSD2/REV4/build/spotarm_assembly_description/build/lib/spotarm_assembly_description/__init__.py -> /home/msd/MSD2/REV4/install/spotarm_assembly_description/lib/python3.10/site-packages/spotarm_assembly_description
+byte-compiling /home/msd/MSD2/REV4/install/spotarm_assembly_description/lib/python3.10/site-packages/spotarm_assembly_description/__init__.py to __init__.cpython-310.pyc
+running install_data
+copying resource/spotarm_assembly_description -> /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/ament_index/resource_index/packages
+copying package.xml -> /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/spotarm_assembly_description
+copying launch/display.launch.py -> /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/spotarm_assembly_description/launch
+copying launch/gazebo.launch.py -> /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/spotarm_assembly_description/launch
+copying urdf/spotarm_assembly.gazebo -> /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/spotarm_assembly_description/urdf
+copying urdf/materials.xacro -> /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/spotarm_assembly_description/urdf
+copying urdf/spotarm_assembly.xacro -> /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/spotarm_assembly_description/urdf
+copying urdf/spotarm_assembly.ros2_control.xacro -> /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/spotarm_assembly_description/urdf
+copying urdf/spotarm_assembly.trans -> /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/spotarm_assembly_description/urdf
+copying urdf/spotarm_assembly.urdf -> /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/spotarm_assembly_description/urdf
+copying meshes/Joint_2_Component_v2_1.stl -> /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/spotarm_assembly_description/meshes
+copying meshes/Joint_4_Component_v2_1.stl -> /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/spotarm_assembly_description/meshes
+copying meshes/base_link.stl -> /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/spotarm_assembly_description/meshes
+copying meshes/Joint_3_Component_v2_1.stl -> /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/spotarm_assembly_description/meshes
+copying meshes/Joint_5_Component_v2_1.stl -> /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/spotarm_assembly_description/meshes
+copying config/display.rviz -> /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/spotarm_assembly_description/config
+running install_egg_info
+Copying ../../build/spotarm_assembly_description/spotarm_assembly_description.egg-info to /home/msd/MSD2/REV4/install/spotarm_assembly_description/lib/python3.10/site-packages/spotarm_assembly_description-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/msd/MSD2/REV4/build/spotarm_assembly_description/install.log'
