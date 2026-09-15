@@ -1,1 +1,0 @@
-/home/msd/MSD2/REV4/src/robot_moveit_config/launch/servo.launch.py

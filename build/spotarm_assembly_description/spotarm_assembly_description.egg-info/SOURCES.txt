@@ -1,4 +1,3 @@
-README.md
 package.xml
 setup.cfg
 setup.py
@@ -19,9 +18,13 @@ meshes/Joint_5_Component_v2_1.stl
 meshes/base_link.stl
 resource/spotarm_assembly_description
 spotarm_assembly_description/__init__.py
-test/test_copyright.py
-test/test_flake8.py
-test/test_pep257.py
+spotarm_assembly_description.egg-info/PKG-INFO
+spotarm_assembly_description.egg-info/SOURCES.txt
+spotarm_assembly_description.egg-info/dependency_links.txt
+spotarm_assembly_description.egg-info/entry_points.txt
+spotarm_assembly_description.egg-info/requires.txt
+spotarm_assembly_description.egg-info/top_level.txt
+spotarm_assembly_description.egg-info/zip-safe
 urdf/materials.xacro
 urdf/spotarm_assembly.gazebo
 urdf/spotarm_assembly.ros2_control.xacro
