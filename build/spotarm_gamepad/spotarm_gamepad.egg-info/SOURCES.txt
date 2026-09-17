@@ -1,0 +1,14 @@
+package.xml
+setup.cfg
+setup.py
+launch/gamepad.launch.py
+resource/spotarm_gamepad
+spotarm_gamepad/__init__.py
+spotarm_gamepad/gamepad_node.py
+spotarm_gamepad.egg-info/PKG-INFO
+spotarm_gamepad.egg-info/SOURCES.txt
+spotarm_gamepad.egg-info/dependency_links.txt
+spotarm_gamepad.egg-info/entry_points.txt
+spotarm_gamepad.egg-info/requires.txt
+spotarm_gamepad.egg-info/top_level.txt
+spotarm_gamepad.egg-info/zip-safe

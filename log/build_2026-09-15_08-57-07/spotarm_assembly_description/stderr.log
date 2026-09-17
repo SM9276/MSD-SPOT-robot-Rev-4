@@ -1,0 +1,5 @@
+/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:355: UserWarning: Unbuilt egg for spotarm-assembly-description [unknown version] (/home/msd/MSD2/REV4/build/spotarm_assembly_description)
+  self.local_index = Environment(self.shadow_path + sys.path)
+/usr/lib/python3/dist-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+  warnings.warn(
+error: could not create '/home/msd/MSD2/REV4/install/spotarm_assembly_description/share/ament_index/resource_index/packages/spotarm_assembly_description': No such file or directory

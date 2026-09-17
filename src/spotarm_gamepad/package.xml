@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+
+<package format="3">
+
+  <name>spotarm_gamepad</name>
+
+  <version>0.1.0</version>
+
+  <description>
+    Gamepad Cartesian jog controller for the SPOT robot arm.
+  </description>
+
+  <maintainer email="msd@example.com">
+    msd
+  </maintainer>
+
+  <license>
+    Apache-2.0
+  </license>
+
+
+  <buildtool_depend>
+    ament_python
+  </buildtool_depend>
+
+
+  <exec_depend>
+    rclpy
+  </exec_depend>
+
+  <exec_depend>
+    sensor_msgs
+  </exec_depend>
+
+  <exec_depend>
+    geometry_msgs
+  </exec_depend>
+
+  <exec_depend>
+    std_msgs
+  </exec_depend>
+
+  <exec_depend>
+    joy
+  </exec_depend>
+
+
+  <export>
+
+    <build_type>
+      ament_python
+    </build_type>
+
+  </export>
+
+</package><?xml version="1.0"?>
+
+<package format="3">
+
+  <name>spotarm_gamepad</name>
+
+  <version>0.1.0</version>
+
+  <description>
+    Gamepad Cartesian jog controller for the SPOT robot arm.
+  </description>
+
+  <maintainer email="msd@example.com">
+    msd
+  </maintainer>
+
+  <license>
+    Apache-2.0
+  </license>
+
+
+  <buildtool_depend>
+    ament_python
+  </buildtool_depend>
+
+
+  <exec_depend>
+    rclpy
+  </exec_depend>
+
+  <exec_depend>
+    sensor_msgs
+  </exec_depend>
+
+  <exec_depend>
+    geometry_msgs
+  </exec_depend>
+
+  <exec_depend>
+    std_msgs
+  </exec_depend>
+
+  <exec_depend>
+    joy
+  </exec_depend>
+
+
+  <export>
+
+    <build_type>
+      ament_python
+    </build_type>
+
+  </export>
+
+</package>

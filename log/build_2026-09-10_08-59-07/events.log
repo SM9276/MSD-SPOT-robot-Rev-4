@@ -1,0 +1,173 @@
+[0.000000] (-) TimerEvent: {}
+[0.000679] (-) JobUnselected: {'identifier': 'gear_manipulator_moveit_config'}
+[0.000714] (-) JobUnselected: {'identifier': 'marge'}
+[0.000733] (-) JobUnselected: {'identifier': 'my_robot'}
+[0.000749] (-) JobUnselected: {'identifier': 'robot_bringup'}
+[0.000763] (-) JobUnselected: {'identifier': 'robot_commander'}
+[0.000778] (-) JobUnselected: {'identifier': 'robot_moveit_config'}
+[0.000792] (-) JobUnselected: {'identifier': 'robot_servoing'}
+[0.000806] (-) JobUnselected: {'identifier': 'robot_status_leds'}
+[0.000819] (-) JobUnselected: {'identifier': 'spotarm_assembly_description'}
+[0.000839] (-) JobUnselected: {'identifier': 'spotarm_gamepad'}
+[0.001043] (-) JobUnselected: {'identifier': 'stepper_test'}
+[0.001070] (robot_hardware) JobQueued: {'identifier': 'robot_hardware', 'dependencies': OrderedDict()}
+[0.001091] (robot_hardware) JobStarted: {'identifier': 'robot_hardware'}
+[0.006816] (robot_hardware) JobProgress: {'identifier': 'robot_hardware', 'progress': 'cmake'}
+[0.007263] (robot_hardware) Command: {'cmd': ['/usr/bin/cmake', '/home/msd/MSD2/REV4/src/robot_hardware', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/msd/MSD2/REV4/install/robot_hardware'], 'cwd': '/home/msd/MSD2/REV4/build/robot_hardware', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'msd'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/msd'), ('OLDPWD', '/home/msd/MSD2/REV4'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/msd/.nvm/versions/node/v20.20.2/bin'), ('NVM_INC', '/home/msd/.nvm/versions/node/v20.20.2/include/node'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '27705'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('NVM_DIR', '/home/msd/.nvm'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'msd'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'msd'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/msd/.nvm/versions/node/v20.20.2/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/msd-ThinkPad-E14:@/tmp/.ICE-unix/1576,unix/msd-ThinkPad-E14:/tmp/.ICE-unix/1576'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/67e4f2a8_3452_4eec_9698_228dec440de6'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.U47WV3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.209'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/msd/MSD2/REV4/build/robot_hardware'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.096350] (robot_hardware) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.099977] (-) TimerEvent: {}
+[0.167411] (robot_hardware) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.177958] (robot_hardware) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.200093] (-) TimerEvent: {}
+[0.241359] (robot_hardware) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.249409] (robot_hardware) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.249919] (robot_hardware) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.250770] (robot_hardware) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.254562] (robot_hardware) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.300190] (-) TimerEvent: {}
+[0.330528] (robot_hardware) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.339560] (robot_hardware) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.339805] (robot_hardware) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.340258] (robot_hardware) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.347775] (robot_hardware) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.400273] (-) TimerEvent: {}
+[0.495610] (robot_hardware) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.500501] (-) TimerEvent: {}
+[0.567024] (robot_hardware) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.598501] (robot_hardware) StdoutLine: {'line': b'-- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.600624] (-) TimerEvent: {}
+[0.648433] (robot_hardware) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.653950] (robot_hardware) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.664404] (robot_hardware) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.681482] (robot_hardware) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.700399] (robot_hardware) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.700690] (-) TimerEvent: {}
+[0.755694] (robot_hardware) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.758908] (robot_hardware) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.800824] (-) TimerEvent: {}
+[0.845591] (robot_hardware) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[0.870018] (robot_hardware) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[0.900937] (-) TimerEvent: {}
+[0.906775] (robot_hardware) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.918477] (robot_hardware) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[0.990595] (robot_hardware) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[0.990956] (robot_hardware) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.001035] (-) TimerEvent: {}
+[1.059509] (robot_hardware) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[1.060589] (robot_hardware) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.101159] (-) TimerEvent: {}
+[1.126323] (robot_hardware) StdoutLine: {'line': b'-- Found rclcpp_lifecycle: 16.0.19 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)\n'}
+[1.152240] (robot_hardware) StdoutLine: {'line': b'-- Found hardware_interface: 2.53.1 (/opt/ros/humble/share/hardware_interface/cmake)\n'}
+[1.201286] (-) TimerEvent: {}
+[1.301566] (-) TimerEvent: {}
+[1.303095] (robot_hardware) StdoutLine: {'line': b'-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.2") \n'}
+[1.303856] (robot_hardware) StdoutLine: {'line': b"-- Checking for module 'libmodbus'\n"}
+[1.314405] (robot_hardware) StdoutLine: {'line': b'--   Found libmodbus, version 3.1.6\n'}
+[1.401688] (-) TimerEvent: {}
+[1.410779] (robot_hardware) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.422126] (robot_hardware) StdoutLine: {'line': b'-- Generating done\n'}
+[1.426107] (robot_hardware) StdoutLine: {'line': b'-- Build files have been written to: /home/msd/MSD2/REV4/build/robot_hardware\n'}
+[1.438965] (robot_hardware) CommandEnded: {'returncode': 0}
+[1.439561] (robot_hardware) JobProgress: {'identifier': 'robot_hardware', 'progress': 'build'}
+[1.440675] (robot_hardware) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/msd/MSD2/REV4/build/robot_hardware', '--', '-j8', '-l8'], 'cwd': '/home/msd/MSD2/REV4/build/robot_hardware', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'msd'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/msd'), ('OLDPWD', '/home/msd/MSD2/REV4'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/msd/.nvm/versions/node/v20.20.2/bin'), ('NVM_INC', '/home/msd/.nvm/versions/node/v20.20.2/include/node'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '27705'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('NVM_DIR', '/home/msd/.nvm'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'msd'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'msd'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/msd/.nvm/versions/node/v20.20.2/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/msd-ThinkPad-E14:@/tmp/.ICE-unix/1576,unix/msd-ThinkPad-E14:/tmp/.ICE-unix/1576'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/67e4f2a8_3452_4eec_9698_228dec440de6'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.U47WV3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.209'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/msd/MSD2/REV4/build/robot_hardware'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[1.486903] (robot_hardware) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/robot_hardware_arm.dir/src/ICLStepper.cpp.o\x1b[0m\n'}
+[1.487111] (robot_hardware) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/robot_hardware_arm.dir/src/arm_hardware_interface.cpp.o\x1b[0m\n'}
+[1.501801] (-) TimerEvent: {}
+[1.602115] (-) TimerEvent: {}
+[1.702423] (-) TimerEvent: {}
+[1.802752] (-) TimerEvent: {}
+[1.823714] (robot_hardware) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/msd/MSD2/REV4/src/robot_hardware/src/ICLStepper.cpp:1\x1b[m\x1b[K:\n'}
+[1.823971] (robot_hardware) StderrLine: {'line': b'\x1b[01m\x1b[K/home/msd/MSD2/REV4/src/robot_hardware/include/robot_hardware/ICLStepper.h:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KICLStepper::ICLStepper(int, modbus_t*, int, int)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.824089] (robot_hardware) StderrLine: {'line': b'\x1b[01m\x1b[K/home/msd/MSD2/REV4/src/robot_hardware/include/robot_hardware/ICLStepper.h:30:9:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KICLStepper::gear_ratio_\x1b[m\x1b[K\xe2\x80\x99 will be initialized after [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder\x07-Wreorder\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.824211] (robot_hardware) StderrLine: {'line': b'   30 |     int \x1b[01;35m\x1b[Kgear_ratio_\x1b[m\x1b[K;\n'}
+[1.824319] (robot_hardware) StderrLine: {'line': b'      |         \x1b[01;35m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.824422] (robot_hardware) StderrLine: {'line': b'\x1b[01m\x1b[K/home/msd/MSD2/REV4/src/robot_hardware/include/robot_hardware/ICLStepper.h:28:9:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kint ICLStepper::delay_us_\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder\x07-Wreorder\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.824538] (robot_hardware) StderrLine: {'line': b'   28 |     int \x1b[01;35m\x1b[Kdelay_us_\x1b[m\x1b[K;\n'}
+[1.824637] (robot_hardware) StderrLine: {'line': b'      |         \x1b[01;35m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[1.824738] (robot_hardware) StderrLine: {'line': b'\x1b[01m\x1b[K/home/msd/MSD2/REV4/src/robot_hardware/src/ICLStepper.cpp:9:1:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K  when initialized here [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder\x07-Wreorder\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.824852] (robot_hardware) StderrLine: {'line': b'    9 | \x1b[01;35m\x1b[KICLStepper\x1b[m\x1b[K::ICLStepper(int slave_id, modbus_t* ctx, int pulses_per_revolution, int gear_ratio)\n'}
+[1.824968] (robot_hardware) StderrLine: {'line': b'      | \x1b[01;35m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.829718] (robot_hardware) StderrLine: {'line': b'\x1b[01m\x1b[K/home/msd/MSD2/REV4/src/robot_hardware/src/ICLStepper.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kint ICLStepper::home(double, double, bool, double)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.830154] (robot_hardware) StderrLine: {'line': b'\x1b[01m\x1b[K/home/msd/MSD2/REV4/src/robot_hardware/src/ICLStepper.cpp:238:20:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Knarrowing conversion of \xe2\x80\x98\x1b[01m\x1b[K(clockwise ? 7 : 6)\x1b[m\x1b[K\xe2\x80\x99 from \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kuint16_t\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kshort unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing\x07-Wnarrowing\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.830342] (robot_hardware) StderrLine: {'line': b'  238 |         \x1b[01;35m\x1b[K(clockwise ? 0b111 : 0b110)\x1b[m\x1b[K, // Homing mode\n'}
+[1.830454] (robot_hardware) StderrLine: {'line': b'      |         \x1b[01;35m\x1b[K~~~~~~~~~~~^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.830583] (robot_hardware) StderrLine: {'line': b'\x1b[01m\x1b[K/home/msd/MSD2/REV4/src/robot_hardware/src/ICLStepper.cpp:243:9:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Knarrowing conversion of \xe2\x80\x98\x1b[01m\x1b[Khigh_velocity_rpm\x1b[m\x1b[K\xe2\x80\x99 from \xe2\x80\x98\x1b[01m\x1b[Kuint\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kunsigned int\x1b[m\x1b[K\xe2\x80\x99} to \xe2\x80\x98\x1b[01m\x1b[Kuint16_t\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kshort unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing\x07-Wnarrowing\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.830696] (robot_hardware) StderrLine: {'line': b'  243 |         \x1b[01;35m\x1b[Khigh_velocity_rpm\x1b[m\x1b[K,    // Homing high velocity\n'}
+[1.830801] (robot_hardware) StderrLine: {'line': b'      |         \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.830923] (robot_hardware) StderrLine: {'line': b'\x1b[01m\x1b[K/home/msd/MSD2/REV4/src/robot_hardware/src/ICLStepper.cpp:244:9:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Knarrowing conversion of \xe2\x80\x98\x1b[01m\x1b[Klow_velocity_rpm\x1b[m\x1b[K\xe2\x80\x99 from \xe2\x80\x98\x1b[01m\x1b[Kuint\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kunsigned int\x1b[m\x1b[K\xe2\x80\x99} to \xe2\x80\x98\x1b[01m\x1b[Kuint16_t\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kshort unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing\x07-Wnarrowing\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.831038] (robot_hardware) StderrLine: {'line': b'  244 |         \x1b[01;35m\x1b[Klow_velocity_rpm\x1b[m\x1b[K,      // Homing low velocity\n'}
+[1.831142] (robot_hardware) StderrLine: {'line': b'      |         \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.902877] (-) TimerEvent: {}
+[2.003211] (-) TimerEvent: {}
+[2.103557] (-) TimerEvent: {}
+[2.203937] (-) TimerEvent: {}
+[2.304232] (-) TimerEvent: {}
+[2.404536] (-) TimerEvent: {}
+[2.504852] (-) TimerEvent: {}
+[2.605148] (-) TimerEvent: {}
+[2.705417] (-) TimerEvent: {}
+[2.805689] (-) TimerEvent: {}
+[2.905970] (-) TimerEvent: {}
+[3.006253] (-) TimerEvent: {}
+[3.106541] (-) TimerEvent: {}
+[3.206857] (-) TimerEvent: {}
+[3.307158] (-) TimerEvent: {}
+[3.407460] (-) TimerEvent: {}
+[3.507736] (-) TimerEvent: {}
+[3.607991] (-) TimerEvent: {}
+[3.708270] (-) TimerEvent: {}
+[3.808541] (-) TimerEvent: {}
+[3.908805] (-) TimerEvent: {}
+[4.009055] (-) TimerEvent: {}
+[4.109347] (-) TimerEvent: {}
+[4.209636] (-) TimerEvent: {}
+[4.309919] (-) TimerEvent: {}
+[4.410205] (-) TimerEvent: {}
+[4.510521] (-) TimerEvent: {}
+[4.610772] (-) TimerEvent: {}
+[4.711067] (-) TimerEvent: {}
+[4.811362] (-) TimerEvent: {}
+[4.911663] (-) TimerEvent: {}
+[5.011934] (-) TimerEvent: {}
+[5.112200] (-) TimerEvent: {}
+[5.212699] (-) TimerEvent: {}
+[5.313501] (-) TimerEvent: {}
+[5.413922] (-) TimerEvent: {}
+[5.514292] (-) TimerEvent: {}
+[5.614576] (-) TimerEvent: {}
+[5.714863] (-) TimerEvent: {}
+[5.763416] (robot_hardware) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX shared library librobot_hardware_arm.so\x1b[0m\n'}
+[5.814916] (-) TimerEvent: {}
+[5.915212] (-) TimerEvent: {}
+[5.944737] (robot_hardware) StdoutLine: {'line': b'[100%] Built target robot_hardware_arm\n'}
+[5.956153] (robot_hardware) CommandEnded: {'returncode': 0}
+[5.956728] (robot_hardware) JobProgress: {'identifier': 'robot_hardware', 'progress': 'install'}
+[5.964866] (robot_hardware) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/msd/MSD2/REV4/build/robot_hardware'], 'cwd': '/home/msd/MSD2/REV4/build/robot_hardware', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'msd'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/msd'), ('OLDPWD', '/home/msd/MSD2/REV4'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/msd/.nvm/versions/node/v20.20.2/bin'), ('NVM_INC', '/home/msd/.nvm/versions/node/v20.20.2/include/node'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '27705'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('NVM_DIR', '/home/msd/.nvm'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'msd'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'msd'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/msd/.nvm/versions/node/v20.20.2/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/msd-ThinkPad-E14:@/tmp/.ICE-unix/1576,unix/msd-ThinkPad-E14:/tmp/.ICE-unix/1576'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/67e4f2a8_3452_4eec_9698_228dec440de6'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.U47WV3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.209'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/msd/MSD2/REV4/build/robot_hardware'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[5.971476] (robot_hardware) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[5.971896] (robot_hardware) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[5.972217] (robot_hardware) StdoutLine: {'line': b'-- Symlinking: /home/msd/MSD2/REV4/install/robot_hardware/share/robot_hardware//robot_hardware_plugin.xml\n'}
+[5.980713] (robot_hardware) StdoutLine: {'line': b'-- Symlinking: /home/msd/MSD2/REV4/install/robot_hardware/lib/librobot_hardware_arm.so\n'}
+[5.989189] (robot_hardware) StdoutLine: {'line': b'-- Symlinking: /home/msd/MSD2/REV4/install/robot_hardware/include/robot_hardware/ICLStepper.h\n'}
+[5.997458] (robot_hardware) StdoutLine: {'line': b'-- Symlinking: /home/msd/MSD2/REV4/install/robot_hardware/include/robot_hardware/arm_hardware_interface.hpp\n'}
+[6.005350] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_hardware/share/robot_hardware/robot_hardware_plugin.xml\n'}
+[6.005591] (robot_hardware) StdoutLine: {'line': b'-- Symlinking: /home/msd/MSD2/REV4/install/robot_hardware/share/ament_index/resource_index/package_run_dependencies/robot_hardware\n'}
+[6.013564] (robot_hardware) StdoutLine: {'line': b'-- Symlinking: /home/msd/MSD2/REV4/install/robot_hardware/share/ament_index/resource_index/parent_prefix_path/robot_hardware\n'}
+[6.015323] (-) TimerEvent: {}
+[6.021567] (robot_hardware) StdoutLine: {'line': b'-- Symlinking: /home/msd/MSD2/REV4/install/robot_hardware/share/robot_hardware/environment/ament_prefix_path.sh\n'}
+[6.029512] (robot_hardware) StdoutLine: {'line': b'-- Symlinking: /home/msd/MSD2/REV4/install/robot_hardware/share/robot_hardware/environment/ament_prefix_path.dsv\n'}
+[6.037389] (robot_hardware) StdoutLine: {'line': b'-- Symlinking: /home/msd/MSD2/REV4/install/robot_hardware/share/robot_hardware/environment/path.sh\n'}
+[6.047741] (robot_hardware) StdoutLine: {'line': b'-- Symlinking: /home/msd/MSD2/REV4/install/robot_hardware/share/robot_hardware/environment/path.dsv\n'}
+[6.056440] (robot_hardware) StdoutLine: {'line': b'-- Symlinking: /home/msd/MSD2/REV4/install/robot_hardware/share/robot_hardware/local_setup.bash\n'}
+[6.063822] (robot_hardware) StdoutLine: {'line': b'-- Symlinking: /home/msd/MSD2/REV4/install/robot_hardware/share/robot_hardware/local_setup.sh\n'}
+[6.071142] (robot_hardware) StdoutLine: {'line': b'-- Symlinking: /home/msd/MSD2/REV4/install/robot_hardware/share/robot_hardware/local_setup.zsh\n'}
+[6.078746] (robot_hardware) StdoutLine: {'line': b'-- Symlinking: /home/msd/MSD2/REV4/install/robot_hardware/share/robot_hardware/local_setup.dsv\n'}
+[6.086125] (robot_hardware) StdoutLine: {'line': b'-- Symlinking: /home/msd/MSD2/REV4/install/robot_hardware/share/robot_hardware/package.dsv\n'}
+[6.093591] (robot_hardware) StdoutLine: {'line': b'-- Symlinking: /home/msd/MSD2/REV4/install/robot_hardware/share/ament_index/resource_index/packages/robot_hardware\n'}
+[6.100996] (robot_hardware) StdoutLine: {'line': b'-- Symlinking: /home/msd/MSD2/REV4/install/robot_hardware/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/robot_hardware\n'}
+[6.108246] (robot_hardware) StdoutLine: {'line': b'-- Symlinking: /home/msd/MSD2/REV4/install/robot_hardware/share/robot_hardware/cmake/robot_hardwareConfig.cmake\n'}
+[6.115434] (-) TimerEvent: {}
+[6.115597] (robot_hardware) StdoutLine: {'line': b'-- Symlinking: /home/msd/MSD2/REV4/install/robot_hardware/share/robot_hardware/cmake/robot_hardwareConfig-version.cmake\n'}
+[6.122948] (robot_hardware) StdoutLine: {'line': b'-- Symlinking: /home/msd/MSD2/REV4/install/robot_hardware/share/robot_hardware/package.xml\n'}
+[6.132033] (robot_hardware) CommandEnded: {'returncode': 0}
+[6.152777] (robot_hardware) JobEnded: {'identifier': 'robot_hardware', 'rc': 0}
+[6.153444] (-) EventReactorShutdown: {}

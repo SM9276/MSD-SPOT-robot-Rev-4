@@ -1,0 +1,1 @@
+Invoking command in '/home/msd/MSD2/REV4/build/robot_commander': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/msd/MSD2/REV4/install/robot_status_leds:/opt/ros/humble /usr/bin/cmake --build /home/msd/MSD2/REV4/build/robot_commander -- -j8 -l8

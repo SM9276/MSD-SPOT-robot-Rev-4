@@ -1,1 +1,2 @@
-/home/msd/MSD2/REV4/build/stepper_test/ament_cmake_environment_hooks/local_setup.dsv
+source;share/stepper_test/environment/ament_prefix_path.sh
+source;share/stepper_test/environment/path.sh

@@ -1,0 +1,21 @@
+[1.449s] Invoking command in '/home/msd/MSD2/REV4/src/robot_status_leds': PYTHONPATH=/home/msd/MSD2/REV4/build/robot_status_leds/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/msd/MSD2/REV4/install/robot_status_leds/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/robot_status_leds build --build-base /home/msd/MSD2/REV4/build/robot_status_leds/build install --record /home/msd/MSD2/REV4/build/robot_status_leds/install.log --single-version-externally-managed install_data
+[1.780s] running egg_info
+[1.781s] writing ../../build/robot_status_leds/robot_status_leds.egg-info/PKG-INFO
+[1.781s] writing dependency_links to ../../build/robot_status_leds/robot_status_leds.egg-info/dependency_links.txt
+[1.782s] writing entry points to ../../build/robot_status_leds/robot_status_leds.egg-info/entry_points.txt
+[1.782s] writing requirements to ../../build/robot_status_leds/robot_status_leds.egg-info/requires.txt
+[1.782s] writing top-level names to ../../build/robot_status_leds/robot_status_leds.egg-info/top_level.txt
+[1.785s] reading manifest file '../../build/robot_status_leds/robot_status_leds.egg-info/SOURCES.txt'
+[1.786s] adding license file 'LICENSE'
+[1.787s] writing manifest file '../../build/robot_status_leds/robot_status_leds.egg-info/SOURCES.txt'
+[1.787s] running build
+[1.787s] running build_py
+[1.788s] running install
+[1.788s] running install_lib
+[1.790s] running install_data
+[1.790s] running install_egg_info
+[1.794s] removing '/home/msd/MSD2/REV4/install/robot_status_leds/lib/python3.10/site-packages/robot_status_leds-0.0.0-py3.10.egg-info' (and everything under it)
+[1.795s] Copying ../../build/robot_status_leds/robot_status_leds.egg-info to /home/msd/MSD2/REV4/install/robot_status_leds/lib/python3.10/site-packages/robot_status_leds-0.0.0-py3.10.egg-info
+[1.796s] running install_scripts
+[1.830s] Installing led_state_node script to /home/msd/MSD2/REV4/install/robot_status_leds/lib/robot_status_leds
+[1.830s] writing list of installed files to '/home/msd/MSD2/REV4/build/robot_status_leds/install.log'

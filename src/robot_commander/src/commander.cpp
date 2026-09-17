@@ -1,218 +1,38 @@
-#include <rclcpp/rclcpp.hpp>
+#include <algorithm>
+#include <atomic>
 #include <chrono>
-#include <moveit/move_group_interface/move_group_interface.h>
-#include <moveit_msgs/msg/robot_trajectory.hpp>
+#include <cmath>
+#include <condition_variable>
+#include <memory>
+#include <mutex>
+#include <optional>
+#include <string>
+#include <thread>
 
-#include <geometry_msgs/msg/pose.hpp>
-#include <geometry_msgs/msg/pose_stamped.hpp>
+#include <rclcpp/rclcpp.hpp>
+
 #include <geometry_msgs/msg/point_stamped.hpp>
+#include <geometry_msgs/msg/pose_stamped.hpp>
 #include <geometry_msgs/msg/vector3.hpp>
 
-#include <vector>
-#include <string>
-#include <iostream>
-#include <sstream>
-#include <thread>
-#include <algorithm>
-#include <cctype>
-#include <cmath>
-#include <mutex>
-#include <condition_variable>
-#include <queue>
-#include <functional>
-#include <atomic>
+#include <std_msgs/msg/empty.hpp>
+#include <std_msgs/msg/string.hpp>
 
-#include <unistd.h>
-
-using MoveGroupInterface =
-    moveit::planning_interface::MoveGroupInterface;
+#include <moveit/move_group_interface/move_group_interface.h>
 
 
-class Commander
+class Commander : public rclcpp::Node
 {
 public:
-    explicit Commander(
-        const std::shared_ptr<rclcpp::Node> &node)
-        : node_(node)
+    explicit Commander(const rclcpp::NodeOptions & options)
+        : Node("commander", options)
     {
-        RCLCPP_INFO(
-            node_->get_logger(),
-            "Creating MoveGroupInterface..."
-        );
-
-        arm_ =
-            std::make_shared<MoveGroupInterface>(
-                node_,
-                "arm"
-            );
-
-        arm_->setPoseReferenceFrame("base_link");
-        arm_->setEndEffectorLink("fake_gripper");
-
-        arm_->setMaxVelocityScalingFactor(0.1);
-        arm_->setMaxAccelerationScalingFactor(0.1);
-
-        arm_->setPlanningTime(10.0);
-        arm_->setNumPlanningAttempts(10);
-
-        arm_->setGoalPositionTolerance(0.01);
-        arm_->setGoalOrientationTolerance(0.05);
-
-        /*
-         * XYZ position command.
-         *
-         * Example:
-         *
-         * ros2 topic pub --once \
-         * /spotarm/target_position \
-         * geometry_msgs/msg/PointStamped \
-         * "{header: {frame_id: 'base_link'},
-         *   point: {x: 0.07, y: -0.96, z: 0.109}}"
-         */
-        target_position_sub_ =
-            node_->create_subscription<
-                geometry_msgs::msg::PointStamped>(
-                "/spotarm/target_position",
-                10,
-                [this](
-                    const geometry_msgs::msg::PointStamped::
-                        SharedPtr msg)
-                {
-                    const double x = msg->point.x;
-                    const double y = msg->point.y;
-                    const double z = msg->point.z;
-
-                    enqueue(
-                        [this, x, y, z]()
-                        {
-                            goToPositionTarget(
-                                x,
-                                y,
-                                z
-                            );
-                        }
-                    );
-                }
-            );
-
-        /*
-         * Full Cartesian pose.
-         *
-         * XYZ + quaternion.
-         */
-        target_pose_sub_ =
-            node_->create_subscription<
-                geometry_msgs::msg::PoseStamped>(
-                "/spotarm/target_pose",
-                10,
-                [this](
-                    const geometry_msgs::msg::PoseStamped::
-                        SharedPtr msg)
-                {
-                    geometry_msgs::msg::PoseStamped target =
-                        *msg;
-
-                    enqueue(
-                        [this, target]()
-                        {
-                            goToPoseTarget(target);
-                        }
-                    );
-                }
-            );
-
-        /*
-         * Relative Cartesian movement.
-         *
-         * x = dx
-         * y = dy
-         * z = dz
-         */
-        relative_move_sub_ =
-            node_->create_subscription<
-                geometry_msgs::msg::Vector3>(
-                "/spotarm/relative_move",
-                10,
-                [this](
-                    const geometry_msgs::msg::Vector3::
-                        SharedPtr msg)
-                {
-                    const double dx = msg->x;
-                    const double dy = msg->y;
-                    const double dz = msg->z;
-
-                    enqueue(
-                        [this, dx, dy, dz]()
-                        {
-                            goToRelativeTarget(
-                                dx,
-                                dy,
-                                dz
-                            );
-                        }
-                    );
-                }
-            );
-
-        running_ = true;
-
-        worker_thread_ =
-            std::thread(
-                [this]()
-                {
-                    workerLoop();
-                }
-            );
-
-        RCLCPP_INFO(
-            node_->get_logger(),
-            "Commander initialized."
-        );
-
-        RCLCPP_INFO(
-            node_->get_logger(),
-            "Planning group: arm"
-        );
-
-        RCLCPP_INFO(
-            node_->get_logger(),
-            "Planning frame: %s",
-            arm_->getPlanningFrame().c_str()
-        );
-
-        RCLCPP_INFO(
-            node_->get_logger(),
-            "End effector: %s",
-            arm_->getEndEffectorLink().c_str()
-        );
-
-        RCLCPP_INFO(
-            node_->get_logger(),
-            "Listening on:"
-        );
-
-        RCLCPP_INFO(
-            node_->get_logger(),
-            "  /spotarm/target_position"
-        );
-
-        RCLCPP_INFO(
-            node_->get_logger(),
-            "  /spotarm/target_pose"
-        );
-
-        RCLCPP_INFO(
-            node_->get_logger(),
-            "  /spotarm/relative_move"
-        );
     }
-
 
     ~Commander()
     {
-        running_ = false;
-
-        queue_condition_.notify_all();
+        shutdown_.store(true);
+        worker_cv_.notify_all();
 
         if (worker_thread_.joinable())
         {
@@ -221,973 +41,1228 @@ public:
     }
 
 
-    void goToNamedTarget(
-        const std::string &name)
+    void initialize()
     {
-        RCLCPP_INFO(
-            node_->get_logger(),
-            "Named target: %s",
-            name.c_str()
-        );
+        // ---------------------------------------------------------
+        // Parameters
+        // ---------------------------------------------------------
 
-        arm_->setStartStateToCurrentState();
-
-        if (!arm_->setNamedTarget(name))
-        {
-            RCLCPP_ERROR(
-                node_->get_logger(),
-                "Unknown named target: %s",
-                name.c_str()
+        planning_group_ =
+            get_or_declare<std::string>(
+                "planning_group",
+                "arm"
             );
 
-            return;
-        }
-
-        planAndExecute();
-    }
-
-
-    void goToJointTarget(
-        const std::vector<double> &joints)
-    {
-        if (joints.size() != jointCount())
-        {
-            RCLCPP_ERROR(
-                node_->get_logger(),
-                "Expected %zu joints, received %zu",
-                jointCount(),
-                joints.size()
+        max_step_ =
+            get_or_declare<double>(
+                "max_step",
+                0.005
             );
 
-            return;
-        }
-
-        RCLCPP_INFO(
-            node_->get_logger(),
-            "Planning joint target..."
-        );
-
-        arm_->setStartStateToCurrentState();
-
-        if (!arm_->setJointValueTarget(joints))
-        {
-            RCLCPP_ERROR(
-                node_->get_logger(),
-                "Joint target rejected."
+        max_pending_ =
+            get_or_declare<double>(
+                "max_pending",
+                0.030
             );
 
-            return;
-        }
-
-        planAndExecute();
-    }
-
-
-    /*
-     * XYZ-only target.
-     *
-     * Orientation is not constrained.
-     */
-    void goToPositionTarget(
-        double x,
-        double y,
-        double z)
-    {
-        RCLCPP_INFO(
-            node_->get_logger(),
-            "Position target:"
-            " x=%.4f y=%.4f z=%.4f",
-            x,
-            y,
-            z
-        );
-
-        arm_->setStartStateToCurrentState();
-
-        arm_->clearPoseTargets();
-
-        arm_->setGoalPositionTolerance(0.01);
-
-        /*
-         * Position-only target.
-         */
-        const bool accepted =
-            arm_->setPositionTarget(
-                x,
-                y,
-                z,
-                "fake_gripper"
+        velocity_scaling_ =
+            get_or_declare<double>(
+                "velocity_scaling",
+                0.05
             );
 
-        if (!accepted)
-        {
-            RCLCPP_ERROR(
-                node_->get_logger(),
-                "MoveIt rejected position target."
+        acceleration_scaling_ =
+            get_or_declare<double>(
+                "acceleration_scaling",
+                0.05
             );
 
-            return;
-        }
-
-        planAndExecute();
-
-        arm_->clearPoseTargets();
-    }
-
-
-    /*
-     * Full Cartesian pose target.
-     */
-    void goToPoseTarget(
-        geometry_msgs::msg::PoseStamped target)
-    {
-        if (target.header.frame_id.empty())
-        {
-            target.header.frame_id =
-                "base_link";
-        }
-
-        /*
-         * If quaternion is all zeros,
-         * preserve the current orientation.
-         */
-        const double q_norm =
-            std::sqrt(
-                target.pose.orientation.x *
-                    target.pose.orientation.x +
-                target.pose.orientation.y *
-                    target.pose.orientation.y +
-                target.pose.orientation.z *
-                    target.pose.orientation.z +
-                target.pose.orientation.w *
-                    target.pose.orientation.w
+        planning_time_ =
+            get_or_declare<double>(
+                "planning_time",
+                1.0
             );
 
-        if (q_norm < 0.0001)
-        {
-            auto current =
-                arm_->getCurrentPose(
-                    "fake_gripper"
-                );
-
-            target.pose.orientation =
-                current.pose.orientation;
-
-            RCLCPP_WARN(
-                node_->get_logger(),
-                "Target quaternion was zero. "
-                "Preserving current orientation."
-            );
-        }
-        else
-        {
-            /*
-             * Normalize quaternion.
-             */
-            target.pose.orientation.x /= q_norm;
-            target.pose.orientation.y /= q_norm;
-            target.pose.orientation.z /= q_norm;
-            target.pose.orientation.w /= q_norm;
-        }
-
-        RCLCPP_INFO(
-            node_->get_logger(),
-            "Pose target:"
-            " x=%.4f y=%.4f z=%.4f",
-            target.pose.position.x,
-            target.pose.position.y,
-            target.pose.position.z
-        );
-
-        arm_->setStartStateToCurrentState();
-
-        arm_->clearPoseTargets();
-
-        arm_->setGoalPositionTolerance(0.01);
-        arm_->setGoalOrientationTolerance(0.05);
-
-        const bool accepted =
-            arm_->setPoseTarget(
-                target,
-                "fake_gripper"
-            );
-
-        if (!accepted)
-        {
-            RCLCPP_ERROR(
-                node_->get_logger(),
-                "MoveIt rejected pose target."
-            );
-
-            return;
-        }
-
-        planAndExecute();
-
-        arm_->clearPoseTargets();
-    }
-
-
-    /*
-     * Relative XYZ move.
-     *
-     * Orientation stays unchanged.
-     */
-    void goToRelativeTarget(
-        double dx,
-        double dy,
-        double dz)
-    {
-        arm_->setStartStateToCurrentState();
-
-        auto current_pose =
-            arm_->getCurrentPose(
-                "fake_gripper"
-            );
-
-        geometry_msgs::msg::Pose target_pose =
-            current_pose.pose;
-
-        target_pose.position.x += dx;
-        target_pose.position.y += dy;
-        target_pose.position.z += dz;
-
-        RCLCPP_INFO(
-            node_->get_logger(),
-            "Relative target:"
-            " dx=%.4f dy=%.4f dz=%.4f",
-            dx,
-            dy,
-            dz
-        );
-
-        RCLCPP_INFO(
-            node_->get_logger(),
-            "New target:"
-            " x=%.4f y=%.4f z=%.4f",
-            target_pose.position.x,
-            target_pose.position.y,
-            target_pose.position.z
-        );
-
-        arm_->clearPoseTargets();
-
-        arm_->setGoalPositionTolerance(0.01);
-        arm_->setGoalOrientationTolerance(0.05);
-
-        const bool accepted =
-            arm_->setPoseTarget(
-                target_pose,
-                "fake_gripper"
-            );
-
-        if (!accepted)
-        {
-            RCLCPP_ERROR(
-                node_->get_logger(),
-                "MoveIt rejected relative target."
-            );
-
-            return;
-        }
-
-        planAndExecute();
-
-        arm_->clearPoseTargets();
-    }
-
-
-    /*
-     * Straight Cartesian path.
-     *
-     * Preserves current orientation.
-     */
-    void goToPositionTargetCartesian(
-        double x,
-        double y,
-        double z)
-    {
-        arm_->setStartStateToCurrentState();
-
-        auto current_pose =
-            arm_->getCurrentPose(
-                "fake_gripper"
-            );
-
-        geometry_msgs::msg::Pose target_pose =
-            current_pose.pose;
-
-        target_pose.position.x = x;
-        target_pose.position.y = y;
-        target_pose.position.z = z;
-
-        std::vector<geometry_msgs::msg::Pose>
-            waypoints;
-
-        waypoints.push_back(target_pose);
-
-        moveit_msgs::msg::RobotTrajectory
-            trajectory;
-
-        constexpr double eef_step =
-            0.005;
-
-        constexpr double jump_threshold =
-            0.0;
-
-        RCLCPP_INFO(
-            node_->get_logger(),
-            "Computing Cartesian path to:"
-            " x=%.4f y=%.4f z=%.4f",
-            x,
-            y,
-            z
-        );
-
-        const double fraction =
-            arm_->computeCartesianPath(
-                waypoints,
-                eef_step,
-                jump_threshold,
-                trajectory,
+        use_pilz_ =
+            get_or_declare<bool>(
+                "use_pilz",
                 true
             );
 
+        fallback_pipeline_ =
+            get_or_declare<std::string>(
+                "fallback_pipeline",
+                "ompl"
+            );
+
+        fallback_planner_ =
+            get_or_declare<std::string>(
+                "fallback_planner",
+                "RRTConnectkConfigDefault"
+            );
+
+
+        // ---------------------------------------------------------
+        // MoveGroupInterface
+        // ---------------------------------------------------------
+
         RCLCPP_INFO(
-            node_->get_logger(),
-            "Cartesian path fraction: %.1f%%",
-            fraction * 100.0
+            get_logger(),
+            "Creating MoveGroupInterface..."
         );
 
-        if (fraction < 0.999)
-        {
-            RCLCPP_WARN(
-                node_->get_logger(),
-                "Cartesian path achieved only "
-                "%.1f%% of requested trajectory.",
-                fraction * 100.0
+        move_group_ =
+            std::make_unique<
+                moveit::planning_interface::MoveGroupInterface
+            >(
+                shared_from_this(),
+                planning_group_
             );
 
-            return;
-        }
+        move_group_->setMaxVelocityScalingFactor(
+            velocity_scaling_
+        );
+
+        move_group_->setMaxAccelerationScalingFactor(
+            acceleration_scaling_
+        );
+
+        move_group_->setPlanningTime(
+            planning_time_
+        );
+
+        planning_frame_ =
+            move_group_->getPlanningFrame();
+
+        end_effector_link_ =
+            move_group_->getEndEffectorLink();
+
+
+        // ---------------------------------------------------------
+        // Subscribers
+        // ---------------------------------------------------------
+
+        relative_sub_ =
+            create_subscription<geometry_msgs::msg::Vector3>(
+                "/spotarm/relative_move",
+                20,
+                std::bind(
+                    &Commander::relative_callback,
+                    this,
+                    std::placeholders::_1
+                )
+            );
+
+        target_position_sub_ =
+            create_subscription<
+                geometry_msgs::msg::PointStamped
+            >(
+                "/spotarm/target_position",
+                10,
+                std::bind(
+                    &Commander::position_callback,
+                    this,
+                    std::placeholders::_1
+                )
+            );
+
+        target_pose_sub_ =
+            create_subscription<
+                geometry_msgs::msg::PoseStamped
+            >(
+                "/spotarm/target_pose",
+                10,
+                std::bind(
+                    &Commander::pose_callback,
+                    this,
+                    std::placeholders::_1
+                )
+            );
+
+        named_target_sub_ =
+            create_subscription<std_msgs::msg::String>(
+                "/spotarm/named_target",
+                10,
+                std::bind(
+                    &Commander::named_target_callback,
+                    this,
+                    std::placeholders::_1
+                )
+            );
+
+        stop_sub_ =
+            create_subscription<std_msgs::msg::Empty>(
+                "/spotarm/stop",
+                10,
+                std::bind(
+                    &Commander::stop_callback,
+                    this,
+                    std::placeholders::_1
+                )
+            );
+
+
+        // ---------------------------------------------------------
+        // Worker
+        //
+        // ROS callbacks never plan or execute.
+        // They only update pending commands.
+        // ---------------------------------------------------------
+
+        worker_thread_ =
+            std::thread(
+                &Commander::worker_loop,
+                this
+            );
+
+
+        // ---------------------------------------------------------
+        // Information
+        // ---------------------------------------------------------
 
         RCLCPP_INFO(
-            node_->get_logger(),
-            "Executing Cartesian trajectory..."
+            get_logger(),
+            "Commander initialized."
         );
 
-        const auto result =
-            arm_->execute(trajectory);
-
-        if (
-            result ==
-            moveit::core::MoveItErrorCode::SUCCESS)
-        {
-            RCLCPP_INFO(
-                node_->get_logger(),
-                "Cartesian execution succeeded."
-            );
-        }
-        else
-        {
-            RCLCPP_ERROR(
-                node_->get_logger(),
-                "Cartesian execution failed."
-            );
-        }
-    }
-
-
-    std::size_t jointCount() const
-    {
-        return arm_->getVariableCount();
-    }
-
-
-    /*
-     * Commands from terminal are placed into
-     * the same worker queue as ROS commands.
-     */
-    void queueNamedTarget(
-        const std::string &name)
-    {
-        enqueue(
-            [this, name]()
-            {
-                goToNamedTarget(name);
-            }
+        RCLCPP_INFO(
+            get_logger(),
+            "Planning group: %s",
+            planning_group_.c_str()
         );
-    }
 
-
-    void queueJointTarget(
-        const std::vector<double> &joints)
-    {
-        enqueue(
-            [this, joints]()
-            {
-                goToJointTarget(joints);
-            }
+        RCLCPP_INFO(
+            get_logger(),
+            "Planning frame: %s",
+            planning_frame_.c_str()
         );
-    }
 
-
-    void queuePositionTarget(
-        double x,
-        double y,
-        double z)
-    {
-        enqueue(
-            [this, x, y, z]()
-            {
-                goToPositionTarget(
-                    x,
-                    y,
-                    z
-                );
-            }
+        RCLCPP_INFO(
+            get_logger(),
+            "End effector: %s",
+            end_effector_link_.c_str()
         );
-    }
 
-
-    void queueCartesianTarget(
-        double x,
-        double y,
-        double z)
-    {
-        enqueue(
-            [this, x, y, z]()
-            {
-                goToPositionTargetCartesian(
-                    x,
-                    y,
-                    z
-                );
-            }
+        RCLCPP_INFO(
+            get_logger(),
+            "Maximum Cartesian step: %.4f m",
+            max_step_
         );
-    }
 
+        RCLCPP_INFO(
+            get_logger(),
+            "Maximum queued Cartesian displacement: %.4f m",
+            max_pending_
+        );
 
-    void queueRelativeTarget(
-        double dx,
-        double dy,
-        double dz)
-    {
-        enqueue(
-            [this, dx, dy, dz]()
-            {
-                goToRelativeTarget(
-                    dx,
-                    dy,
-                    dz
-                );
-            }
+        RCLCPP_INFO(
+            get_logger(),
+            "Pilz LIN enabled: %s",
+            use_pilz_ ? "true" : "false"
+        );
+
+        RCLCPP_INFO(
+            get_logger(),
+            "Listening on:"
+        );
+
+        RCLCPP_INFO(
+            get_logger(),
+            "  /spotarm/target_position"
+        );
+
+        RCLCPP_INFO(
+            get_logger(),
+            "  /spotarm/target_pose"
+        );
+
+        RCLCPP_INFO(
+            get_logger(),
+            "  /spotarm/relative_move"
+        );
+
+        RCLCPP_INFO(
+            get_logger(),
+            "  /spotarm/named_target"
+        );
+
+        RCLCPP_INFO(
+            get_logger(),
+            "  /spotarm/stop"
+        );
+
+        RCLCPP_INFO(
+            get_logger(),
+            "Commander ready."
         );
     }
 
 
 private:
-    /*
-     * Put MoveIt operations on a separate
-     * worker thread.
-     *
-     * This prevents ROS subscription callbacks
-     * from blocking the executor while MoveIt
-     * waits for actions/services.
-     */
-    void enqueue(
-        std::function<void()> command)
-    {
-        {
-            std::lock_guard<std::mutex>
-                lock(queue_mutex_);
 
-            command_queue_.push(
-                std::move(command)
+    // =============================================================
+    // Parameter helper
+    // =============================================================
+
+    template<typename T>
+    T get_or_declare(
+        const std::string & name,
+        const T & default_value)
+    {
+        if (!has_parameter(name))
+        {
+            declare_parameter<T>(
+                name,
+                default_value
             );
         }
 
-        queue_condition_.notify_one();
+        return get_parameter(name).get_value<T>();
     }
 
 
-    void workerLoop()
+    // =============================================================
+    // Relative Cartesian command
+    // =============================================================
+
+    void relative_callback(
+        const geometry_msgs::msg::Vector3::SharedPtr msg)
     {
-        while (running_ && rclcpp::ok())
-        {
-            std::function<void()> command;
-
-            {
-                std::unique_lock<std::mutex>
-                    lock(queue_mutex_);
-
-                queue_condition_.wait(
-                    lock,
-                    [this]()
-                    {
-                        return
-                            !command_queue_.empty() ||
-                            !running_;
-                    }
-                );
-
-                if (!running_)
-                {
-                    break;
-                }
-
-                command =
-                    std::move(
-                        command_queue_.front()
-                    );
-
-                command_queue_.pop();
-            }
-
-            try
-            {
-                command();
-            }
-            catch (
-                const std::exception &e)
-            {
-                RCLCPP_ERROR(
-                    node_->get_logger(),
-                    "Command exception: %s",
-                    e.what()
-                );
-            }
-        }
-    }
-
-
-    void planAndExecute()
-    {
-        MoveGroupInterface::Plan plan;
-
-        RCLCPP_INFO(
-            node_->get_logger(),
-            "Planning..."
+        std::lock_guard<std::mutex> lock(
+            command_mutex_
         );
 
-        const auto result =
-            arm_->plan(plan);
+        // An explicit absolute target is replaced by joystick jog.
+        pending_pose_.reset();
+        pending_position_.reset();
+        pending_named_target_.reset();
 
+        pending_relative_.x =
+            std::clamp(
+                pending_relative_.x + msg->x,
+                -max_pending_,
+                max_pending_
+            );
+
+        pending_relative_.y =
+            std::clamp(
+                pending_relative_.y + msg->y,
+                -max_pending_,
+                max_pending_
+            );
+
+        pending_relative_.z =
+            std::clamp(
+                pending_relative_.z + msg->z,
+                -max_pending_,
+                max_pending_
+            );
+
+        worker_cv_.notify_one();
+    }
+
+
+    // =============================================================
+    // Absolute position target
+    // =============================================================
+
+    void position_callback(
+        const geometry_msgs::msg::PointStamped::SharedPtr msg)
+    {
         if (
-            result !=
-            moveit::core::MoveItErrorCode::SUCCESS)
+            !msg->header.frame_id.empty() &&
+            msg->header.frame_id != planning_frame_
+        )
         {
             RCLCPP_ERROR(
-                node_->get_logger(),
-                "Planning failed."
+                get_logger(),
+                "target_position frame '%s' does not match planning frame '%s'.",
+                msg->header.frame_id.c_str(),
+                planning_frame_.c_str()
             );
 
             return;
         }
 
-        RCLCPP_INFO(
-            node_->get_logger(),
-            "Planning succeeded. Executing..."
-        );
-
-        const auto execute_result =
-            arm_->execute(plan);
-
-        if (
-            execute_result ==
-            moveit::core::MoveItErrorCode::SUCCESS)
         {
-            RCLCPP_INFO(
-                node_->get_logger(),
-                "Execution succeeded."
+            std::lock_guard<std::mutex> lock(
+                command_mutex_
             );
+
+            pending_relative_ =
+                geometry_msgs::msg::Vector3();
+
+            pending_pose_.reset();
+
+            pending_named_target_.reset();
+
+            pending_position_ = *msg;
         }
-        else
+
+        worker_cv_.notify_one();
+    }
+
+
+    // =============================================================
+    // Absolute pose target
+    // =============================================================
+
+    void pose_callback(
+        const geometry_msgs::msg::PoseStamped::SharedPtr msg)
+    {
+        if (
+            !msg->header.frame_id.empty() &&
+            msg->header.frame_id != planning_frame_
+        )
         {
             RCLCPP_ERROR(
-                node_->get_logger(),
-                "Execution failed."
+                get_logger(),
+                "target_pose frame '%s' does not match planning frame '%s'.",
+                msg->header.frame_id.c_str(),
+                planning_frame_.c_str()
             );
+
+            return;
+        }
+
+        {
+            std::lock_guard<std::mutex> lock(
+                command_mutex_
+            );
+
+            pending_relative_ =
+                geometry_msgs::msg::Vector3();
+
+            pending_position_.reset();
+
+            pending_named_target_.reset();
+
+            pending_pose_ = *msg;
+        }
+
+        worker_cv_.notify_one();
+    }
+
+
+    // =============================================================
+    // Named MoveIt pose
+    // =============================================================
+
+    void named_target_callback(
+        const std_msgs::msg::String::SharedPtr msg)
+    {
+        if (msg->data.empty())
+        {
+            return;
+        }
+
+        {
+            std::lock_guard<std::mutex> lock(
+                command_mutex_
+            );
+
+            pending_relative_ =
+                geometry_msgs::msg::Vector3();
+
+            pending_pose_.reset();
+            pending_position_.reset();
+
+            pending_named_target_ =
+                msg->data;
+        }
+
+        RCLCPP_INFO(
+            get_logger(),
+            "Queued named target: %s",
+            msg->data.c_str()
+        );
+
+        worker_cv_.notify_one();
+    }
+
+
+    // =============================================================
+    // Stop
+    // =============================================================
+
+    void stop_callback(
+        const std_msgs::msg::Empty::SharedPtr)
+    {
+        RCLCPP_WARN(
+            get_logger(),
+            "STOP requested. Clearing pending commands."
+        );
+
+        {
+            std::lock_guard<std::mutex> lock(
+                command_mutex_
+            );
+
+            clear_pending_locked();
+        }
+
+        stop_requested_.store(true);
+
+        /*
+         * Ask MoveIt to cancel currently executing motion.
+         *
+         * This is useful for the gamepad deadman release,
+         * but it is NOT a replacement for a physical E-stop.
+         */
+        if (move_group_)
+        {
+            move_group_->stop();
+        }
+
+        worker_cv_.notify_all();
+    }
+
+
+    // =============================================================
+    // Worker
+    // =============================================================
+
+    void worker_loop()
+    {
+        using namespace std::chrono_literals;
+
+        while (
+            rclcpp::ok() &&
+            !shutdown_.load()
+        )
+        {
+            Command command;
+
+            {
+                std::unique_lock<std::mutex> lock(
+                    command_mutex_
+                );
+
+                worker_cv_.wait_for(
+                    lock,
+                    100ms,
+                    [this]()
+                    {
+                        return
+                            shutdown_.load() ||
+                            has_pending_command_locked();
+                    }
+                );
+
+                if (shutdown_.load())
+                {
+                    break;
+                }
+
+                if (!has_pending_command_locked())
+                {
+                    continue;
+                }
+
+                command =
+                    get_next_command_locked();
+            }
+
+
+            stop_requested_.store(false);
+
+
+            bool success = false;
+
+            switch (command.type)
+            {
+                case CommandType::RELATIVE:
+                    success =
+                        execute_relative(
+                            command.relative
+                        );
+                    break;
+
+                case CommandType::POSITION:
+                    success =
+                        execute_position(
+                            command.position
+                        );
+                    break;
+
+                case CommandType::POSE:
+                    success =
+                        execute_pose(
+                            command.pose
+                        );
+                    break;
+
+                case CommandType::NAMED:
+                    success =
+                        execute_named_target(
+                            command.named_target
+                        );
+                    break;
+
+                default:
+                    break;
+            }
+
+
+            if (!success)
+            {
+                std::lock_guard<std::mutex> lock(
+                    command_mutex_
+                );
+
+                clear_pending_locked();
+
+                RCLCPP_WARN(
+                    get_logger(),
+                    "Motion failed. Pending motion queue cleared."
+                );
+            }
         }
     }
 
 
-    std::shared_ptr<rclcpp::Node>
-        node_;
+    // =============================================================
+    // Execute relative Cartesian increment
+    // =============================================================
 
-    std::shared_ptr<MoveGroupInterface>
-        arm_;
+    bool execute_relative(
+        const geometry_msgs::msg::Vector3 & delta)
+    {
+        const auto current =
+            move_group_->getCurrentPose(
+                end_effector_link_
+            );
 
+        geometry_msgs::msg::Pose target =
+            current.pose;
+
+        target.position.x += delta.x;
+        target.position.y += delta.y;
+        target.position.z += delta.z;
+
+        RCLCPP_INFO(
+            get_logger(),
+            "Cartesian step: dx=%+.4f dy=%+.4f dz=%+.4f",
+            delta.x,
+            delta.y,
+            delta.z
+        );
+
+        RCLCPP_INFO(
+            get_logger(),
+            "Target: x=%.4f y=%.4f z=%.4f",
+            target.position.x,
+            target.position.y,
+            target.position.z
+        );
+
+        return plan_and_execute_pose(
+            target
+        );
+    }
+
+
+    // =============================================================
+    // Execute absolute position
+    // =============================================================
+
+    bool execute_position(
+        const geometry_msgs::msg::PointStamped & target_position)
+    {
+        const auto current =
+            move_group_->getCurrentPose(
+                end_effector_link_
+            );
+
+        geometry_msgs::msg::Pose target =
+            current.pose;
+
+        target.position =
+            target_position.point;
+
+        RCLCPP_INFO(
+            get_logger(),
+            "Absolute position target: x=%.4f y=%.4f z=%.4f",
+            target.position.x,
+            target.position.y,
+            target.position.z
+        );
+
+        return plan_and_execute_pose(
+            target
+        );
+    }
+
+
+    // =============================================================
+    // Execute absolute pose
+    // =============================================================
+
+    bool execute_pose(
+        const geometry_msgs::msg::PoseStamped & msg)
+    {
+        RCLCPP_INFO(
+            get_logger(),
+            "Absolute pose target: x=%.4f y=%.4f z=%.4f",
+            msg.pose.position.x,
+            msg.pose.position.y,
+            msg.pose.position.z
+        );
+
+        return plan_and_execute_pose(
+            msg.pose
+        );
+    }
+
+
+    // =============================================================
+    // Named state
+    // =============================================================
+
+    bool execute_named_target(
+        const std::string & name)
+    {
+        RCLCPP_INFO(
+            get_logger(),
+            "Planning to named target '%s'...",
+            name.c_str()
+        );
+
+        move_group_->stop();
+
+        move_group_->clearPoseTargets();
+
+        move_group_->setStartStateToCurrentState();
+
+        move_group_->setPlanningPipelineId(
+            fallback_pipeline_
+        );
+
+        if (!fallback_planner_.empty())
+        {
+            move_group_->setPlannerId(
+                fallback_planner_
+            );
+        }
+
+        if (!move_group_->setNamedTarget(name))
+        {
+            RCLCPP_ERROR(
+                get_logger(),
+                "Unknown named target '%s'.",
+                name.c_str()
+            );
+
+            return false;
+        }
+
+        moveit::planning_interface::
+            MoveGroupInterface::Plan plan;
+
+        const auto result =
+            move_group_->plan(plan);
+
+        if (
+            result !=
+            moveit::core::MoveItErrorCode::SUCCESS
+        )
+        {
+            RCLCPP_ERROR(
+                get_logger(),
+                "Planning to named target '%s' failed.",
+                name.c_str()
+            );
+
+            return false;
+        }
+
+        if (stop_requested_.load())
+        {
+            RCLCPP_WARN(
+                get_logger(),
+                "Motion canceled before execution."
+            );
+
+            return false;
+        }
+
+        RCLCPP_INFO(
+            get_logger(),
+            "Executing named target '%s'...",
+            name.c_str()
+        );
+
+        const auto execution_result =
+            move_group_->execute(plan);
+
+        if (
+            execution_result !=
+            moveit::core::MoveItErrorCode::SUCCESS
+        )
+        {
+            RCLCPP_ERROR(
+                get_logger(),
+                "Execution of named target '%s' failed.",
+                name.c_str()
+            );
+
+            return false;
+        }
+
+        RCLCPP_INFO(
+            get_logger(),
+            "Named target '%s' reached.",
+            name.c_str()
+        );
+
+        return true;
+    }
+
+
+    // =============================================================
+    // Plan a Cartesian pose
+    // =============================================================
+
+    bool plan_and_execute_pose(
+        const geometry_msgs::msg::Pose & target)
+    {
+        moveit::planning_interface::
+            MoveGroupInterface::Plan plan;
+
+        bool planned = false;
+
+
+        // ---------------------------------------------------------
+        // First choice: Pilz LIN
+        // ---------------------------------------------------------
+
+        if (use_pilz_)
+        {
+            move_group_->clearPoseTargets();
+
+            move_group_->setStartStateToCurrentState();
+
+            move_group_->setPlanningPipelineId(
+                "pilz_industrial_motion_planner"
+            );
+
+            move_group_->setPlannerId(
+                "LIN"
+            );
+
+            move_group_->setPoseTarget(
+                target,
+                end_effector_link_
+            );
+
+            RCLCPP_INFO(
+                get_logger(),
+                "Planning Cartesian step using Pilz LIN..."
+            );
+
+            const auto result =
+                move_group_->plan(plan);
+
+            planned =
+                result ==
+                moveit::core::MoveItErrorCode::SUCCESS;
+
+            if (!planned)
+            {
+                RCLCPP_WARN(
+                    get_logger(),
+                    "Pilz LIN failed. Trying OMPL fallback."
+                );
+            }
+        }
+
+
+        // ---------------------------------------------------------
+        // Fallback: OMPL
+        // ---------------------------------------------------------
+
+        if (!planned)
+        {
+            move_group_->clearPoseTargets();
+
+            move_group_->setStartStateToCurrentState();
+
+            move_group_->setPlanningPipelineId(
+                fallback_pipeline_
+            );
+
+            if (!fallback_planner_.empty())
+            {
+                move_group_->setPlannerId(
+                    fallback_planner_
+                );
+            }
+
+            move_group_->setPoseTarget(
+                target,
+                end_effector_link_
+            );
+
+            const auto result =
+                move_group_->plan(plan);
+
+            planned =
+                result ==
+                moveit::core::MoveItErrorCode::SUCCESS;
+        }
+
+
+        move_group_->clearPoseTargets();
+
+
+        if (!planned)
+        {
+            RCLCPP_ERROR(
+                get_logger(),
+                "Unable to plan Cartesian movement."
+            );
+
+            return false;
+        }
+
+
+        if (stop_requested_.load())
+        {
+            RCLCPP_WARN(
+                get_logger(),
+                "Movement canceled before execution."
+            );
+
+            return false;
+        }
+
+
+        // ---------------------------------------------------------
+        // Execute
+        // ---------------------------------------------------------
+
+        RCLCPP_INFO(
+            get_logger(),
+            "Executing trajectory..."
+        );
+
+        const auto execution_result =
+            move_group_->execute(plan);
+
+        if (
+            execution_result !=
+            moveit::core::MoveItErrorCode::SUCCESS
+        )
+        {
+            RCLCPP_ERROR(
+                get_logger(),
+                "Trajectory execution failed."
+            );
+
+            return false;
+        }
+
+        RCLCPP_INFO(
+            get_logger(),
+            "Trajectory completed."
+        );
+
+        return true;
+    }
+
+
+    // =============================================================
+    // Pending command management
+    // =============================================================
+
+    enum class CommandType
+    {
+        NONE,
+        RELATIVE,
+        POSITION,
+        POSE,
+        NAMED
+    };
+
+
+    struct Command
+    {
+        CommandType type =
+            CommandType::NONE;
+
+        geometry_msgs::msg::Vector3 relative;
+
+        geometry_msgs::msg::PointStamped position;
+
+        geometry_msgs::msg::PoseStamped pose;
+
+        std::string named_target;
+    };
+
+
+    bool has_pending_relative_locked() const
+    {
+        constexpr double epsilon =
+            1e-6;
+
+        return
+            std::abs(pending_relative_.x) > epsilon ||
+            std::abs(pending_relative_.y) > epsilon ||
+            std::abs(pending_relative_.z) > epsilon;
+    }
+
+
+    bool has_pending_command_locked() const
+    {
+        return
+            pending_named_target_.has_value() ||
+            pending_pose_.has_value() ||
+            pending_position_.has_value() ||
+            has_pending_relative_locked();
+    }
+
+
+    Command get_next_command_locked()
+    {
+        Command command;
+
+
+        // Named target has highest priority.
+        if (pending_named_target_)
+        {
+            command.type =
+                CommandType::NAMED;
+
+            command.named_target =
+                *pending_named_target_;
+
+            pending_named_target_.reset();
+
+            return command;
+        }
+
+
+        // Full pose.
+        if (pending_pose_)
+        {
+            command.type =
+                CommandType::POSE;
+
+            command.pose =
+                *pending_pose_;
+
+            pending_pose_.reset();
+
+            return command;
+        }
+
+
+        // Position-only.
+        if (pending_position_)
+        {
+            command.type =
+                CommandType::POSITION;
+
+            command.position =
+                *pending_position_;
+
+            pending_position_.reset();
+
+            return command;
+        }
+
+
+        // Relative joystick motion.
+        if (has_pending_relative_locked())
+        {
+            command.type =
+                CommandType::RELATIVE;
+
+            const double length =
+                std::sqrt(
+                    pending_relative_.x *
+                    pending_relative_.x +
+
+                    pending_relative_.y *
+                    pending_relative_.y +
+
+                    pending_relative_.z *
+                    pending_relative_.z
+                );
+
+            double scale =
+                1.0;
+
+            if (
+                length > max_step_ &&
+                length > 0.0
+            )
+            {
+                scale =
+                    max_step_ /
+                    length;
+            }
+
+            command.relative.x =
+                pending_relative_.x *
+                scale;
+
+            command.relative.y =
+                pending_relative_.y *
+                scale;
+
+            command.relative.z =
+                pending_relative_.z *
+                scale;
+
+            pending_relative_.x -=
+                command.relative.x;
+
+            pending_relative_.y -=
+                command.relative.y;
+
+            pending_relative_.z -=
+                command.relative.z;
+
+            return command;
+        }
+
+
+        return command;
+    }
+
+
+    void clear_pending_locked()
+    {
+        pending_relative_ =
+            geometry_msgs::msg::Vector3();
+
+        pending_position_.reset();
+        pending_pose_.reset();
+        pending_named_target_.reset();
+    }
+
+
+    // =============================================================
+    // ROS
+    // =============================================================
 
     rclcpp::Subscription<
-        geometry_msgs::msg::PoseStamped>::
-        SharedPtr target_pose_sub_;
+        geometry_msgs::msg::Vector3
+    >::SharedPtr relative_sub_;
 
     rclcpp::Subscription<
-        geometry_msgs::msg::PointStamped>::
-        SharedPtr target_position_sub_;
+        geometry_msgs::msg::PointStamped
+    >::SharedPtr target_position_sub_;
 
     rclcpp::Subscription<
-        geometry_msgs::msg::Vector3>::
-        SharedPtr relative_move_sub_;
+        geometry_msgs::msg::PoseStamped
+    >::SharedPtr target_pose_sub_;
+
+    rclcpp::Subscription<
+        std_msgs::msg::String
+    >::SharedPtr named_target_sub_;
+
+    rclcpp::Subscription<
+        std_msgs::msg::Empty
+    >::SharedPtr stop_sub_;
 
 
-    std::mutex queue_mutex_;
+    // =============================================================
+    // MoveIt
+    // =============================================================
 
-    std::condition_variable
-        queue_condition_;
+    std::unique_ptr<
+        moveit::planning_interface::MoveGroupInterface
+    > move_group_;
 
-    std::queue<
-        std::function<void()>>
-        command_queue_;
+    std::string planning_group_;
+    std::string planning_frame_;
+    std::string end_effector_link_;
+
+    std::string fallback_pipeline_;
+    std::string fallback_planner_;
+
+    double max_step_ = 0.005;
+    double max_pending_ = 0.030;
+
+    double velocity_scaling_ = 0.05;
+    double acceleration_scaling_ = 0.05;
+
+    double planning_time_ = 1.0;
+
+    bool use_pilz_ = true;
+
+
+    // =============================================================
+    // Commands
+    // =============================================================
+
+    std::mutex command_mutex_;
+    std::condition_variable worker_cv_;
+
+    geometry_msgs::msg::Vector3
+        pending_relative_;
+
+    std::optional<
+        geometry_msgs::msg::PointStamped
+    > pending_position_;
+
+    std::optional<
+        geometry_msgs::msg::PoseStamped
+    > pending_pose_;
+
+    std::optional<std::string>
+        pending_named_target_;
+
+
+    // =============================================================
+    // Worker
+    // =============================================================
 
     std::thread worker_thread_;
 
-    std::atomic<bool> running_{false};
+    std::atomic<bool>
+        shutdown_{false};
+
+    std::atomic<bool>
+        stop_requested_{false};
 };
 
 
-static void printHelp(
-    Commander &commander)
-{
-    std::cout
-        << "\nAvailable commands:\n\n";
-
-    std::cout
-        << "  help\n"
-        << "      Show this message\n\n";
-
-    std::cout
-        << "  named <target>\n"
-        << "      Move to named target\n\n";
-
-    std::cout
-        << "  joint <v1> ... <vN>\n"
-        << "      Move joints directly\n"
-        << "      Expected joints: "
-        << commander.jointCount()
-        << "\n\n";
-
-    std::cout
-        << "  position <x> <y> <z>\n"
-        << "      Move to XYZ position\n\n";
-
-    std::cout
-        << "  position <x> <y> <z> cartesian\n"
-        << "      Straight Cartesian move\n\n";
-
-    std::cout
-        << "  relative <dx> <dy> <dz>\n"
-        << "      Relative XYZ movement\n\n";
-
-    std::cout
-        << "  exit\n"
-        << "      Shutdown commander\n\n";
-
-    std::cout
-        << "ROS topics:\n\n";
-
-    std::cout
-        << "  /spotarm/target_position\n"
-        << "      geometry_msgs/msg/PointStamped\n\n";
-
-    std::cout
-        << "  /spotarm/target_pose\n"
-        << "      geometry_msgs/msg/PoseStamped\n\n";
-
-    std::cout
-        << "  /spotarm/relative_move\n"
-        << "      geometry_msgs/msg/Vector3\n\n";
-}
-
+// =================================================================
+// main
+// =================================================================
 
 int main(
     int argc,
-    char **argv)
+    char ** argv)
 {
     rclcpp::init(
         argc,
         argv
     );
 
-    auto node =
-        std::make_shared<rclcpp::Node>(
-            "commander",
-            rclcpp::NodeOptions()
-                .automatically_declare_parameters_from_overrides(
-                    true
-                )
+    rclcpp::NodeOptions options;
+
+    options
+        .automatically_declare_parameters_from_overrides(
+            true
         );
 
+    auto node =
+        std::make_shared<Commander>(
+            options
+        );
 
-    /*
-     * MoveGroupInterface connects here.
-     *
-     * move_group must already be running.
-     */
-    Commander commander(node);
+    node->initialize();
 
-
-    /*
-     * ROS executor runs independently of
-     * the MoveIt command worker.
-     */
     rclcpp::executors::
         MultiThreadedExecutor executor;
 
     executor.add_node(node);
 
-
-    std::thread spinner(
-        [&executor]()
-        {
-            executor.spin();
-        }
-    );
-
-
-    RCLCPP_INFO(
-        node->get_logger(),
-        "Commander ready."
-    );
-
-
-    /*
-     * If started from ros2 run in a real
-     * terminal, preserve the interactive CLI.
-     *
-     * If launched by ros2 launch, the node
-     * still works entirely through ROS topics.
-     */
-    if (isatty(STDIN_FILENO))
-    {
-        std::cout
-            << "\nCommander ready. "
-            << "Type 'help' for command list.\n";
-
-        std::string line;
-
-        while (rclcpp::ok())
-        {
-            std::cout
-                << "> "
-                << std::flush;
-
-            if (!std::getline(
-                    std::cin,
-                    line))
-            {
-                break;
-            }
-
-            if (line.empty())
-            {
-                continue;
-            }
-
-            std::istringstream iss(line);
-
-            std::string command;
-
-            iss >> command;
-
-            std::transform(
-                command.begin(),
-                command.end(),
-                command.begin(),
-                [](unsigned char c)
-                {
-                    return
-                        static_cast<char>(
-                            std::tolower(c)
-                        );
-                }
-            );
-
-
-            if (
-                command == "exit" ||
-                command == "quit")
-            {
-                break;
-            }
-
-
-            if (command == "help")
-            {
-                printHelp(commander);
-            }
-
-
-            else if (command == "named")
-            {
-                std::string target;
-
-                if (!(iss >> target))
-                {
-                    std::cout
-                        << "Usage: named <target>\n";
-
-                    continue;
-                }
-
-                commander.queueNamedTarget(
-                    target
-                );
-            }
-
-
-            else if (command == "joint")
-            {
-                std::vector<double> joints;
-
-                double value = 0.0;
-
-                while (iss >> value)
-                {
-                    joints.push_back(
-                        value
-                    );
-                }
-
-                if (
-                    joints.size() !=
-                    commander.jointCount())
-                {
-                    std::cout
-                        << "Expected "
-                        << commander.jointCount()
-                        << " joint values, received "
-                        << joints.size()
-                        << ".\n";
-
-                    continue;
-                }
-
-                commander.queueJointTarget(
-                    joints
-                );
-            }
-
-
-            else if (command == "position")
-            {
-                double x = 0.0;
-                double y = 0.0;
-                double z = 0.0;
-
-                if (!(iss >> x >> y >> z))
-                {
-                    std::cout
-                        << "Usage: "
-                        << "position <x> <y> <z> "
-                        << "[cartesian]\n";
-
-                    continue;
-                }
-
-                std::string mode;
-
-                if (iss >> mode)
-                {
-                    std::transform(
-                        mode.begin(),
-                        mode.end(),
-                        mode.begin(),
-                        [](unsigned char c)
-                        {
-                            return
-                                static_cast<char>(
-                                    std::tolower(c)
-                                );
-                        }
-                    );
-                }
-
-                if (
-                    mode == "cartesian" ||
-                    mode == "cart")
-                {
-                    commander.queueCartesianTarget(
-                        x,
-                        y,
-                        z
-                    );
-                }
-                else
-                {
-                    commander.queuePositionTarget(
-                        x,
-                        y,
-                        z
-                    );
-                }
-            }
-
-
-            else if (command == "relative")
-            {
-                double dx = 0.0;
-                double dy = 0.0;
-                double dz = 0.0;
-
-                if (!(iss >> dx >> dy >> dz))
-                {
-                    std::cout
-                        << "Usage: "
-                        << "relative "
-                        << "<dx> <dy> <dz>\n";
-
-                    continue;
-                }
-
-                commander.queueRelativeTarget(
-                    dx,
-                    dy,
-                    dz
-                );
-            }
-
-
-            else
-            {
-                std::cout
-                    << "Unknown command. "
-                    << "Type 'help'.\n";
-            }
-        }
-    }
-    else
-    {
-        /*
-         * ros2 launch gives us no interactive
-         * stdin. Just keep the ROS node alive.
-         */
-        RCLCPP_INFO(
-            node->get_logger(),
-            "No interactive terminal detected."
-        );
-
-        RCLCPP_INFO(
-            node->get_logger(),
-            "Use ROS topics to command the arm."
-        );
-
-        while (rclcpp::ok())
-        {
-            std::this_thread::sleep_for(
-                std::chrono::milliseconds(250)
-            );
-        }
-    }
-
-
-    executor.cancel();
-
-    if (spinner.joinable())
-    {
-        spinner.join();
-    }
+    executor.spin();
 
     rclcpp::shutdown();
 

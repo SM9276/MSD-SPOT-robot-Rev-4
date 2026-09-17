@@ -1,0 +1,24 @@
+[0.734s] Invoking command in '/home/msd/MSD2/REV4/build/stepper_test': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/msd/MSD2/REV4/install/robot_status_leds:/opt/ros/humble /usr/bin/cmake --build /home/msd/MSD2/REV4/build/stepper_test -- -j8 -l8
+[0.795s] [35m[1mConsolidate compiler generated dependencies of target motor_key[0m
+[0.816s] [100%] Built target motor_key
+[0.939s] Invoked command in '/home/msd/MSD2/REV4/build/stepper_test' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/msd/MSD2/REV4/install/robot_status_leds:/opt/ros/humble /usr/bin/cmake --build /home/msd/MSD2/REV4/build/stepper_test -- -j8 -l8
+[0.940s] Invoking command in '/home/msd/MSD2/REV4/build/stepper_test': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/msd/MSD2/REV4/install/robot_status_leds:/opt/ros/humble /usr/bin/cmake --install /home/msd/MSD2/REV4/build/stepper_test
+[0.956s] -- Install configuration: ""
+[0.957s] -- Installing: /home/msd/MSD2/REV4/install/stepper_test/lib/stepper_test/motor_key
+[0.958s] -- Set runtime path of "/home/msd/MSD2/REV4/install/stepper_test/lib/stepper_test/motor_key" to ""
+[0.960s] -- Installing: /home/msd/MSD2/REV4/install/stepper_test/share/ament_index/resource_index/package_run_dependencies/stepper_test
+[0.961s] -- Installing: /home/msd/MSD2/REV4/install/stepper_test/share/ament_index/resource_index/parent_prefix_path/stepper_test
+[0.967s] -- Installing: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/environment/ament_prefix_path.sh
+[0.967s] -- Installing: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/environment/ament_prefix_path.dsv
+[0.967s] -- Installing: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/environment/path.sh
+[0.968s] -- Installing: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/environment/path.dsv
+[0.968s] -- Installing: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/local_setup.bash
+[0.968s] -- Installing: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/local_setup.sh
+[0.968s] -- Installing: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/local_setup.zsh
+[0.968s] -- Installing: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/local_setup.dsv
+[0.969s] -- Installing: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/package.dsv
+[0.969s] -- Installing: /home/msd/MSD2/REV4/install/stepper_test/share/ament_index/resource_index/packages/stepper_test
+[0.969s] -- Installing: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/cmake/stepper_testConfig.cmake
+[0.970s] -- Installing: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/cmake/stepper_testConfig-version.cmake
+[0.970s] -- Installing: /home/msd/MSD2/REV4/install/stepper_test/share/stepper_test/package.xml
+[0.971s] Invoked command in '/home/msd/MSD2/REV4/build/stepper_test' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/msd/MSD2/REV4/install/robot_status_leds:/opt/ros/humble /usr/bin/cmake --install /home/msd/MSD2/REV4/build/stepper_test

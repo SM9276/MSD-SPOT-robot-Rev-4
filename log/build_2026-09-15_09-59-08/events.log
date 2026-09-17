@@ -1,0 +1,638 @@
+[0.000000] (-) TimerEvent: {}
+[0.001181] (-) JobUnselected: {'identifier': 'gear_manipulator_moveit_config'}
+[0.001312] (-) JobUnselected: {'identifier': 'marge'}
+[0.001341] (-) JobUnselected: {'identifier': 'my_robot'}
+[0.001362] (-) JobUnselected: {'identifier': 'robot_bringup'}
+[0.001385] (-) JobUnselected: {'identifier': 'robot_hardware'}
+[0.001409] (-) JobUnselected: {'identifier': 'robot_moveit_config'}
+[0.001430] (-) JobUnselected: {'identifier': 'robot_servoing'}
+[0.001452] (-) JobUnselected: {'identifier': 'robot_status_leds'}
+[0.001473] (-) JobUnselected: {'identifier': 'spotarm_assembly_description'}
+[0.001493] (-) JobUnselected: {'identifier': 'stepper_test'}
+[0.001523] (robot_commander) JobQueued: {'identifier': 'robot_commander', 'dependencies': OrderedDict()}
+[0.001611] (spotarm_gamepad) JobQueued: {'identifier': 'spotarm_gamepad', 'dependencies': OrderedDict()}
+[0.001637] (robot_commander) JobStarted: {'identifier': 'robot_commander'}
+[0.014248] (spotarm_gamepad) JobStarted: {'identifier': 'spotarm_gamepad'}
+[0.020920] (robot_commander) JobProgress: {'identifier': 'robot_commander', 'progress': 'cmake'}
+[0.023985] (robot_commander) JobProgress: {'identifier': 'robot_commander', 'progress': 'build'}
+[0.025329] (robot_commander) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/msd/MSD2/REV4/build/robot_commander', '--', '-j8', '-l8'], 'cwd': '/home/msd/MSD2/REV4/build/robot_commander', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'msd'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/msd/MSD2/REV4/install/robot_hardware/lib:/home/msd/MSD2/REV4/install/marge/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/msd'), ('OLDPWD', '/home/msd/MSD2/REV4/src'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/msd/.nvm/versions/node/v20.20.2/bin'), ('NVM_INC', '/home/msd/.nvm/versions/node/v20.20.2/include/node'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '58088'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('NVM_DIR', '/home/msd/.nvm'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/msd/MSD2/REV4/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'msd'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'msd'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/msd/.nvm/versions/node/v20.20.2/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/msd-ThinkPad-E14:@/tmp/.ICE-unix/1576,unix/msd-ThinkPad-E14:/tmp/.ICE-unix/1576'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/10d04d5d_ba57_4cad_afb2_8e4dd895dc51'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.U47WV3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.462'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/msd/MSD2/REV4/install/stepper_test:/home/msd/MSD2/REV4/install/spotarm_gamepad:/home/msd/MSD2/REV4/install/robot_bringup:/home/msd/MSD2/REV4/install/robot_moveit_config:/home/msd/MSD2/REV4/install/spotarm_assembly_description:/home/msd/MSD2/REV4/install/robot_status_leds:/home/msd/MSD2/REV4/install/robot_hardware:/home/msd/MSD2/REV4/install/robot_commander:/home/msd/MSD2/REV4/install/gear_manipulator_moveit_config:/home/msd/MSD2/REV4/install/my_robot:/home/msd/MSD2/REV4/install/marge:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/msd/MSD2/REV4/build/robot_commander'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/msd/MSD2/REV4/build/spotarm_gamepad:/home/msd/MSD2/REV4/install/spotarm_gamepad/lib/python3.10/site-packages:/home/msd/MSD2/REV4/build/spotarm_assembly_description:/home/msd/MSD2/REV4/install/spotarm_assembly_description/lib/python3.10/site-packages:/home/msd/MSD2/REV4/install/robot_status_leds/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/msd/MSD2/REV4/install/stepper_test:/home/msd/MSD2/REV4/install/robot_bringup:/home/msd/MSD2/REV4/install/robot_moveit_config:/home/msd/MSD2/REV4/install/robot_hardware:/home/msd/MSD2/REV4/install/robot_commander:/home/msd/MSD2/REV4/install/gear_manipulator_moveit_config:/home/msd/MSD2/REV4/install/my_robot:/home/msd/MSD2/REV4/install/marge:/home/msd/MSD2/REV4/install/spotarm_gamepad:/home/msd/MSD2/REV4/install/spotarm_assembly_description:/home/msd/MSD2/REV4/install/robot_status_leds:/opt/ros/humble')]), 'shell': False}
+[0.098881] (-) TimerEvent: {}
+[0.100542] (robot_commander) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.199201] (-) TimerEvent: {}
+[0.300419] (-) TimerEvent: {}
+[0.400961] (-) TimerEvent: {}
+[0.501945] (-) TimerEvent: {}
+[0.534543] (robot_commander) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.576102] (robot_commander) StdoutLine: {'line': b'-- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.602114] (-) TimerEvent: {}
+[0.685897] (robot_commander) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.696715] (robot_commander) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.702187] (-) TimerEvent: {}
+[0.715442] (robot_commander) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.750914] (robot_commander) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.794711] (robot_commander) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.802436] (-) TimerEvent: {}
+[0.903213] (-) TimerEvent: {}
+[0.922266] (robot_commander) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.926465] (robot_commander) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.003068] (-) TimerEvent: {}
+[1.103828] (-) TimerEvent: {}
+[1.151413] (robot_commander) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.203891] (-) TimerEvent: {}
+[1.260517] (robot_commander) StdoutLine: {'line': b'-- Found geometry_msgs: 4.9.1 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[1.292121] (robot_commander) StdoutLine: {'line': b'-- Found moveit_ros_planning_interface: 2.5.9 (/opt/ros/humble/share/moveit_ros_planning_interface/cmake)\n'}
+[1.304076] (-) TimerEvent: {}
+[1.333331] (robot_commander) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: date_time filesystem program_options system thread \n'}
+[1.404460] (-) TimerEvent: {}
+[1.506091] (-) TimerEvent: {}
+[1.606552] (-) TimerEvent: {}
+[1.707148] (-) TimerEvent: {}
+[1.808235] (-) TimerEvent: {}
+[1.909017] (-) TimerEvent: {}
+[1.955731] (spotarm_gamepad) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/msd/MSD2/REV4/build/spotarm_gamepad/build', '--no-deps', 'symlink_data'], 'cwd': '/home/msd/MSD2/REV4/build/spotarm_gamepad', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'msd', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/msd/MSD2/REV4/install/robot_hardware/lib:/home/msd/MSD2/REV4/install/marge/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/msd', 'OLDPWD': '/home/msd/MSD2/REV4/src', 'DESKTOP_SESSION': 'ubuntu', 'NVM_BIN': '/home/msd/.nvm/versions/node/v20.20.2/bin', 'NVM_INC': '/home/msd/.nvm/versions/node/v20.20.2/include/node', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '58088', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'NVM_DIR': '/home/msd/.nvm', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/msd/MSD2/REV4/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'msd', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'msd', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/msd/.nvm/versions/node/v20.20.2/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/msd-ThinkPad-E14:@/tmp/.ICE-unix/1576,unix/msd-ThinkPad-E14:/tmp/.ICE-unix/1576', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/10d04d5d_ba57_4cad_afb2_8e4dd895dc51', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.U47WV3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.462', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/msd/MSD2/REV4/install/stepper_test:/home/msd/MSD2/REV4/install/spotarm_gamepad:/home/msd/MSD2/REV4/install/robot_bringup:/home/msd/MSD2/REV4/install/robot_moveit_config:/home/msd/MSD2/REV4/install/spotarm_assembly_description:/home/msd/MSD2/REV4/install/robot_status_leds:/home/msd/MSD2/REV4/install/robot_hardware:/home/msd/MSD2/REV4/install/robot_commander:/home/msd/MSD2/REV4/install/gear_manipulator_moveit_config:/home/msd/MSD2/REV4/install/my_robot:/home/msd/MSD2/REV4/install/marge:/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/msd/MSD2/REV4/build/spotarm_gamepad', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/msd/MSD2/REV4/build/spotarm_gamepad/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/msd/MSD2/REV4/install/spotarm_gamepad/lib/python3.10/site-packages:/home/msd/MSD2/REV4/build/spotarm_gamepad:/home/msd/MSD2/REV4/install/spotarm_gamepad/lib/python3.10/site-packages:/home/msd/MSD2/REV4/build/spotarm_assembly_description:/home/msd/MSD2/REV4/install/spotarm_assembly_description/lib/python3.10/site-packages:/home/msd/MSD2/REV4/install/robot_status_leds/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/msd/MSD2/REV4/install/stepper_test:/home/msd/MSD2/REV4/install/robot_bringup:/home/msd/MSD2/REV4/install/robot_moveit_config:/home/msd/MSD2/REV4/install/robot_hardware:/home/msd/MSD2/REV4/install/robot_commander:/home/msd/MSD2/REV4/install/gear_manipulator_moveit_config:/home/msd/MSD2/REV4/install/my_robot:/home/msd/MSD2/REV4/install/marge'}, 'shell': False}
+[1.985901] (robot_commander) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread \n'}
+[2.009177] (-) TimerEvent: {}
+[2.060192] (robot_commander) StdoutLine: {'line': b'-- Found parameter_traits: 0.7.1 (/opt/ros/humble/share/parameter_traits/cmake)\n'}
+[2.085094] (robot_commander) StdoutLine: {'line': b'-- Found rclcpp_lifecycle: 16.0.19 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)\n'}
+[2.109421] (-) TimerEvent: {}
+[2.142796] (robot_commander) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: filesystem \n'}
+[2.199318] (robot_commander) StdoutLine: {'line': b'-- library: /usr/lib/x86_64-linux-gnu/libcurl.so\n'}
+[2.209634] (-) TimerEvent: {}
+[2.251418] (robot_commander) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[2.309718] (-) TimerEvent: {}
+[2.410018] (-) TimerEvent: {}
+[2.463008] (robot_commander) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system filesystem date_time program_options thread chrono \n'}
+[2.506434] (spotarm_gamepad) StdoutLine: {'line': b'running develop\n'}
+[2.510075] (-) TimerEvent: {}
+[2.511007] (robot_commander) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: thread system filesystem regex date_time program_options \n'}
+[2.546278] (robot_commander) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system filesystem date_time program_options thread \n'}
+[2.610187] (-) TimerEvent: {}
+[2.710542] (-) TimerEvent: {}
+[2.753713] (robot_commander) StdoutLine: {'line': b'-- Configuring done\n'}
+[2.810647] (-) TimerEvent: {}
+[2.833672] (robot_commander) StdoutLine: {'line': b'-- Generating done\n'}
+[2.854622] (robot_commander) StdoutLine: {'line': b'-- Build files have been written to: /home/msd/MSD2/REV4/build/robot_commander\n'}
+[2.866738] (spotarm_gamepad) StdoutLine: {'line': b'running egg_info\n'}
+[2.867148] (spotarm_gamepad) StdoutLine: {'line': b'writing spotarm_gamepad.egg-info/PKG-INFO\n'}
+[2.867436] (spotarm_gamepad) StdoutLine: {'line': b'writing dependency_links to spotarm_gamepad.egg-info/dependency_links.txt\n'}
+[2.867713] (spotarm_gamepad) StdoutLine: {'line': b'writing entry points to spotarm_gamepad.egg-info/entry_points.txt\n'}
+[2.867973] (spotarm_gamepad) StdoutLine: {'line': b'writing requirements to spotarm_gamepad.egg-info/requires.txt\n'}
+[2.868247] (spotarm_gamepad) StdoutLine: {'line': b'writing top-level names to spotarm_gamepad.egg-info/top_level.txt\n'}
+[2.874782] (spotarm_gamepad) StdoutLine: {'line': b"reading manifest file 'spotarm_gamepad.egg-info/SOURCES.txt'\n"}
+[2.876627] (spotarm_gamepad) StdoutLine: {'line': b"writing manifest file 'spotarm_gamepad.egg-info/SOURCES.txt'\n"}
+[2.881162] (spotarm_gamepad) StdoutLine: {'line': b'running build_ext\n'}
+[2.881533] (spotarm_gamepad) StdoutLine: {'line': b'Creating /home/msd/MSD2/REV4/install/spotarm_gamepad/lib/python3.10/site-packages/spotarm-gamepad.egg-link (link to .)\n'}
+[2.882982] (spotarm_gamepad) StdoutLine: {'line': b'Installing gamepad script to /home/msd/MSD2/REV4/install/spotarm_gamepad/lib/spotarm_gamepad\n'}
+[2.883404] (spotarm_gamepad) StdoutLine: {'line': b'\n'}
+[2.883595] (spotarm_gamepad) StdoutLine: {'line': b'Installed /home/msd/MSD2/REV4/build/spotarm_gamepad\n'}
+[2.883845] (spotarm_gamepad) StdoutLine: {'line': b'running symlink_data\n'}
+[2.884068] (spotarm_gamepad) StdoutLine: {'line': b'creating /home/msd/MSD2/REV4/install/spotarm_gamepad/share/spotarm_gamepad/launch\n'}
+[2.884248] (spotarm_gamepad) StdoutLine: {'line': b'symbolically linking /home/msd/MSD2/REV4/build/spotarm_gamepad/launch/gamepad.launch.py -> /home/msd/MSD2/REV4/install/spotarm_gamepad/share/spotarm_gamepad/launch\n'}
+[2.910867] (-) TimerEvent: {}
+[2.931210] (robot_commander) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target commander\x1b[0m\n'}
+[2.966576] (spotarm_gamepad) CommandEnded: {'returncode': 0}
+[2.984423] (robot_commander) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/commander.dir/src/commander.cpp.o\x1b[0m\n'}
+[2.999191] (spotarm_gamepad) JobEnded: {'identifier': 'spotarm_gamepad', 'rc': 0}
+[3.011078] (-) TimerEvent: {}
+[3.111840] (-) TimerEvent: {}
+[3.212084] (-) TimerEvent: {}
+[3.312388] (-) TimerEvent: {}
+[3.412726] (-) TimerEvent: {}
+[3.513310] (-) TimerEvent: {}
+[3.614126] (-) TimerEvent: {}
+[3.714826] (-) TimerEvent: {}
+[3.815202] (-) TimerEvent: {}
+[3.915534] (-) TimerEvent: {}
+[4.015978] (-) TimerEvent: {}
+[4.116317] (-) TimerEvent: {}
+[4.216780] (-) TimerEvent: {}
+[4.317627] (-) TimerEvent: {}
+[4.418705] (-) TimerEvent: {}
+[4.519116] (-) TimerEvent: {}
+[4.619465] (-) TimerEvent: {}
+[4.719754] (-) TimerEvent: {}
+[4.820080] (-) TimerEvent: {}
+[4.920390] (-) TimerEvent: {}
+[5.020869] (-) TimerEvent: {}
+[5.121454] (-) TimerEvent: {}
+[5.222406] (-) TimerEvent: {}
+[5.323264] (-) TimerEvent: {}
+[5.423752] (-) TimerEvent: {}
+[5.524086] (-) TimerEvent: {}
+[5.624431] (-) TimerEvent: {}
+[5.724853] (-) TimerEvent: {}
+[5.825621] (-) TimerEvent: {}
+[5.925915] (-) TimerEvent: {}
+[6.026286] (-) TimerEvent: {}
+[6.126876] (-) TimerEvent: {}
+[6.227472] (-) TimerEvent: {}
+[6.327793] (-) TimerEvent: {}
+[6.428263] (-) TimerEvent: {}
+[6.528687] (-) TimerEvent: {}
+[6.629200] (-) TimerEvent: {}
+[6.730171] (-) TimerEvent: {}
+[6.830669] (-) TimerEvent: {}
+[6.931093] (-) TimerEvent: {}
+[7.031478] (-) TimerEvent: {}
+[7.131949] (-) TimerEvent: {}
+[7.232517] (-) TimerEvent: {}
+[7.333083] (-) TimerEvent: {}
+[7.433596] (-) TimerEvent: {}
+[7.533891] (-) TimerEvent: {}
+[7.634173] (-) TimerEvent: {}
+[7.734500] (-) TimerEvent: {}
+[7.834958] (-) TimerEvent: {}
+[7.935438] (-) TimerEvent: {}
+[8.036152] (-) TimerEvent: {}
+[8.136862] (-) TimerEvent: {}
+[8.237174] (-) TimerEvent: {}
+[8.337505] (-) TimerEvent: {}
+[8.437946] (-) TimerEvent: {}
+[8.538625] (-) TimerEvent: {}
+[8.639443] (-) TimerEvent: {}
+[8.740190] (-) TimerEvent: {}
+[8.840818] (-) TimerEvent: {}
+[8.941098] (-) TimerEvent: {}
+[9.041420] (-) TimerEvent: {}
+[9.141846] (-) TimerEvent: {}
+[9.242562] (-) TimerEvent: {}
+[9.343192] (-) TimerEvent: {}
+[9.443623] (-) TimerEvent: {}
+[9.544208] (-) TimerEvent: {}
+[9.644520] (-) TimerEvent: {}
+[9.744801] (-) TimerEvent: {}
+[9.845177] (-) TimerEvent: {}
+[9.945605] (-) TimerEvent: {}
+[10.046145] (-) TimerEvent: {}
+[10.146776] (-) TimerEvent: {}
+[10.247482] (-) TimerEvent: {}
+[10.347821] (-) TimerEvent: {}
+[10.448094] (-) TimerEvent: {}
+[10.548520] (-) TimerEvent: {}
+[10.649323] (-) TimerEvent: {}
+[10.749865] (-) TimerEvent: {}
+[10.850565] (-) TimerEvent: {}
+[10.951486] (-) TimerEvent: {}
+[11.052142] (-) TimerEvent: {}
+[11.152617] (-) TimerEvent: {}
+[11.253093] (-) TimerEvent: {}
+[11.353656] (-) TimerEvent: {}
+[11.454190] (-) TimerEvent: {}
+[11.554935] (-) TimerEvent: {}
+[11.655794] (-) TimerEvent: {}
+[11.756329] (-) TimerEvent: {}
+[11.856638] (-) TimerEvent: {}
+[11.957091] (-) TimerEvent: {}
+[12.057513] (-) TimerEvent: {}
+[12.158168] (-) TimerEvent: {}
+[12.258884] (-) TimerEvent: {}
+[12.359473] (-) TimerEvent: {}
+[12.459929] (-) TimerEvent: {}
+[12.560363] (-) TimerEvent: {}
+[12.660789] (-) TimerEvent: {}
+[12.761236] (-) TimerEvent: {}
+[12.861704] (-) TimerEvent: {}
+[12.962226] (-) TimerEvent: {}
+[13.062842] (-) TimerEvent: {}
+[13.163469] (-) TimerEvent: {}
+[13.263755] (-) TimerEvent: {}
+[13.364154] (-) TimerEvent: {}
+[13.464872] (-) TimerEvent: {}
+[13.565382] (-) TimerEvent: {}
+[13.666033] (-) TimerEvent: {}
+[13.767226] (-) TimerEvent: {}
+[13.867659] (-) TimerEvent: {}
+[13.968009] (-) TimerEvent: {}
+[14.068517] (-) TimerEvent: {}
+[14.169302] (-) TimerEvent: {}
+[14.269785] (-) TimerEvent: {}
+[14.370189] (-) TimerEvent: {}
+[14.470882] (-) TimerEvent: {}
+[14.571265] (-) TimerEvent: {}
+[14.671701] (-) TimerEvent: {}
+[14.772142] (-) TimerEvent: {}
+[14.872817] (-) TimerEvent: {}
+[14.973190] (-) TimerEvent: {}
+[15.073857] (-) TimerEvent: {}
+[15.174612] (-) TimerEvent: {}
+[15.274907] (-) TimerEvent: {}
+[15.375201] (-) TimerEvent: {}
+[15.475494] (-) TimerEvent: {}
+[15.575857] (-) TimerEvent: {}
+[15.676445] (-) TimerEvent: {}
+[15.777169] (-) TimerEvent: {}
+[15.877919] (-) TimerEvent: {}
+[15.978677] (-) TimerEvent: {}
+[16.079036] (-) TimerEvent: {}
+[16.179394] (-) TimerEvent: {}
+[16.279760] (-) TimerEvent: {}
+[16.380191] (-) TimerEvent: {}
+[16.480702] (-) TimerEvent: {}
+[16.581438] (-) TimerEvent: {}
+[16.682113] (-) TimerEvent: {}
+[16.782459] (-) TimerEvent: {}
+[16.882814] (-) TimerEvent: {}
+[16.983276] (-) TimerEvent: {}
+[17.083989] (-) TimerEvent: {}
+[17.184444] (-) TimerEvent: {}
+[17.284910] (-) TimerEvent: {}
+[17.385267] (-) TimerEvent: {}
+[17.485635] (-) TimerEvent: {}
+[17.585963] (-) TimerEvent: {}
+[17.686453] (-) TimerEvent: {}
+[17.787142] (-) TimerEvent: {}
+[17.887574] (-) TimerEvent: {}
+[17.988320] (-) TimerEvent: {}
+[18.088755] (-) TimerEvent: {}
+[18.189406] (-) TimerEvent: {}
+[18.289766] (-) TimerEvent: {}
+[18.390224] (-) TimerEvent: {}
+[18.491123] (-) TimerEvent: {}
+[18.591689] (-) TimerEvent: {}
+[18.692355] (-) TimerEvent: {}
+[18.792665] (-) TimerEvent: {}
+[18.893043] (-) TimerEvent: {}
+[18.993416] (-) TimerEvent: {}
+[19.093830] (-) TimerEvent: {}
+[19.194273] (-) TimerEvent: {}
+[19.294689] (-) TimerEvent: {}
+[19.395048] (-) TimerEvent: {}
+[19.495356] (-) TimerEvent: {}
+[19.595643] (-) TimerEvent: {}
+[19.695951] (-) TimerEvent: {}
+[19.796355] (-) TimerEvent: {}
+[19.897106] (-) TimerEvent: {}
+[19.997617] (-) TimerEvent: {}
+[20.098242] (-) TimerEvent: {}
+[20.198810] (-) TimerEvent: {}
+[20.299097] (-) TimerEvent: {}
+[20.399389] (-) TimerEvent: {}
+[20.499727] (-) TimerEvent: {}
+[20.600234] (-) TimerEvent: {}
+[20.701159] (-) TimerEvent: {}
+[20.801871] (-) TimerEvent: {}
+[20.902662] (-) TimerEvent: {}
+[21.003052] (-) TimerEvent: {}
+[21.103368] (-) TimerEvent: {}
+[21.203830] (-) TimerEvent: {}
+[21.304284] (-) TimerEvent: {}
+[21.404804] (-) TimerEvent: {}
+[21.505589] (-) TimerEvent: {}
+[21.606433] (-) TimerEvent: {}
+[21.706701] (-) TimerEvent: {}
+[21.807008] (-) TimerEvent: {}
+[21.907333] (-) TimerEvent: {}
+[22.007661] (-) TimerEvent: {}
+[22.108102] (-) TimerEvent: {}
+[22.208566] (-) TimerEvent: {}
+[22.309050] (-) TimerEvent: {}
+[22.409463] (-) TimerEvent: {}
+[22.509812] (-) TimerEvent: {}
+[22.610230] (-) TimerEvent: {}
+[22.710618] (-) TimerEvent: {}
+[22.811119] (-) TimerEvent: {}
+[22.911773] (-) TimerEvent: {}
+[23.012550] (-) TimerEvent: {}
+[23.112830] (-) TimerEvent: {}
+[23.213106] (-) TimerEvent: {}
+[23.313380] (-) TimerEvent: {}
+[23.413740] (-) TimerEvent: {}
+[23.514231] (-) TimerEvent: {}
+[23.614754] (-) TimerEvent: {}
+[23.715217] (-) TimerEvent: {}
+[23.815577] (-) TimerEvent: {}
+[23.915916] (-) TimerEvent: {}
+[24.016236] (-) TimerEvent: {}
+[24.116602] (-) TimerEvent: {}
+[24.217034] (-) TimerEvent: {}
+[24.317482] (-) TimerEvent: {}
+[24.418068] (-) TimerEvent: {}
+[24.518757] (-) TimerEvent: {}
+[24.619131] (-) TimerEvent: {}
+[24.719550] (-) TimerEvent: {}
+[24.820108] (-) TimerEvent: {}
+[24.920679] (-) TimerEvent: {}
+[25.021171] (-) TimerEvent: {}
+[25.121654] (-) TimerEvent: {}
+[25.222098] (-) TimerEvent: {}
+[25.322459] (-) TimerEvent: {}
+[25.422818] (-) TimerEvent: {}
+[25.523158] (-) TimerEvent: {}
+[25.623707] (-) TimerEvent: {}
+[25.724552] (-) TimerEvent: {}
+[25.824955] (-) TimerEvent: {}
+[25.925652] (-) TimerEvent: {}
+[26.026172] (-) TimerEvent: {}
+[26.126476] (-) TimerEvent: {}
+[26.226756] (-) TimerEvent: {}
+[26.327096] (-) TimerEvent: {}
+[26.427535] (-) TimerEvent: {}
+[26.528126] (-) TimerEvent: {}
+[26.628780] (-) TimerEvent: {}
+[26.729247] (-) TimerEvent: {}
+[26.829631] (-) TimerEvent: {}
+[26.930057] (-) TimerEvent: {}
+[27.030400] (-) TimerEvent: {}
+[27.130801] (-) TimerEvent: {}
+[27.231415] (-) TimerEvent: {}
+[27.331941] (-) TimerEvent: {}
+[27.432646] (-) TimerEvent: {}
+[27.533077] (-) TimerEvent: {}
+[27.633494] (-) TimerEvent: {}
+[27.733875] (-) TimerEvent: {}
+[27.834243] (-) TimerEvent: {}
+[27.934682] (-) TimerEvent: {}
+[28.035092] (-) TimerEvent: {}
+[28.135532] (-) TimerEvent: {}
+[28.235898] (-) TimerEvent: {}
+[28.336410] (-) TimerEvent: {}
+[28.437202] (-) TimerEvent: {}
+[28.537549] (-) TimerEvent: {}
+[28.638124] (-) TimerEvent: {}
+[28.738781] (-) TimerEvent: {}
+[28.839372] (-) TimerEvent: {}
+[28.940139] (-) TimerEvent: {}
+[29.040897] (-) TimerEvent: {}
+[29.141194] (-) TimerEvent: {}
+[29.241524] (-) TimerEvent: {}
+[29.342043] (-) TimerEvent: {}
+[29.442703] (-) TimerEvent: {}
+[29.543243] (-) TimerEvent: {}
+[29.643792] (-) TimerEvent: {}
+[29.744386] (-) TimerEvent: {}
+[29.844772] (-) TimerEvent: {}
+[29.945224] (-) TimerEvent: {}
+[30.045912] (-) TimerEvent: {}
+[30.146727] (-) TimerEvent: {}
+[30.247285] (-) TimerEvent: {}
+[30.347562] (-) TimerEvent: {}
+[30.447836] (-) TimerEvent: {}
+[30.548097] (-) TimerEvent: {}
+[30.648449] (-) TimerEvent: {}
+[30.748977] (-) TimerEvent: {}
+[30.849837] (-) TimerEvent: {}
+[30.950800] (-) TimerEvent: {}
+[31.051575] (-) TimerEvent: {}
+[31.151857] (-) TimerEvent: {}
+[31.252138] (-) TimerEvent: {}
+[31.352549] (-) TimerEvent: {}
+[31.453151] (-) TimerEvent: {}
+[31.553766] (-) TimerEvent: {}
+[31.654329] (-) TimerEvent: {}
+[31.754976] (-) TimerEvent: {}
+[31.855574] (-) TimerEvent: {}
+[31.955928] (-) TimerEvent: {}
+[32.056315] (-) TimerEvent: {}
+[32.156797] (-) TimerEvent: {}
+[32.258078] (-) TimerEvent: {}
+[32.358824] (-) TimerEvent: {}
+[32.459274] (-) TimerEvent: {}
+[32.559857] (-) TimerEvent: {}
+[32.660311] (-) TimerEvent: {}
+[32.760661] (-) TimerEvent: {}
+[32.861152] (-) TimerEvent: {}
+[32.961698] (-) TimerEvent: {}
+[33.062467] (-) TimerEvent: {}
+[33.163384] (-) TimerEvent: {}
+[33.264190] (-) TimerEvent: {}
+[33.365027] (-) TimerEvent: {}
+[33.465745] (-) TimerEvent: {}
+[33.566276] (-) TimerEvent: {}
+[33.666905] (-) TimerEvent: {}
+[33.767616] (-) TimerEvent: {}
+[33.867917] (-) TimerEvent: {}
+[33.968171] (-) TimerEvent: {}
+[34.068441] (-) TimerEvent: {}
+[34.168866] (-) TimerEvent: {}
+[34.269678] (-) TimerEvent: {}
+[34.370188] (-) TimerEvent: {}
+[34.470866] (-) TimerEvent: {}
+[34.571592] (-) TimerEvent: {}
+[34.671836] (-) TimerEvent: {}
+[34.772077] (-) TimerEvent: {}
+[34.872596] (-) TimerEvent: {}
+[34.973067] (-) TimerEvent: {}
+[35.073549] (-) TimerEvent: {}
+[35.174094] (-) TimerEvent: {}
+[35.274706] (-) TimerEvent: {}
+[35.375194] (-) TimerEvent: {}
+[35.475491] (-) TimerEvent: {}
+[35.575861] (-) TimerEvent: {}
+[35.676535] (-) TimerEvent: {}
+[35.776981] (-) TimerEvent: {}
+[35.877335] (-) TimerEvent: {}
+[35.978304] (-) TimerEvent: {}
+[36.078572] (-) TimerEvent: {}
+[36.178842] (-) TimerEvent: {}
+[36.279082] (-) TimerEvent: {}
+[36.379385] (-) TimerEvent: {}
+[36.479905] (-) TimerEvent: {}
+[36.580734] (-) TimerEvent: {}
+[36.681482] (-) TimerEvent: {}
+[36.782240] (-) TimerEvent: {}
+[36.882520] (-) TimerEvent: {}
+[36.983021] (-) TimerEvent: {}
+[37.083830] (-) TimerEvent: {}
+[37.184238] (-) TimerEvent: {}
+[37.285074] (-) TimerEvent: {}
+[37.385443] (-) TimerEvent: {}
+[37.485727] (-) TimerEvent: {}
+[37.586005] (-) TimerEvent: {}
+[37.686255] (-) TimerEvent: {}
+[37.786574] (-) TimerEvent: {}
+[37.887154] (-) TimerEvent: {}
+[37.987906] (-) TimerEvent: {}
+[38.088814] (-) TimerEvent: {}
+[38.189606] (-) TimerEvent: {}
+[38.289897] (-) TimerEvent: {}
+[38.390186] (-) TimerEvent: {}
+[38.490569] (-) TimerEvent: {}
+[38.591522] (-) TimerEvent: {}
+[38.691948] (-) TimerEvent: {}
+[38.792336] (-) TimerEvent: {}
+[38.892688] (-) TimerEvent: {}
+[38.992973] (-) TimerEvent: {}
+[39.093222] (-) TimerEvent: {}
+[39.193605] (-) TimerEvent: {}
+[39.294386] (-) TimerEvent: {}
+[39.395021] (-) TimerEvent: {}
+[39.495305] (-) TimerEvent: {}
+[39.595599] (-) TimerEvent: {}
+[39.695871] (-) TimerEvent: {}
+[39.796091] (-) TimerEvent: {}
+[39.896479] (-) TimerEvent: {}
+[39.997133] (-) TimerEvent: {}
+[40.097594] (-) TimerEvent: {}
+[40.197868] (-) TimerEvent: {}
+[40.298090] (-) TimerEvent: {}
+[40.398393] (-) TimerEvent: {}
+[40.498669] (-) TimerEvent: {}
+[40.599133] (-) TimerEvent: {}
+[40.699852] (-) TimerEvent: {}
+[40.800245] (-) TimerEvent: {}
+[40.900682] (-) TimerEvent: {}
+[41.001143] (-) TimerEvent: {}
+[41.101499] (-) TimerEvent: {}
+[41.201769] (-) TimerEvent: {}
+[41.302044] (-) TimerEvent: {}
+[41.402373] (-) TimerEvent: {}
+[41.502873] (-) TimerEvent: {}
+[41.603919] (-) TimerEvent: {}
+[41.704257] (-) TimerEvent: {}
+[41.804561] (-) TimerEvent: {}
+[41.904839] (-) TimerEvent: {}
+[42.005133] (-) TimerEvent: {}
+[42.105638] (-) TimerEvent: {}
+[42.206321] (-) TimerEvent: {}
+[42.307129] (-) TimerEvent: {}
+[42.407557] (-) TimerEvent: {}
+[42.507885] (-) TimerEvent: {}
+[42.608134] (-) TimerEvent: {}
+[42.708410] (-) TimerEvent: {}
+[42.808814] (-) TimerEvent: {}
+[42.909501] (-) TimerEvent: {}
+[43.010319] (-) TimerEvent: {}
+[43.110810] (-) TimerEvent: {}
+[43.211095] (-) TimerEvent: {}
+[43.311370] (-) TimerEvent: {}
+[43.411645] (-) TimerEvent: {}
+[43.511984] (-) TimerEvent: {}
+[43.612397] (-) TimerEvent: {}
+[43.712845] (-) TimerEvent: {}
+[43.813154] (-) TimerEvent: {}
+[43.913438] (-) TimerEvent: {}
+[44.013707] (-) TimerEvent: {}
+[44.113975] (-) TimerEvent: {}
+[44.214217] (-) TimerEvent: {}
+[44.314564] (-) TimerEvent: {}
+[44.415043] (-) TimerEvent: {}
+[44.515540] (-) TimerEvent: {}
+[44.616274] (-) TimerEvent: {}
+[44.716766] (-) TimerEvent: {}
+[44.817060] (-) TimerEvent: {}
+[44.917335] (-) TimerEvent: {}
+[45.017659] (-) TimerEvent: {}
+[45.118082] (-) TimerEvent: {}
+[45.218738] (-) TimerEvent: {}
+[45.319407] (-) TimerEvent: {}
+[45.419730] (-) TimerEvent: {}
+[45.520151] (-) TimerEvent: {}
+[45.620852] (-) TimerEvent: {}
+[45.721512] (-) TimerEvent: {}
+[45.822038] (-) TimerEvent: {}
+[45.922447] (-) TimerEvent: {}
+[46.023383] (-) TimerEvent: {}
+[46.123686] (-) TimerEvent: {}
+[46.224150] (-) TimerEvent: {}
+[46.324699] (-) TimerEvent: {}
+[46.424966] (-) TimerEvent: {}
+[46.525237] (-) TimerEvent: {}
+[46.625627] (-) TimerEvent: {}
+[46.726046] (-) TimerEvent: {}
+[46.826560] (-) TimerEvent: {}
+[46.927273] (-) TimerEvent: {}
+[47.028041] (-) TimerEvent: {}
+[47.128984] (-) TimerEvent: {}
+[47.230171] (-) TimerEvent: {}
+[47.330651] (-) TimerEvent: {}
+[47.431132] (-) TimerEvent: {}
+[47.531696] (-) TimerEvent: {}
+[47.632149] (-) TimerEvent: {}
+[47.732955] (-) TimerEvent: {}
+[47.834054] (-) TimerEvent: {}
+[47.934592] (-) TimerEvent: {}
+[48.035094] (-) TimerEvent: {}
+[48.135673] (-) TimerEvent: {}
+[48.236361] (-) TimerEvent: {}
+[48.336797] (-) TimerEvent: {}
+[48.437289] (-) TimerEvent: {}
+[48.537675] (-) TimerEvent: {}
+[48.638055] (-) TimerEvent: {}
+[48.738357] (-) TimerEvent: {}
+[48.838784] (-) TimerEvent: {}
+[48.939364] (-) TimerEvent: {}
+[49.039791] (-) TimerEvent: {}
+[49.140206] (-) TimerEvent: {}
+[49.240656] (-) TimerEvent: {}
+[49.341344] (-) TimerEvent: {}
+[49.442235] (-) TimerEvent: {}
+[49.543031] (-) TimerEvent: {}
+[49.643636] (-) TimerEvent: {}
+[49.744259] (-) TimerEvent: {}
+[49.844815] (-) TimerEvent: {}
+[49.945558] (-) TimerEvent: {}
+[50.046440] (-) TimerEvent: {}
+[50.146952] (-) TimerEvent: {}
+[50.168695] (robot_commander) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable commander\x1b[0m\n'}
+[50.247065] (-) TimerEvent: {}
+[50.347469] (-) TimerEvent: {}
+[50.448084] (-) TimerEvent: {}
+[50.548744] (-) TimerEvent: {}
+[50.649165] (-) TimerEvent: {}
+[50.749745] (-) TimerEvent: {}
+[50.850258] (-) TimerEvent: {}
+[50.951504] (-) TimerEvent: {}
+[51.052077] (-) TimerEvent: {}
+[51.152731] (-) TimerEvent: {}
+[51.253845] (-) TimerEvent: {}
+[51.354583] (-) TimerEvent: {}
+[51.455043] (-) TimerEvent: {}
+[51.555593] (-) TimerEvent: {}
+[51.656105] (-) TimerEvent: {}
+[51.756835] (-) TimerEvent: {}
+[51.858086] (-) TimerEvent: {}
+[51.958647] (-) TimerEvent: {}
+[52.059462] (-) TimerEvent: {}
+[52.160207] (-) TimerEvent: {}
+[52.261268] (-) TimerEvent: {}
+[52.362538] (-) TimerEvent: {}
+[52.463241] (-) TimerEvent: {}
+[52.564692] (-) TimerEvent: {}
+[52.666210] (-) TimerEvent: {}
+[52.766839] (-) TimerEvent: {}
+[52.868053] (-) TimerEvent: {}
+[52.968905] (-) TimerEvent: {}
+[53.069440] (-) TimerEvent: {}
+[53.169980] (-) TimerEvent: {}
+[53.270503] (-) TimerEvent: {}
+[53.370960] (-) TimerEvent: {}
+[53.471541] (-) TimerEvent: {}
+[53.571801] (-) TimerEvent: {}
+[53.672160] (-) TimerEvent: {}
+[53.772632] (-) TimerEvent: {}
+[53.873482] (-) TimerEvent: {}
+[53.974100] (-) TimerEvent: {}
+[54.074556] (-) TimerEvent: {}
+[54.175236] (-) TimerEvent: {}
+[54.275589] (-) TimerEvent: {}
+[54.375986] (-) TimerEvent: {}
+[54.476368] (-) TimerEvent: {}
+[54.576754] (-) TimerEvent: {}
+[54.677355] (-) TimerEvent: {}
+[54.698068] (robot_commander) StdoutLine: {'line': b'[100%] Built target commander\n'}
+[54.727913] (robot_commander) CommandEnded: {'returncode': 0}
+[54.729376] (robot_commander) JobProgress: {'identifier': 'robot_commander', 'progress': 'install'}
+[54.750489] (robot_commander) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/msd/MSD2/REV4/build/robot_commander'], 'cwd': '/home/msd/MSD2/REV4/build/robot_commander', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'msd'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/msd/MSD2/REV4/install/robot_hardware/lib:/home/msd/MSD2/REV4/install/marge/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/msd'), ('OLDPWD', '/home/msd/MSD2/REV4/src'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/msd/.nvm/versions/node/v20.20.2/bin'), ('NVM_INC', '/home/msd/.nvm/versions/node/v20.20.2/include/node'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '58088'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('NVM_DIR', '/home/msd/.nvm'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/msd/MSD2/REV4/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'msd'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'msd'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/msd/.nvm/versions/node/v20.20.2/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/msd-ThinkPad-E14:@/tmp/.ICE-unix/1576,unix/msd-ThinkPad-E14:/tmp/.ICE-unix/1576'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/10d04d5d_ba57_4cad_afb2_8e4dd895dc51'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.U47WV3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.462'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/msd/MSD2/REV4/install/stepper_test:/home/msd/MSD2/REV4/install/spotarm_gamepad:/home/msd/MSD2/REV4/install/robot_bringup:/home/msd/MSD2/REV4/install/robot_moveit_config:/home/msd/MSD2/REV4/install/spotarm_assembly_description:/home/msd/MSD2/REV4/install/robot_status_leds:/home/msd/MSD2/REV4/install/robot_hardware:/home/msd/MSD2/REV4/install/robot_commander:/home/msd/MSD2/REV4/install/gear_manipulator_moveit_config:/home/msd/MSD2/REV4/install/my_robot:/home/msd/MSD2/REV4/install/marge:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/msd/MSD2/REV4/build/robot_commander'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/msd/MSD2/REV4/build/spotarm_gamepad:/home/msd/MSD2/REV4/install/spotarm_gamepad/lib/python3.10/site-packages:/home/msd/MSD2/REV4/build/spotarm_assembly_description:/home/msd/MSD2/REV4/install/spotarm_assembly_description/lib/python3.10/site-packages:/home/msd/MSD2/REV4/install/robot_status_leds/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/msd/MSD2/REV4/install/stepper_test:/home/msd/MSD2/REV4/install/robot_bringup:/home/msd/MSD2/REV4/install/robot_moveit_config:/home/msd/MSD2/REV4/install/robot_hardware:/home/msd/MSD2/REV4/install/robot_commander:/home/msd/MSD2/REV4/install/gear_manipulator_moveit_config:/home/msd/MSD2/REV4/install/my_robot:/home/msd/MSD2/REV4/install/marge:/home/msd/MSD2/REV4/install/spotarm_gamepad:/home/msd/MSD2/REV4/install/spotarm_assembly_description:/home/msd/MSD2/REV4/install/robot_status_leds:/opt/ros/humble')]), 'shell': False}
+[54.768013] (robot_commander) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[54.769166] (robot_commander) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[54.770532] (robot_commander) StdoutLine: {'line': b'-- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_commander/lib/robot_commander/commander\n'}
+[54.772460] (robot_commander) StdoutLine: {'line': b'-- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/launch/commander.launch.py\n'}
+[54.772918] (robot_commander) StdoutLine: {'line': b'-- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_commander/share/ament_index/resource_index/package_run_dependencies/robot_commander\n'}
+[54.773363] (robot_commander) StdoutLine: {'line': b'-- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_commander/share/ament_index/resource_index/parent_prefix_path/robot_commander\n'}
+[54.773804] (robot_commander) StdoutLine: {'line': b'-- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/environment/ament_prefix_path.sh\n'}
+[54.774112] (robot_commander) StdoutLine: {'line': b'-- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/environment/ament_prefix_path.dsv\n'}
+[54.774480] (robot_commander) StdoutLine: {'line': b'-- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/environment/path.sh\n'}
+[54.774772] (robot_commander) StdoutLine: {'line': b'-- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/environment/path.dsv\n'}
+[54.775077] (robot_commander) StdoutLine: {'line': b'-- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/local_setup.bash\n'}
+[54.775391] (robot_commander) StdoutLine: {'line': b'-- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/local_setup.sh\n'}
+[54.775667] (robot_commander) StdoutLine: {'line': b'-- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/local_setup.zsh\n'}
+[54.775965] (robot_commander) StdoutLine: {'line': b'-- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/local_setup.dsv\n'}
+[54.776362] (robot_commander) StdoutLine: {'line': b'-- Symlinking: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/package.dsv\n'}
+[54.777583] (-) TimerEvent: {}
+[54.792898] (robot_commander) StdoutLine: {'line': b'-- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_commander/share/ament_index/resource_index/packages/robot_commander\n'}
+[54.793460] (robot_commander) StdoutLine: {'line': b'-- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/cmake/robot_commanderConfig.cmake\n'}
+[54.793877] (robot_commander) StdoutLine: {'line': b'-- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/cmake/robot_commanderConfig-version.cmake\n'}
+[54.794275] (robot_commander) StdoutLine: {'line': b'-- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/package.xml\n'}
+[54.798004] (robot_commander) CommandEnded: {'returncode': 0}
+[54.835494] (robot_commander) JobEnded: {'identifier': 'robot_commander', 'rc': 0}
+[54.837003] (-) EventReactorShutdown: {}

@@ -1,0 +1,43 @@
+[0.725s] Invoking command in '/home/msd/MSD2/REV4/build/spotarm_assembly_description': PYTHONPATH=/home/msd/MSD2/REV4/build/spotarm_assembly_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/msd/MSD2/REV4/install/spotarm_assembly_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/msd/MSD2/REV4/build/spotarm_assembly_description/build --no-deps symlink_data
+[1.056s] /usr/lib/python3/dist-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[1.056s]   warnings.warn(
+[1.096s] running develop
+[1.350s] running egg_info
+[1.351s] creating spotarm_assembly_description.egg-info
+[1.351s] writing spotarm_assembly_description.egg-info/PKG-INFO
+[1.351s] writing dependency_links to spotarm_assembly_description.egg-info/dependency_links.txt
+[1.352s] writing entry points to spotarm_assembly_description.egg-info/entry_points.txt
+[1.353s] writing requirements to spotarm_assembly_description.egg-info/requires.txt
+[1.353s] writing top-level names to spotarm_assembly_description.egg-info/top_level.txt
+[1.353s] writing manifest file 'spotarm_assembly_description.egg-info/SOURCES.txt'
+[1.355s] reading manifest file 'spotarm_assembly_description.egg-info/SOURCES.txt'
+[1.356s] writing manifest file 'spotarm_assembly_description.egg-info/SOURCES.txt'
+[1.359s] running build_ext
+[1.359s] Creating /home/msd/MSD2/REV4/install/spotarm_assembly_description/lib/python3.10/site-packages/spotarm-assembly-description.egg-link (link to .)
+[1.361s] 
+[1.361s] Installed /home/msd/MSD2/REV4/build/spotarm_assembly_description
+[1.361s] running symlink_data
+[1.361s] creating /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/ament_index
+[1.361s] creating /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/ament_index/resource_index
+[1.362s] creating /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/ament_index/resource_index/packages
+[1.362s] symbolically linking /home/msd/MSD2/REV4/build/spotarm_assembly_description/resource/spotarm_assembly_description -> /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/ament_index/resource_index/packages
+[1.362s] symbolically linking /home/msd/MSD2/REV4/build/spotarm_assembly_description/package.xml -> /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/spotarm_assembly_description
+[1.362s] creating /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/spotarm_assembly_description/launch
+[1.362s] symbolically linking /home/msd/MSD2/REV4/build/spotarm_assembly_description/launch/display.launch.py -> /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/spotarm_assembly_description/launch
+[1.362s] symbolically linking /home/msd/MSD2/REV4/build/spotarm_assembly_description/launch/gazebo.launch.py -> /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/spotarm_assembly_description/launch
+[1.362s] creating /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/spotarm_assembly_description/urdf
+[1.362s] symbolically linking /home/msd/MSD2/REV4/build/spotarm_assembly_description/urdf/spotarm_assembly.gazebo -> /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/spotarm_assembly_description/urdf
+[1.363s] symbolically linking /home/msd/MSD2/REV4/build/spotarm_assembly_description/urdf/materials.xacro -> /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/spotarm_assembly_description/urdf
+[1.363s] symbolically linking /home/msd/MSD2/REV4/build/spotarm_assembly_description/urdf/spotarm_assembly.xacro -> /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/spotarm_assembly_description/urdf
+[1.363s] symbolically linking /home/msd/MSD2/REV4/build/spotarm_assembly_description/urdf/spotarm_assembly.ros2_control.xacro -> /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/spotarm_assembly_description/urdf
+[1.363s] symbolically linking /home/msd/MSD2/REV4/build/spotarm_assembly_description/urdf/spotarm_assembly.trans -> /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/spotarm_assembly_description/urdf
+[1.363s] symbolically linking /home/msd/MSD2/REV4/build/spotarm_assembly_description/urdf/spotarm_assembly.urdf -> /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/spotarm_assembly_description/urdf
+[1.363s] creating /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/spotarm_assembly_description/meshes
+[1.363s] symbolically linking /home/msd/MSD2/REV4/build/spotarm_assembly_description/meshes/Joint_2_Component_v2_1.stl -> /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/spotarm_assembly_description/meshes
+[1.363s] symbolically linking /home/msd/MSD2/REV4/build/spotarm_assembly_description/meshes/Joint_4_Component_v2_1.stl -> /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/spotarm_assembly_description/meshes
+[1.363s] symbolically linking /home/msd/MSD2/REV4/build/spotarm_assembly_description/meshes/base_link.stl -> /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/spotarm_assembly_description/meshes
+[1.364s] symbolically linking /home/msd/MSD2/REV4/build/spotarm_assembly_description/meshes/Joint_3_Component_v2_1.stl -> /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/spotarm_assembly_description/meshes
+[1.364s] symbolically linking /home/msd/MSD2/REV4/build/spotarm_assembly_description/meshes/Joint_5_Component_v2_1.stl -> /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/spotarm_assembly_description/meshes
+[1.364s] creating /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/spotarm_assembly_description/config
+[1.364s] symbolically linking /home/msd/MSD2/REV4/build/spotarm_assembly_description/config/display.rviz -> /home/msd/MSD2/REV4/install/spotarm_assembly_description/share/spotarm_assembly_description/config
+[1.428s] Invoked command in '/home/msd/MSD2/REV4/build/spotarm_assembly_description' returned '0': PYTHONPATH=/home/msd/MSD2/REV4/build/spotarm_assembly_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/msd/MSD2/REV4/install/spotarm_assembly_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/msd/MSD2/REV4/build/spotarm_assembly_description/build --no-deps symlink_data

@@ -1,0 +1,70 @@
+[0.292s] Invoking command in '/home/msd/MSD2/REV4/build/robot_hardware': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/msd/MSD2/REV4/src/robot_hardware -DCMAKE_INSTALL_PREFIX=/home/msd/MSD2/REV4/install/robot_hardware
+[0.770s] -- The C compiler identification is GNU 11.4.0
+[0.770s] -- The CXX compiler identification is GNU 11.4.0
+[0.770s] -- Detecting C compiler ABI info
+[0.770s] -- Detecting C compiler ABI info - done
+[0.770s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.770s] -- Detecting C compile features
+[0.770s] -- Detecting C compile features - done
+[0.771s] -- Detecting CXX compiler ABI info
+[0.771s] -- Detecting CXX compiler ABI info - done
+[0.771s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.771s] -- Detecting CXX compile features
+[0.771s] -- Detecting CXX compile features - done
+[0.771s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.010s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.188s] -- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)
+[1.283s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.293s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.314s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.343s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.374s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.470s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.476s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.657s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.707s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.779s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.794s] -- Looking for pthread.h
+[1.931s] -- Looking for pthread.h - found
+[1.931s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.065s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[2.066s] -- Found Threads: TRUE  
+[2.187s] -- Found rclcpp_lifecycle: 16.0.19 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)
+[2.234s] -- Found hardware_interface: 2.53.1 (/opt/ros/humble/share/hardware_interface/cmake)
+[2.482s] -- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.2") 
+[2.483s] -- Checking for module 'libmodbus'
+[2.504s] --   Found libmodbus, version 3.1.6
+[2.633s] -- Configuring done
+[2.652s] -- Generating done
+[2.662s] -- Build files have been written to: /home/msd/MSD2/REV4/build/robot_hardware
+[2.686s] Invoked command in '/home/msd/MSD2/REV4/build/robot_hardware' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/msd/MSD2/REV4/src/robot_hardware -DCMAKE_INSTALL_PREFIX=/home/msd/MSD2/REV4/install/robot_hardware
+[2.687s] Invoking command in '/home/msd/MSD2/REV4/build/robot_hardware': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/msd/MSD2/REV4/build/robot_hardware -- -j8 -l8
+[2.763s] [ 66%] [32mBuilding CXX object CMakeFiles/robot_hardware_arm.dir/src/ICLStepper.cpp.o[0m
+[2.764s] [ 66%] [32mBuilding CXX object CMakeFiles/robot_hardware_arm.dir/src/arm_hardware_interface.cpp.o[0m
+[3.358s] In file included from [01m[K/home/msd/MSD2/REV4/src/robot_hardware/src/ICLStepper.cpp:1[m[K:
+[3.358s] [01m[K/home/msd/MSD2/REV4/src/robot_hardware/include/robot_hardware/ICLStepper.h:[m[K In constructor ‘[01m[KICLStepper::ICLStepper(int, modbus_t*, int, int)[m[K’:
+[3.358s] [01m[K/home/msd/MSD2/REV4/src/robot_hardware/include/robot_hardware/ICLStepper.h:30:9:[m[K [01;35m[Kwarning: [m[K‘[01m[KICLStepper::gear_ratio_[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[3.359s]    30 |     int [01;35m[Kgear_ratio_[m[K;
+[3.359s]       |         [01;35m[K^~~~~~~~~~~[m[K
+[3.359s] [01m[K/home/msd/MSD2/REV4/src/robot_hardware/include/robot_hardware/ICLStepper.h:28:9:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kint ICLStepper::delay_us_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[3.359s]    28 |     int [01;35m[Kdelay_us_[m[K;
+[3.359s]       |         [01;35m[K^~~~~~~~~[m[K
+[3.359s] [01m[K/home/msd/MSD2/REV4/src/robot_hardware/src/ICLStepper.cpp:9:1:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[3.359s]     9 | [01;35m[KICLStepper[m[K::ICLStepper(int slave_id, modbus_t* ctx, int pulses_per_revolution, int gear_ratio)
+[3.359s]       | [01;35m[K^~~~~~~~~~[m[K
+[3.367s] [01m[K/home/msd/MSD2/REV4/src/robot_hardware/src/ICLStepper.cpp:[m[K In member function ‘[01m[Kint ICLStepper::home(double, double, bool, double)[m[K’:
+[3.367s] [01m[K/home/msd/MSD2/REV4/src/robot_hardware/src/ICLStepper.cpp:229:20:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K(clockwise ? 7 : 6)[m[K’ from ‘[01m[Kint[m[K’ to ‘[01m[Kuint16_t[m[K’ {aka ‘[01m[Kshort unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[3.367s]   229 |         [01;35m[K(clockwise ? 0b111 : 0b110)[m[K, // Homing mode
+[3.367s]       |         [01;35m[K~~~~~~~~~~~^~~~~~~~~~~~~~~~[m[K
+[3.368s] [01m[K/home/msd/MSD2/REV4/src/robot_hardware/src/ICLStepper.cpp:234:9:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[Khigh_velocity_rpm[m[K’ from ‘[01m[Kuint[m[K’ {aka ‘[01m[Kunsigned int[m[K’} to ‘[01m[Kuint16_t[m[K’ {aka ‘[01m[Kshort unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[3.368s]   234 |         [01;35m[Khigh_velocity_rpm[m[K,    // Homing high velocity
+[3.368s]       |         [01;35m[K^~~~~~~~~~~~~~~~~[m[K
+[3.368s] [01m[K/home/msd/MSD2/REV4/src/robot_hardware/src/ICLStepper.cpp:235:9:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[Klow_velocity_rpm[m[K’ from ‘[01m[Kuint[m[K’ {aka ‘[01m[Kunsigned int[m[K’} to ‘[01m[Kuint16_t[m[K’ {aka ‘[01m[Kshort unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[3.368s]   235 |         [01;35m[Klow_velocity_rpm[m[K,      // Homing low velocity
+[3.368s]       |         [01;35m[K^~~~~~~~~~~~~~~~[m[K
+[3.474s] [01m[K/home/msd/MSD2/REV4/src/robot_hardware/src/ICLStepper.cpp:[m[K In member function ‘[01m[Kint ICLStepper::set_as_home()[m[K’:
+[3.475s] [01m[K/home/msd/MSD2/REV4/src/robot_hardware/src/ICLStepper.cpp:290:1:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+[3.475s]   290 | [01;35m[K}[m[K
+[3.475s]       | [01;35m[K^[m[K
+[7.010s] [100%] [32m[1mLinking CXX shared library librobot_hardware_arm.so[0m
+[7.181s] [100%] Built target robot_hardware_arm

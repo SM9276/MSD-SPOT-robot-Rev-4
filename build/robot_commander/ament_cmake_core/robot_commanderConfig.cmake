@@ -16,7 +16,7 @@ set(_robot_commander_CONFIG_INCLUDED TRUE)
 
 # output package information
 if(NOT robot_commander_FIND_QUIETLY)
-  message(STATUS "Found robot_commander: 0.0.0 (${robot_commander_DIR})")
+  message(STATUS "Found robot_commander: 0.1.0 (${robot_commander_DIR})")
 endif()
 
 # warn when using a deprecated package

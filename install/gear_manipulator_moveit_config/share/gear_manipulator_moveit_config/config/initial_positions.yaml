@@ -1,1 +1,8 @@
-/home/msd/MSD2/REV4/src/gear_manipulator_moveit_config/config/initial_positions.yaml
+# Default initial positions for gear_manipulator's ros2_control fake system
+
+initial_positions:
+  joint1: 0
+  joint2: 0
+  joint3: 0
+  joint4: 0
+  joint5: 0

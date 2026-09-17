@@ -1,0 +1,173 @@
+# ================================================================
+# SPOT Arm - MoveIt Servo configuration
+#
+# Initial conservative configuration for the current real hardware.
+#
+# The ros2_control loop has previously been running at 2 Hz,
+# therefore we start Servo slowly as well.
+#
+# Once Modbus communication is stable, this can be increased.
+# ================================================================
+
+
+# ------------------------------------------------
+# General
+# ------------------------------------------------
+
+use_gazebo: false
+
+status_topic: /servo_node/status
+
+
+# ------------------------------------------------
+# Incoming commands
+# ------------------------------------------------
+
+cartesian_command_in_topic: /servo_node/delta_twist_cmds
+
+joint_command_in_topic: /servo_node/delta_joint_cmds
+
+
+# Commands from our gamepad are expressed relative to base_link.
+robot_link_command_frame: base_link
+
+
+# "unitless":
+#
+# joystick values are expected approximately in [-1.0, 1.0]
+#
+# Servo applies linear_scale / rotational_scale itself.
+command_in_type: unitless
+
+
+# ------------------------------------------------
+# Command scaling
+# ------------------------------------------------
+
+# Full-stick Cartesian translation speed.
+#
+# 0.01 m/s = 1 cm/s.
+#
+# Start slow on the physical arm.
+linear_scale: 0.01
+
+
+# We are NOT enabling rotational joystick commands yet.
+# Keep this conservative anyway.
+rotational_scale: 0.10
+
+
+# Used for JointJog commands.
+# Our first controller does not publish JointJog.
+joint_scale: 0.10
+
+
+override_velocity_scaling_factor: 0.0
+
+
+# ------------------------------------------------
+# Output controller
+# ------------------------------------------------
+
+# Existing ros2_control trajectory controller.
+command_out_topic: /arm_controller/joint_trajectory
+
+
+# Your current controller_manager runs slowly.
+#
+# 0.5 s = 2 Hz.
+publish_period: 0.5
+
+
+command_out_type: trajectory_msgs/JointTrajectory
+
+
+  # The SPOT hardware exposes position command interfaces.
+publish_joint_positions: true
+
+publish_joint_velocities: false
+
+publish_joint_accelerations: false
+
+
+  # ------------------------------------------------
+  # Robot feedback
+  # ------------------------------------------------
+
+joint_topic: /joint_states
+
+
+  # Servo's smoothing plugin.
+smoothing_filter_plugin_name: online_signal_smoothing::ButterworthFilterPlugin
+
+
+  # ------------------------------------------------
+  # MoveIt robot configuration
+  # ------------------------------------------------
+
+move_group_name: arm
+
+planning_frame: base_link
+
+ee_frame_name: fake_gripper
+
+
+  # move_group is already running in hardware.launch.py.
+  #
+  # We do not want Servo pretending to be the primary planning
+  # scene monitor.
+is_primary_planning_scene_monitor: false
+
+monitored_planning_scene_topic: /monitored_planning_scene
+
+
+  # ------------------------------------------------
+  # Deadman / command timeout
+  # ------------------------------------------------
+
+  # Since Servo currently outputs at 2 Hz, don't use the normal
+  # 0.1-second timeout.
+incoming_command_timeout: 0.5
+
+
+  # Publish several stop commands when commands disappear.
+num_outgoing_halt_msgs_to_publish: 4
+
+
+halt_all_joints_in_joint_mode: true
+
+halt_all_joints_in_cartesian_mode: true
+
+
+  # ------------------------------------------------
+  # Singularity protection
+  # ------------------------------------------------
+
+lower_singularity_threshold: 17.0
+
+hard_stop_singularity_threshold: 30.0
+
+leaving_singularity_threshold_multiplier: 2.0
+
+
+  # Stay slightly away from joint limits.
+joint_limit_margin: 0.10
+
+
+low_latency_mode: false
+
+
+  # ------------------------------------------------
+  # Collision checking
+  # ------------------------------------------------
+
+check_collisions: true
+
+
+  # Match the initial slow hardware setup.
+collision_check_rate: 5.0
+
+
+self_collision_proximity_threshold: 0.01
+
+scene_collision_proximity_threshold: 0.02

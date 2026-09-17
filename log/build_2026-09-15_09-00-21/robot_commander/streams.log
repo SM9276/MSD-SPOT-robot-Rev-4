@@ -1,0 +1,53 @@
+[0.336s] Invoking command in '/home/msd/MSD2/REV4/build/robot_commander': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/msd/MSD2/REV4/install/spotarm_assembly_description:/home/msd/MSD2/REV4/install/robot_status_leds:/opt/ros/humble /usr/bin/cmake /home/msd/MSD2/REV4/src/robot_commander -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/msd/MSD2/REV4/install/robot_commander
+[0.356s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.536s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.545s] -- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)
+[0.578s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.581s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.587s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.600s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.617s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.672s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.675s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.829s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.912s] -- Found moveit_ros_planning_interface: 2.5.9 (/opt/ros/humble/share/moveit_ros_planning_interface/cmake)
+[0.926s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: date_time filesystem program_options system thread 
+[1.150s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread 
+[1.181s] -- Found parameter_traits: 0.7.1 (/opt/ros/humble/share/parameter_traits/cmake)
+[1.191s] -- Found rclcpp_lifecycle: 16.0.19 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)
+[1.215s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: filesystem 
+[1.258s] -- library: /usr/lib/x86_64-linux-gnu/libcurl.so
+[1.293s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.459s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system filesystem date_time program_options thread chrono 
+[1.530s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: thread system filesystem regex date_time program_options 
+[1.567s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system filesystem date_time program_options thread 
+[1.715s] -- Configuring done
+[1.754s] -- Generating done
+[1.763s] -- Build files have been written to: /home/msd/MSD2/REV4/build/robot_commander
+[1.780s] Invoked command in '/home/msd/MSD2/REV4/build/robot_commander' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/msd/MSD2/REV4/install/spotarm_assembly_description:/home/msd/MSD2/REV4/install/robot_status_leds:/opt/ros/humble /usr/bin/cmake /home/msd/MSD2/REV4/src/robot_commander -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/msd/MSD2/REV4/install/robot_commander
+[1.782s] Invoking command in '/home/msd/MSD2/REV4/build/robot_commander': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/msd/MSD2/REV4/install/spotarm_assembly_description:/home/msd/MSD2/REV4/install/robot_status_leds:/opt/ros/humble /usr/bin/cmake --build /home/msd/MSD2/REV4/build/robot_commander -- -j8 -l8
+[1.836s] [35m[1mConsolidate compiler generated dependencies of target commander[0m
+[1.863s] [ 50%] [32m[1mLinking CXX executable commander[0m
+[3.900s] [100%] Built target commander
+[3.912s] Invoked command in '/home/msd/MSD2/REV4/build/robot_commander' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/msd/MSD2/REV4/install/spotarm_assembly_description:/home/msd/MSD2/REV4/install/robot_status_leds:/opt/ros/humble /usr/bin/cmake --build /home/msd/MSD2/REV4/build/robot_commander -- -j8 -l8
+[3.913s] Invoking command in '/home/msd/MSD2/REV4/build/robot_commander': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/msd/MSD2/REV4/install/spotarm_assembly_description:/home/msd/MSD2/REV4/install/robot_status_leds:/opt/ros/humble /usr/bin/cmake --install /home/msd/MSD2/REV4/build/robot_commander
+[3.921s] -- Install configuration: ""
+[3.921s] -- Execute custom install script
+[3.922s] -- Symlinking: /home/msd/MSD2/REV4/install/robot_commander/lib/robot_commander//commander
+[3.933s] -- Symlinking: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/launch/commander.launch.py
+[3.944s] -- Symlinking: /home/msd/MSD2/REV4/install/robot_commander/share/ament_index/resource_index/package_run_dependencies/robot_commander
+[3.952s] -- Symlinking: /home/msd/MSD2/REV4/install/robot_commander/share/ament_index/resource_index/parent_prefix_path/robot_commander
+[3.961s] -- Symlinking: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/environment/ament_prefix_path.sh
+[3.969s] -- Symlinking: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/environment/ament_prefix_path.dsv
+[3.979s] -- Symlinking: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/environment/path.sh
+[3.987s] -- Symlinking: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/environment/path.dsv
+[3.996s] -- Symlinking: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/local_setup.bash
+[4.005s] -- Symlinking: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/local_setup.sh
+[4.013s] -- Symlinking: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/local_setup.zsh
+[4.021s] -- Symlinking: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/local_setup.dsv
+[4.030s] -- Symlinking: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/package.dsv
+[4.042s] -- Symlinking: /home/msd/MSD2/REV4/install/robot_commander/share/ament_index/resource_index/packages/robot_commander
+[4.051s] -- Symlinking: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/cmake/robot_commanderConfig.cmake
+[4.060s] -- Symlinking: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/cmake/robot_commanderConfig-version.cmake
+[4.069s] -- Symlinking: /home/msd/MSD2/REV4/install/robot_commander/share/robot_commander/package.xml
+[4.081s] Invoked command in '/home/msd/MSD2/REV4/build/robot_commander' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/msd/MSD2/REV4/install/spotarm_assembly_description:/home/msd/MSD2/REV4/install/robot_status_leds:/opt/ros/humble /usr/bin/cmake --install /home/msd/MSD2/REV4/build/robot_commander

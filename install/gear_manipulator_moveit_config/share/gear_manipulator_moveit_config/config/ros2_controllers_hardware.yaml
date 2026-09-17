@@ -1,0 +1,53 @@
+controller_manager:
+  ros__parameters:
+
+    # Keep this deliberately slow while bringing up
+    # the Modbus hardware.
+    #
+    # Five motors currently require multiple serial
+    # transactions per update.
+    update_rate: 2
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    arm_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+
+joint_state_broadcaster:
+  ros__parameters:
+    publish_rate: 2.0
+
+
+arm_controller:
+  ros__parameters:
+
+    joints:
+      - Revolute1
+      - Revolute2
+      - Revolute3
+      - Revolute4
+      - Revolute5
+      - Revolute6
+
+    command_interfaces:
+      - position
+
+    state_interfaces:
+      - position
+      - velocity
+
+    state_publish_rate: 2.0
+
+    action_monitor_rate: 5.0
+
+    allow_partial_joints_goal: false
+
+    open_loop_control: false
+
+    allow_integration_in_goal_trajectories: true
+
+    constraints:
+      stopped_velocity_tolerance: 0.05
+      goal_time: 2.0

@@ -1,1 +1,2 @@
-/home/msd/MSD2/REV4/build/gear_manipulator_moveit_config/ament_cmake_environment_hooks/local_setup.dsv
+source;share/gear_manipulator_moveit_config/environment/ament_prefix_path.sh
+source;share/gear_manipulator_moveit_config/environment/path.sh

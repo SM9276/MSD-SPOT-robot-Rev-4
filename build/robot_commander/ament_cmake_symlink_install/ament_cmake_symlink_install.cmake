@@ -315,11 +315,11 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
-# install("TARGETS" "commander" "DESTINATION" "lib/robot_commander/")
+# install("TARGETS" "commander" "DESTINATION" "lib/robot_commander")
 include("/home/msd/MSD2/REV4/build/robot_commander/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
-# install(DIRECTORY "launch" "DESTINATION" "share/robot_commander")
-ament_cmake_symlink_install_directory("/home/msd/MSD2/REV4/src/robot_commander" DIRECTORY "launch" "DESTINATION" "share/robot_commander")
+# install(DIRECTORY "launch" "DESTINATION" "share/robot_commander" "OPTIONAL")
+ament_cmake_symlink_install_directory("/home/msd/MSD2/REV4/src/robot_commander" DIRECTORY "launch" "DESTINATION" "share/robot_commander" "OPTIONAL")
 
 # install(FILES "/home/msd/MSD2/REV4/build/robot_commander/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/robot_commander" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/robot_commander" FILES "/home/msd/MSD2/REV4/build/robot_commander/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/robot_commander" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
