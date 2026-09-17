@@ -167,7 +167,7 @@ def generate_launch_description():
             # Normal mode uses only 35% of Servo's configured
             # maximum velocity.
             'normal_gain':
-                0.35,
+                1.0,
 
 
             # Hold RB for full configured Servo speed.
