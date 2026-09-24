@@ -30,24 +30,63 @@ NOTE: Package was left mostly untested due to time constraints.
      ```
    - Source:
      ```bash
+     source /opt/ros/humble/setup.bash
      source install/setup.bash
      ```
 
 4. Run:
    ```bash
-   ros2 run robot_status_leds led_status_node
+   ros2 run robot_status_leds led_state_node
    ```
 
-   Example with parameters:
+   Example with parameters for PC testing:
    ```bash
-   ros2 run robot_status_leds led_status_node --ros-args \
-     -p led_backend:=rpi_neopixel \
-     -p led_count:=60 \
-     -p led_pin:=18 \
-     -p brightness:=0.4 \
-     -p moving_color:="#FF0000" \
-     -p static_color:="#0000FF"
+    source setup.bash
+    source install/setup.bash
+
+    ros2 run robot_status_leds led_state_node --ros-args \
+      -p led_backend:=mock \
+      -p led_count:=60 \
+      -p led_pin:=18 \
+      -p brightness:=0.4 \
+      -p moving_color:=F8F000 \
+      -p static_color:=00F8F0 \
+      -p blinking_color:=F000F8
    ```
+
+   Example with parameters for Pi testing:
+   ```bash 
+    sudo bash -c '
+    source /opt/ros/humble/setup.bash
+    source /home/pi/msd_robot_arm_rev4-main/install/setup.bash
+
+    ros2 run robot_status_leds led_state_node --ros-args \
+      -p led_backend:=rpi_neopixel \
+      -p led_count:=60 \
+      -p led_pin:=18 \
+      -p brightness:=0.4 \
+      -p moving_color:=F8F000 \
+      -p static_color:=00F8F0 \
+      -p blinking_color:=F000F8
+    '
+   ```
+ 
+5. Simulate State Change (1 Hz):
+   ```bash
+   source setup.bash
+   source install/setup.bash
+   ros2 topic pub /joint_states sensor_msgs/msg/JointState   "{velocity: [1.0], blink: [0.1]}" -r 1
+   ```
+       ```bash 
+    sudo bash -c '
+    source /opt/ros/humble/setup.bash
+    source /home/pi/msd_robot_arm_rev4-main/install/setup.bash
+    ros2 topic pub /joint_states sensor_msgs/msg/JointState   "{velocity: [1.0]}" -r 1
+    '
+    ```
+    ros2 node list
+    ros2 topic info /joint_states
+
 
 ## Parameters
 - led_backend: 'rpi_neopixel' (default) or 'mock'
