@@ -21,7 +21,7 @@ class LEDStateNode(Node):
         self.declare_parameter('velocity_threshold', 0.01)
         self.declare_parameter('moving_timeout_ms', 500)
         self.declare_parameter('update_rate_hz', 10.0)
-        self.declare_parameter('joint_states_topic', '  ')
+        self.declare_parameter('joint_states_topic', 'joint_states')
 
         # Read parameters
         self.led_backend = self.get_parameter('led_backend').value

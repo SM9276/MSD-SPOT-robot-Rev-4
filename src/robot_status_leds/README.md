@@ -80,7 +80,7 @@ NOTE: Package was left mostly untested due to time constraints.
        ```bash 
     sudo bash -c '
     source /opt/ros/humble/setup.bash
-    source /home/pi/msd_robot_arm_rev4-main/install/setup.bash
+    source /home/pi/MSD-SPOT-robot-Rev-4/install/setup.bash
     ros2 topic pub /joint_states sensor_msgs/msg/JointState   "{velocity: [1.0]}" -r 1
     '
     ```

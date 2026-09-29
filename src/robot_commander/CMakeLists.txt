@@ -29,6 +29,7 @@ add_executable(
   src/commander.cpp
 )
 
+target_include_directories(commander PUBLIC include)
 
 ament_target_dependencies(
   commander
@@ -38,6 +39,8 @@ ament_target_dependencies(
   std_msgs
   moveit_ros_planning_interface
 )
+
+target_link_libraries(commander modbus)
 
 
 target_compile_features(
