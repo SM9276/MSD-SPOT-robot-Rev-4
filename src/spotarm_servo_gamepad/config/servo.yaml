@@ -49,7 +49,7 @@ command_in_type: unitless
 # 0.01 m/s = 1 cm/s.
 #
 # Start slow on the physical arm.
-linear_scale: 0.01
+linear_scale: 0.1
 
 
 # We are NOT enabling rotational joystick commands yet.
