@@ -1,0 +1,17 @@
+/home/msd/MSD2/REV4/install/my_robot/share/my_robot/urdf/gear_manipulator.urdf
+/home/msd/MSD2/REV4/install/my_robot/share/my_robot/launch/display.launch.py
+/home/msd/MSD2/REV4/install/my_robot/share/ament_index/resource_index/package_run_dependencies/my_robot
+/home/msd/MSD2/REV4/install/my_robot/share/ament_index/resource_index/parent_prefix_path/my_robot
+/home/msd/MSD2/REV4/install/my_robot/share/my_robot/environment/ament_prefix_path.sh
+/home/msd/MSD2/REV4/install/my_robot/share/my_robot/environment/ament_prefix_path.dsv
+/home/msd/MSD2/REV4/install/my_robot/share/my_robot/environment/path.sh
+/home/msd/MSD2/REV4/install/my_robot/share/my_robot/environment/path.dsv
+/home/msd/MSD2/REV4/install/my_robot/share/my_robot/local_setup.bash
+/home/msd/MSD2/REV4/install/my_robot/share/my_robot/local_setup.sh
+/home/msd/MSD2/REV4/install/my_robot/share/my_robot/local_setup.zsh
+/home/msd/MSD2/REV4/install/my_robot/share/my_robot/local_setup.dsv
+/home/msd/MSD2/REV4/install/my_robot/share/my_robot/package.dsv
+/home/msd/MSD2/REV4/install/my_robot/share/ament_index/resource_index/packages/my_robot
+/home/msd/MSD2/REV4/install/my_robot/share/my_robot/cmake/my_robotConfig.cmake
+/home/msd/MSD2/REV4/install/my_robot/share/my_robot/cmake/my_robotConfig-version.cmake
+/home/msd/MSD2/REV4/install/my_robot/share/my_robot/package.xml

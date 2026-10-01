@@ -1,5 +1,3 @@
-LICENSE
-README.md
 package.xml
 setup.cfg
 setup.py
@@ -14,6 +12,10 @@ resource/robot_status_leds
 robot_status_leds/__init__.py
 robot_status_leds/led_controller.py
 robot_status_leds/led_state_node.py
-test/test_copyright.py
-test/test_flake8.py
-test/test_pep257.py
+robot_status_leds.egg-info/PKG-INFO
+robot_status_leds.egg-info/SOURCES.txt
+robot_status_leds.egg-info/dependency_links.txt
+robot_status_leds.egg-info/entry_points.txt
+robot_status_leds.egg-info/requires.txt
+robot_status_leds.egg-info/top_level.txt
+robot_status_leds.egg-info/zip-safe

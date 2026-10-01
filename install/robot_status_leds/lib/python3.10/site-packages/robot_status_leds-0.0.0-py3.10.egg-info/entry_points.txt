@@ -1,3 +1,0 @@
-[console_scripts]
-led_state_node = robot_status_leds.led_state_node:main
-
