@@ -23,7 +23,11 @@ function(ament_cmake_symlink_install_directory cmake_current_source_dir)
 
   # make destination absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
+<<<<<<< HEAD
     set(ARG_DESTINATION "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/stepper_test/${ARG_DESTINATION}")
+=======
+    set(ARG_DESTINATION "/home/msd/MSD2/REV4/install/stepper_test/${ARG_DESTINATION}")
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -55,6 +59,14 @@ function(ament_cmake_symlink_install_directory cmake_current_source_dir)
         # remove trailing slash
         string(SUBSTRING "${dir}" 0 ${offset} dir)
       endif()
+<<<<<<< HEAD
+=======
+      
+      # Create destination directory.
+      # This does *not* solve the problem of empty directories WITHIN the install tree,
+      # but does make sure that the top-level directory specified by the caller gets created.
+      file(MAKE_DIRECTORY "${destination}")
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 
       # glob recursive files
       set(relative_files "")
@@ -123,7 +135,11 @@ function(ament_cmake_symlink_install_files cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
+<<<<<<< HEAD
     set(ARG_DESTINATION "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/stepper_test/${ARG_DESTINATION}")
+=======
+    set(ARG_DESTINATION "/home/msd/MSD2/REV4/install/stepper_test/${ARG_DESTINATION}")
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -181,7 +197,11 @@ function(ament_cmake_symlink_install_programs cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
+<<<<<<< HEAD
     set(ARG_DESTINATION "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/stepper_test/${ARG_DESTINATION}")
+=======
+    set(ARG_DESTINATION "/home/msd/MSD2/REV4/install/stepper_test/${ARG_DESTINATION}")
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -251,7 +271,11 @@ function(ament_cmake_symlink_install_targets)
 
     # make destination an absolute path and ensure that it exists
     if(NOT IS_ABSOLUTE "${destination}")
+<<<<<<< HEAD
       set(destination "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/stepper_test/${destination}")
+=======
+      set(destination "/home/msd/MSD2/REV4/install/stepper_test/${destination}")
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
     endif()
     if(NOT EXISTS "${destination}")
       file(MAKE_DIRECTORY "${destination}")
@@ -311,6 +335,7 @@ message(STATUS "Execute custom install script")
 # begin of custom install code
 
 # install("TARGETS" "motor_key" "DESTINATION" "lib/stepper_test")
+<<<<<<< HEAD
 include("/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/stepper_test/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install(FILES "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/stepper_test/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/stepper_test" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
@@ -354,3 +379,48 @@ ament_cmake_symlink_install_files("/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-R
 
 # install(FILES "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/stepper_test/package.xml" "DESTINATION" "share/stepper_test")
 ament_cmake_symlink_install_files("/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/stepper_test" FILES "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/stepper_test/package.xml" "DESTINATION" "share/stepper_test")
+=======
+include("/home/msd/MSD2/REV4/build/stepper_test/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+
+# install(FILES "/home/msd/MSD2/REV4/build/stepper_test/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/stepper_test" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/stepper_test" FILES "/home/msd/MSD2/REV4/build/stepper_test/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/stepper_test" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+
+# install(FILES "/home/msd/MSD2/REV4/build/stepper_test/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/stepper_test" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/stepper_test" FILES "/home/msd/MSD2/REV4/build/stepper_test/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/stepper_test" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+
+# install(FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/stepper_test/environment")
+ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/stepper_test" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/stepper_test/environment")
+
+# install(FILES "/home/msd/MSD2/REV4/build/stepper_test/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/stepper_test/environment")
+ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/stepper_test" FILES "/home/msd/MSD2/REV4/build/stepper_test/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/stepper_test/environment")
+
+# install(FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/stepper_test/environment")
+ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/stepper_test" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/stepper_test/environment")
+
+# install(FILES "/home/msd/MSD2/REV4/build/stepper_test/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/stepper_test/environment")
+ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/stepper_test" FILES "/home/msd/MSD2/REV4/build/stepper_test/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/stepper_test/environment")
+
+# install(FILES "/home/msd/MSD2/REV4/build/stepper_test/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/stepper_test")
+ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/stepper_test" FILES "/home/msd/MSD2/REV4/build/stepper_test/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/stepper_test")
+
+# install(FILES "/home/msd/MSD2/REV4/build/stepper_test/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/stepper_test")
+ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/stepper_test" FILES "/home/msd/MSD2/REV4/build/stepper_test/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/stepper_test")
+
+# install(FILES "/home/msd/MSD2/REV4/build/stepper_test/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/stepper_test")
+ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/stepper_test" FILES "/home/msd/MSD2/REV4/build/stepper_test/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/stepper_test")
+
+# install(FILES "/home/msd/MSD2/REV4/build/stepper_test/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/stepper_test")
+ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/stepper_test" FILES "/home/msd/MSD2/REV4/build/stepper_test/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/stepper_test")
+
+# install(FILES "/home/msd/MSD2/REV4/build/stepper_test/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/stepper_test")
+ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/stepper_test" FILES "/home/msd/MSD2/REV4/build/stepper_test/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/stepper_test")
+
+# install(FILES "/home/msd/MSD2/REV4/build/stepper_test/ament_cmake_index/share/ament_index/resource_index/packages/stepper_test" "DESTINATION" "share/ament_index/resource_index/packages")
+ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/stepper_test" FILES "/home/msd/MSD2/REV4/build/stepper_test/ament_cmake_index/share/ament_index/resource_index/packages/stepper_test" "DESTINATION" "share/ament_index/resource_index/packages")
+
+# install(FILES "/home/msd/MSD2/REV4/build/stepper_test/ament_cmake_core/stepper_testConfig.cmake" "/home/msd/MSD2/REV4/build/stepper_test/ament_cmake_core/stepper_testConfig-version.cmake" "DESTINATION" "share/stepper_test/cmake")
+ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/stepper_test" FILES "/home/msd/MSD2/REV4/build/stepper_test/ament_cmake_core/stepper_testConfig.cmake" "/home/msd/MSD2/REV4/build/stepper_test/ament_cmake_core/stepper_testConfig-version.cmake" "DESTINATION" "share/stepper_test/cmake")
+
+# install(FILES "/home/msd/MSD2/REV4/src/stepper_test/package.xml" "DESTINATION" "share/stepper_test")
+ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/stepper_test" FILES "/home/msd/MSD2/REV4/src/stepper_test/package.xml" "DESTINATION" "share/stepper_test")
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26

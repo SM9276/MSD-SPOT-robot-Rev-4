@@ -23,7 +23,11 @@ function(ament_cmake_symlink_install_directory cmake_current_source_dir)
 
   # make destination absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
+<<<<<<< HEAD
     set(ARG_DESTINATION "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_servoing/${ARG_DESTINATION}")
+=======
+    set(ARG_DESTINATION "/home/msd/MSD2/REV4/install/robot_servoing/${ARG_DESTINATION}")
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -55,6 +59,14 @@ function(ament_cmake_symlink_install_directory cmake_current_source_dir)
         # remove trailing slash
         string(SUBSTRING "${dir}" 0 ${offset} dir)
       endif()
+<<<<<<< HEAD
+=======
+      
+      # Create destination directory.
+      # This does *not* solve the problem of empty directories WITHIN the install tree,
+      # but does make sure that the top-level directory specified by the caller gets created.
+      file(MAKE_DIRECTORY "${destination}")
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 
       # glob recursive files
       set(relative_files "")
@@ -123,7 +135,11 @@ function(ament_cmake_symlink_install_files cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
+<<<<<<< HEAD
     set(ARG_DESTINATION "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_servoing/${ARG_DESTINATION}")
+=======
+    set(ARG_DESTINATION "/home/msd/MSD2/REV4/install/robot_servoing/${ARG_DESTINATION}")
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -181,7 +197,11 @@ function(ament_cmake_symlink_install_programs cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
+<<<<<<< HEAD
     set(ARG_DESTINATION "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_servoing/${ARG_DESTINATION}")
+=======
+    set(ARG_DESTINATION "/home/msd/MSD2/REV4/install/robot_servoing/${ARG_DESTINATION}")
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -251,7 +271,11 @@ function(ament_cmake_symlink_install_targets)
 
     # make destination an absolute path and ensure that it exists
     if(NOT IS_ABSOLUTE "${destination}")
+<<<<<<< HEAD
       set(destination "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_servoing/${destination}")
+=======
+      set(destination "/home/msd/MSD2/REV4/install/robot_servoing/${destination}")
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
     endif()
     if(NOT EXISTS "${destination}")
       file(MAKE_DIRECTORY "${destination}")
@@ -311,6 +335,7 @@ message(STATUS "Execute custom install script")
 # begin of custom install code
 
 # install(DIRECTORY "launch" "DESTINATION" "share/robot_servoing")
+<<<<<<< HEAD
 ament_cmake_symlink_install_directory("/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_servoing" DIRECTORY "launch" "DESTINATION" "share/robot_servoing")
 
 # install(DIRECTORY "config" "DESTINATION" "share/robot_servoing")
@@ -360,3 +385,54 @@ ament_cmake_symlink_install_files("/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-R
 
 # install(FILES "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_servoing/package.xml" "DESTINATION" "share/robot_servoing")
 ament_cmake_symlink_install_files("/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_servoing" FILES "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_servoing/package.xml" "DESTINATION" "share/robot_servoing")
+=======
+ament_cmake_symlink_install_directory("/home/msd/MSD2/REV4/src/robot_servoing" DIRECTORY "launch" "DESTINATION" "share/robot_servoing")
+
+# install(DIRECTORY "config" "DESTINATION" "share/robot_servoing")
+ament_cmake_symlink_install_directory("/home/msd/MSD2/REV4/src/robot_servoing" DIRECTORY "config" "DESTINATION" "share/robot_servoing")
+
+# install(FILES "/home/msd/MSD2/REV4/build/robot_servoing/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/robot_servoing" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/robot_servoing" FILES "/home/msd/MSD2/REV4/build/robot_servoing/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/robot_servoing" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+
+# install(FILES "/home/msd/MSD2/REV4/build/robot_servoing/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/robot_servoing" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/robot_servoing" FILES "/home/msd/MSD2/REV4/build/robot_servoing/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/robot_servoing" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+
+# install(FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/robot_servoing/environment")
+ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/robot_servoing" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/robot_servoing/environment")
+
+# install(FILES "/home/msd/MSD2/REV4/build/robot_servoing/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/robot_servoing/environment")
+ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/robot_servoing" FILES "/home/msd/MSD2/REV4/build/robot_servoing/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/robot_servoing/environment")
+
+# install(FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/robot_servoing/environment")
+ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/robot_servoing" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/robot_servoing/environment")
+
+# install(FILES "/home/msd/MSD2/REV4/build/robot_servoing/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/robot_servoing/environment")
+ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/robot_servoing" FILES "/home/msd/MSD2/REV4/build/robot_servoing/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/robot_servoing/environment")
+
+# install(FILES "/home/msd/MSD2/REV4/build/robot_servoing/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/robot_servoing")
+ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/robot_servoing" FILES "/home/msd/MSD2/REV4/build/robot_servoing/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/robot_servoing")
+
+# install(FILES "/home/msd/MSD2/REV4/build/robot_servoing/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/robot_servoing")
+ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/robot_servoing" FILES "/home/msd/MSD2/REV4/build/robot_servoing/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/robot_servoing")
+
+# install(FILES "/home/msd/MSD2/REV4/build/robot_servoing/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/robot_servoing")
+ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/robot_servoing" FILES "/home/msd/MSD2/REV4/build/robot_servoing/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/robot_servoing")
+
+# install(FILES "/home/msd/MSD2/REV4/build/robot_servoing/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/robot_servoing")
+ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/robot_servoing" FILES "/home/msd/MSD2/REV4/build/robot_servoing/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/robot_servoing")
+
+# install(FILES "/home/msd/MSD2/REV4/build/robot_servoing/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/robot_servoing")
+ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/robot_servoing" FILES "/home/msd/MSD2/REV4/build/robot_servoing/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/robot_servoing")
+
+# install(FILES "/home/msd/MSD2/REV4/build/robot_servoing/ament_cmake_index/share/ament_index/resource_index/packages/robot_servoing" "DESTINATION" "share/ament_index/resource_index/packages")
+ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/robot_servoing" FILES "/home/msd/MSD2/REV4/build/robot_servoing/ament_cmake_index/share/ament_index/resource_index/packages/robot_servoing" "DESTINATION" "share/ament_index/resource_index/packages")
+
+# install(FILES "/home/msd/MSD2/REV4/build/robot_servoing/ament_cmake_index/share/ament_index/resource_index/rclcpp_components/robot_servoing" "DESTINATION" "share/ament_index/resource_index/rclcpp_components")
+ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/robot_servoing" FILES "/home/msd/MSD2/REV4/build/robot_servoing/ament_cmake_index/share/ament_index/resource_index/rclcpp_components/robot_servoing" "DESTINATION" "share/ament_index/resource_index/rclcpp_components")
+
+# install(FILES "/home/msd/MSD2/REV4/build/robot_servoing/ament_cmake_core/robot_servoingConfig.cmake" "/home/msd/MSD2/REV4/build/robot_servoing/ament_cmake_core/robot_servoingConfig-version.cmake" "DESTINATION" "share/robot_servoing/cmake")
+ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/robot_servoing" FILES "/home/msd/MSD2/REV4/build/robot_servoing/ament_cmake_core/robot_servoingConfig.cmake" "/home/msd/MSD2/REV4/build/robot_servoing/ament_cmake_core/robot_servoingConfig-version.cmake" "DESTINATION" "share/robot_servoing/cmake")
+
+# install(FILES "/home/msd/MSD2/REV4/src/robot_servoing/package.xml" "DESTINATION" "share/robot_servoing")
+ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/robot_servoing" FILES "/home/msd/MSD2/REV4/src/robot_servoing/package.xml" "DESTINATION" "share/robot_servoing")
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26

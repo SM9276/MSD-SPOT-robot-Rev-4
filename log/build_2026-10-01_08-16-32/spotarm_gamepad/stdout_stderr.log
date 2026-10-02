@@ -1,0 +1,15 @@
+running develop
+running egg_info
+writing spotarm_gamepad.egg-info/PKG-INFO
+writing dependency_links to spotarm_gamepad.egg-info/dependency_links.txt
+writing entry points to spotarm_gamepad.egg-info/entry_points.txt
+writing requirements to spotarm_gamepad.egg-info/requires.txt
+writing top-level names to spotarm_gamepad.egg-info/top_level.txt
+reading manifest file 'spotarm_gamepad.egg-info/SOURCES.txt'
+writing manifest file 'spotarm_gamepad.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/msd/MSD2/REV4/install/spotarm_gamepad/lib/python3.10/site-packages/spotarm-gamepad.egg-link (link to .)
+Installing gamepad script to /home/msd/MSD2/REV4/install/spotarm_gamepad/lib/spotarm_gamepad
+
+Installed /home/msd/MSD2/REV4/build/spotarm_gamepad
+running symlink_data

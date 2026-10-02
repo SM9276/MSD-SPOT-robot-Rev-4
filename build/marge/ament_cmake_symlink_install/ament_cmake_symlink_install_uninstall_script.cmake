@@ -1,7 +1,11 @@
 # generated from
 # ament_cmake_core/cmake/symlink_install/ament_cmake_symlink_install_uninstall_script.cmake.in
 
+<<<<<<< HEAD
 set(install_manifest "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/marge/symlink_install_manifest.txt")
+=======
+set(install_manifest "/home/msd/MSD2/REV4/build/marge/symlink_install_manifest.txt")
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 if(NOT EXISTS "${install_manifest}")
   message(FATAL_ERROR "Cannot find symlink install manifest: ${install_manifest}")
 endif()
