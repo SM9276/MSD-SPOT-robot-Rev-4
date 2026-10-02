@@ -1,0 +1,154 @@
+[0.000000] (-) TimerEvent: {}
+[0.000968] (-) JobUnselected: {'identifier': 'gear_manipulator_moveit_config'}
+[0.001472] (-) JobUnselected: {'identifier': 'marge'}
+[0.002018] (-) JobUnselected: {'identifier': 'my_robot'}
+[0.002689] (-) JobUnselected: {'identifier': 'robot_bringup'}
+[0.003230] (-) JobUnselected: {'identifier': 'robot_commander'}
+[0.003773] (-) JobUnselected: {'identifier': 'robot_hardware'}
+[0.004351] (-) JobUnselected: {'identifier': 'robot_moveit_config'}
+[0.004812] (-) JobUnselected: {'identifier': 'robot_servoing'}
+[0.005424] (-) JobUnselected: {'identifier': 'robot_status_leds'}
+[0.006201] (-) JobUnselected: {'identifier': 'spotarm_assembly_description'}
+[0.006566] (-) JobUnselected: {'identifier': 'spotarm_gamepad'}
+[0.007247] (-) JobUnselected: {'identifier': 'spotarm_servo_gamepad'}
+[0.007776] (-) JobUnselected: {'identifier': 'stepper_test'}
+[0.008217] (end_effector) JobQueued: {'identifier': 'end_effector', 'dependencies': OrderedDict()}
+[0.008617] (end_effector) JobStarted: {'identifier': 'end_effector'}
+[0.063558] (end_effector) JobProgress: {'identifier': 'end_effector', 'progress': 'cmake'}
+[0.096666] (-) TimerEvent: {}
+[0.146677] (end_effector) Command: {'cmd': ['/usr/bin/cmake', '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/End_Effector', '-DCMAKE_INSTALL_PREFIX=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector'], 'cwd': '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/end_effector', 'env': OrderedDict([('USER', 'tfb6251'), ('SHLVL', '0'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/tfb6251'), ('OLDPWD', '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'tfb6251'), ('NAME', 'TheSource'), ('WSL_INTEROP', '/run/WSL/6140_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Users/Oden2/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand:/mnt/c/Users/Oden2/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli:/mnt/c/Python38/Scripts/:/mnt/c/Python38/:/mnt/c/Program Files/Eclipse Adoptium/jdk-21.0.7.6-hotspot/bin:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/java8path:/mnt/c/Users/Oden2/apache-maven-3.9.9/bin:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0/:/mnt/c/windows/System32/OpenSSH/:/mnt/c/Users/Administrator/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/HP/OMEN-Broadcast/Common:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/opt/apache-maven-3.9.9/bin:/mnt/c/Program Files/Java/jdk-21/bin:/mnt/c/Program Files/nodejs/:/mnt/c/Users/Oden2/OneDrive/Desktop/SwenProject/static/sonar-scanner-6.2.1.4610-windows-x64/bin/:/mnt/c/Program Files/MATLAB/R2024b/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/PuTTY/:/mnt/c/Program Files/dotnet/:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/CMake/bin:/mnt/c/ProgramData/chocolatey/lib/cunit/lib:/mnt/c/ProgramData/chocolatey/lib/tinyxml2/lib:/mnt/c/ProgramData/chocolatey/lib/bullet/lib:/mnt/c/Program Files/Graphviz/bin:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/usbipd-win/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Users/Oden2/AppData/Local/Microsoft/WindowsApps:/mnt/c/Modeltech_pe_edu_10.4a/win32pe_edu:/mnt/c/Users/Oden2/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/Oden2/AppData/Roaming/npm:/mnt/c/altera/13.1/modelsim_ase/win32aloem:/mnt/c/msys64/ucrt64/bin:/mnt/c/Program Files/OpenSSL-Win64/bin:/mnt/c/Program Files/OpenSSL-Win64/bin/:/mnt/c/opencv/x64/vc16/bin:/mnt/c/Program Files/CMake/bin:/mnt/c/Users/Oden2/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('PWD', '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/end_effector'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', ''), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.196915] (-) TimerEvent: {}
+[0.300637] (-) TimerEvent: {}
+[0.401781] (-) TimerEvent: {}
+[0.434194] (end_effector) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.502240] (-) TimerEvent: {}
+[0.603706] (-) TimerEvent: {}
+[0.704693] (-) TimerEvent: {}
+[0.750083] (end_effector) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.804930] (-) TimerEvent: {}
+[0.905999] (-) TimerEvent: {}
+[1.006964] (-) TimerEvent: {}
+[1.075894] (end_effector) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[1.107265] (-) TimerEvent: {}
+[1.208321] (-) TimerEvent: {}
+[1.309372] (-) TimerEvent: {}
+[1.410571] (-) TimerEvent: {}
+[1.511503] (-) TimerEvent: {}
+[1.612761] (-) TimerEvent: {}
+[1.713610] (-) TimerEvent: {}
+[1.814438] (-) TimerEvent: {}
+[1.915365] (-) TimerEvent: {}
+[2.016532] (-) TimerEvent: {}
+[2.117379] (-) TimerEvent: {}
+[2.218467] (-) TimerEvent: {}
+[2.319245] (-) TimerEvent: {}
+[2.420339] (-) TimerEvent: {}
+[2.521447] (-) TimerEvent: {}
+[2.623398] (-) TimerEvent: {}
+[2.724771] (-) TimerEvent: {}
+[2.827087] (-) TimerEvent: {}
+[2.929371] (-) TimerEvent: {}
+[2.998725] (end_effector) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[3.029898] (-) TimerEvent: {}
+[3.131120] (-) TimerEvent: {}
+[3.211217] (end_effector) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[3.231388] (-) TimerEvent: {}
+[3.305088] (end_effector) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[3.331730] (-) TimerEvent: {}
+[3.433134] (-) TimerEvent: {}
+[3.534297] (-) TimerEvent: {}
+[3.635287] (-) TimerEvent: {}
+[3.736302] (-) TimerEvent: {}
+[3.837206] (-) TimerEvent: {}
+[3.938510] (-) TimerEvent: {}
+[4.039752] (-) TimerEvent: {}
+[4.128278] (end_effector) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[4.140020] (-) TimerEvent: {}
+[4.240905] (-) TimerEvent: {}
+[4.319879] (end_effector) StdoutLine: {'line': b'-- Configuring done\n'}
+[4.341260] (-) TimerEvent: {}
+[4.442378] (-) TimerEvent: {}
+[4.543164] (-) TimerEvent: {}
+[4.644733] (-) TimerEvent: {}
+[4.747237] (-) TimerEvent: {}
+[4.848518] (-) TimerEvent: {}
+[4.949414] (-) TimerEvent: {}
+[4.977571] (end_effector) StdoutLine: {'line': b'-- Generating done\n'}
+[5.049593] (-) TimerEvent: {}
+[5.150780] (-) TimerEvent: {}
+[5.251802] (-) TimerEvent: {}
+[5.352945] (-) TimerEvent: {}
+[5.387210] (end_effector) StdoutLine: {'line': b'-- Build files have been written to: /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/end_effector\n'}
+[5.397151] (end_effector) CommandEnded: {'returncode': 0}
+[5.407062] (end_effector) JobProgress: {'identifier': 'end_effector', 'progress': 'build'}
+[5.418696] (end_effector) Command: {'cmd': ['/usr/bin/cmake', '--build', '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/end_effector', '--', '-j16', '-l16'], 'cwd': '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/end_effector', 'env': OrderedDict([('USER', 'tfb6251'), ('SHLVL', '0'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/tfb6251'), ('OLDPWD', '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'tfb6251'), ('NAME', 'TheSource'), ('WSL_INTEROP', '/run/WSL/6140_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Users/Oden2/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand:/mnt/c/Users/Oden2/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli:/mnt/c/Python38/Scripts/:/mnt/c/Python38/:/mnt/c/Program Files/Eclipse Adoptium/jdk-21.0.7.6-hotspot/bin:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/java8path:/mnt/c/Users/Oden2/apache-maven-3.9.9/bin:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0/:/mnt/c/windows/System32/OpenSSH/:/mnt/c/Users/Administrator/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/HP/OMEN-Broadcast/Common:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/opt/apache-maven-3.9.9/bin:/mnt/c/Program Files/Java/jdk-21/bin:/mnt/c/Program Files/nodejs/:/mnt/c/Users/Oden2/OneDrive/Desktop/SwenProject/static/sonar-scanner-6.2.1.4610-windows-x64/bin/:/mnt/c/Program Files/MATLAB/R2024b/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/PuTTY/:/mnt/c/Program Files/dotnet/:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/CMake/bin:/mnt/c/ProgramData/chocolatey/lib/cunit/lib:/mnt/c/ProgramData/chocolatey/lib/tinyxml2/lib:/mnt/c/ProgramData/chocolatey/lib/bullet/lib:/mnt/c/Program Files/Graphviz/bin:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/usbipd-win/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Users/Oden2/AppData/Local/Microsoft/WindowsApps:/mnt/c/Modeltech_pe_edu_10.4a/win32pe_edu:/mnt/c/Users/Oden2/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/Oden2/AppData/Roaming/npm:/mnt/c/altera/13.1/modelsim_ase/win32aloem:/mnt/c/msys64/ucrt64/bin:/mnt/c/Program Files/OpenSSL-Win64/bin:/mnt/c/Program Files/OpenSSL-Win64/bin/:/mnt/c/opencv/x64/vc16/bin:/mnt/c/Program Files/CMake/bin:/mnt/c/Users/Oden2/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('PWD', '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/end_effector'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', ''), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[5.453204] (-) TimerEvent: {}
+[5.554157] (-) TimerEvent: {}
+[5.610488] (end_effector) CommandEnded: {'returncode': 0}
+[5.645919] (end_effector) JobProgress: {'identifier': 'end_effector', 'progress': 'install'}
+[5.654454] (-) TimerEvent: {}
+[5.664277] (end_effector) Command: {'cmd': ['/usr/bin/cmake', '--install', '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/end_effector'], 'cwd': '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/end_effector', 'env': OrderedDict([('USER', 'tfb6251'), ('SHLVL', '0'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/tfb6251'), ('OLDPWD', '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'tfb6251'), ('NAME', 'TheSource'), ('WSL_INTEROP', '/run/WSL/6140_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Users/Oden2/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand:/mnt/c/Users/Oden2/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli:/mnt/c/Python38/Scripts/:/mnt/c/Python38/:/mnt/c/Program Files/Eclipse Adoptium/jdk-21.0.7.6-hotspot/bin:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/java8path:/mnt/c/Users/Oden2/apache-maven-3.9.9/bin:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0/:/mnt/c/windows/System32/OpenSSH/:/mnt/c/Users/Administrator/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/HP/OMEN-Broadcast/Common:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/opt/apache-maven-3.9.9/bin:/mnt/c/Program Files/Java/jdk-21/bin:/mnt/c/Program Files/nodejs/:/mnt/c/Users/Oden2/OneDrive/Desktop/SwenProject/static/sonar-scanner-6.2.1.4610-windows-x64/bin/:/mnt/c/Program Files/MATLAB/R2024b/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/PuTTY/:/mnt/c/Program Files/dotnet/:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/CMake/bin:/mnt/c/ProgramData/chocolatey/lib/cunit/lib:/mnt/c/ProgramData/chocolatey/lib/tinyxml2/lib:/mnt/c/ProgramData/chocolatey/lib/bullet/lib:/mnt/c/Program Files/Graphviz/bin:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/usbipd-win/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Users/Oden2/AppData/Local/Microsoft/WindowsApps:/mnt/c/Modeltech_pe_edu_10.4a/win32pe_edu:/mnt/c/Users/Oden2/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/Oden2/AppData/Roaming/npm:/mnt/c/altera/13.1/modelsim_ase/win32aloem:/mnt/c/msys64/ucrt64/bin:/mnt/c/Program Files/OpenSSL-Win64/bin:/mnt/c/Program Files/OpenSSL-Win64/bin/:/mnt/c/opencv/x64/vc16/bin:/mnt/c/Program Files/CMake/bin:/mnt/c/Users/Oden2/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('PWD', '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/end_effector'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', ''), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[5.682333] (end_effector) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[5.702214] (end_effector) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[5.754609] (-) TimerEvent: {}
+[5.767436] (end_effector) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/lib/end_effector/pwm_output_node.py\n'}
+[5.824004] (end_effector) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/README.md\n'}
+[5.854765] (-) TimerEvent: {}
+[5.936343] (end_effector) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/ament_index/resource_index/package_run_dependencies/end_effector\n'}
+[5.954997] (-) TimerEvent: {}
+[6.056000] (-) TimerEvent: {}
+[6.060886] (end_effector) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/ament_index/resource_index/parent_prefix_path/end_effector\n'}
+[6.119271] (end_effector) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/environment/ament_prefix_path.sh\n'}
+[6.156681] (-) TimerEvent: {}
+[6.199898] (end_effector) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/environment/ament_prefix_path.dsv\n'}
+[6.256770] (end_effector) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/environment/path.sh\n'}
+[6.258624] (-) TimerEvent: {}
+[6.345270] (end_effector) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/environment/path.dsv\n'}
+[6.359004] (-) TimerEvent: {}
+[6.441989] (end_effector) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/local_setup.bash\n'}
+[6.459365] (-) TimerEvent: {}
+[6.509897] (end_effector) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/local_setup.sh\n'}
+[6.559748] (-) TimerEvent: {}
+[6.575599] (end_effector) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/local_setup.zsh\n'}
+[6.635374] (end_effector) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/local_setup.dsv\n'}
+[6.660044] (-) TimerEvent: {}
+[6.667475] (end_effector) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/package.dsv\n'}
+[6.760527] (-) TimerEvent: {}
+[6.861661] (-) TimerEvent: {}
+[6.916928] (end_effector) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/ament_index/resource_index/packages/end_effector\n'}
+[6.961918] (-) TimerEvent: {}
+[7.025491] (end_effector) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/cmake/end_effectorConfig.cmake\n'}
+[7.062391] (-) TimerEvent: {}
+[7.107678] (end_effector) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/cmake/end_effectorConfig-version.cmake\n'}
+[7.162837] (-) TimerEvent: {}
+[7.204800] (end_effector) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/package.xml\n'}
+[7.217076] (end_effector) CommandEnded: {'returncode': 0}
+[7.263140] (-) TimerEvent: {}
+[7.364486] (-) TimerEvent: {}
+[7.465947] (-) TimerEvent: {}
+[7.567069] (-) TimerEvent: {}
+[7.668752] (-) TimerEvent: {}
+[7.770226] (-) TimerEvent: {}
+[7.872249] (-) TimerEvent: {}
+[7.980445] (-) TimerEvent: {}
+[8.101398] (-) TimerEvent: {}
+[8.203147] (-) TimerEvent: {}
+[8.304903] (-) TimerEvent: {}
+[8.406862] (-) TimerEvent: {}
+[8.508493] (-) TimerEvent: {}
+[8.609475] (-) TimerEvent: {}
+[8.711052] (-) TimerEvent: {}
+[8.812916] (-) TimerEvent: {}
+[8.913992] (-) TimerEvent: {}
+[9.015578] (-) TimerEvent: {}
+[9.117481] (-) TimerEvent: {}
+[9.219176] (-) TimerEvent: {}
+[9.320939] (-) TimerEvent: {}
+[9.423452] (-) TimerEvent: {}
+[9.524472] (-) TimerEvent: {}
+[9.625414] (-) TimerEvent: {}
+[9.729836] (-) TimerEvent: {}
+[9.833821] (-) TimerEvent: {}
+[9.937626] (-) TimerEvent: {}
+[9.987630] (end_effector) JobEnded: {'identifier': 'end_effector', 'rc': 0}
+[10.015899] (-) EventReactorShutdown: {}

@@ -1,0 +1,8 @@
+source;share/end_effector/hook/cmake_prefix_path.ps1
+source;share/end_effector/hook/cmake_prefix_path.dsv
+source;share/end_effector/hook/cmake_prefix_path.sh
+source;share/end_effector/local_setup.bash
+source;share/end_effector/local_setup.dsv
+source;share/end_effector/local_setup.ps1
+source;share/end_effector/local_setup.sh
+source;share/end_effector/local_setup.zsh

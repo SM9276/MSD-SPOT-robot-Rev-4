@@ -1,0 +1,1 @@
+/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/stepper_test/ament_cmake_environment_hooks/local_setup.bash

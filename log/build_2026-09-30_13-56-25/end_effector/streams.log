@@ -1,0 +1,35 @@
+[0.160s] Invoking command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/end_effector': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/End_Effector -DCMAKE_INSTALL_PREFIX=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector
+[0.428s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.743s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.069s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[2.992s] -- Added test 'flake8' to check Python code syntax and style conventions
+[3.203s] -- Added test 'lint_cmake' to check CMake code style
+[3.298s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[4.122s] -- Added test 'xmllint' to check XML markup files
+[4.312s] -- Configuring done
+[4.970s] -- Generating done
+[5.379s] -- Build files have been written to: /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/end_effector
+[5.389s] Invoked command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/end_effector' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/End_Effector -DCMAKE_INSTALL_PREFIX=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector
+[5.412s] Invoking command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/end_effector': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/end_effector -- -j16 -l16
+[5.602s] Invoked command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/end_effector' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/end_effector -- -j16 -l16
+[5.658s] Invoking command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/end_effector': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/end_effector
+[5.675s] -- Install configuration: ""
+[5.695s] -- Execute custom install script
+[5.760s] -- Up-to-date symlink: /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/lib/end_effector/pwm_output_node.py
+[5.816s] -- Up-to-date symlink: /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/README.md
+[5.929s] -- Up-to-date symlink: /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/ament_index/resource_index/package_run_dependencies/end_effector
+[6.053s] -- Up-to-date symlink: /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/ament_index/resource_index/parent_prefix_path/end_effector
+[6.112s] -- Up-to-date symlink: /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/environment/ament_prefix_path.sh
+[6.193s] -- Up-to-date symlink: /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/environment/ament_prefix_path.dsv
+[6.249s] -- Up-to-date symlink: /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/environment/path.sh
+[6.338s] -- Up-to-date symlink: /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/environment/path.dsv
+[6.435s] -- Up-to-date symlink: /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/local_setup.bash
+[6.502s] -- Up-to-date symlink: /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/local_setup.sh
+[6.568s] -- Up-to-date symlink: /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/local_setup.zsh
+[6.628s] -- Up-to-date symlink: /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/local_setup.dsv
+[6.660s] -- Symlinking: /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/package.dsv
+[6.909s] -- Up-to-date symlink: /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/ament_index/resource_index/packages/end_effector
+[7.018s] -- Up-to-date symlink: /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/cmake/end_effectorConfig.cmake
+[7.101s] -- Up-to-date symlink: /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/cmake/end_effectorConfig-version.cmake
+[7.197s] -- Up-to-date symlink: /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/package.xml
+[7.210s] Invoked command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/end_effector' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/end_effector
