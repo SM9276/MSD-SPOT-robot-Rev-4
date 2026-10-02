@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot/share/my_robot/urdf/gear_manipulator.urdf
 /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot/share/my_robot/launch/display.launch.py
 /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot/share/ament_index/resource_index/package_run_dependencies/my_robot
@@ -17,6 +18,8 @@
 /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot/share/my_robot/cmake/my_robotConfig-version.cmake
 /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot/share/my_robot/package.xml
 =======
+=======
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 /home/msd/MSD2/REV4/install/my_robot/share/my_robot/urdf/gear_manipulator.urdf
 /home/msd/MSD2/REV4/install/my_robot/share/my_robot/launch/display.launch.py
 /home/msd/MSD2/REV4/install/my_robot/share/ament_index/resource_index/package_run_dependencies/my_robot
@@ -34,4 +37,7 @@
 /home/msd/MSD2/REV4/install/my_robot/share/my_robot/cmake/my_robotConfig.cmake
 /home/msd/MSD2/REV4/install/my_robot/share/my_robot/cmake/my_robotConfig-version.cmake
 /home/msd/MSD2/REV4/install/my_robot/share/my_robot/package.xml
+<<<<<<< HEAD
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26

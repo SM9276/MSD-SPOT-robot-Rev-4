@@ -44,7 +44,11 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
 <<<<<<< HEAD
+<<<<<<< HEAD
   include("/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/marge/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
+=======
+  include("/home/msd/MSD2/REV4/build/marge/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 =======
   include("/home/msd/MSD2/REV4/build/marge/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26

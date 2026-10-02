@@ -58,7 +58,11 @@ message(STATUS "Execute custom uninstall script")
 
 # uninstall files installed using the symlink install functions
 <<<<<<< HEAD
+<<<<<<< HEAD
 include("/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_servoing/ament_cmake_symlink_install/ament_cmake_symlink_install_uninstall_script.cmake")
+=======
+include("/home/msd/MSD2/REV4/build/robot_servoing/ament_cmake_symlink_install/ament_cmake_symlink_install_uninstall_script.cmake")
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 =======
 include("/home/msd/MSD2/REV4/build/robot_servoing/ament_cmake_symlink_install/ament_cmake_symlink_install_uninstall_script.cmake")
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26

@@ -66,8 +66,16 @@
 				{
 					"backtrace" : 2,
 <<<<<<<< HEAD:build/marge/.cmake/api/v1/reply/target-homer-c81ae3bb001bcebd9084.json
+<<<<<<< HEAD
 					"path" : "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/marge/include"
 ========
+=======
+<<<<<<<< HEAD:build/marge/.cmake/api/v1/reply/target-homer-c81ae3bb001bcebd9084.json
+					"path" : "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/marge/include"
+========
+========
+>>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/marge/.cmake/api/v1/reply/target-homer-e84f7b28492884eeb1bb.json
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 					"path" : "/home/msd/MSD2/REV4/src/marge/include"
 >>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/marge/.cmake/api/v1/reply/target-homer-e84f7b28492884eeb1bb.json
 				}
@@ -97,10 +105,20 @@
 			},
 			{
 <<<<<<<< HEAD:build/marge/.cmake/api/v1/reply/target-homer-c81ae3bb001bcebd9084.json
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:build/marge/.cmake/api/v1/reply/target-homer-c81ae3bb001bcebd9084.json
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 				"fragment" : "-Wl,-rpath,/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/marge",
 ========
 				"fragment" : "-Wl,-rpath,/home/msd/MSD2/REV4/build/marge",
 >>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/marge/.cmake/api/v1/reply/target-homer-e84f7b28492884eeb1bb.json
+<<<<<<< HEAD
+=======
+========
+				"fragment" : "-Wl,-rpath,/home/msd/MSD2/REV4/build/marge",
+>>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/marge/.cmake/api/v1/reply/target-homer-e84f7b28492884eeb1bb.json
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 				"role" : "libraries"
 			},
 			{

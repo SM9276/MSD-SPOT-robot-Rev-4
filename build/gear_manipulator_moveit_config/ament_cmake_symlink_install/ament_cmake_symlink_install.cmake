@@ -24,7 +24,11 @@ function(ament_cmake_symlink_install_directory cmake_current_source_dir)
   # make destination absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
 <<<<<<< HEAD
+<<<<<<< HEAD
     set(ARG_DESTINATION "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config/${ARG_DESTINATION}")
+=======
+    set(ARG_DESTINATION "/home/msd/MSD2/REV4/install/gear_manipulator_moveit_config/${ARG_DESTINATION}")
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 =======
     set(ARG_DESTINATION "/home/msd/MSD2/REV4/install/gear_manipulator_moveit_config/${ARG_DESTINATION}")
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
@@ -60,12 +64,18 @@ function(ament_cmake_symlink_install_directory cmake_current_source_dir)
         string(SUBSTRING "${dir}" 0 ${offset} dir)
       endif()
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
       
       # Create destination directory.
       # This does *not* solve the problem of empty directories WITHIN the install tree,
       # but does make sure that the top-level directory specified by the caller gets created.
       file(MAKE_DIRECTORY "${destination}")
+<<<<<<< HEAD
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 
       # glob recursive files
@@ -136,7 +146,11 @@ function(ament_cmake_symlink_install_files cmake_current_source_dir)
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
 <<<<<<< HEAD
+<<<<<<< HEAD
     set(ARG_DESTINATION "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config/${ARG_DESTINATION}")
+=======
+    set(ARG_DESTINATION "/home/msd/MSD2/REV4/install/gear_manipulator_moveit_config/${ARG_DESTINATION}")
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 =======
     set(ARG_DESTINATION "/home/msd/MSD2/REV4/install/gear_manipulator_moveit_config/${ARG_DESTINATION}")
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
@@ -198,7 +212,11 @@ function(ament_cmake_symlink_install_programs cmake_current_source_dir)
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
 <<<<<<< HEAD
+<<<<<<< HEAD
     set(ARG_DESTINATION "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config/${ARG_DESTINATION}")
+=======
+    set(ARG_DESTINATION "/home/msd/MSD2/REV4/install/gear_manipulator_moveit_config/${ARG_DESTINATION}")
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 =======
     set(ARG_DESTINATION "/home/msd/MSD2/REV4/install/gear_manipulator_moveit_config/${ARG_DESTINATION}")
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
@@ -272,7 +290,11 @@ function(ament_cmake_symlink_install_targets)
     # make destination an absolute path and ensure that it exists
     if(NOT IS_ABSOLUTE "${destination}")
 <<<<<<< HEAD
+<<<<<<< HEAD
       set(destination "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config/${destination}")
+=======
+      set(destination "/home/msd/MSD2/REV4/install/gear_manipulator_moveit_config/${destination}")
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 =======
       set(destination "/home/msd/MSD2/REV4/install/gear_manipulator_moveit_config/${destination}")
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
@@ -335,6 +357,7 @@ message(STATUS "Execute custom install script")
 # begin of custom install code
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # install(FILES "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/gear_manipulator_moveit_config/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/gear_manipulator_moveit_config" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/gear_manipulator_moveit_config" FILES "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/gear_manipulator_moveit_config/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/gear_manipulator_moveit_config" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 
@@ -386,6 +409,8 @@ ament_cmake_symlink_install_directory("/mnt/c/Users/Oden2/Downloads/MSD-SPOT-rob
 # install(FILES ".setup_assistant" "DESTINATION" "share/gear_manipulator_moveit_config")
 ament_cmake_symlink_install_files("/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/gear_manipulator_moveit_config" FILES ".setup_assistant" "DESTINATION" "share/gear_manipulator_moveit_config")
 =======
+=======
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 # install(FILES "/home/msd/MSD2/REV4/build/gear_manipulator_moveit_config/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/gear_manipulator_moveit_config" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/gear_manipulator_moveit_config" FILES "/home/msd/MSD2/REV4/build/gear_manipulator_moveit_config/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/gear_manipulator_moveit_config" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 
@@ -436,4 +461,7 @@ ament_cmake_symlink_install_directory("/home/msd/MSD2/REV4/src/gear_manipulator_
 
 # install(FILES ".setup_assistant" "DESTINATION" "share/gear_manipulator_moveit_config")
 ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/gear_manipulator_moveit_config" FILES ".setup_assistant" "DESTINATION" "share/gear_manipulator_moveit_config")
+<<<<<<< HEAD
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26

@@ -24,7 +24,11 @@ function(ament_cmake_symlink_install_directory cmake_current_source_dir)
   # make destination absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
 <<<<<<< HEAD
+<<<<<<< HEAD
     set(ARG_DESTINATION "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot/${ARG_DESTINATION}")
+=======
+    set(ARG_DESTINATION "/home/msd/MSD2/REV4/install/my_robot/${ARG_DESTINATION}")
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 =======
     set(ARG_DESTINATION "/home/msd/MSD2/REV4/install/my_robot/${ARG_DESTINATION}")
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
@@ -60,12 +64,18 @@ function(ament_cmake_symlink_install_directory cmake_current_source_dir)
         string(SUBSTRING "${dir}" 0 ${offset} dir)
       endif()
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
       
       # Create destination directory.
       # This does *not* solve the problem of empty directories WITHIN the install tree,
       # but does make sure that the top-level directory specified by the caller gets created.
       file(MAKE_DIRECTORY "${destination}")
+<<<<<<< HEAD
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 
       # glob recursive files
@@ -136,7 +146,11 @@ function(ament_cmake_symlink_install_files cmake_current_source_dir)
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
 <<<<<<< HEAD
+<<<<<<< HEAD
     set(ARG_DESTINATION "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot/${ARG_DESTINATION}")
+=======
+    set(ARG_DESTINATION "/home/msd/MSD2/REV4/install/my_robot/${ARG_DESTINATION}")
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 =======
     set(ARG_DESTINATION "/home/msd/MSD2/REV4/install/my_robot/${ARG_DESTINATION}")
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
@@ -198,7 +212,11 @@ function(ament_cmake_symlink_install_programs cmake_current_source_dir)
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
 <<<<<<< HEAD
+<<<<<<< HEAD
     set(ARG_DESTINATION "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot/${ARG_DESTINATION}")
+=======
+    set(ARG_DESTINATION "/home/msd/MSD2/REV4/install/my_robot/${ARG_DESTINATION}")
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 =======
     set(ARG_DESTINATION "/home/msd/MSD2/REV4/install/my_robot/${ARG_DESTINATION}")
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
@@ -272,7 +290,11 @@ function(ament_cmake_symlink_install_targets)
     # make destination an absolute path and ensure that it exists
     if(NOT IS_ABSOLUTE "${destination}")
 <<<<<<< HEAD
+<<<<<<< HEAD
       set(destination "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot/${destination}")
+=======
+      set(destination "/home/msd/MSD2/REV4/install/my_robot/${destination}")
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 =======
       set(destination "/home/msd/MSD2/REV4/install/my_robot/${destination}")
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
@@ -336,6 +358,7 @@ message(STATUS "Execute custom install script")
 
 # install(DIRECTORY "urdf" "launch" "DESTINATION" "share/my_robot")
 <<<<<<< HEAD
+<<<<<<< HEAD
 ament_cmake_symlink_install_directory("/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/my_robot" DIRECTORY "urdf" "launch" "DESTINATION" "share/my_robot")
 
 # install(FILES "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/my_robot/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/my_robot" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
@@ -380,6 +403,8 @@ ament_cmake_symlink_install_files("/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-R
 # install(FILES "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/my_robot/package.xml" "DESTINATION" "share/my_robot")
 ament_cmake_symlink_install_files("/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/my_robot" FILES "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/my_robot/package.xml" "DESTINATION" "share/my_robot")
 =======
+=======
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 ament_cmake_symlink_install_directory("/home/msd/MSD2/REV4/src/my_robot" DIRECTORY "urdf" "launch" "DESTINATION" "share/my_robot")
 
 # install(FILES "/home/msd/MSD2/REV4/build/my_robot/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/my_robot" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
@@ -423,4 +448,7 @@ ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/my_robot" FILES "/hom
 
 # install(FILES "/home/msd/MSD2/REV4/src/my_robot/package.xml" "DESTINATION" "share/my_robot")
 ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/my_robot" FILES "/home/msd/MSD2/REV4/src/my_robot/package.xml" "DESTINATION" "share/my_robot")
+<<<<<<< HEAD
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26

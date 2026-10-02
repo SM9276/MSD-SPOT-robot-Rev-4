@@ -107,9 +107,12 @@
 			[
 				{
 					"backtrace" : 6,
+<<<<<<< HEAD
 <<<<<<<< HEAD:build/stepper_test/.cmake/api/v1/reply/target-motor_key-a526e3b847f3509867ee.json
 					"path" : "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/stepper_test/include"
 ========
+=======
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 					"path" : "/home/msd/MSD2/REV4/src/stepper_test/include"
 >>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/stepper_test/.cmake/api/v1/reply/target-motor_key-86707de4191344c2074e.json
 				},
