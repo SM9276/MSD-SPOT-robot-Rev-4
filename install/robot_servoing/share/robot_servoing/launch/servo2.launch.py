@@ -1,1 +1,0 @@
-/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_servoing/launch/servo2.launch.py

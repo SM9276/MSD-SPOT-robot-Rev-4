@@ -1,1 +1,0 @@
-/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_servoing/ament_cmake_core/robot_servoingConfig-version.cmake

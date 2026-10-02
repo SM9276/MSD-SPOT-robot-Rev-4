@@ -1,1 +1,0 @@
-/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_moveit_config/ament_cmake_environment_hooks/local_setup.sh

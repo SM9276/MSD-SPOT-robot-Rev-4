@@ -1,1 +1,0 @@
-/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/gear_manipulator_moveit_config/launch/setup_assistant.launch.py

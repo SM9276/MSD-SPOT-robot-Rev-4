@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/marge/libicl_stepper.so" "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/marge/homer" "TARGETS" "icl_stepper" "homer" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "lib/marge")
