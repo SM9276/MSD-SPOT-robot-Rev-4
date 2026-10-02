@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [0.484s] Invoking command in '/home/msd/MSD2/REV4/build/marge': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/msd/MSD2/REV4/src/marge -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/msd/MSD2/REV4/install/marge
 [1.758s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
 [1.758s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
@@ -38,3 +39,45 @@
 [3.097s] -- Symlinking: /home/msd/MSD2/REV4/install/marge/share/marge/cmake/margeConfig-version.cmake
 [3.118s] -- Symlinking: /home/msd/MSD2/REV4/install/marge/share/marge/package.xml
 [3.183s] Invoked command in '/home/msd/MSD2/REV4/build/marge' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/msd/MSD2/REV4/build/marge
+=======
+[0.484s] Invoking command in '/home/msd/MSD2/REV4/build/marge': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/msd/MSD2/REV4/src/marge -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/msd/MSD2/REV4/install/marge
+[1.758s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.758s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.758s] -- Configuring done
+[1.760s] -- Generating done
+[1.760s] -- Build files have been written to: /home/msd/MSD2/REV4/build/marge
+[1.806s] Invoked command in '/home/msd/MSD2/REV4/build/marge' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/msd/MSD2/REV4/src/marge -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/msd/MSD2/REV4/install/marge
+[1.807s] Invoking command in '/home/msd/MSD2/REV4/build/marge': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/msd/MSD2/REV4/build/marge -- -j8 -l8
+[1.956s] [35m[1mConsolidate compiler generated dependencies of target icl_stepper[0m
+[1.996s] [ 50%] Built target icl_stepper
+[2.029s] [35m[1mConsolidate compiler generated dependencies of target homer[0m
+[2.103s] [ 75%] [32m[1mLinking CXX executable homer[0m
+[2.490s] [100%] Built target homer
+[2.531s] Invoked command in '/home/msd/MSD2/REV4/build/marge' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/msd/MSD2/REV4/build/marge -- -j8 -l8
+[2.532s] Invoking command in '/home/msd/MSD2/REV4/build/marge': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/msd/MSD2/REV4/build/marge
+[2.548s] -- Install configuration: ""
+[2.548s] -- Execute custom install script
+[2.548s] -- Symlinking: /home/msd/MSD2/REV4/install/marge/lib/libicl_stepper.so
+[2.577s] -- Symlinking: /home/msd/MSD2/REV4/install/marge/lib/marge/homer
+[2.587s] -- Symlinking: /home/msd/MSD2/REV4/install/marge/include/marge/ICLStepper.h
+[2.610s] -- Symlinking: /home/msd/MSD2/REV4/install/marge/share/marge/environment/library_path.sh
+[2.639s] -- Symlinking: /home/msd/MSD2/REV4/install/marge/share/marge/environment/library_path.dsv
+[2.664s] -- Symlinking: /home/msd/MSD2/REV4/install/marge/share/ament_index/resource_index/package_run_dependencies/marge
+[2.716s] -- Symlinking: /home/msd/MSD2/REV4/install/marge/share/ament_index/resource_index/parent_prefix_path/marge
+[2.763s] -- Symlinking: /home/msd/MSD2/REV4/install/marge/share/marge/environment/ament_prefix_path.sh
+[2.787s] -- Symlinking: /home/msd/MSD2/REV4/install/marge/share/marge/environment/ament_prefix_path.dsv
+[2.807s] -- Symlinking: /home/msd/MSD2/REV4/install/marge/share/marge/environment/path.sh
+[2.829s] -- Symlinking: /home/msd/MSD2/REV4/install/marge/share/marge/environment/path.dsv
+[2.854s] -- Symlinking: /home/msd/MSD2/REV4/install/marge/share/marge/local_setup.bash
+[2.874s] -- Symlinking: /home/msd/MSD2/REV4/install/marge/share/marge/local_setup.sh
+[2.910s] -- Symlinking: /home/msd/MSD2/REV4/install/marge/share/marge/local_setup.zsh
+[2.932s] -- Symlinking: /home/msd/MSD2/REV4/install/marge/share/marge/local_setup.dsv
+[2.962s] -- Symlinking: /home/msd/MSD2/REV4/install/marge/share/marge/package.dsv
+[2.989s] -- Symlinking: /home/msd/MSD2/REV4/install/marge/share/ament_index/resource_index/packages/marge
+[3.013s] -- Symlinking: /home/msd/MSD2/REV4/install/marge/share/marge/cmake/ament_cmake_export_include_directories-extras.cmake
+[3.033s] -- Symlinking: /home/msd/MSD2/REV4/install/marge/share/marge/cmake/ament_cmake_export_libraries-extras.cmake
+[3.065s] -- Symlinking: /home/msd/MSD2/REV4/install/marge/share/marge/cmake/margeConfig.cmake
+[3.097s] -- Symlinking: /home/msd/MSD2/REV4/install/marge/share/marge/cmake/margeConfig-version.cmake
+[3.118s] -- Symlinking: /home/msd/MSD2/REV4/install/marge/share/marge/package.xml
+[3.183s] Invoked command in '/home/msd/MSD2/REV4/build/marge' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/msd/MSD2/REV4/build/marge
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26

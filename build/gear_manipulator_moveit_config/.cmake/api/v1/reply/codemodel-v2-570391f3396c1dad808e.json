@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
 	"configurations" : 
 	[
@@ -82,3 +83,79 @@
 		"minor" : 3
 	}
 }
+=======
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+<<<<<<<< HEAD:build/robot_bringup/.cmake/api/v1/reply/codemodel-v2-0be09ea2612883f00e6a.json
+					"jsonFile" : "directory-.-77ed4d496647ecd10369.json",
+========
+					"jsonFile" : "directory-.-7d93982118d60ad7cbe8.json",
+>>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/gear_manipulator_moveit_config/.cmake/api/v1/reply/codemodel-v2-570391f3396c1dad808e.json
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "robot_bringup",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_bringup_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_bringup_uninstall-cc1954442d213506b62d.json",
+					"name" : "robot_bringup_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-bdf62ca0284bad9831e3.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_bringup",
+		"source" : "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_bringup"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26

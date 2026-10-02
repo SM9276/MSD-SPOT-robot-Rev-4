@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
 -- Override CMake install command with custom implementation using symlinks instead of copying resources
 -- Configuring done
@@ -22,3 +23,29 @@
 -- Symlinking: /home/msd/MSD2/REV4/install/my_robot/share/my_robot/cmake/my_robotConfig.cmake
 -- Symlinking: /home/msd/MSD2/REV4/install/my_robot/share/my_robot/cmake/my_robotConfig-version.cmake
 -- Symlinking: /home/msd/MSD2/REV4/install/my_robot/share/my_robot/package.xml
+=======
+-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/msd/MSD2/REV4/build/my_robot
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/msd/MSD2/REV4/install/my_robot/share/my_robot/urdf/gear_manipulator.urdf
+-- Symlinking: /home/msd/MSD2/REV4/install/my_robot/share/my_robot/launch/display.launch.py
+-- Symlinking: /home/msd/MSD2/REV4/install/my_robot/share/ament_index/resource_index/package_run_dependencies/my_robot
+-- Symlinking: /home/msd/MSD2/REV4/install/my_robot/share/ament_index/resource_index/parent_prefix_path/my_robot
+-- Symlinking: /home/msd/MSD2/REV4/install/my_robot/share/my_robot/environment/ament_prefix_path.sh
+-- Symlinking: /home/msd/MSD2/REV4/install/my_robot/share/my_robot/environment/ament_prefix_path.dsv
+-- Symlinking: /home/msd/MSD2/REV4/install/my_robot/share/my_robot/environment/path.sh
+-- Symlinking: /home/msd/MSD2/REV4/install/my_robot/share/my_robot/environment/path.dsv
+-- Symlinking: /home/msd/MSD2/REV4/install/my_robot/share/my_robot/local_setup.bash
+-- Symlinking: /home/msd/MSD2/REV4/install/my_robot/share/my_robot/local_setup.sh
+-- Symlinking: /home/msd/MSD2/REV4/install/my_robot/share/my_robot/local_setup.zsh
+-- Symlinking: /home/msd/MSD2/REV4/install/my_robot/share/my_robot/local_setup.dsv
+-- Symlinking: /home/msd/MSD2/REV4/install/my_robot/share/my_robot/package.dsv
+-- Symlinking: /home/msd/MSD2/REV4/install/my_robot/share/ament_index/resource_index/packages/my_robot
+-- Symlinking: /home/msd/MSD2/REV4/install/my_robot/share/my_robot/cmake/my_robotConfig.cmake
+-- Symlinking: /home/msd/MSD2/REV4/install/my_robot/share/my_robot/cmake/my_robotConfig-version.cmake
+-- Symlinking: /home/msd/MSD2/REV4/install/my_robot/share/my_robot/package.xml
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
