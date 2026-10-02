@@ -1,0 +1,100 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+<<<<<<<< HEAD:build/marge/.cmake/api/v1/reply/codemodel-v2-c7d4b422923b3fe2c441.json
+					"jsonFile" : "directory-.-799f058ab704dd70638e.json",
+========
+					"jsonFile" : "directory-.-8a8776d2717b3acb2f39.json",
+>>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/marge/.cmake/api/v1/reply/codemodel-v2-a4b96a5f5b718774ef6f.json
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "marge",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "homer::@6890427a1f51a3e7e1df",
+<<<<<<<< HEAD:build/marge/.cmake/api/v1/reply/codemodel-v2-c7d4b422923b3fe2c441.json
+					"jsonFile" : "target-homer-c81ae3bb001bcebd9084.json",
+========
+					"jsonFile" : "target-homer-e84f7b28492884eeb1bb.json",
+>>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/marge/.cmake/api/v1/reply/codemodel-v2-a4b96a5f5b718774ef6f.json
+					"name" : "homer",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "icl_stepper::@6890427a1f51a3e7e1df",
+<<<<<<<< HEAD:build/marge/.cmake/api/v1/reply/codemodel-v2-c7d4b422923b3fe2c441.json
+					"jsonFile" : "target-icl_stepper-7fc44573ae74c9592625.json",
+========
+					"jsonFile" : "target-icl_stepper-d9558722c5ea8a94dac5.json",
+>>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/marge/.cmake/api/v1/reply/codemodel-v2-a4b96a5f5b718774ef6f.json
+					"name" : "icl_stepper",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "marge_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-marge_uninstall-12f4affd0baae7e38d2d.json",
+					"name" : "marge_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-7a411859cf09024aabc6.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/marge",
+		"source" : "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/marge"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

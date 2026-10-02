@@ -1,0 +1,154 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+<<<<<<< HEAD
+<<<<<<<< HEAD:build/marge/.cmake/api/v1/reply/codemodel-v2-c7d4b422923b3fe2c441.json
+					"jsonFile" : "directory-.-799f058ab704dd70638e.json",
+=======
+<<<<<<<< HEAD:build/robot_servoing/.cmake/api/v1/reply/codemodel-v2-c305ce666ad4c509b956.json
+					"jsonFile" : "directory-.-686dac82e4fd744f26b6.json",
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+========
+					"jsonFile" : "directory-.-8a8776d2717b3acb2f39.json",
+>>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/marge/.cmake/api/v1/reply/codemodel-v2-a4b96a5f5b718774ef6f.json
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+<<<<<<< HEAD
+						2,
+						3
+=======
+						2
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+<<<<<<< HEAD
+					"name" : "marge",
+=======
+					"name" : "robot_servoing",
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+					"targetIndexes" : 
+					[
+						0,
+						1,
+<<<<<<< HEAD
+						2,
+						3
+=======
+						2
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+<<<<<<< HEAD
+					"id" : "homer::@6890427a1f51a3e7e1df",
+<<<<<<<< HEAD:build/marge/.cmake/api/v1/reply/codemodel-v2-c7d4b422923b3fe2c441.json
+					"jsonFile" : "target-homer-c81ae3bb001bcebd9084.json",
+========
+					"jsonFile" : "target-homer-e84f7b28492884eeb1bb.json",
+>>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/marge/.cmake/api/v1/reply/codemodel-v2-a4b96a5f5b718774ef6f.json
+					"name" : "homer",
+=======
+<<<<<<<< HEAD:build/robot_servoing/.cmake/api/v1/reply/codemodel-v2-c305ce666ad4c509b956.json
+					"id" : "robot_servoing_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_servoing_uninstall-7f3468d844be69cdcf79.json",
+					"name" : "robot_servoing_uninstall",
+========
+					"id" : "homer::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-homer-e84f7b28492884eeb1bb.json",
+					"name" : "homer",
+>>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/marge/.cmake/api/v1/reply/codemodel-v2-a4b96a5f5b718774ef6f.json
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+<<<<<<< HEAD
+					"id" : "icl_stepper::@6890427a1f51a3e7e1df",
+<<<<<<<< HEAD:build/marge/.cmake/api/v1/reply/codemodel-v2-c7d4b422923b3fe2c441.json
+					"jsonFile" : "target-icl_stepper-7fc44573ae74c9592625.json",
+========
+					"jsonFile" : "target-icl_stepper-d9558722c5ea8a94dac5.json",
+>>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/marge/.cmake/api/v1/reply/codemodel-v2-a4b96a5f5b718774ef6f.json
+=======
+<<<<<<<< HEAD:build/robot_servoing/.cmake/api/v1/reply/codemodel-v2-c305ce666ad4c509b956.json
+					"id" : "servo_controller_input::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-servo_controller_input-8b8f7d424ef4a2d59d8a.json",
+					"name" : "servo_controller_input",
+========
+					"id" : "icl_stepper::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-icl_stepper-d9558722c5ea8a94dac5.json",
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+					"name" : "icl_stepper",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "marge_uninstall::@6890427a1f51a3e7e1df",
+<<<<<<< HEAD
+					"jsonFile" : "target-marge_uninstall-12f4affd0baae7e38d2d.json",
+					"name" : "marge_uninstall",
+=======
+					"jsonFile" : "target-marge_uninstall-b837c7ae7ab9ca077e2e.json",
+					"name" : "marge_uninstall",
+>>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/marge/.cmake/api/v1/reply/codemodel-v2-a4b96a5f5b718774ef6f.json
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+<<<<<<< HEAD
+					"jsonFile" : "target-uninstall-7a411859cf09024aabc6.json",
+=======
+					"jsonFile" : "target-uninstall-2afd8263164267752c7a.json",
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+<<<<<<< HEAD
+		"build" : "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/marge",
+		"source" : "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/marge"
+=======
+		"build" : "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_servoing",
+		"source" : "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_servoing"
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

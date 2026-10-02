@@ -1,0 +1,84 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+<<<<<<<< HEAD:build/my_robot/.cmake/api/v1/reply/codemodel-v2-f4d7fd5725ccca121dde.json
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:build/my_robot/.cmake/api/v1/reply/codemodel-v2-f4d7fd5725ccca121dde.json
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+					"jsonFile" : "directory-.-61e9da8bcfe5b9688155.json",
+========
+					"jsonFile" : "directory-.-d294de4d522d4b11b8b3.json",
+>>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/my_robot/.cmake/api/v1/reply/codemodel-v2-fc00d6427c248379d835.json
+<<<<<<< HEAD
+=======
+========
+					"jsonFile" : "directory-.-d294de4d522d4b11b8b3.json",
+>>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/my_robot/.cmake/api/v1/reply/codemodel-v2-fc00d6427c248379d835.json
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "my_robot",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "my_robot_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-my_robot_uninstall-88b155b7dd7081cef86b.json",
+					"name" : "my_robot_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-fb2e528145efe59ef808.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/my_robot",
+		"source" : "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/my_robot"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}
