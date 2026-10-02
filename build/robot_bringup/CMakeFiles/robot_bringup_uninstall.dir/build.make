@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/msd/MSD2/REV4/src/robot_bringup
+CMAKE_SOURCE_DIR = /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_bringup
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/msd/MSD2/REV4/build/robot_bringup
+CMAKE_BINARY_DIR = /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_bringup
 
 # Utility rule file for robot_bringup_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/robot_bringup_uninstall.dir/compiler_depend.make
 include CMakeFiles/robot_bringup_uninstall.dir/progress.make
 
 CMakeFiles/robot_bringup_uninstall:
-	/usr/bin/cmake -P /home/msd/MSD2/REV4/build/robot_bringup/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_bringup/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 robot_bringup_uninstall: CMakeFiles/robot_bringup_uninstall
 robot_bringup_uninstall: CMakeFiles/robot_bringup_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/robot_bringup_uninstall.dir/clean:
 .PHONY : CMakeFiles/robot_bringup_uninstall.dir/clean
 
 CMakeFiles/robot_bringup_uninstall.dir/depend:
-	cd /home/msd/MSD2/REV4/build/robot_bringup && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/msd/MSD2/REV4/src/robot_bringup /home/msd/MSD2/REV4/src/robot_bringup /home/msd/MSD2/REV4/build/robot_bringup /home/msd/MSD2/REV4/build/robot_bringup /home/msd/MSD2/REV4/build/robot_bringup/CMakeFiles/robot_bringup_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_bringup && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_bringup /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_bringup /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_bringup /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_bringup /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_bringup/CMakeFiles/robot_bringup_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/robot_bringup_uninstall.dir/depend
 

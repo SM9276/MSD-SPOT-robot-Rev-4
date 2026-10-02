@@ -1,8 +1,8 @@
-# Install script for directory: /home/msd/MSD2/REV4/src/gear_manipulator_moveit_config
+# Install script for directory: /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/gear_manipulator_moveit_config
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/msd/MSD2/REV4/install/gear_manipulator_moveit_config")
+  set(CMAKE_INSTALL_PREFIX "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -43,74 +43,7 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/msd/MSD2/REV4/build/gear_manipulator_moveit_config/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/gear_manipulator_moveit_config")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/msd/MSD2/REV4/build/gear_manipulator_moveit_config/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/gear_manipulator_moveit_config")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gear_manipulator_moveit_config/environment" TYPE FILE FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gear_manipulator_moveit_config/environment" TYPE FILE FILES "/home/msd/MSD2/REV4/build/gear_manipulator_moveit_config/ament_cmake_environment_hooks/ament_prefix_path.dsv")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gear_manipulator_moveit_config/environment" TYPE FILE FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gear_manipulator_moveit_config/environment" TYPE FILE FILES "/home/msd/MSD2/REV4/build/gear_manipulator_moveit_config/ament_cmake_environment_hooks/path.dsv")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gear_manipulator_moveit_config" TYPE FILE FILES "/home/msd/MSD2/REV4/build/gear_manipulator_moveit_config/ament_cmake_environment_hooks/local_setup.bash")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gear_manipulator_moveit_config" TYPE FILE FILES "/home/msd/MSD2/REV4/build/gear_manipulator_moveit_config/ament_cmake_environment_hooks/local_setup.sh")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gear_manipulator_moveit_config" TYPE FILE FILES "/home/msd/MSD2/REV4/build/gear_manipulator_moveit_config/ament_cmake_environment_hooks/local_setup.zsh")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gear_manipulator_moveit_config" TYPE FILE FILES "/home/msd/MSD2/REV4/build/gear_manipulator_moveit_config/ament_cmake_environment_hooks/local_setup.dsv")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gear_manipulator_moveit_config" TYPE FILE FILES "/home/msd/MSD2/REV4/build/gear_manipulator_moveit_config/ament_cmake_environment_hooks/package.dsv")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/msd/MSD2/REV4/build/gear_manipulator_moveit_config/ament_cmake_index/share/ament_index/resource_index/packages/gear_manipulator_moveit_config")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gear_manipulator_moveit_config/cmake" TYPE FILE FILES
-    "/home/msd/MSD2/REV4/build/gear_manipulator_moveit_config/ament_cmake_core/gear_manipulator_moveit_configConfig.cmake"
-    "/home/msd/MSD2/REV4/build/gear_manipulator_moveit_config/ament_cmake_core/gear_manipulator_moveit_configConfig-version.cmake"
-    )
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gear_manipulator_moveit_config" TYPE FILE FILES "/home/msd/MSD2/REV4/src/gear_manipulator_moveit_config/package.xml")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gear_manipulator_moveit_config" TYPE DIRECTORY FILES "/home/msd/MSD2/REV4/src/gear_manipulator_moveit_config/launch" REGEX "/setup\\_assistant\\.launch$" EXCLUDE)
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gear_manipulator_moveit_config" TYPE DIRECTORY FILES "/home/msd/MSD2/REV4/src/gear_manipulator_moveit_config/config")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gear_manipulator_moveit_config" TYPE FILE FILES "/home/msd/MSD2/REV4/src/gear_manipulator_moveit_config/.setup_assistant")
+  include("/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/gear_manipulator_moveit_config/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -121,5 +54,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/msd/MSD2/REV4/build/gear_manipulator_moveit_config/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/gear_manipulator_moveit_config/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
