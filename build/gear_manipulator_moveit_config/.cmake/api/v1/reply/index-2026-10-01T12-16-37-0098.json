@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
 	"cmake" : 
 	{
@@ -70,3 +71,67 @@
 		}
 	}
 }
+=======
+{
+	"cmake" : 
+	{
+		"generator" : 
+		{
+			"multiConfig" : false,
+			"name" : "Unix Makefiles"
+		},
+		"paths" : 
+		{
+			"cmake" : "/usr/bin/cmake",
+			"cpack" : "/usr/bin/cpack",
+			"ctest" : "/usr/bin/ctest",
+			"root" : "/usr/share/cmake-3.22"
+		},
+		"version" : 
+		{
+			"isDirty" : false,
+			"major" : 3,
+			"minor" : 22,
+			"patch" : 1,
+			"string" : "3.22.1",
+			"suffix" : ""
+		}
+	},
+	"objects" : 
+	[
+		{
+<<<<<<<< HEAD:build/robot_commander/.cmake/api/v1/reply/index-2026-09-30T15-30-12-0240.json
+			"jsonFile" : "codemodel-v2-3e83470181639c5763a4.json",
+========
+			"jsonFile" : "codemodel-v2-570391f3396c1dad808e.json",
+>>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/gear_manipulator_moveit_config/.cmake/api/v1/reply/index-2026-10-01T12-16-37-0098.json
+			"kind" : "codemodel",
+			"version" : 
+			{
+				"major" : 2,
+				"minor" : 3
+			}
+		}
+	],
+	"reply" : 
+	{
+		"client-colcon-cmake" : 
+		{
+			"codemodel-v2" : 
+			{
+<<<<<<<< HEAD:build/robot_commander/.cmake/api/v1/reply/index-2026-09-30T15-30-12-0240.json
+				"jsonFile" : "codemodel-v2-3e83470181639c5763a4.json",
+========
+				"jsonFile" : "codemodel-v2-570391f3396c1dad808e.json",
+>>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/gear_manipulator_moveit_config/.cmake/api/v1/reply/index-2026-10-01T12-16-37-0098.json
+				"kind" : "codemodel",
+				"version" : 
+				{
+					"major" : 2,
+					"minor" : 3
+				}
+			}
+		}
+	}
+}
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
