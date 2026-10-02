@@ -1,0 +1,17 @@
+/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/lib/end_effector/pwm_output_node.py
+/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/README.md
+/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/ament_index/resource_index/package_run_dependencies/end_effector
+/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/ament_index/resource_index/parent_prefix_path/end_effector
+/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/environment/ament_prefix_path.sh
+/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/environment/ament_prefix_path.dsv
+/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/environment/path.sh
+/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/environment/path.dsv
+/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/local_setup.bash
+/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/local_setup.sh
+/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/local_setup.zsh
+/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/local_setup.dsv
+/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/package.dsv
+/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/ament_index/resource_index/packages/end_effector
+/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/cmake/end_effectorConfig.cmake
+/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/cmake/end_effectorConfig-version.cmake
+/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/package.xml

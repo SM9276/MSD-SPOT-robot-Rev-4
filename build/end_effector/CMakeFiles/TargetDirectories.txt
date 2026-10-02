@@ -1,0 +1,9 @@
+/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/end_effector/CMakeFiles/uninstall.dir
+/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/end_effector/CMakeFiles/end_effector_uninstall.dir
+/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/end_effector/CMakeFiles/test.dir
+/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/end_effector/CMakeFiles/edit_cache.dir
+/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/end_effector/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/end_effector/CMakeFiles/list_install_components.dir
+/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/end_effector/CMakeFiles/install.dir
+/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/end_effector/CMakeFiles/install/local.dir
+/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/end_effector/CMakeFiles/install/strip.dir

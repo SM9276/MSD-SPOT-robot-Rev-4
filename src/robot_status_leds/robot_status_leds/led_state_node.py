@@ -79,12 +79,9 @@ class LEDStateNode(Node):
         except Exception as e:
             self.get_logger().error(
                 f'Invalid blinking_color parameter {self.blinking_color_hex}: {e}')
-            self.blinking_color = (0, 0, 255)
-
+            self.blinking_color = (255, 0, 0)
 
         # subscribe to joint_states topic
-        self.sub = self.create_subscription(JointState, self.joint_states_topic, self.joint_state_cb, 10)
-
         self.sub = self.create_subscription(JointState, self.joint_states_topic, self.joint_state_cb, 10)
 
         # periodic timer to update LEDs

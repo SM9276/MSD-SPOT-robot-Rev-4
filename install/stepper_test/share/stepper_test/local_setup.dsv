@@ -1,2 +1,1 @@
-source;share/stepper_test/environment/ament_prefix_path.sh
-source;share/stepper_test/environment/path.sh
+/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/stepper_test/ament_cmake_environment_hooks/local_setup.dsv

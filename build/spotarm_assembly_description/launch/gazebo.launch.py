@@ -1,1 +1,1 @@
-/home/msd/MSD2/REV4/src/spotarm_assembly_description/launch/gazebo.launch.py
+/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/spotarm_assembly_description/launch/gazebo.launch.py

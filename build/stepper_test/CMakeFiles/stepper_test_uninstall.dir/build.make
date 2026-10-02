@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/msd/MSD2/REV4/src/stepper_test
+CMAKE_SOURCE_DIR = /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/stepper_test
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/msd/MSD2/REV4/build/stepper_test
+CMAKE_BINARY_DIR = /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/stepper_test
 
 # Utility rule file for stepper_test_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/stepper_test_uninstall.dir/compiler_depend.make
 include CMakeFiles/stepper_test_uninstall.dir/progress.make
 
 CMakeFiles/stepper_test_uninstall:
-	/usr/bin/cmake -P /home/msd/MSD2/REV4/build/stepper_test/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/stepper_test/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 stepper_test_uninstall: CMakeFiles/stepper_test_uninstall
 stepper_test_uninstall: CMakeFiles/stepper_test_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/stepper_test_uninstall.dir/clean:
 .PHONY : CMakeFiles/stepper_test_uninstall.dir/clean
 
 CMakeFiles/stepper_test_uninstall.dir/depend:
-	cd /home/msd/MSD2/REV4/build/stepper_test && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/msd/MSD2/REV4/src/stepper_test /home/msd/MSD2/REV4/src/stepper_test /home/msd/MSD2/REV4/build/stepper_test /home/msd/MSD2/REV4/build/stepper_test /home/msd/MSD2/REV4/build/stepper_test/CMakeFiles/stepper_test_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/stepper_test && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/stepper_test /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/stepper_test /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/stepper_test /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/stepper_test /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/stepper_test/CMakeFiles/stepper_test_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/stepper_test_uninstall.dir/depend
 

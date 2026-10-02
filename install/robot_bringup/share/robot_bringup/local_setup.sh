@@ -1,1 +1,1 @@
-/home/msd/MSD2/REV4/build/robot_bringup/ament_cmake_environment_hooks/local_setup.sh
+/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_bringup/ament_cmake_environment_hooks/local_setup.sh

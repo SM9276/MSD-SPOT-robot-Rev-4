@@ -1,0 +1,4 @@
+source;share/end_effector/local_setup.bash
+source;share/end_effector/local_setup.dsv
+source;share/end_effector/local_setup.sh
+source;share/end_effector/local_setup.zsh

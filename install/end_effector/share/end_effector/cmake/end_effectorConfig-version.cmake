@@ -1,0 +1,1 @@
+/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/end_effector/ament_cmake_core/end_effectorConfig-version.cmake

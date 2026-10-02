@@ -1,0 +1,981 @@
+[0.468s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.469s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7fc2f3ec53f0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7fc2f3ec4e20>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7fc2f3ec4e20>>, mixin_verb=('build',))
+[0.973s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.975s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.975s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.975s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.976s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.976s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.977s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4'
+[0.980s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.981s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.982s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.984s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.984s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.985s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.985s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.986s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.986s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[1.007s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[1.008s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[1.009s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[1.009s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[1.010s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[1.015s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[1.015s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[1.019s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[1.024s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[1.025s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[1.028s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[1.036s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[1.037s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[1.040s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[1.045s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[1.046s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[1.048s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[1.051s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[1.051s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[1.053s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[1.054s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[1.055s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[1.056s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[1.063s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[1.063s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[1.064s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[1.065s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[1.066s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[1.073s] Level 1:colcon.colcon_core.package_identification:_identify(src/End_Effector) by extensions ['ignore', 'ignore_ament_install']
+[1.074s] Level 1:colcon.colcon_core.package_identification:_identify(src/End_Effector) by extension 'ignore'
+[1.077s] Level 1:colcon.colcon_core.package_identification:_identify(src/End_Effector) by extension 'ignore_ament_install'
+[1.081s] Level 1:colcon.colcon_core.package_identification:_identify(src/End_Effector) by extensions ['colcon_pkg']
+[1.082s] Level 1:colcon.colcon_core.package_identification:_identify(src/End_Effector) by extension 'colcon_pkg'
+[1.085s] Level 1:colcon.colcon_core.package_identification:_identify(src/End_Effector) by extensions ['colcon_meta']
+[1.085s] Level 1:colcon.colcon_core.package_identification:_identify(src/End_Effector) by extension 'colcon_meta'
+[1.089s] Level 1:colcon.colcon_core.package_identification:_identify(src/End_Effector) by extensions ['ros']
+[1.089s] Level 1:colcon.colcon_core.package_identification:_identify(src/End_Effector) by extension 'ros'
+[1.121s] DEBUG:colcon.colcon_core.package_identification:Package 'src/End_Effector' with type 'ros.ament_cmake' and name 'end_effector'
+[1.131s] Level 1:colcon.colcon_core.package_identification:_identify(src/gear_manipulator_moveit_config) by extensions ['ignore', 'ignore_ament_install']
+[1.132s] Level 1:colcon.colcon_core.package_identification:_identify(src/gear_manipulator_moveit_config) by extension 'ignore'
+[1.134s] Level 1:colcon.colcon_core.package_identification:_identify(src/gear_manipulator_moveit_config) by extension 'ignore_ament_install'
+[1.141s] Level 1:colcon.colcon_core.package_identification:_identify(src/gear_manipulator_moveit_config) by extensions ['colcon_pkg']
+[1.141s] Level 1:colcon.colcon_core.package_identification:_identify(src/gear_manipulator_moveit_config) by extension 'colcon_pkg'
+[1.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/gear_manipulator_moveit_config) by extensions ['colcon_meta']
+[1.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/gear_manipulator_moveit_config) by extension 'colcon_meta'
+[1.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/gear_manipulator_moveit_config) by extensions ['ros']
+[1.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/gear_manipulator_moveit_config) by extension 'ros'
+[1.182s] DEBUG:colcon.colcon_core.package_identification:Package 'src/gear_manipulator_moveit_config' with type 'ros.ament_cmake' and name 'gear_manipulator_moveit_config'
+[1.193s] Level 1:colcon.colcon_core.package_identification:_identify(src/marge) by extensions ['ignore', 'ignore_ament_install']
+[1.194s] Level 1:colcon.colcon_core.package_identification:_identify(src/marge) by extension 'ignore'
+[1.198s] Level 1:colcon.colcon_core.package_identification:_identify(src/marge) by extension 'ignore_ament_install'
+[1.204s] Level 1:colcon.colcon_core.package_identification:_identify(src/marge) by extensions ['colcon_pkg']
+[1.205s] Level 1:colcon.colcon_core.package_identification:_identify(src/marge) by extension 'colcon_pkg'
+[1.209s] Level 1:colcon.colcon_core.package_identification:_identify(src/marge) by extensions ['colcon_meta']
+[1.209s] Level 1:colcon.colcon_core.package_identification:_identify(src/marge) by extension 'colcon_meta'
+[1.215s] Level 1:colcon.colcon_core.package_identification:_identify(src/marge) by extensions ['ros']
+[1.216s] Level 1:colcon.colcon_core.package_identification:_identify(src/marge) by extension 'ros'
+[1.247s] DEBUG:colcon.colcon_core.package_identification:Package 'src/marge' with type 'ros.ament_cmake' and name 'marge'
+[1.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot) by extensions ['ignore', 'ignore_ament_install']
+[1.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot) by extension 'ignore'
+[1.257s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot) by extension 'ignore_ament_install'
+[1.260s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot) by extensions ['colcon_pkg']
+[1.260s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot) by extension 'colcon_pkg'
+[1.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot) by extensions ['colcon_meta']
+[1.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot) by extension 'colcon_meta'
+[1.264s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot) by extensions ['ros']
+[1.265s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot) by extension 'ros'
+[1.282s] DEBUG:colcon.colcon_core.package_identification:Package 'src/my_robot' with type 'ros.ament_cmake' and name 'my_robot'
+[1.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_bringup) by extensions ['ignore', 'ignore_ament_install']
+[1.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_bringup) by extension 'ignore'
+[1.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_bringup) by extension 'ignore_ament_install'
+[1.301s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_bringup) by extensions ['colcon_pkg']
+[1.301s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_bringup) by extension 'colcon_pkg'
+[1.305s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_bringup) by extensions ['colcon_meta']
+[1.306s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_bringup) by extension 'colcon_meta'
+[1.311s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_bringup) by extensions ['ros']
+[1.311s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_bringup) by extension 'ros'
+[1.345s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robot_bringup' with type 'ros.ament_cmake' and name 'robot_bringup'
+[1.358s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_commander) by extensions ['ignore', 'ignore_ament_install']
+[1.358s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_commander) by extension 'ignore'
+[1.363s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_commander) by extension 'ignore_ament_install'
+[1.368s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_commander) by extensions ['colcon_pkg']
+[1.368s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_commander) by extension 'colcon_pkg'
+[1.373s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_commander) by extensions ['colcon_meta']
+[1.374s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_commander) by extension 'colcon_meta'
+[1.380s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_commander) by extensions ['ros']
+[1.381s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_commander) by extension 'ros'
+[1.412s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robot_commander' with type 'ros.ament_cmake' and name 'robot_commander'
+[1.422s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_hardware) by extensions ['ignore', 'ignore_ament_install']
+[1.423s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_hardware) by extension 'ignore'
+[1.427s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_hardware) by extension 'ignore_ament_install'
+[1.436s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_hardware) by extensions ['colcon_pkg']
+[1.436s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_hardware) by extension 'colcon_pkg'
+[1.438s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_hardware) by extensions ['colcon_meta']
+[1.439s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_hardware) by extension 'colcon_meta'
+[1.445s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_hardware) by extensions ['ros']
+[1.446s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_hardware) by extension 'ros'
+[1.475s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robot_hardware' with type 'ros.ament_cmake' and name 'robot_hardware'
+[1.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_moveit_config) by extensions ['ignore', 'ignore_ament_install']
+[1.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_moveit_config) by extension 'ignore'
+[1.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_moveit_config) by extension 'ignore_ament_install'
+[1.492s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_moveit_config) by extensions ['colcon_pkg']
+[1.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_moveit_config) by extension 'colcon_pkg'
+[1.495s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_moveit_config) by extensions ['colcon_meta']
+[1.495s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_moveit_config) by extension 'colcon_meta'
+[1.501s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_moveit_config) by extensions ['ros']
+[1.501s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_moveit_config) by extension 'ros'
+[1.528s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robot_moveit_config' with type 'ros.ament_cmake' and name 'robot_moveit_config'
+[1.532s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_servoing) by extensions ['ignore', 'ignore_ament_install']
+[1.532s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_servoing) by extension 'ignore'
+[1.534s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_servoing) by extension 'ignore_ament_install'
+[1.536s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_servoing) by extensions ['colcon_pkg']
+[1.537s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_servoing) by extension 'colcon_pkg'
+[1.538s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_servoing) by extensions ['colcon_meta']
+[1.538s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_servoing) by extension 'colcon_meta'
+[1.541s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_servoing) by extensions ['ros']
+[1.541s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_servoing) by extension 'ros'
+[1.561s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robot_servoing' with type 'ros.ament_cmake' and name 'robot_servoing'
+[1.570s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_status_leds) by extensions ['ignore', 'ignore_ament_install']
+[1.571s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_status_leds) by extension 'ignore'
+[1.576s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_status_leds) by extension 'ignore_ament_install'
+[1.585s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_status_leds) by extensions ['colcon_pkg']
+[1.586s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_status_leds) by extension 'colcon_pkg'
+[1.593s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_status_leds) by extensions ['colcon_meta']
+[1.594s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_status_leds) by extension 'colcon_meta'
+[1.604s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_status_leds) by extensions ['ros']
+[1.612s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_status_leds) by extension 'ros'
+[1.673s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robot_status_leds' with type 'ros.ament_python' and name 'robot_status_leds'
+[1.681s] Level 1:colcon.colcon_core.package_identification:_identify(src/spotarm_assembly_description) by extensions ['ignore', 'ignore_ament_install']
+[1.682s] Level 1:colcon.colcon_core.package_identification:_identify(src/spotarm_assembly_description) by extension 'ignore'
+[1.685s] Level 1:colcon.colcon_core.package_identification:_identify(src/spotarm_assembly_description) by extension 'ignore_ament_install'
+[1.690s] Level 1:colcon.colcon_core.package_identification:_identify(src/spotarm_assembly_description) by extensions ['colcon_pkg']
+[1.691s] Level 1:colcon.colcon_core.package_identification:_identify(src/spotarm_assembly_description) by extension 'colcon_pkg'
+[1.694s] Level 1:colcon.colcon_core.package_identification:_identify(src/spotarm_assembly_description) by extensions ['colcon_meta']
+[1.695s] Level 1:colcon.colcon_core.package_identification:_identify(src/spotarm_assembly_description) by extension 'colcon_meta'
+[1.699s] Level 1:colcon.colcon_core.package_identification:_identify(src/spotarm_assembly_description) by extensions ['ros']
+[1.699s] Level 1:colcon.colcon_core.package_identification:_identify(src/spotarm_assembly_description) by extension 'ros'
+[1.727s] DEBUG:colcon.colcon_core.package_identification:Package 'src/spotarm_assembly_description' with type 'ros.ament_python' and name 'spotarm_assembly_description'
+[1.736s] Level 1:colcon.colcon_core.package_identification:_identify(src/spotarm_gamepad) by extensions ['ignore', 'ignore_ament_install']
+[1.736s] Level 1:colcon.colcon_core.package_identification:_identify(src/spotarm_gamepad) by extension 'ignore'
+[1.739s] Level 1:colcon.colcon_core.package_identification:_identify(src/spotarm_gamepad) by extension 'ignore_ament_install'
+[1.744s] Level 1:colcon.colcon_core.package_identification:_identify(src/spotarm_gamepad) by extensions ['colcon_pkg']
+[1.744s] Level 1:colcon.colcon_core.package_identification:_identify(src/spotarm_gamepad) by extension 'colcon_pkg'
+[1.747s] Level 1:colcon.colcon_core.package_identification:_identify(src/spotarm_gamepad) by extensions ['colcon_meta']
+[1.747s] Level 1:colcon.colcon_core.package_identification:_identify(src/spotarm_gamepad) by extension 'colcon_meta'
+[1.751s] Level 1:colcon.colcon_core.package_identification:_identify(src/spotarm_gamepad) by extensions ['ros']
+[1.751s] Level 1:colcon.colcon_core.package_identification:_identify(src/spotarm_gamepad) by extension 'ros'
+[1.793s] DEBUG:colcon.colcon_core.package_identification:Failed to parse potential ROS package manifest in'src/spotarm_gamepad': Error(s) in package 'src/spotarm_gamepad/package.xml':
+The manifest contains invalid XML:
+junk after document element: line 56, column 10
+[1.796s] Level 1:colcon.colcon_core.package_identification:_identify(src/spotarm_gamepad) by extensions ['cmake', 'python']
+[1.796s] Level 1:colcon.colcon_core.package_identification:_identify(src/spotarm_gamepad) by extension 'cmake'
+[1.799s] Level 1:colcon.colcon_core.package_identification:_identify(src/spotarm_gamepad) by extension 'python'
+[1.811s] DEBUG:colcon.colcon_core.package_identification:Python package in 'src/spotarm_gamepad' passes arguments to the setup() function which requires a different identification extension than 'python'
+[1.811s] Level 1:colcon.colcon_core.package_identification:_identify(src/spotarm_gamepad) by extensions ['python_setup_py']
+[1.812s] Level 1:colcon.colcon_core.package_identification:_identify(src/spotarm_gamepad) by extension 'python_setup_py'
+[2.184s] DEBUG:colcon.colcon_core.package_identification:Package 'src/spotarm_gamepad' with type 'python' and name 'spotarm_gamepad'
+[2.193s] Level 1:colcon.colcon_core.package_identification:_identify(src/spotarm_servo_gamepad) by extensions ['ignore', 'ignore_ament_install']
+[2.193s] Level 1:colcon.colcon_core.package_identification:_identify(src/spotarm_servo_gamepad) by extension 'ignore'
+[2.194s] Level 1:colcon.colcon_core.package_identification:_identify(src/spotarm_servo_gamepad) by extension 'ignore_ament_install'
+[2.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/spotarm_servo_gamepad) by extensions ['colcon_pkg']
+[2.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/spotarm_servo_gamepad) by extension 'colcon_pkg'
+[2.203s] Level 1:colcon.colcon_core.package_identification:_identify(src/spotarm_servo_gamepad) by extensions ['colcon_meta']
+[2.203s] Level 1:colcon.colcon_core.package_identification:_identify(src/spotarm_servo_gamepad) by extension 'colcon_meta'
+[2.206s] Level 1:colcon.colcon_core.package_identification:_identify(src/spotarm_servo_gamepad) by extensions ['ros']
+[2.207s] Level 1:colcon.colcon_core.package_identification:_identify(src/spotarm_servo_gamepad) by extension 'ros'
+[2.243s] DEBUG:colcon.colcon_core.package_identification:Package 'src/spotarm_servo_gamepad' with type 'ros.ament_python' and name 'spotarm_servo_gamepad'
+[2.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/stepper_test) by extensions ['ignore', 'ignore_ament_install']
+[2.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/stepper_test) by extension 'ignore'
+[2.258s] Level 1:colcon.colcon_core.package_identification:_identify(src/stepper_test) by extension 'ignore_ament_install'
+[2.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/stepper_test) by extensions ['colcon_pkg']
+[2.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/stepper_test) by extension 'colcon_pkg'
+[2.264s] Level 1:colcon.colcon_core.package_identification:_identify(src/stepper_test) by extensions ['colcon_meta']
+[2.265s] Level 1:colcon.colcon_core.package_identification:_identify(src/stepper_test) by extension 'colcon_meta'
+[2.268s] Level 1:colcon.colcon_core.package_identification:_identify(src/stepper_test) by extensions ['ros']
+[2.268s] Level 1:colcon.colcon_core.package_identification:_identify(src/stepper_test) by extension 'ros'
+[2.285s] DEBUG:colcon.colcon_core.package_identification:Package 'src/stepper_test' with type 'ros.ament_cmake' and name 'stepper_test'
+[2.285s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[2.286s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[2.286s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[2.286s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[2.287s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[2.431s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[2.431s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[2.434s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[2.435s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[2.435s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[2.436s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[2.437s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[2.438s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[2.439s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[2.440s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[2.460s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 0 installed packages in /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install
+[2.464s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 338 installed packages in /opt/ros/humble
+[2.466s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[2.568s] Level 5:colcon.colcon_core.verb:set package 'end_effector' build argument 'cmake_args' from command line to 'None'
+[2.568s] Level 5:colcon.colcon_core.verb:set package 'end_effector' build argument 'cmake_target' from command line to 'None'
+[2.569s] Level 5:colcon.colcon_core.verb:set package 'end_effector' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.569s] Level 5:colcon.colcon_core.verb:set package 'end_effector' build argument 'cmake_clean_cache' from command line to 'False'
+[2.569s] Level 5:colcon.colcon_core.verb:set package 'end_effector' build argument 'cmake_clean_first' from command line to 'False'
+[2.569s] Level 5:colcon.colcon_core.verb:set package 'end_effector' build argument 'cmake_force_configure' from command line to 'False'
+[2.570s] Level 5:colcon.colcon_core.verb:set package 'end_effector' build argument 'ament_cmake_args' from command line to 'None'
+[2.570s] Level 5:colcon.colcon_core.verb:set package 'end_effector' build argument 'catkin_cmake_args' from command line to 'None'
+[2.571s] Level 5:colcon.colcon_core.verb:set package 'end_effector' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.571s] DEBUG:colcon.colcon_core.verb:Building package 'end_effector' with the following arguments: {'ament_cmake_args': None, 'build_base': '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/end_effector', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector', 'merge_install': False, 'path': '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/End_Effector', 'symlink_install': True, 'test_result_base': None}
+[2.572s] Level 5:colcon.colcon_core.verb:set package 'marge' build argument 'cmake_args' from command line to 'None'
+[2.572s] Level 5:colcon.colcon_core.verb:set package 'marge' build argument 'cmake_target' from command line to 'None'
+[2.572s] Level 5:colcon.colcon_core.verb:set package 'marge' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.573s] Level 5:colcon.colcon_core.verb:set package 'marge' build argument 'cmake_clean_cache' from command line to 'False'
+[2.573s] Level 5:colcon.colcon_core.verb:set package 'marge' build argument 'cmake_clean_first' from command line to 'False'
+[2.573s] Level 5:colcon.colcon_core.verb:set package 'marge' build argument 'cmake_force_configure' from command line to 'False'
+[2.574s] Level 5:colcon.colcon_core.verb:set package 'marge' build argument 'ament_cmake_args' from command line to 'None'
+[2.574s] Level 5:colcon.colcon_core.verb:set package 'marge' build argument 'catkin_cmake_args' from command line to 'None'
+[2.575s] Level 5:colcon.colcon_core.verb:set package 'marge' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.575s] DEBUG:colcon.colcon_core.verb:Building package 'marge' with the following arguments: {'ament_cmake_args': None, 'build_base': '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/marge', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge', 'merge_install': False, 'path': '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/marge', 'symlink_install': True, 'test_result_base': None}
+[2.576s] Level 5:colcon.colcon_core.verb:set package 'my_robot' build argument 'cmake_args' from command line to 'None'
+[2.576s] Level 5:colcon.colcon_core.verb:set package 'my_robot' build argument 'cmake_target' from command line to 'None'
+[2.576s] Level 5:colcon.colcon_core.verb:set package 'my_robot' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.577s] Level 5:colcon.colcon_core.verb:set package 'my_robot' build argument 'cmake_clean_cache' from command line to 'False'
+[2.577s] Level 5:colcon.colcon_core.verb:set package 'my_robot' build argument 'cmake_clean_first' from command line to 'False'
+[2.577s] Level 5:colcon.colcon_core.verb:set package 'my_robot' build argument 'cmake_force_configure' from command line to 'False'
+[2.578s] Level 5:colcon.colcon_core.verb:set package 'my_robot' build argument 'ament_cmake_args' from command line to 'None'
+[2.578s] Level 5:colcon.colcon_core.verb:set package 'my_robot' build argument 'catkin_cmake_args' from command line to 'None'
+[2.578s] Level 5:colcon.colcon_core.verb:set package 'my_robot' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.578s] DEBUG:colcon.colcon_core.verb:Building package 'my_robot' with the following arguments: {'ament_cmake_args': None, 'build_base': '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/my_robot', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot', 'merge_install': False, 'path': '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/my_robot', 'symlink_install': True, 'test_result_base': None}
+[2.579s] Level 5:colcon.colcon_core.verb:set package 'robot_commander' build argument 'cmake_args' from command line to 'None'
+[2.579s] Level 5:colcon.colcon_core.verb:set package 'robot_commander' build argument 'cmake_target' from command line to 'None'
+[2.579s] Level 5:colcon.colcon_core.verb:set package 'robot_commander' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.580s] Level 5:colcon.colcon_core.verb:set package 'robot_commander' build argument 'cmake_clean_cache' from command line to 'False'
+[2.580s] Level 5:colcon.colcon_core.verb:set package 'robot_commander' build argument 'cmake_clean_first' from command line to 'False'
+[2.580s] Level 5:colcon.colcon_core.verb:set package 'robot_commander' build argument 'cmake_force_configure' from command line to 'False'
+[2.580s] Level 5:colcon.colcon_core.verb:set package 'robot_commander' build argument 'ament_cmake_args' from command line to 'None'
+[2.581s] Level 5:colcon.colcon_core.verb:set package 'robot_commander' build argument 'catkin_cmake_args' from command line to 'None'
+[2.581s] Level 5:colcon.colcon_core.verb:set package 'robot_commander' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.581s] DEBUG:colcon.colcon_core.verb:Building package 'robot_commander' with the following arguments: {'ament_cmake_args': None, 'build_base': '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_commander', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_commander', 'merge_install': False, 'path': '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_commander', 'symlink_install': True, 'test_result_base': None}
+[2.582s] Level 5:colcon.colcon_core.verb:set package 'robot_hardware' build argument 'cmake_args' from command line to 'None'
+[2.582s] Level 5:colcon.colcon_core.verb:set package 'robot_hardware' build argument 'cmake_target' from command line to 'None'
+[2.582s] Level 5:colcon.colcon_core.verb:set package 'robot_hardware' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.582s] Level 5:colcon.colcon_core.verb:set package 'robot_hardware' build argument 'cmake_clean_cache' from command line to 'False'
+[2.583s] Level 5:colcon.colcon_core.verb:set package 'robot_hardware' build argument 'cmake_clean_first' from command line to 'False'
+[2.583s] Level 5:colcon.colcon_core.verb:set package 'robot_hardware' build argument 'cmake_force_configure' from command line to 'False'
+[2.583s] Level 5:colcon.colcon_core.verb:set package 'robot_hardware' build argument 'ament_cmake_args' from command line to 'None'
+[2.583s] Level 5:colcon.colcon_core.verb:set package 'robot_hardware' build argument 'catkin_cmake_args' from command line to 'None'
+[2.583s] Level 5:colcon.colcon_core.verb:set package 'robot_hardware' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.584s] DEBUG:colcon.colcon_core.verb:Building package 'robot_hardware' with the following arguments: {'ament_cmake_args': None, 'build_base': '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_hardware', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_hardware', 'merge_install': False, 'path': '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_hardware', 'symlink_install': True, 'test_result_base': None}
+[2.584s] Level 5:colcon.colcon_core.verb:set package 'robot_servoing' build argument 'cmake_args' from command line to 'None'
+[2.584s] Level 5:colcon.colcon_core.verb:set package 'robot_servoing' build argument 'cmake_target' from command line to 'None'
+[2.585s] Level 5:colcon.colcon_core.verb:set package 'robot_servoing' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.585s] Level 5:colcon.colcon_core.verb:set package 'robot_servoing' build argument 'cmake_clean_cache' from command line to 'False'
+[2.585s] Level 5:colcon.colcon_core.verb:set package 'robot_servoing' build argument 'cmake_clean_first' from command line to 'False'
+[2.585s] Level 5:colcon.colcon_core.verb:set package 'robot_servoing' build argument 'cmake_force_configure' from command line to 'False'
+[2.586s] Level 5:colcon.colcon_core.verb:set package 'robot_servoing' build argument 'ament_cmake_args' from command line to 'None'
+[2.586s] Level 5:colcon.colcon_core.verb:set package 'robot_servoing' build argument 'catkin_cmake_args' from command line to 'None'
+[2.586s] Level 5:colcon.colcon_core.verb:set package 'robot_servoing' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.586s] DEBUG:colcon.colcon_core.verb:Building package 'robot_servoing' with the following arguments: {'ament_cmake_args': None, 'build_base': '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_servoing', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_servoing', 'merge_install': False, 'path': '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_servoing', 'symlink_install': True, 'test_result_base': None}
+[2.588s] Level 5:colcon.colcon_core.verb:set package 'robot_status_leds' build argument 'cmake_args' from command line to 'None'
+[2.588s] Level 5:colcon.colcon_core.verb:set package 'robot_status_leds' build argument 'cmake_target' from command line to 'None'
+[2.588s] Level 5:colcon.colcon_core.verb:set package 'robot_status_leds' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.588s] Level 5:colcon.colcon_core.verb:set package 'robot_status_leds' build argument 'cmake_clean_cache' from command line to 'False'
+[2.589s] Level 5:colcon.colcon_core.verb:set package 'robot_status_leds' build argument 'cmake_clean_first' from command line to 'False'
+[2.589s] Level 5:colcon.colcon_core.verb:set package 'robot_status_leds' build argument 'cmake_force_configure' from command line to 'False'
+[2.589s] Level 5:colcon.colcon_core.verb:set package 'robot_status_leds' build argument 'ament_cmake_args' from command line to 'None'
+[2.589s] Level 5:colcon.colcon_core.verb:set package 'robot_status_leds' build argument 'catkin_cmake_args' from command line to 'None'
+[2.590s] Level 5:colcon.colcon_core.verb:set package 'robot_status_leds' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.590s] DEBUG:colcon.colcon_core.verb:Building package 'robot_status_leds' with the following arguments: {'ament_cmake_args': None, 'build_base': '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_status_leds', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_status_leds', 'merge_install': False, 'path': '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_status_leds', 'symlink_install': True, 'test_result_base': None}
+[2.591s] Level 5:colcon.colcon_core.verb:set package 'spotarm_assembly_description' build argument 'cmake_args' from command line to 'None'
+[2.591s] Level 5:colcon.colcon_core.verb:set package 'spotarm_assembly_description' build argument 'cmake_target' from command line to 'None'
+[2.592s] Level 5:colcon.colcon_core.verb:set package 'spotarm_assembly_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.592s] Level 5:colcon.colcon_core.verb:set package 'spotarm_assembly_description' build argument 'cmake_clean_cache' from command line to 'False'
+[2.592s] Level 5:colcon.colcon_core.verb:set package 'spotarm_assembly_description' build argument 'cmake_clean_first' from command line to 'False'
+[2.592s] Level 5:colcon.colcon_core.verb:set package 'spotarm_assembly_description' build argument 'cmake_force_configure' from command line to 'False'
+[2.593s] Level 5:colcon.colcon_core.verb:set package 'spotarm_assembly_description' build argument 'ament_cmake_args' from command line to 'None'
+[2.593s] Level 5:colcon.colcon_core.verb:set package 'spotarm_assembly_description' build argument 'catkin_cmake_args' from command line to 'None'
+[2.593s] Level 5:colcon.colcon_core.verb:set package 'spotarm_assembly_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.594s] DEBUG:colcon.colcon_core.verb:Building package 'spotarm_assembly_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_assembly_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_assembly_description', 'merge_install': False, 'path': '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/spotarm_assembly_description', 'symlink_install': True, 'test_result_base': None}
+[2.595s] Level 5:colcon.colcon_core.verb:set package 'spotarm_gamepad' build argument 'cmake_args' from command line to 'None'
+[2.595s] Level 5:colcon.colcon_core.verb:set package 'spotarm_gamepad' build argument 'cmake_target' from command line to 'None'
+[2.595s] Level 5:colcon.colcon_core.verb:set package 'spotarm_gamepad' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.596s] Level 5:colcon.colcon_core.verb:set package 'spotarm_gamepad' build argument 'cmake_clean_cache' from command line to 'False'
+[2.596s] Level 5:colcon.colcon_core.verb:set package 'spotarm_gamepad' build argument 'cmake_clean_first' from command line to 'False'
+[2.596s] Level 5:colcon.colcon_core.verb:set package 'spotarm_gamepad' build argument 'cmake_force_configure' from command line to 'False'
+[2.596s] Level 5:colcon.colcon_core.verb:set package 'spotarm_gamepad' build argument 'ament_cmake_args' from command line to 'None'
+[2.597s] Level 5:colcon.colcon_core.verb:set package 'spotarm_gamepad' build argument 'catkin_cmake_args' from command line to 'None'
+[2.597s] Level 5:colcon.colcon_core.verb:set package 'spotarm_gamepad' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.597s] DEBUG:colcon.colcon_core.verb:Building package 'spotarm_gamepad' with the following arguments: {'ament_cmake_args': None, 'build_base': '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_gamepad', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_gamepad', 'merge_install': False, 'path': '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/spotarm_gamepad', 'symlink_install': True, 'test_result_base': None}
+[2.597s] Level 5:colcon.colcon_core.verb:set package 'stepper_test' build argument 'cmake_args' from command line to 'None'
+[2.598s] Level 5:colcon.colcon_core.verb:set package 'stepper_test' build argument 'cmake_target' from command line to 'None'
+[2.598s] Level 5:colcon.colcon_core.verb:set package 'stepper_test' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.598s] Level 5:colcon.colcon_core.verb:set package 'stepper_test' build argument 'cmake_clean_cache' from command line to 'False'
+[2.599s] Level 5:colcon.colcon_core.verb:set package 'stepper_test' build argument 'cmake_clean_first' from command line to 'False'
+[2.599s] Level 5:colcon.colcon_core.verb:set package 'stepper_test' build argument 'cmake_force_configure' from command line to 'False'
+[2.599s] Level 5:colcon.colcon_core.verb:set package 'stepper_test' build argument 'ament_cmake_args' from command line to 'None'
+[2.600s] Level 5:colcon.colcon_core.verb:set package 'stepper_test' build argument 'catkin_cmake_args' from command line to 'None'
+[2.600s] Level 5:colcon.colcon_core.verb:set package 'stepper_test' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.600s] DEBUG:colcon.colcon_core.verb:Building package 'stepper_test' with the following arguments: {'ament_cmake_args': None, 'build_base': '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/stepper_test', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/stepper_test', 'merge_install': False, 'path': '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/stepper_test', 'symlink_install': True, 'test_result_base': None}
+[2.601s] Level 5:colcon.colcon_core.verb:set package 'gear_manipulator_moveit_config' build argument 'cmake_args' from command line to 'None'
+[2.601s] Level 5:colcon.colcon_core.verb:set package 'gear_manipulator_moveit_config' build argument 'cmake_target' from command line to 'None'
+[2.601s] Level 5:colcon.colcon_core.verb:set package 'gear_manipulator_moveit_config' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.602s] Level 5:colcon.colcon_core.verb:set package 'gear_manipulator_moveit_config' build argument 'cmake_clean_cache' from command line to 'False'
+[2.602s] Level 5:colcon.colcon_core.verb:set package 'gear_manipulator_moveit_config' build argument 'cmake_clean_first' from command line to 'False'
+[2.602s] Level 5:colcon.colcon_core.verb:set package 'gear_manipulator_moveit_config' build argument 'cmake_force_configure' from command line to 'False'
+[2.603s] Level 5:colcon.colcon_core.verb:set package 'gear_manipulator_moveit_config' build argument 'ament_cmake_args' from command line to 'None'
+[2.603s] Level 5:colcon.colcon_core.verb:set package 'gear_manipulator_moveit_config' build argument 'catkin_cmake_args' from command line to 'None'
+[2.603s] Level 5:colcon.colcon_core.verb:set package 'gear_manipulator_moveit_config' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.603s] DEBUG:colcon.colcon_core.verb:Building package 'gear_manipulator_moveit_config' with the following arguments: {'ament_cmake_args': None, 'build_base': '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/gear_manipulator_moveit_config', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config', 'merge_install': False, 'path': '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/gear_manipulator_moveit_config', 'symlink_install': True, 'test_result_base': None}
+[2.604s] Level 5:colcon.colcon_core.verb:set package 'robot_moveit_config' build argument 'cmake_args' from command line to 'None'
+[2.604s] Level 5:colcon.colcon_core.verb:set package 'robot_moveit_config' build argument 'cmake_target' from command line to 'None'
+[2.605s] Level 5:colcon.colcon_core.verb:set package 'robot_moveit_config' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.605s] Level 5:colcon.colcon_core.verb:set package 'robot_moveit_config' build argument 'cmake_clean_cache' from command line to 'False'
+[2.605s] Level 5:colcon.colcon_core.verb:set package 'robot_moveit_config' build argument 'cmake_clean_first' from command line to 'False'
+[2.606s] Level 5:colcon.colcon_core.verb:set package 'robot_moveit_config' build argument 'cmake_force_configure' from command line to 'False'
+[2.606s] Level 5:colcon.colcon_core.verb:set package 'robot_moveit_config' build argument 'ament_cmake_args' from command line to 'None'
+[2.606s] Level 5:colcon.colcon_core.verb:set package 'robot_moveit_config' build argument 'catkin_cmake_args' from command line to 'None'
+[2.606s] Level 5:colcon.colcon_core.verb:set package 'robot_moveit_config' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.606s] DEBUG:colcon.colcon_core.verb:Building package 'robot_moveit_config' with the following arguments: {'ament_cmake_args': None, 'build_base': '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_moveit_config', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_moveit_config', 'merge_install': False, 'path': '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_moveit_config', 'symlink_install': True, 'test_result_base': None}
+[2.607s] Level 5:colcon.colcon_core.verb:set package 'robot_bringup' build argument 'cmake_args' from command line to 'None'
+[2.607s] Level 5:colcon.colcon_core.verb:set package 'robot_bringup' build argument 'cmake_target' from command line to 'None'
+[2.607s] Level 5:colcon.colcon_core.verb:set package 'robot_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.607s] Level 5:colcon.colcon_core.verb:set package 'robot_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[2.608s] Level 5:colcon.colcon_core.verb:set package 'robot_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[2.608s] Level 5:colcon.colcon_core.verb:set package 'robot_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[2.608s] Level 5:colcon.colcon_core.verb:set package 'robot_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[2.608s] Level 5:colcon.colcon_core.verb:set package 'robot_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[2.608s] Level 5:colcon.colcon_core.verb:set package 'robot_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.608s] DEBUG:colcon.colcon_core.verb:Building package 'robot_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_bringup', 'merge_install': False, 'path': '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_bringup', 'symlink_install': True, 'test_result_base': None}
+[2.609s] Level 5:colcon.colcon_core.verb:set package 'spotarm_servo_gamepad' build argument 'cmake_args' from command line to 'None'
+[2.609s] Level 5:colcon.colcon_core.verb:set package 'spotarm_servo_gamepad' build argument 'cmake_target' from command line to 'None'
+[2.610s] Level 5:colcon.colcon_core.verb:set package 'spotarm_servo_gamepad' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.610s] Level 5:colcon.colcon_core.verb:set package 'spotarm_servo_gamepad' build argument 'cmake_clean_cache' from command line to 'False'
+[2.610s] Level 5:colcon.colcon_core.verb:set package 'spotarm_servo_gamepad' build argument 'cmake_clean_first' from command line to 'False'
+[2.610s] Level 5:colcon.colcon_core.verb:set package 'spotarm_servo_gamepad' build argument 'cmake_force_configure' from command line to 'False'
+[2.610s] Level 5:colcon.colcon_core.verb:set package 'spotarm_servo_gamepad' build argument 'ament_cmake_args' from command line to 'None'
+[2.611s] Level 5:colcon.colcon_core.verb:set package 'spotarm_servo_gamepad' build argument 'catkin_cmake_args' from command line to 'None'
+[2.611s] Level 5:colcon.colcon_core.verb:set package 'spotarm_servo_gamepad' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.611s] DEBUG:colcon.colcon_core.verb:Building package 'spotarm_servo_gamepad' with the following arguments: {'ament_cmake_args': None, 'build_base': '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_servo_gamepad', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_servo_gamepad', 'merge_install': False, 'path': '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/spotarm_servo_gamepad', 'symlink_install': True, 'test_result_base': None}
+[2.611s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[2.613s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[2.613s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/spotarm_assembly_description' with build type 'ament_python'
+[2.614s] Level 1:colcon.colcon_core.shell:create_environment_hook('spotarm_assembly_description', 'ament_prefix_path')
+[2.621s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[2.621s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_assembly_description/share/spotarm_assembly_description/hook/ament_prefix_path.ps1'
+[2.649s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_assembly_description/share/spotarm_assembly_description/hook/ament_prefix_path.dsv'
+[2.664s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_assembly_description/share/spotarm_assembly_description/hook/ament_prefix_path.sh'
+[2.690s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.691s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.764s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/my_robot' with build type 'ament_cmake'
+[2.765s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/my_robot'
+[2.770s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.777s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.967s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/End_Effector' with build type 'ament_cmake'
+[2.967s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/End_Effector'
+[2.968s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.969s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.024s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/marge' with build type 'ament_cmake'
+[3.025s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/marge'
+[3.025s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.025s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.082s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_commander' with build type 'ament_cmake'
+[3.083s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_commander'
+[3.084s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.084s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.134s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_hardware' with build type 'ament_cmake'
+[3.134s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_hardware'
+[3.136s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.137s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.189s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_servoing' with build type 'ament_cmake'
+[3.189s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_servoing'
+[3.190s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.190s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.246s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_status_leds' with build type 'ament_python'
+[3.247s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_status_leds', 'ament_prefix_path')
+[3.247s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_status_leds/share/robot_status_leds/hook/ament_prefix_path.ps1'
+[3.302s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_status_leds/share/robot_status_leds/hook/ament_prefix_path.dsv'
+[3.360s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_status_leds/share/robot_status_leds/hook/ament_prefix_path.sh'
+[3.412s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.413s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.499s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/spotarm_gamepad'
+[3.499s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.500s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.566s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/stepper_test' with build type 'ament_cmake'
+[3.566s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/stepper_test'
+[3.567s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.568s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.913s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/spotarm_assembly_description'
+[3.914s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.915s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.118s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/my_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/my_robot -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot
+[4.208s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/end_effector': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/End_Effector -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector
+[4.301s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/marge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/marge -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge
+[4.386s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_commander': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_commander -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_commander
+[4.477s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_hardware': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_hardware -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_hardware
+[4.579s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_servoing': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_servoing -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_servoing
+[4.996s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_status_leds'
+[4.998s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.999s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[5.734s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/stepper_test': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/stepper_test -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/stepper_test
+[9.044s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_gamepad': PYTHONPATH=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_gamepad/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_gamepad/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_gamepad/build --no-deps symlink_data
+[9.186s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_status_leds': PYTHONPATH=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_status_leds/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_status_leds/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_status_leds/build --no-deps symlink_data
+[9.865s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_assembly_description': PYTHONPATH=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_assembly_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_assembly_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_assembly_description/build --no-deps symlink_data
+[13.205s] Level 1:colcon.colcon_core.shell:create_environment_hook('spotarm_gamepad', 'pythonpath_develop')
+[13.206s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_gamepad/share/spotarm_gamepad/hook/pythonpath_develop.ps1'
+[13.215s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_gamepad' returned '0': PYTHONPATH=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_gamepad/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_gamepad/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_gamepad/build --no-deps symlink_data
+[13.258s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_gamepad/share/spotarm_gamepad/hook/pythonpath_develop.dsv'
+[13.299s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_gamepad/share/spotarm_gamepad/hook/pythonpath_develop.sh'
+[13.355s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_gamepad' for CMake module files
+[13.550s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_gamepad' for CMake config files
+[13.871s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_gamepad/lib'
+[13.890s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_gamepad/bin'
+[13.896s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_gamepad/lib/pkgconfig/spotarm_gamepad.pc'
+[13.904s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_gamepad/lib/python3.10/site-packages'
+[13.917s] Level 1:colcon.colcon_core.shell:create_environment_hook('spotarm_gamepad', 'pythonpath')
+[13.921s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_gamepad/share/spotarm_gamepad/hook/pythonpath.ps1'
+[13.972s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_gamepad/share/spotarm_gamepad/hook/pythonpath.dsv'
+[14.037s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_gamepad/share/spotarm_gamepad/hook/pythonpath.sh'
+[14.102s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_gamepad/bin'
+[14.109s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(spotarm_gamepad)
+[14.111s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_gamepad/share/spotarm_gamepad/package.ps1'
+[14.151s] INFO:colcon.colcon_core.shell:Creating package descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_gamepad/share/spotarm_gamepad/package.dsv'
+[14.190s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_gamepad/share/spotarm_gamepad/package.sh'
+[14.237s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_gamepad/share/spotarm_gamepad/package.bash'
+[14.285s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_gamepad/share/spotarm_gamepad/package.zsh'
+[14.326s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_gamepad/share/colcon-core/packages/spotarm_gamepad)
+[14.373s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_status_leds', 'pythonpath_develop')
+[14.374s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_status_leds/share/robot_status_leds/hook/pythonpath_develop.ps1'
+[14.402s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_status_leds' returned '0': PYTHONPATH=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_status_leds/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_status_leds/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_status_leds/build --no-deps symlink_data
+[14.425s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_status_leds/share/robot_status_leds/hook/pythonpath_develop.dsv'
+[14.487s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_status_leds/share/robot_status_leds/hook/pythonpath_develop.sh'
+[14.550s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_status_leds' for CMake module files
+[14.695s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_status_leds' for CMake config files
+[14.930s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_status_leds/lib'
+[14.944s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_status_leds/bin'
+[14.948s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_status_leds/lib/pkgconfig/robot_status_leds.pc'
+[14.953s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_status_leds/lib/python3.10/site-packages'
+[14.962s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_status_leds', 'pythonpath')
+[14.963s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_status_leds/share/robot_status_leds/hook/pythonpath.ps1'
+[15.017s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_status_leds/share/robot_status_leds/hook/pythonpath.dsv'
+[15.068s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_status_leds/share/robot_status_leds/hook/pythonpath.sh'
+[15.122s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_status_leds/bin'
+[15.126s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot_status_leds)
+[15.127s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_status_leds/share/robot_status_leds/package.ps1'
+[15.169s] INFO:colcon.colcon_core.shell:Creating package descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_status_leds/share/robot_status_leds/package.dsv'
+[15.207s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_status_leds/share/robot_status_leds/package.sh'
+[15.244s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_status_leds/share/robot_status_leds/package.bash'
+[15.280s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_status_leds/share/robot_status_leds/package.zsh'
+[15.318s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_status_leds/share/colcon-core/packages/robot_status_leds)
+[15.355s] Level 1:colcon.colcon_core.shell:create_environment_hook('spotarm_assembly_description', 'pythonpath_develop')
+[15.356s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_assembly_description/share/spotarm_assembly_description/hook/pythonpath_develop.ps1'
+[15.378s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_assembly_description' returned '0': PYTHONPATH=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_assembly_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_assembly_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_assembly_description/build --no-deps symlink_data
+[15.405s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_assembly_description/share/spotarm_assembly_description/hook/pythonpath_develop.dsv'
+[15.450s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_assembly_description/share/spotarm_assembly_description/hook/pythonpath_develop.sh'
+[15.494s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_assembly_description' for CMake module files
+[15.623s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_assembly_description' for CMake config files
+[16.106s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_assembly_description/lib'
+[16.119s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_assembly_description/bin'
+[16.123s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_assembly_description/lib/pkgconfig/spotarm_assembly_description.pc'
+[16.129s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_assembly_description/lib/python3.10/site-packages'
+[16.137s] Level 1:colcon.colcon_core.shell:create_environment_hook('spotarm_assembly_description', 'pythonpath')
+[16.138s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_assembly_description/share/spotarm_assembly_description/hook/pythonpath.ps1'
+[16.195s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_assembly_description/share/spotarm_assembly_description/hook/pythonpath.dsv'
+[16.251s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_assembly_description/share/spotarm_assembly_description/hook/pythonpath.sh'
+[16.312s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_assembly_description/bin'
+[16.318s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(spotarm_assembly_description)
+[16.320s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_assembly_description/share/spotarm_assembly_description/package.ps1'
+[16.367s] INFO:colcon.colcon_core.shell:Creating package descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_assembly_description/share/spotarm_assembly_description/package.dsv'
+[16.404s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_assembly_description/share/spotarm_assembly_description/package.sh'
+[16.451s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_assembly_description/share/spotarm_assembly_description/package.bash'
+[16.494s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_assembly_description/share/spotarm_assembly_description/package.zsh'
+[16.545s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_assembly_description/share/colcon-core/packages/spotarm_assembly_description)
+[16.591s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_moveit_config' with build type 'ament_cmake'
+[16.593s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_moveit_config'
+[16.595s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[16.596s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[17.881s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_moveit_config': AMENT_PREFIX_PATH=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_assembly_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PYTHONPATH=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_assembly_description:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_assembly_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_moveit_config -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_moveit_config
+[21.215s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/my_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/my_robot -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot
+[21.245s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/my_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/my_robot -- -j16 -l16
+[21.651s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/my_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/my_robot -- -j16 -l16
+[21.747s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/my_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/my_robot
+[23.943s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(my_robot)
+[23.944s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot' for CMake module files
+[23.946s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/my_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/my_robot
+[24.147s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot' for CMake config files
+[24.335s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_robot', 'cmake_prefix_path')
+[24.337s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot/share/my_robot/hook/cmake_prefix_path.ps1'
+[24.365s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot/share/my_robot/hook/cmake_prefix_path.dsv'
+[24.400s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot/share/my_robot/hook/cmake_prefix_path.sh'
+[24.431s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot/bin'
+[24.435s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot/lib/pkgconfig/my_robot.pc'
+[24.439s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot/lib/python3.10/site-packages'
+[24.442s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot/bin'
+[24.446s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot/share/my_robot/package.ps1'
+[24.478s] INFO:colcon.colcon_core.shell:Creating package descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot/share/my_robot/package.dsv'
+[24.499s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot/share/my_robot/package.sh'
+[24.532s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot/share/my_robot/package.bash'
+[24.564s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot/share/my_robot/package.zsh'
+[24.583s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot/share/colcon-core/packages/my_robot)
+[24.658s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(my_robot)
+[24.659s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot' for CMake module files
+[24.890s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot' for CMake config files
+[25.157s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_robot', 'cmake_prefix_path')
+[25.158s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot/share/my_robot/hook/cmake_prefix_path.ps1'
+[25.193s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot/share/my_robot/hook/cmake_prefix_path.dsv'
+[25.239s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot/share/my_robot/hook/cmake_prefix_path.sh'
+[25.284s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot/bin'
+[25.289s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot/lib/pkgconfig/my_robot.pc'
+[25.293s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot/lib/python3.10/site-packages'
+[25.299s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot/bin'
+[25.303s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot/share/my_robot/package.ps1'
+[25.330s] INFO:colcon.colcon_core.shell:Creating package descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot/share/my_robot/package.dsv'
+[25.354s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot/share/my_robot/package.sh'
+[25.393s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot/share/my_robot/package.bash'
+[25.419s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot/share/my_robot/package.zsh'
+[25.443s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot/share/colcon-core/packages/my_robot)
+[25.476s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/gear_manipulator_moveit_config' with build type 'ament_cmake'
+[25.478s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/gear_manipulator_moveit_config'
+[25.478s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[25.479s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[25.622s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/marge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/marge -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge
+[25.643s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/marge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/marge -- -j16 -l16
+[25.646s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/end_effector' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/End_Effector -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector
+[25.666s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/end_effector': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/end_effector -- -j16 -l16
+[26.122s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/gear_manipulator_moveit_config': CMAKE_PREFIX_PATH=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector:/opt/ros/humble /usr/bin/cmake /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/gear_manipulator_moveit_config -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config
+[26.127s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/end_effector' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/end_effector -- -j16 -l16
+[26.168s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/end_effector': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/end_effector
+[29.074s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(end_effector)
+[29.074s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector' for CMake module files
+[29.077s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/end_effector' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/end_effector
+[29.363s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector' for CMake config files
+[29.636s] Level 1:colcon.colcon_core.shell:create_environment_hook('end_effector', 'cmake_prefix_path')
+[29.637s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/hook/cmake_prefix_path.ps1'
+[29.658s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/hook/cmake_prefix_path.dsv'
+[29.687s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/hook/cmake_prefix_path.sh'
+[29.736s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/lib'
+[29.745s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/bin'
+[29.746s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/lib/pkgconfig/end_effector.pc'
+[29.750s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/lib/python3.10/site-packages'
+[29.755s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/bin'
+[29.757s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/package.ps1'
+[29.783s] INFO:colcon.colcon_core.shell:Creating package descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/package.dsv'
+[29.816s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/package.sh'
+[29.854s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/package.bash'
+[29.900s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/package.zsh'
+[29.938s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/colcon-core/packages/end_effector)
+[29.999s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(end_effector)
+[30.000s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector' for CMake module files
+[30.294s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector' for CMake config files
+[30.596s] Level 1:colcon.colcon_core.shell:create_environment_hook('end_effector', 'cmake_prefix_path')
+[30.597s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/hook/cmake_prefix_path.ps1'
+[30.642s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/hook/cmake_prefix_path.dsv'
+[30.686s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/hook/cmake_prefix_path.sh'
+[30.736s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/lib'
+[30.748s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/bin'
+[30.750s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/lib/pkgconfig/end_effector.pc'
+[30.753s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/lib/python3.10/site-packages'
+[30.757s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/bin'
+[30.759s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/package.ps1'
+[30.783s] INFO:colcon.colcon_core.shell:Creating package descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/package.dsv'
+[30.812s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/package.sh'
+[30.847s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/package.bash'
+[30.887s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/end_effector/package.zsh'
+[30.919s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector/share/colcon-core/packages/end_effector)
+[32.554s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/marge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/marge -- -j16 -l16
+[32.604s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/marge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/marge
+[37.557s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(marge)
+[37.558s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge' for CMake module files
+[37.561s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/marge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/marge
+[37.830s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge' for CMake config files
+[38.122s] Level 1:colcon.colcon_core.shell:create_environment_hook('marge', 'cmake_prefix_path')
+[38.124s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/share/marge/hook/cmake_prefix_path.ps1'
+[38.156s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/share/marge/hook/cmake_prefix_path.dsv'
+[38.206s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/share/marge/hook/cmake_prefix_path.sh'
+[38.271s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/lib'
+[38.279s] Level 1:colcon.colcon_core.shell:create_environment_hook('marge', 'ld_library_path_lib')
+[38.280s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/share/marge/hook/ld_library_path_lib.ps1'
+[38.326s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/share/marge/hook/ld_library_path_lib.dsv'
+[38.364s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/share/marge/hook/ld_library_path_lib.sh'
+[38.408s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/bin'
+[38.411s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/lib/pkgconfig/marge.pc'
+[38.416s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/lib/python3.10/site-packages'
+[38.421s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/bin'
+[38.424s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/share/marge/package.ps1'
+[38.459s] INFO:colcon.colcon_core.shell:Creating package descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/share/marge/package.dsv'
+[38.502s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/share/marge/package.sh'
+[38.538s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/share/marge/package.bash'
+[38.565s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/share/marge/package.zsh'
+[38.599s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/share/colcon-core/packages/marge)
+[38.679s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(marge)
+[38.680s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge' for CMake module files
+[38.990s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge' for CMake config files
+[39.322s] Level 1:colcon.colcon_core.shell:create_environment_hook('marge', 'cmake_prefix_path')
+[39.323s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/share/marge/hook/cmake_prefix_path.ps1'
+[39.365s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/share/marge/hook/cmake_prefix_path.dsv'
+[39.398s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/share/marge/hook/cmake_prefix_path.sh'
+[39.441s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/lib'
+[39.452s] Level 1:colcon.colcon_core.shell:create_environment_hook('marge', 'ld_library_path_lib')
+[39.453s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/share/marge/hook/ld_library_path_lib.ps1'
+[39.496s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/share/marge/hook/ld_library_path_lib.dsv'
+[39.547s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/share/marge/hook/ld_library_path_lib.sh'
+[39.596s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/bin'
+[39.600s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/lib/pkgconfig/marge.pc'
+[39.609s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/lib/python3.10/site-packages'
+[39.616s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/bin'
+[39.620s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/share/marge/package.ps1'
+[39.672s] INFO:colcon.colcon_core.shell:Creating package descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/share/marge/package.dsv'
+[39.713s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/share/marge/package.sh'
+[39.742s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/share/marge/package.bash'
+[39.764s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/share/marge/package.zsh'
+[39.791s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/share/colcon-core/packages/marge)
+[41.304s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_moveit_config' returned '0': AMENT_PREFIX_PATH=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_assembly_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PYTHONPATH=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_assembly_description:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_assembly_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_moveit_config -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_moveit_config
+[41.322s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_moveit_config': AMENT_PREFIX_PATH=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_assembly_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PYTHONPATH=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_assembly_description:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_assembly_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --build /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_moveit_config -- -j16 -l16
+[42.294s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_moveit_config' returned '0': AMENT_PREFIX_PATH=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_assembly_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PYTHONPATH=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_assembly_description:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_assembly_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --build /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_moveit_config -- -j16 -l16
+[42.347s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_moveit_config': AMENT_PREFIX_PATH=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_assembly_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PYTHONPATH=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_assembly_description:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_assembly_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --install /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_moveit_config
+[46.128s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/gear_manipulator_moveit_config' returned '0': CMAKE_PREFIX_PATH=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector:/opt/ros/humble /usr/bin/cmake /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/gear_manipulator_moveit_config -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config
+[46.145s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/gear_manipulator_moveit_config': CMAKE_PREFIX_PATH=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector:/opt/ros/humble /usr/bin/cmake --build /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/gear_manipulator_moveit_config -- -j16 -l16
+[46.783s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/gear_manipulator_moveit_config' returned '0': CMAKE_PREFIX_PATH=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector:/opt/ros/humble /usr/bin/cmake --build /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/gear_manipulator_moveit_config -- -j16 -l16
+[46.847s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/gear_manipulator_moveit_config': CMAKE_PREFIX_PATH=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector:/opt/ros/humble /usr/bin/cmake --install /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/gear_manipulator_moveit_config
+[51.233s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot_moveit_config)
+[51.234s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_moveit_config' for CMake module files
+[51.237s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_moveit_config' returned '0': AMENT_PREFIX_PATH=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_assembly_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PYTHONPATH=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_assembly_description:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_assembly_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --install /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_moveit_config
+[51.476s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_moveit_config' for CMake config files
+[51.691s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_moveit_config', 'cmake_prefix_path')
+[51.692s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_moveit_config/share/robot_moveit_config/hook/cmake_prefix_path.ps1'
+[51.720s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_moveit_config/share/robot_moveit_config/hook/cmake_prefix_path.dsv'
+[51.757s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_moveit_config/share/robot_moveit_config/hook/cmake_prefix_path.sh'
+[51.801s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_moveit_config/bin'
+[51.804s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_moveit_config/lib/pkgconfig/robot_moveit_config.pc'
+[51.807s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_moveit_config/lib/python3.10/site-packages'
+[51.810s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_moveit_config/bin'
+[51.812s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_moveit_config/share/robot_moveit_config/package.ps1'
+[51.847s] INFO:colcon.colcon_core.shell:Creating package descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_moveit_config/share/robot_moveit_config/package.dsv'
+[51.893s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_moveit_config/share/robot_moveit_config/package.sh'
+[51.932s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_moveit_config/share/robot_moveit_config/package.bash'
+[51.953s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_moveit_config/share/robot_moveit_config/package.zsh'
+[51.977s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_moveit_config/share/colcon-core/packages/robot_moveit_config)
+[52.053s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot_moveit_config)
+[52.055s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_moveit_config' for CMake module files
+[52.342s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_moveit_config' for CMake config files
+[52.587s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_moveit_config', 'cmake_prefix_path')
+[52.588s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_moveit_config/share/robot_moveit_config/hook/cmake_prefix_path.ps1'
+[52.626s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_moveit_config/share/robot_moveit_config/hook/cmake_prefix_path.dsv'
+[52.666s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_moveit_config/share/robot_moveit_config/hook/cmake_prefix_path.sh'
+[52.716s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_moveit_config/bin'
+[52.720s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_moveit_config/lib/pkgconfig/robot_moveit_config.pc'
+[52.723s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_moveit_config/lib/python3.10/site-packages'
+[52.728s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_moveit_config/bin'
+[52.731s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_moveit_config/share/robot_moveit_config/package.ps1'
+[52.766s] INFO:colcon.colcon_core.shell:Creating package descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_moveit_config/share/robot_moveit_config/package.dsv'
+[52.797s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_moveit_config/share/robot_moveit_config/package.sh'
+[52.833s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_moveit_config/share/robot_moveit_config/package.bash'
+[52.866s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_moveit_config/share/robot_moveit_config/package.zsh'
+[52.893s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_moveit_config/share/colcon-core/packages/robot_moveit_config)
+[52.913s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_bringup' with build type 'ament_cmake'
+[52.914s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_bringup'
+[52.915s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[52.916s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[53.142s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/spotarm_servo_gamepad' with build type 'ament_python'
+[53.142s] Level 1:colcon.colcon_core.shell:create_environment_hook('spotarm_servo_gamepad', 'ament_prefix_path')
+[53.143s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_servo_gamepad/share/spotarm_servo_gamepad/hook/ament_prefix_path.ps1'
+[53.192s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_servo_gamepad/share/spotarm_servo_gamepad/hook/ament_prefix_path.dsv'
+[53.233s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_servo_gamepad/share/spotarm_servo_gamepad/hook/ament_prefix_path.sh'
+[53.289s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[53.290s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[53.536s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gear_manipulator_moveit_config)
+[53.537s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config' for CMake module files
+[53.539s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/gear_manipulator_moveit_config' returned '0': CMAKE_PREFIX_PATH=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector:/opt/ros/humble /usr/bin/cmake --install /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/gear_manipulator_moveit_config
+[53.794s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config' for CMake config files
+[54.060s] Level 1:colcon.colcon_core.shell:create_environment_hook('gear_manipulator_moveit_config', 'cmake_prefix_path')
+[54.061s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config/share/gear_manipulator_moveit_config/hook/cmake_prefix_path.ps1'
+[54.091s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config/share/gear_manipulator_moveit_config/hook/cmake_prefix_path.dsv'
+[54.135s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config/share/gear_manipulator_moveit_config/hook/cmake_prefix_path.sh'
+[54.182s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config/bin'
+[54.186s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config/lib/pkgconfig/gear_manipulator_moveit_config.pc'
+[54.189s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config/lib/python3.10/site-packages'
+[54.193s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config/bin'
+[54.197s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config/share/gear_manipulator_moveit_config/package.ps1'
+[54.241s] INFO:colcon.colcon_core.shell:Creating package descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config/share/gear_manipulator_moveit_config/package.dsv'
+[54.282s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config/share/gear_manipulator_moveit_config/package.sh'
+[54.310s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config/share/gear_manipulator_moveit_config/package.bash'
+[54.338s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config/share/gear_manipulator_moveit_config/package.zsh'
+[54.365s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config/share/colcon-core/packages/gear_manipulator_moveit_config)
+[54.458s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gear_manipulator_moveit_config)
+[54.459s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config' for CMake module files
+[54.761s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config' for CMake config files
+[55.031s] Level 1:colcon.colcon_core.shell:create_environment_hook('gear_manipulator_moveit_config', 'cmake_prefix_path')
+[55.032s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config/share/gear_manipulator_moveit_config/hook/cmake_prefix_path.ps1'
+[55.067s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config/share/gear_manipulator_moveit_config/hook/cmake_prefix_path.dsv'
+[55.103s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config/share/gear_manipulator_moveit_config/hook/cmake_prefix_path.sh'
+[55.135s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config/bin'
+[55.137s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config/lib/pkgconfig/gear_manipulator_moveit_config.pc'
+[55.140s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config/lib/python3.10/site-packages'
+[55.141s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config/bin'
+[55.144s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config/share/gear_manipulator_moveit_config/package.ps1'
+[55.167s] INFO:colcon.colcon_core.shell:Creating package descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config/share/gear_manipulator_moveit_config/package.dsv'
+[55.203s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config/share/gear_manipulator_moveit_config/package.sh'
+[55.236s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config/share/gear_manipulator_moveit_config/package.bash'
+[55.255s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config/share/gear_manipulator_moveit_config/package.zsh'
+[55.296s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config/share/colcon-core/packages/gear_manipulator_moveit_config)
+[55.449s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_bringup': AMENT_PREFIX_PATH=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_moveit_config:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_assembly_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_moveit_config:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector:/opt/ros/humble PYTHONPATH=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_assembly_description:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_assembly_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_bringup -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_bringup
+[56.969s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/spotarm_servo_gamepad'
+[56.970s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[56.971s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[60.082s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/stepper_test' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/stepper_test -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/stepper_test
+[60.118s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/stepper_test': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/stepper_test -- -j16 -l16
+[61.938s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_servo_gamepad': AMENT_PREFIX_PATH=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_moveit_config:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_assembly_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_moveit_config:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector PYTHONPATH=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_servo_gamepad/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_servo_gamepad/lib/python3.10/site-packages:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_assembly_description:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_assembly_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_servo_gamepad/build --no-deps symlink_data
+[66.691s] Level 1:colcon.colcon_core.shell:create_environment_hook('spotarm_servo_gamepad', 'pythonpath_develop')
+[66.692s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_servo_gamepad/share/spotarm_servo_gamepad/hook/pythonpath_develop.ps1'
+[66.694s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_servo_gamepad' returned '0': AMENT_PREFIX_PATH=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_moveit_config:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_assembly_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_moveit_config:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector PYTHONPATH=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_servo_gamepad/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_servo_gamepad/lib/python3.10/site-packages:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_assembly_description:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_assembly_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_servo_gamepad/build --no-deps symlink_data
+[66.735s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_servo_gamepad/share/spotarm_servo_gamepad/hook/pythonpath_develop.dsv'
+[66.772s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_servo_gamepad/share/spotarm_servo_gamepad/hook/pythonpath_develop.sh'
+[66.808s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_servo_gamepad' for CMake module files
+[66.931s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_servo_gamepad' for CMake config files
+[67.168s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_servo_gamepad/lib'
+[67.184s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_servo_gamepad/bin'
+[67.187s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_servo_gamepad/lib/pkgconfig/spotarm_servo_gamepad.pc'
+[67.191s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_servo_gamepad/lib/python3.10/site-packages'
+[67.199s] Level 1:colcon.colcon_core.shell:create_environment_hook('spotarm_servo_gamepad', 'pythonpath')
+[67.200s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_servo_gamepad/share/spotarm_servo_gamepad/hook/pythonpath.ps1'
+[67.236s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_servo_gamepad/share/spotarm_servo_gamepad/hook/pythonpath.dsv'
+[67.268s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_servo_gamepad/share/spotarm_servo_gamepad/hook/pythonpath.sh'
+[67.307s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_servo_gamepad/bin'
+[67.310s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(spotarm_servo_gamepad)
+[67.311s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_servo_gamepad/share/spotarm_servo_gamepad/package.ps1'
+[67.341s] INFO:colcon.colcon_core.shell:Creating package descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_servo_gamepad/share/spotarm_servo_gamepad/package.dsv'
+[67.379s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_servo_gamepad/share/spotarm_servo_gamepad/package.sh'
+[67.417s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_servo_gamepad/share/spotarm_servo_gamepad/package.bash'
+[67.449s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_servo_gamepad/share/spotarm_servo_gamepad/package.zsh'
+[67.484s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_servo_gamepad/share/colcon-core/packages/spotarm_servo_gamepad)
+[68.607s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/stepper_test' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/stepper_test -- -j16 -l16
+[68.659s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/stepper_test': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/stepper_test
+[70.841s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_hardware' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_hardware -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_hardware
+[70.860s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_hardware': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_hardware -- -j16 -l16
+[72.427s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(stepper_test)
+[72.428s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/stepper_test' for CMake module files
+[72.431s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/stepper_test' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/stepper_test
+[72.709s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/stepper_test' for CMake config files
+[72.995s] Level 1:colcon.colcon_core.shell:create_environment_hook('stepper_test', 'cmake_prefix_path')
+[72.996s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/stepper_test/share/stepper_test/hook/cmake_prefix_path.ps1'
+[73.024s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/stepper_test/share/stepper_test/hook/cmake_prefix_path.dsv'
+[73.055s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/stepper_test/share/stepper_test/hook/cmake_prefix_path.sh'
+[73.093s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/stepper_test/lib'
+[73.101s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/stepper_test/bin'
+[73.104s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/stepper_test/lib/pkgconfig/stepper_test.pc'
+[73.107s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/stepper_test/lib/python3.10/site-packages'
+[73.110s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/stepper_test/bin'
+[73.112s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/stepper_test/share/stepper_test/package.ps1'
+[73.137s] INFO:colcon.colcon_core.shell:Creating package descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/stepper_test/share/stepper_test/package.dsv'
+[73.173s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/stepper_test/share/stepper_test/package.sh'
+[73.199s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/stepper_test/share/stepper_test/package.bash'
+[73.230s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/stepper_test/share/stepper_test/package.zsh'
+[73.260s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/stepper_test/share/colcon-core/packages/stepper_test)
+[73.340s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(stepper_test)
+[73.341s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/stepper_test' for CMake module files
+[73.562s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/stepper_test' for CMake config files
+[73.796s] Level 1:colcon.colcon_core.shell:create_environment_hook('stepper_test', 'cmake_prefix_path')
+[73.797s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/stepper_test/share/stepper_test/hook/cmake_prefix_path.ps1'
+[73.829s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/stepper_test/share/stepper_test/hook/cmake_prefix_path.dsv'
+[73.851s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/stepper_test/share/stepper_test/hook/cmake_prefix_path.sh'
+[73.896s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/stepper_test/lib'
+[73.909s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/stepper_test/bin'
+[73.913s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/stepper_test/lib/pkgconfig/stepper_test.pc'
+[73.918s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/stepper_test/lib/python3.10/site-packages'
+[73.924s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/stepper_test/bin'
+[73.927s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/stepper_test/share/stepper_test/package.ps1'
+[73.959s] INFO:colcon.colcon_core.shell:Creating package descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/stepper_test/share/stepper_test/package.dsv'
+[73.980s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/stepper_test/share/stepper_test/package.sh'
+[73.994s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/stepper_test/share/stepper_test/package.bash'
+[74.013s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/stepper_test/share/stepper_test/package.zsh'
+[74.028s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/stepper_test/share/colcon-core/packages/stepper_test)
+[78.761s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_bringup' returned '0': AMENT_PREFIX_PATH=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_moveit_config:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_assembly_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_moveit_config:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector:/opt/ros/humble PYTHONPATH=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_assembly_description:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_assembly_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_bringup -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_bringup
+[78.790s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_bringup': AMENT_PREFIX_PATH=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_moveit_config:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_assembly_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_moveit_config:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector:/opt/ros/humble PYTHONPATH=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_assembly_description:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_assembly_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --build /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_bringup -- -j16 -l16
+[79.448s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_bringup' returned '0': AMENT_PREFIX_PATH=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_moveit_config:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_assembly_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_moveit_config:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector:/opt/ros/humble PYTHONPATH=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_assembly_description:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_assembly_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --build /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_bringup -- -j16 -l16
+[79.475s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_bringup': AMENT_PREFIX_PATH=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_moveit_config:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_assembly_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_moveit_config:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector:/opt/ros/humble PYTHONPATH=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_assembly_description:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_assembly_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --install /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_bringup
+[79.534s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_hardware' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_hardware -- -j16 -l16
+[79.560s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_hardware': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_hardware
+[80.942s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot_bringup)
+[80.943s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_bringup' for CMake module files
+[80.944s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_bringup' returned '0': AMENT_PREFIX_PATH=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_moveit_config:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_assembly_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_moveit_config:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/gear_manipulator_moveit_config:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/my_robot:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/end_effector:/opt/ros/humble PYTHONPATH=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_assembly_description:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_assembly_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --install /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_bringup
+[81.053s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_bringup' for CMake config files
+[81.146s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_bringup', 'cmake_prefix_path')
+[81.147s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_bringup/share/robot_bringup/hook/cmake_prefix_path.ps1'
+[81.161s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_bringup/share/robot_bringup/hook/cmake_prefix_path.dsv'
+[81.177s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_bringup/share/robot_bringup/hook/cmake_prefix_path.sh'
+[81.197s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_bringup/bin'
+[81.198s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_bringup/lib/pkgconfig/robot_bringup.pc'
+[81.199s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_bringup/lib/python3.10/site-packages'
+[81.201s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_bringup/bin'
+[81.202s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_bringup/share/robot_bringup/package.ps1'
+[81.216s] INFO:colcon.colcon_core.shell:Creating package descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_bringup/share/robot_bringup/package.dsv'
+[81.232s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_bringup/share/robot_bringup/package.sh'
+[81.245s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_bringup/share/robot_bringup/package.bash'
+[81.258s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_bringup/share/robot_bringup/package.zsh'
+[81.270s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_bringup/share/colcon-core/packages/robot_bringup)
+[81.302s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot_bringup)
+[81.303s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_bringup' for CMake module files
+[81.432s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_bringup' for CMake config files
+[81.538s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_bringup', 'cmake_prefix_path')
+[81.539s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_bringup/share/robot_bringup/hook/cmake_prefix_path.ps1'
+[81.554s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_bringup/share/robot_bringup/hook/cmake_prefix_path.dsv'
+[81.569s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_bringup/share/robot_bringup/hook/cmake_prefix_path.sh'
+[81.590s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_bringup/bin'
+[81.591s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_bringup/lib/pkgconfig/robot_bringup.pc'
+[81.593s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_bringup/lib/python3.10/site-packages'
+[81.594s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_bringup/bin'
+[81.595s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_bringup/share/robot_bringup/package.ps1'
+[81.610s] INFO:colcon.colcon_core.shell:Creating package descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_bringup/share/robot_bringup/package.dsv'
+[81.628s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_bringup/share/robot_bringup/package.sh'
+[81.645s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_bringup/share/robot_bringup/package.bash'
+[81.656s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_bringup/share/robot_bringup/package.zsh'
+[81.675s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_bringup/share/colcon-core/packages/robot_bringup)
+[81.687s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot_hardware)
+[81.687s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_hardware' for CMake module files
+[81.698s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_hardware' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_hardware
+[81.847s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_hardware' for CMake config files
+[82.016s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_hardware', 'cmake_prefix_path')
+[82.017s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_hardware/share/robot_hardware/hook/cmake_prefix_path.ps1'
+[82.052s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_hardware/share/robot_hardware/hook/cmake_prefix_path.dsv'
+[82.078s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_hardware/share/robot_hardware/hook/cmake_prefix_path.sh'
+[82.116s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_hardware/lib'
+[82.126s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_hardware', 'ld_library_path_lib')
+[82.127s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_hardware/share/robot_hardware/hook/ld_library_path_lib.ps1'
+[82.162s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_hardware/share/robot_hardware/hook/ld_library_path_lib.dsv'
+[82.193s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_hardware/share/robot_hardware/hook/ld_library_path_lib.sh'
+[82.213s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_hardware/bin'
+[82.214s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_hardware/lib/pkgconfig/robot_hardware.pc'
+[82.216s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_hardware/lib/python3.10/site-packages'
+[82.219s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_hardware/bin'
+[82.220s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_hardware/share/robot_hardware/package.ps1'
+[82.234s] INFO:colcon.colcon_core.shell:Creating package descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_hardware/share/robot_hardware/package.dsv'
+[82.254s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_hardware/share/robot_hardware/package.sh'
+[82.274s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_hardware/share/robot_hardware/package.bash'
+[82.308s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_hardware/share/robot_hardware/package.zsh'
+[82.334s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_hardware/share/colcon-core/packages/robot_hardware)
+[82.377s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot_hardware)
+[82.378s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_hardware' for CMake module files
+[82.515s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_hardware' for CMake config files
+[82.648s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_hardware', 'cmake_prefix_path')
+[82.649s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_hardware/share/robot_hardware/hook/cmake_prefix_path.ps1'
+[82.665s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_hardware/share/robot_hardware/hook/cmake_prefix_path.dsv'
+[82.683s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_hardware/share/robot_hardware/hook/cmake_prefix_path.sh'
+[82.708s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_hardware/lib'
+[82.713s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_hardware', 'ld_library_path_lib')
+[82.714s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_hardware/share/robot_hardware/hook/ld_library_path_lib.ps1'
+[82.729s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_hardware/share/robot_hardware/hook/ld_library_path_lib.dsv'
+[82.745s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_hardware/share/robot_hardware/hook/ld_library_path_lib.sh'
+[82.761s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_hardware/bin'
+[82.762s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_hardware/lib/pkgconfig/robot_hardware.pc'
+[82.764s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_hardware/lib/python3.10/site-packages'
+[82.766s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_hardware/bin'
+[82.768s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_hardware/share/robot_hardware/package.ps1'
+[82.781s] INFO:colcon.colcon_core.shell:Creating package descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_hardware/share/robot_hardware/package.dsv'
+[82.796s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_hardware/share/robot_hardware/package.sh'
+[82.810s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_hardware/share/robot_hardware/package.bash'
+[82.824s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_hardware/share/robot_hardware/package.zsh'
+[82.837s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_hardware/share/colcon-core/packages/robot_hardware)
+[91.083s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_commander' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_commander -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_commander
+[91.091s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_commander': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_commander -- -j16 -l16
+[93.652s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_servoing' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_servoing -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_servoing
+[93.665s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_servoing': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_servoing -- -j16 -l16
+[108.903s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_servoing' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_servoing -- -j16 -l16
+[108.924s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_servoing': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_servoing
+[112.424s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot_servoing)
+[112.425s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_servoing' for CMake module files
+[112.426s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_servoing' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_servoing
+[111.936s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_servoing' for CMake config files
+[112.029s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_servoing', 'cmake_prefix_path')
+[112.030s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_servoing/share/robot_servoing/hook/cmake_prefix_path.ps1'
+[112.054s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_servoing/share/robot_servoing/hook/cmake_prefix_path.dsv'
+[112.067s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_servoing/share/robot_servoing/hook/cmake_prefix_path.sh'
+[112.083s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_servoing/lib'
+[112.087s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_servoing', 'ld_library_path_lib')
+[112.088s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_servoing/share/robot_servoing/hook/ld_library_path_lib.ps1'
+[112.102s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_servoing/share/robot_servoing/hook/ld_library_path_lib.dsv'
+[112.114s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_servoing/share/robot_servoing/hook/ld_library_path_lib.sh'
+[112.127s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_servoing/bin'
+[112.128s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_servoing/lib/pkgconfig/robot_servoing.pc'
+[112.130s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_servoing/lib/python3.10/site-packages'
+[112.133s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_servoing/bin'
+[112.134s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_servoing/share/robot_servoing/package.ps1'
+[112.146s] INFO:colcon.colcon_core.shell:Creating package descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_servoing/share/robot_servoing/package.dsv'
+[112.163s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_servoing/share/robot_servoing/package.sh'
+[112.174s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_servoing/share/robot_servoing/package.bash'
+[112.186s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_servoing/share/robot_servoing/package.zsh'
+[112.199s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_servoing/share/colcon-core/packages/robot_servoing)
+[112.231s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot_servoing)
+[112.232s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_servoing' for CMake module files
+[112.347s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_servoing' for CMake config files
+[112.523s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_servoing', 'cmake_prefix_path')
+[112.524s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_servoing/share/robot_servoing/hook/cmake_prefix_path.ps1'
+[112.548s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_servoing/share/robot_servoing/hook/cmake_prefix_path.dsv'
+[112.572s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_servoing/share/robot_servoing/hook/cmake_prefix_path.sh'
+[112.602s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_servoing/lib'
+[112.610s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_servoing', 'ld_library_path_lib')
+[112.610s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_servoing/share/robot_servoing/hook/ld_library_path_lib.ps1'
+[112.634s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_servoing/share/robot_servoing/hook/ld_library_path_lib.dsv'
+[112.659s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_servoing/share/robot_servoing/hook/ld_library_path_lib.sh'
+[112.684s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_servoing/bin'
+[112.686s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_servoing/lib/pkgconfig/robot_servoing.pc'
+[112.689s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_servoing/lib/python3.10/site-packages'
+[112.693s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_servoing/bin'
+[112.696s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_servoing/share/robot_servoing/package.ps1'
+[112.716s] INFO:colcon.colcon_core.shell:Creating package descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_servoing/share/robot_servoing/package.dsv'
+[112.737s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_servoing/share/robot_servoing/package.sh'
+[112.757s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_servoing/share/robot_servoing/package.bash'
+[112.782s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_servoing/share/robot_servoing/package.zsh'
+[112.804s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_servoing/share/colcon-core/packages/robot_servoing)
+[120.014s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_commander' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_commander -- -j16 -l16
+[120.032s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_commander': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_commander
+[122.236s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot_commander)
+[122.237s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_commander' for CMake module files
+[122.238s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_commander' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_commander
+[122.321s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_commander' for CMake config files
+[122.380s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_commander', 'cmake_prefix_path')
+[122.381s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_commander/share/robot_commander/hook/cmake_prefix_path.ps1'
+[122.391s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_commander/share/robot_commander/hook/cmake_prefix_path.dsv'
+[122.403s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_commander/share/robot_commander/hook/cmake_prefix_path.sh'
+[122.422s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_commander/lib'
+[122.425s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_commander/bin'
+[122.426s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_commander/lib/pkgconfig/robot_commander.pc'
+[122.428s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_commander/lib/python3.10/site-packages'
+[122.429s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_commander/bin'
+[122.431s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_commander/share/robot_commander/package.ps1'
+[122.438s] INFO:colcon.colcon_core.shell:Creating package descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_commander/share/robot_commander/package.dsv'
+[122.449s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_commander/share/robot_commander/package.sh'
+[122.460s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_commander/share/robot_commander/package.bash'
+[122.470s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_commander/share/robot_commander/package.zsh'
+[122.481s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_commander/share/colcon-core/packages/robot_commander)
+[122.532s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot_commander)
+[122.532s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_commander' for CMake module files
+[122.765s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_commander' for CMake config files
+[122.832s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_commander', 'cmake_prefix_path')
+[122.833s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_commander/share/robot_commander/hook/cmake_prefix_path.ps1'
+[122.843s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_commander/share/robot_commander/hook/cmake_prefix_path.dsv'
+[122.856s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_commander/share/robot_commander/hook/cmake_prefix_path.sh'
+[122.868s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_commander/lib'
+[122.871s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_commander/bin'
+[122.872s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_commander/lib/pkgconfig/robot_commander.pc'
+[122.873s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_commander/lib/python3.10/site-packages'
+[122.875s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_commander/bin'
+[122.876s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_commander/share/robot_commander/package.ps1'
+[122.883s] INFO:colcon.colcon_core.shell:Creating package descriptor '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_commander/share/robot_commander/package.dsv'
+[122.892s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_commander/share/robot_commander/package.sh'
+[122.901s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_commander/share/robot_commander/package.bash'
+[122.923s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_commander/share/robot_commander/package.zsh'
+[122.946s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_commander/share/colcon-core/packages/robot_commander)
+[122.956s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[122.956s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[122.957s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[122.957s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[123.094s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[123.094s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[123.095s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[123.095s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[123.095s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.FileNotFound: Failed to connect to socket /run/user/1000/bus: No such file or directory
+[123.096s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[123.096s] INFO:colcon.colcon_core.shell:Creating prefix script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/local_setup.ps1'
+[123.104s] INFO:colcon.colcon_core.shell:Creating prefix util module '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/_local_setup_util_ps1.py'
+[123.111s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/setup.ps1'
+[123.155s] INFO:colcon.colcon_core.shell:Creating prefix script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/local_setup.sh'
+[123.160s] INFO:colcon.colcon_core.shell:Creating prefix util module '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/_local_setup_util_sh.py'
+[123.164s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/setup.sh'
+[123.198s] INFO:colcon.colcon_core.shell:Creating prefix script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/local_setup.bash'
+[123.203s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/setup.bash'
+[123.236s] INFO:colcon.colcon_core.shell:Creating prefix script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/local_setup.zsh'
+[123.242s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/setup.zsh'

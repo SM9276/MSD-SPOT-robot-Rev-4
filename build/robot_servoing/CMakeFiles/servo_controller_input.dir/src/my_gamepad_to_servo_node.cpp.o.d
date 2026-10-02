@@ -1,5 +1,5 @@
 CMakeFiles/servo_controller_input.dir/src/my_gamepad_to_servo_node.cpp.o: \
- /home/msd/MSD2/REV4/src/robot_servoing/src/my_gamepad_to_servo_node.cpp \
+ /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_servoing/src/my_gamepad_to_servo_node.cpp \
  /usr/include/stdc-predef.h \
  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/joy.hpp \
  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joy__struct.hpp \

@@ -1,0 +1,28 @@
+[5.543s] Invoking command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_gamepad': PYTHONPATH=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_gamepad/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_gamepad/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_gamepad/build --no-deps symlink_data
+[8.075s] running develop
+[8.691s] running egg_info
+[8.695s] creating spotarm_gamepad.egg-info
+[8.701s] writing spotarm_gamepad.egg-info/PKG-INFO
+[8.724s] writing dependency_links to spotarm_gamepad.egg-info/dependency_links.txt
+[8.737s] writing entry points to spotarm_gamepad.egg-info/entry_points.txt
+[8.750s] writing requirements to spotarm_gamepad.egg-info/requires.txt
+[8.758s] writing top-level names to spotarm_gamepad.egg-info/top_level.txt
+[8.772s] writing manifest file 'spotarm_gamepad.egg-info/SOURCES.txt'
+[8.982s] reading manifest file 'spotarm_gamepad.egg-info/SOURCES.txt'
+[9.185s] writing manifest file 'spotarm_gamepad.egg-info/SOURCES.txt'
+[9.229s] running build_ext
+[9.233s] Creating /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_gamepad/lib/python3.10/site-packages/spotarm-gamepad.egg-link (link to .)
+[9.313s] Installing gamepad script to /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_gamepad/lib/spotarm_gamepad
+[9.369s] 
+[9.371s] Installed /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_gamepad
+[9.380s] running symlink_data
+[9.403s] creating /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_gamepad/share
+[9.411s] creating /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_gamepad/share/ament_index
+[9.421s] creating /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_gamepad/share/ament_index/resource_index
+[9.425s] creating /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_gamepad/share/ament_index/resource_index/packages
+[9.479s] symbolically linking /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_gamepad/resource/spotarm_gamepad -> /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_gamepad/share/ament_index/resource_index/packages
+[9.510s] creating /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_gamepad/share/spotarm_gamepad
+[9.555s] symbolically linking /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_gamepad/package.xml -> /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_gamepad/share/spotarm_gamepad
+[9.594s] creating /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_gamepad/share/spotarm_gamepad/launch
+[9.633s] symbolically linking /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_gamepad/launch/gamepad.launch.py -> /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_gamepad/share/spotarm_gamepad/launch
+[9.715s] Invoked command in '/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_gamepad' returned '0': PYTHONPATH=/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_gamepad/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/spotarm_gamepad/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_gamepad/build --no-deps symlink_data

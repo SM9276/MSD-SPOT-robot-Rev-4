@@ -1,1 +1,1 @@
-/home/msd/MSD2/REV4/build/spotarm_assembly_description/launch/display.launch.py
+/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/spotarm_assembly_description/launch/display.launch.py

@@ -1,4 +1,0 @@
-[31mCMake Error at CMakeLists.txt:14 (message):
-  modbus/modbus.h not found.  Please install libmodbus development headers.
-
-[0m

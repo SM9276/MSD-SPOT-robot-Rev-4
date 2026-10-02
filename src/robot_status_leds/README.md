@@ -51,14 +51,14 @@ NOTE: Package was left mostly untested due to time constraints.
       -p brightness:=0.4 \
       -p moving_color:=F8F000 \
       -p static_color:=00F8F0 \
-      -p blinking_color:=F000F8
+      
    ```
 
    Example with parameters for Pi testing:
    ```bash 
     sudo bash -c '
     source /opt/ros/humble/setup.bash
-    source /home/pi/msd_robot_arm_rev4-main/install/setup.bash
+    source /home/pi/MSD-SPOT-robot-Rev-4-main/install/setup.bash
 
     ros2 run robot_status_leds led_state_node --ros-args \
       -p led_backend:=rpi_neopixel \
@@ -66,8 +66,7 @@ NOTE: Package was left mostly untested due to time constraints.
       -p led_pin:=18 \
       -p brightness:=0.4 \
       -p moving_color:=F8F000 \
-      -p static_color:=00F8F0 \
-      -p blinking_color:=F000F8
+      -p static_color:=00F8F0 
     '
    ```
  
@@ -80,7 +79,7 @@ NOTE: Package was left mostly untested due to time constraints.
        ```bash 
     sudo bash -c '
     source /opt/ros/humble/setup.bash
-    source /home/pi/MSD-SPOT-robot-Rev-4/install/setup.bash
+    source /home/pi/MSD-SPOT-robot-Rev-4-main/install/setup.bash
     ros2 topic pub /joint_states sensor_msgs/msg/JointState   "{velocity: [1.0]}" -r 1
     '
     ```

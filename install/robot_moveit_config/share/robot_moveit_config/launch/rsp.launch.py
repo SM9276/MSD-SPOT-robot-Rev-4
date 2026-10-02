@@ -1,1 +1,1 @@
-/home/msd/MSD2/REV4/src/robot_moveit_config/launch/rsp.launch.py
+/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_moveit_config/launch/rsp.launch.py

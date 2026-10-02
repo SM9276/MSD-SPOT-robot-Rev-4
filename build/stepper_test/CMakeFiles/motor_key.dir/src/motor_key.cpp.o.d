@@ -1,5 +1,5 @@
 CMakeFiles/motor_key.dir/src/motor_key.cpp.o: \
- /home/msd/MSD2/REV4/src/stepper_test/src/motor_key.cpp \
+ /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/stepper_test/src/motor_key.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -164,7 +164,7 @@ CMakeFiles/motor_key.dir/src/motor_key.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/termios-tcflow.h \
  /usr/include/x86_64-linux-gnu/bits/termios-misc.h \
  /usr/include/x86_64-linux-gnu/sys/ttydefaults.h \
- /home/msd/MSD2/REV4/src/stepper_test/include/stepper_test/ICLStepper.h \
+ /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/stepper_test/include/stepper_test/ICLStepper.h \
  /usr/include/modbus/modbus.h /usr/include/x86_64-linux-gnu/sys/param.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
