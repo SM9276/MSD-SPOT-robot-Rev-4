@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 running develop
 running egg_info
 writing robot_status_leds.egg-info/PKG-INFO
@@ -20,6 +21,8 @@ symbolically linking /home/msd/MSD2/REV4/build/robot_status_leds/package.xml -> 
 =======
 =======
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 running develop
 running egg_info
 writing robot_status_leds.egg-info/PKG-INFO
@@ -38,6 +41,9 @@ running symlink_data
 symbolically linking /home/msd/MSD2/REV4/build/robot_status_leds/resource/robot_status_leds -> /home/msd/MSD2/REV4/install/robot_status_leds/share/ament_index/resource_index/packages
 symbolically linking /home/msd/MSD2/REV4/build/robot_status_leds/package.xml -> /home/msd/MSD2/REV4/install/robot_status_leds/share/robot_status_leds
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 =======
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26

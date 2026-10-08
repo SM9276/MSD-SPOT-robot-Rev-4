@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<<< HEAD:build/stepper_test/.cmake/api/v1/reply/target-motor_key-a526e3b847f3509867ee.json
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
@@ -547,14 +548,20 @@
 ========
 =======
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 {
 	"artifacts" : 
 	[
 		{
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"path" : "motor_key"
 =======
 			"path" : "librobot_hardware_arm.so"
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
+			"path" : "motor_key"
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 		}
 	],
@@ -564,6 +571,7 @@
 		"commands" : 
 		[
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"add_executable",
 =======
 <<<<<<<< HEAD:build/robot_hardware/.cmake/api/v1/reply/target-robot_hardware_arm-78201afd5a0dc7597b5f.json
@@ -571,6 +579,9 @@
 ========
 			"add_executable",
 >>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/stepper_test/.cmake/api/v1/reply/target-motor_key-86707de4191344c2074e.json
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
+			"add_executable",
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 			"target_link_libraries",
 			"ament_target_dependencies",
@@ -591,10 +602,14 @@
 				"command" : 0,
 				"file" : 0,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 				"line" : 12,
 				"parent" : 0
 			},
 			{
+<<<<<<< HEAD
 =======
 				"line" : 19,
 				"parent" : 0
@@ -615,6 +630,8 @@
 			{
 ========
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 				"command" : 2,
 				"file" : 0,
 				"line" : 14,
@@ -622,8 +639,11 @@
 			},
 			{
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/stepper_test/.cmake/api/v1/reply/target-motor_key-86707de4191344c2074e.json
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 				"command" : 1,
 				"file" : 1,
@@ -632,9 +652,12 @@
 			},
 			{
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<<< HEAD:build/robot_hardware/.cmake/api/v1/reply/target-robot_hardware_arm-78201afd5a0dc7597b5f.json
 ========
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 				"command" : 1,
 				"file" : 0,
@@ -643,8 +666,11 @@
 			},
 			{
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/stepper_test/.cmake/api/v1/reply/target-motor_key-86707de4191344c2074e.json
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 				"command" : 3,
 				"file" : 0,
@@ -655,9 +681,13 @@
 				"command" : 4,
 				"file" : 0,
 <<<<<<< HEAD
+<<<<<<< HEAD
 				"line" : 13,
 =======
 				"line" : 24,
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
+				"line" : 13,
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 				"parent" : 0
 			},
@@ -676,6 +706,7 @@
 			[
 				{
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<<< HEAD:build/robot_hardware/.cmake/api/v1/reply/target-robot_hardware_arm-78201afd5a0dc7597b5f.json
 					"fragment" : "-fPIC"
@@ -683,6 +714,8 @@
 				{
 ========
 >>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/stepper_test/.cmake/api/v1/reply/target-motor_key-86707de4191344c2074e.json
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 					"backtrace" : 5,
 					"fragment" : "-Wall"
@@ -710,10 +743,13 @@
 					"backtrace" : 3,
 					"define" : "RCUTILS_ENABLE_FAULT_INJECTION"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 				},
 				{
 					"define" : "robot_hardware_arm_EXPORTS"
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 				}
 			],
@@ -721,6 +757,7 @@
 			[
 				{
 					"backtrace" : 6,
+<<<<<<< HEAD
 <<<<<<< HEAD
 					"path" : "/home/msd/MSD2/REV4/src/stepper_test/include"
 				},
@@ -740,11 +777,17 @@
 				{
 >>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/stepper_test/.cmake/api/v1/reply/target-motor_key-86707de4191344c2074e.json
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
+					"path" : "/home/msd/MSD2/REV4/src/stepper_test/include"
+				},
+				{
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 					"backtrace" : 7,
 					"isSystem" : true,
 					"path" : "/opt/ros/humble/include/rclcpp"
 				},
 				{
+<<<<<<< HEAD
 <<<<<<< HEAD
 					"backtrace" : 3,
 =======
@@ -768,6 +811,9 @@
 ========
 					"backtrace" : 3,
 >>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/stepper_test/.cmake/api/v1/reply/target-motor_key-86707de4191344c2074e.json
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
+					"backtrace" : 3,
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 					"isSystem" : true,
 					"path" : "/opt/ros/humble/include/ament_index_cpp"
@@ -887,6 +933,7 @@
 					"isSystem" : true,
 					"path" : "/opt/ros/humble/include/rosidl_typesupport_c"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 				},
 				{
@@ -939,6 +986,8 @@
 					"isSystem" : true,
 					"path" : "/opt/ros/humble/include/trajectory_msgs"
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 				}
 			],
 			"language" : "CXX",
@@ -950,6 +999,7 @@
 		}
 	],
 <<<<<<< HEAD
+<<<<<<< HEAD
 	"id" : "motor_key::@6890427a1f51a3e7e1df",
 =======
 <<<<<<<< HEAD:build/robot_hardware/.cmake/api/v1/reply/target-robot_hardware_arm-78201afd5a0dc7597b5f.json
@@ -957,6 +1007,9 @@
 ========
 	"id" : "motor_key::@6890427a1f51a3e7e1df",
 >>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/stepper_test/.cmake/api/v1/reply/target-motor_key-86707de4191344c2074e.json
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
+	"id" : "motor_key::@6890427a1f51a3e7e1df",
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 	"link" : 
 	{
@@ -968,6 +1021,7 @@
 			},
 			{
 				"fragment" : "-Wl,-rpath,/opt/ros/humble/lib",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<<< HEAD:build/robot_hardware/.cmake/api/v1/reply/target-robot_hardware_arm-78201afd5a0dc7597b5f.json
@@ -999,6 +1053,8 @@
 ========
 >>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/stepper_test/.cmake/api/v1/reply/target-motor_key-86707de4191344c2074e.json
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 				"role" : "libraries"
 			},
 			{
@@ -1008,9 +1064,12 @@
 			},
 			{
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<<< HEAD:build/robot_hardware/.cmake/api/v1/reply/target-robot_hardware_arm-78201afd5a0dc7597b5f.json
 ========
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 				"backtrace" : 4,
 				"fragment" : "-lmodbus",
@@ -1018,13 +1077,17 @@
 			},
 			{
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/stepper_test/.cmake/api/v1/reply/target-motor_key-86707de4191344c2074e.json
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 				"fragment" : "/opt/ros/humble/lib/liblibstatistics_collector.so",
 				"role" : "libraries"
 			},
 			{
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 				"fragment" : "/opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_fastrtps_c.so",
@@ -1096,11 +1159,16 @@
 			},
 			{
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 				"fragment" : "/opt/ros/humble/lib/librcl.so",
 				"role" : "libraries"
 			},
 			{
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 				"fragment" : "/opt/ros/humble/lib/librmw_implementation.so",
 				"role" : "libraries"
 			},
@@ -1117,6 +1185,9 @@
 				"role" : "libraries"
 			},
 			{
+<<<<<<< HEAD
+=======
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 =======
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 				"fragment" : "/opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_fastrtps_c.so",
@@ -1160,6 +1231,9 @@
 			},
 			{
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 				"fragment" : "/opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_fastrtps_c.so",
 				"role" : "libraries"
 			},
@@ -1193,6 +1267,7 @@
 			},
 			{
 				"fragment" : "/opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_fastrtps_c.so",
+<<<<<<< HEAD
 =======
 				"fragment" : "/opt/ros/humble/lib/librmw_implementation.so",
 				"role" : "libraries"
@@ -1288,6 +1363,8 @@
 			{
 				"fragment" : "/opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_fastrtps_c.so",
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 				"role" : "libraries"
 			},
 			{
@@ -1299,6 +1376,7 @@
 				"role" : "libraries"
 			},
 			{
+<<<<<<< HEAD
 <<<<<<< HEAD
 				"fragment" : "/opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_fastrtps_cpp.so",
 =======
@@ -1328,6 +1406,9 @@
 			{
 				"fragment" : "/opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_fastrtps_cpp.so",
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
+				"fragment" : "/opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_fastrtps_cpp.so",
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 				"role" : "libraries"
 			},
 			{
@@ -1347,6 +1428,7 @@
 				"role" : "libraries"
 			},
 			{
+<<<<<<< HEAD
 <<<<<<< HEAD
 				"fragment" : "/opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_introspection_c.so",
 =======
@@ -1376,6 +1458,9 @@
 			{
 				"fragment" : "/opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_introspection_c.so",
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
+				"fragment" : "/opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_introspection_c.so",
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 				"role" : "libraries"
 			},
 			{
@@ -1383,6 +1468,7 @@
 				"role" : "libraries"
 			},
 			{
+<<<<<<< HEAD
 <<<<<<< HEAD
 				"fragment" : "/opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_introspection_cpp.so",
 =======
@@ -1412,6 +1498,9 @@
 			{
 				"fragment" : "/opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_introspection_cpp.so",
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
+				"fragment" : "/opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_introspection_cpp.so",
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 				"role" : "libraries"
 			},
 			{
@@ -1427,6 +1516,7 @@
 				"role" : "libraries"
 			},
 			{
+<<<<<<< HEAD
 <<<<<<< HEAD
 				"fragment" : "/opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_cpp.so",
 =======
@@ -1456,6 +1546,9 @@
 			{
 				"fragment" : "/opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_cpp.so",
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
+				"fragment" : "/opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_cpp.so",
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 				"role" : "libraries"
 			},
 			{
@@ -1467,6 +1560,7 @@
 				"role" : "libraries"
 			},
 			{
+<<<<<<< HEAD
 <<<<<<< HEAD
 				"fragment" : "/opt/ros/humble/lib/libstatistics_msgs__rosidl_generator_py.so",
 =======
@@ -1544,6 +1638,9 @@
 			{
 				"fragment" : "/opt/ros/humble/lib/libstd_msgs__rosidl_generator_py.so",
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
+				"fragment" : "/opt/ros/humble/lib/libstatistics_msgs__rosidl_generator_py.so",
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 				"role" : "libraries"
 			},
 			{
@@ -1551,6 +1648,7 @@
 				"role" : "libraries"
 			},
 			{
+<<<<<<< HEAD
 <<<<<<< HEAD
 				"fragment" : "/opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_c.so",
 =======
@@ -1560,6 +1658,9 @@
 			{
 				"fragment" : "/opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_c.so",
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
+				"fragment" : "/opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_c.so",
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 				"role" : "libraries"
 			},
 			{
@@ -1568,6 +1669,9 @@
 			},
 			{
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 				"fragment" : "/opt/ros/humble/lib/libstatistics_msgs__rosidl_generator_c.so",
 				"role" : "libraries"
 			},
@@ -1576,6 +1680,9 @@
 				"role" : "libraries"
 			},
 			{
+<<<<<<< HEAD
+=======
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 =======
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 				"fragment" : "/opt/ros/humble/lib/librosidl_typesupport_c.so",
@@ -1587,6 +1694,7 @@
 			},
 			{
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 				"fragment" : "/opt/ros/humble/lib/libstd_msgs__rosidl_generator_c.so",
 				"role" : "libraries"
@@ -1596,6 +1704,8 @@
 				"role" : "libraries"
 			},
 			{
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 				"fragment" : "/opt/ros/humble/lib/librosidl_runtime_c.so",
 				"role" : "libraries"
@@ -1612,6 +1722,9 @@
 				"fragment" : "-latomic",
 				"role" : "libraries"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 			},
 			{
 				"fragment" : "/usr/lib/x86_64-linux-gnu/libpython3.10.so",
@@ -1620,6 +1733,9 @@
 			{
 				"fragment" : "/opt/ros/humble/lib/libtracetools.so",
 				"role" : "libraries"
+<<<<<<< HEAD
+=======
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 =======
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 			}
@@ -1627,11 +1743,16 @@
 		"language" : "CXX"
 	},
 <<<<<<< HEAD
+<<<<<<< HEAD
 	"name" : "motor_key",
 	"nameOnDisk" : "motor_key",
 =======
 	"name" : "robot_hardware_arm",
 	"nameOnDisk" : "librobot_hardware_arm.so",
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
+	"name" : "motor_key",
+	"nameOnDisk" : "motor_key",
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 	"paths" : 
 	{
@@ -1655,9 +1776,13 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"path" : "src/motor_key.cpp",
 =======
 			"path" : "src/arm_hardware_interface.cpp",
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
+			"path" : "src/motor_key.cpp",
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 			"sourceGroupIndex" : 0
 		},
@@ -1669,11 +1794,16 @@
 		}
 	],
 <<<<<<< HEAD
+<<<<<<< HEAD
 	"type" : "EXECUTABLE"
 }
 >>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/stepper_test/.cmake/api/v1/reply/target-motor_key-86707de4191344c2074e.json
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 =======
 	"type" : "SHARED_LIBRARY"
+}
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
+	"type" : "EXECUTABLE"
 }
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26

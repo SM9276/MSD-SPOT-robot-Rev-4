@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # generated from
 # ament_cmake_core/cmake/symlink_install/ament_cmake_symlink_install.cmake.in
 
@@ -457,6 +458,8 @@ ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/my_robot" FILES "/hom
 =======
 =======
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 # generated from
 # ament_cmake_core/cmake/symlink_install/ament_cmake_symlink_install.cmake.in
 
@@ -819,6 +822,9 @@ ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/my_robot" FILES "/hom
 # install(FILES "/home/msd/MSD2/REV4/src/my_robot/package.xml" "DESTINATION" "share/my_robot")
 ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/my_robot" FILES "/home/msd/MSD2/REV4/src/my_robot/package.xml" "DESTINATION" "share/my_robot")
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 =======
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<<< HEAD:build/gear_manipulator_moveit_config/.cmake/api/v1/reply/codemodel-v2-101ce9ceb3bf02a278a2.json
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
@@ -102,6 +103,8 @@
 =======
 ========
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 {
 	"configurations" : 
 	[
@@ -112,6 +115,7 @@
 					"build" : ".",
 					"hasInstallRule" : true,
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:build/robot_bringup/.cmake/api/v1/reply/codemodel-v2-0be09ea2612883f00e6a.json
 					"jsonFile" : "directory-.-77ed4d496647ecd10369.json",
 ========
@@ -119,6 +123,17 @@
 >>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/gear_manipulator_moveit_config/.cmake/api/v1/reply/codemodel-v2-570391f3396c1dad808e.json
 =======
 					"jsonFile" : "directory-.-7d93982118d60ad7cbe8.json",
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
+<<<<<<<< HEAD:build/end_effector/.cmake/api/v1/reply/codemodel-v2-4ae53f327ab3cface264.json
+<<<<<<<< HEAD:build/end_effector/.cmake/api/v1/reply/codemodel-v2-4ae53f327ab3cface264.json
+					"jsonFile" : "directory-.-501454e2219e6a3f4ef4.json",
+========
+					"jsonFile" : "directory-.-d294de4d522d4b11b8b3.json",
+>>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/my_robot/.cmake/api/v1/reply/codemodel-v2-fc00d6427c248379d835.json
+========
+					"jsonFile" : "directory-.-7d93982118d60ad7cbe8.json",
+>>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/gear_manipulator_moveit_config/.cmake/api/v1/reply/codemodel-v2-570391f3396c1dad808e.json
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 					"minimumCMakeVersion" : 
 					{
@@ -142,9 +157,13 @@
 						0
 					],
 <<<<<<< HEAD
+<<<<<<< HEAD
 					"name" : "robot_bringup",
 =======
 					"name" : "gear_manipulator_moveit_config",
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
+					"name" : "end_effector",
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 					"targetIndexes" : 
 					[
@@ -158,6 +177,7 @@
 				{
 					"directoryIndex" : 0,
 <<<<<<< HEAD
+<<<<<<< HEAD
 					"id" : "robot_bringup_uninstall::@6890427a1f51a3e7e1df",
 					"jsonFile" : "target-robot_bringup_uninstall-cc1954442d213506b62d.json",
 					"name" : "robot_bringup_uninstall",
@@ -166,15 +186,24 @@
 					"jsonFile" : "target-gear_manipulator_moveit_config_uninstall-8ade4d4f7a382d8b4f71.json",
 					"name" : "gear_manipulator_moveit_config_uninstall",
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
+					"id" : "end_effector_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-end_effector_uninstall-b3f95c5b99ab141db7a3.json",
+					"name" : "end_effector_uninstall",
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "uninstall::@6890427a1f51a3e7e1df",
 <<<<<<< HEAD
+<<<<<<< HEAD
 					"jsonFile" : "target-uninstall-bdf62ca0284bad9831e3.json",
 =======
 					"jsonFile" : "target-uninstall-7a6e673f9d30ae64b13d.json",
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
+					"jsonFile" : "target-uninstall-4cad4bf0e1cc1f780d87.json",
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 					"name" : "uninstall",
 					"projectIndex" : 0
@@ -186,11 +215,16 @@
 	"paths" : 
 	{
 <<<<<<< HEAD
+<<<<<<< HEAD
 		"build" : "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_bringup",
 		"source" : "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_bringup"
 =======
 		"build" : "/home/msd/MSD2/REV4/build/gear_manipulator_moveit_config",
 		"source" : "/home/msd/MSD2/REV4/src/gear_manipulator_moveit_config"
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
+		"build" : "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/end_effector",
+		"source" : "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/End_Effector"
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 	},
 	"version" : 
@@ -200,7 +234,10 @@
 	}
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 =======
 >>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/gear_manipulator_moveit_config/.cmake/api/v1/reply/codemodel-v2-570391f3396c1dad808e.json
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
