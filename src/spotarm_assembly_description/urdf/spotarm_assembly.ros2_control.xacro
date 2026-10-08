@@ -77,7 +77,7 @@
              = 0.5010125780020597
         -->
 	<param name="offset">0.4745369599135717</param>
-        <param name="default_velocity">0.05</param>
+        <param name="default_velocity">0.2</param>
 
         <param name="min_position">-0.436</param>
         <param name="max_position">2.13</param>
@@ -121,7 +121,7 @@
         -->
         <param name="offset">-1.570630884961621</param>
 
-        <param name="default_velocity">0.05</param>
+        <param name="default_velocity">0.2</param>
 
       </joint>
 
@@ -155,7 +155,7 @@
         -->
         <param name="offset">0.00003141592653589793</param>
 
-        <param name="default_velocity">0.05</param>
+        <param name="default_velocity">0.2</param>
 
       </joint>
 
