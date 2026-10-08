@@ -1,1 +1,0 @@
-/home/msd/MSD2/REV4/build/robot_hardware/ament_cmake_environment_hooks/local_setup.sh

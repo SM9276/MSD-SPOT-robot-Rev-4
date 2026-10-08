@@ -1,1 +1,0 @@
-/home/msd/MSD2/REV4/src/spotarm_assembly_description/setup.py

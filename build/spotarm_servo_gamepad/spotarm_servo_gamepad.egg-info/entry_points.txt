@@ -1,3 +1,0 @@
-[console_scripts]
-gamepad_servo = spotarm_servo_gamepad.gamepad_servo:main
-
