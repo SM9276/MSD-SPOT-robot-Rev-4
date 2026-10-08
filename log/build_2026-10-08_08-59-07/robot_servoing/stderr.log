@@ -1,3 +1,0 @@
-gmake[2]: *** [CMakeFiles/servo_controller_input.dir/build.make:76: CMakeFiles/servo_controller_input.dir/src/my_gamepad_to_servo_node.cpp.o] Interrupt
-gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/servo_controller_input.dir/all] Interrupt
-gmake: *** [Makefile:146: all] Interrupt

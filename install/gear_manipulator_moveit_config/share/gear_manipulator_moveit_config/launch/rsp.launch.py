@@ -1,1 +1,0 @@
-/home/msd/MSD2/REV4/src/gear_manipulator_moveit_config/launch/rsp.launch.py
