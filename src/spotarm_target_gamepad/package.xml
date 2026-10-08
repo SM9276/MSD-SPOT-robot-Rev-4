@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+
+<package format="3">
+
+  <name>
+    spotarm_target_gamepad
+  </name>
+
+  <version>
+    0.2.0
+  </version>
+
+  <description>
+    Gamepad control of the MoveIt RViz end-effector goal marker
+    for the SPOT Rev-4 robot arm. The controller edits the MoveIt
+    goal without physically moving the robot. Pressing A requests
+    MoveIt planning and then execution through the RViz MotionPlanning
+    plugin.
+  </description>
+
+  <maintainer email="msd@example.com">
+    msd
+  </maintainer>
+
+  <license>
+    Apache-2.0
+  </license>
+
+
+  <buildtool_depend>
+    ament_python
+  </buildtool_depend>
+
+
+  <exec_depend>
+    rclpy
+  </exec_depend>
+
+  <exec_depend>
+    sensor_msgs
+  </exec_depend>
+
+  <exec_depend>
+    visualization_msgs
+  </exec_depend>
+
+  <exec_depend>
+    tf2_ros
+  </exec_depend>
+
+  <exec_depend>
+    std_msgs
+  </exec_depend>
+
+  <exec_depend>
+    moveit_msgs
+  </exec_depend>
+
+  <exec_depend>
+    joy
+  </exec_depend>
+
+
+  <export>
+
+    <build_type>
+      ament_python
+    </build_type>
+
+  </export>
+
+</package>

@@ -1,8 +1,8 @@
 # Default initial positions for gear_manipulator's ros2_control fake system
 
 initial_positions:
-  joint1: 0
-  joint2: 0
-  joint3: 0
-  joint4: 0
+  joint1:  0.4744630400864284
+  joint2: -2.0160961568700393
+  joint3: 4.3982297150257105e-05
+  joint4: -1.5594656492909493
   joint5: 0

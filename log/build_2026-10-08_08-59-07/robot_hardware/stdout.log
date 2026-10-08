@@ -1,0 +1,24 @@
+[100%] Built target robot_hardware_arm
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_hardware/share/robot_hardware//robot_hardware_plugin.xml
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_hardware/lib/librobot_hardware_arm.so
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_hardware/include/robot_hardware/ICLStepper.h
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_hardware/include/robot_hardware/arm_hardware_interface.hpp
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_hardware/share/robot_hardware/robot_hardware_plugin.xml
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_hardware/share/ament_index/resource_index/package_run_dependencies/robot_hardware
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_hardware/share/ament_index/resource_index/parent_prefix_path/robot_hardware
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_hardware/share/robot_hardware/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_hardware/share/robot_hardware/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_hardware/share/robot_hardware/environment/path.sh
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_hardware/share/robot_hardware/environment/path.dsv
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_hardware/share/robot_hardware/local_setup.bash
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_hardware/share/robot_hardware/local_setup.sh
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_hardware/share/robot_hardware/local_setup.zsh
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_hardware/share/robot_hardware/local_setup.dsv
+-- Symlinking: /home/msd/MSD2/REV4/install/robot_hardware/share/robot_hardware/package.dsv
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_hardware/share/ament_index/resource_index/packages/robot_hardware
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_hardware/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/robot_hardware
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_hardware/share/robot_hardware/cmake/robot_hardwareConfig.cmake
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_hardware/share/robot_hardware/cmake/robot_hardwareConfig-version.cmake
+-- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_hardware/share/robot_hardware/package.xml
