@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 running develop
 running egg_info
 writing spotarm_assembly_description.egg-info/PKG-INFO
@@ -14,6 +15,8 @@ Creating /home/msd/MSD2/REV4/install/spotarm_assembly_description/lib/python3.10
 Installed /home/msd/MSD2/REV4/build/spotarm_assembly_description
 running symlink_data
 =======
+=======
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 running develop
 running egg_info
 writing spotarm_assembly_description.egg-info/PKG-INFO
@@ -28,4 +31,7 @@ Creating /home/msd/MSD2/REV4/install/spotarm_assembly_description/lib/python3.10
 
 Installed /home/msd/MSD2/REV4/build/spotarm_assembly_description
 running symlink_data
+<<<<<<< HEAD
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26

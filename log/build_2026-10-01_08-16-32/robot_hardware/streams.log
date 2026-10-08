@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 [0.493s] Invoking command in '/home/msd/MSD2/REV4/build/robot_hardware': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/msd/MSD2/REV4/build/robot_hardware -- -j8 -l8
 [1.756s] [100%] Built target robot_hardware_arm
 [1.765s] Invoked command in '/home/msd/MSD2/REV4/build/robot_hardware' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/msd/MSD2/REV4/build/robot_hardware -- -j8 -l8
@@ -28,6 +29,8 @@
 [1.857s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_hardware/share/robot_hardware/package.xml
 [1.875s] Invoked command in '/home/msd/MSD2/REV4/build/robot_hardware' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/msd/MSD2/REV4/build/robot_hardware
 =======
+=======
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 [0.493s] Invoking command in '/home/msd/MSD2/REV4/build/robot_hardware': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/msd/MSD2/REV4/build/robot_hardware -- -j8 -l8
 [1.756s] [100%] Built target robot_hardware_arm
 [1.765s] Invoked command in '/home/msd/MSD2/REV4/build/robot_hardware' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/msd/MSD2/REV4/build/robot_hardware -- -j8 -l8
@@ -56,4 +59,7 @@
 [1.857s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_hardware/share/robot_hardware/cmake/robot_hardwareConfig-version.cmake
 [1.857s] -- Up-to-date symlink: /home/msd/MSD2/REV4/install/robot_hardware/share/robot_hardware/package.xml
 [1.875s] Invoked command in '/home/msd/MSD2/REV4/build/robot_hardware' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/msd/MSD2/REV4/build/robot_hardware
+<<<<<<< HEAD
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
