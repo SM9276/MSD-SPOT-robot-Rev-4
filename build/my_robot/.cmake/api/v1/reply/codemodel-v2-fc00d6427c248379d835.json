@@ -1,5 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:build/my_robot/.cmake/api/v1/reply/codemodel-v2-f4d7fd5725ccca121dde.json
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 {
 	"configurations" : 
 	[
@@ -11,6 +15,10 @@
 					"hasInstallRule" : true,
 <<<<<<<< HEAD:build/my_robot/.cmake/api/v1/reply/codemodel-v2-f4d7fd5725ccca121dde.json
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:build/my_robot/.cmake/api/v1/reply/codemodel-v2-f4d7fd5725ccca121dde.json
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 =======
 <<<<<<<< HEAD:build/my_robot/.cmake/api/v1/reply/codemodel-v2-f4d7fd5725ccca121dde.json
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
@@ -19,6 +27,12 @@
 					"jsonFile" : "directory-.-d294de4d522d4b11b8b3.json",
 >>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/my_robot/.cmake/api/v1/reply/codemodel-v2-fc00d6427c248379d835.json
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+========
+					"jsonFile" : "directory-.-d294de4d522d4b11b8b3.json",
+>>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/my_robot/.cmake/api/v1/reply/codemodel-v2-fc00d6427c248379d835.json
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 =======
 ========
 					"jsonFile" : "directory-.-d294de4d522d4b11b8b3.json",
@@ -84,8 +98,12 @@
 		"minor" : 3
 	}
 }
+<<<<<<< HEAD
 =======
 =======
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
+========
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 {
 	"configurations" : 
@@ -97,6 +115,7 @@
 					"build" : ".",
 					"hasInstallRule" : true,
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:build/end_effector/.cmake/api/v1/reply/codemodel-v2-4ae53f327ab3cface264.json
 					"jsonFile" : "directory-.-501454e2219e6a3f4ef4.json",
 =======
@@ -106,6 +125,9 @@
 ========
 					"jsonFile" : "directory-.-d294de4d522d4b11b8b3.json",
 >>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/my_robot/.cmake/api/v1/reply/codemodel-v2-fc00d6427c248379d835.json
+=======
+					"jsonFile" : "directory-.-d294de4d522d4b11b8b3.json",
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.12"
@@ -128,9 +150,13 @@
 						0
 					],
 <<<<<<< HEAD
+<<<<<<< HEAD
 					"name" : "end_effector",
 =======
 					"name" : "robot_moveit_config",
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
+					"name" : "my_robot",
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 					"targetIndexes" : 
 					[
@@ -144,6 +170,7 @@
 				{
 					"directoryIndex" : 0,
 <<<<<<< HEAD
+<<<<<<< HEAD
 					"id" : "end_effector_uninstall::@6890427a1f51a3e7e1df",
 					"jsonFile" : "target-end_effector_uninstall-b3f95c5b99ab141db7a3.json",
 					"name" : "end_effector_uninstall",
@@ -152,15 +179,24 @@
 					"jsonFile" : "target-robot_moveit_config_uninstall-d5eb11a1772abe6b3bde.json",
 					"name" : "robot_moveit_config_uninstall",
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
+					"id" : "my_robot_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-my_robot_uninstall-1c7822478d28602ceeba.json",
+					"name" : "my_robot_uninstall",
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "uninstall::@6890427a1f51a3e7e1df",
 <<<<<<< HEAD
+<<<<<<< HEAD
 					"jsonFile" : "target-uninstall-4cad4bf0e1cc1f780d87.json",
 =======
 					"jsonFile" : "target-uninstall-897f2a0d27ff0c94a00e.json",
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
+					"jsonFile" : "target-uninstall-fb2e528145efe59ef808.json",
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 					"name" : "uninstall",
 					"projectIndex" : 0
@@ -172,11 +208,16 @@
 	"paths" : 
 	{
 <<<<<<< HEAD
+<<<<<<< HEAD
 		"build" : "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/end_effector",
 		"source" : "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/End_Effector"
 =======
 		"build" : "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_moveit_config",
 		"source" : "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_moveit_config"
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
+		"build" : "/home/msd/MSD2/REV4/build/my_robot",
+		"source" : "/home/msd/MSD2/REV4/src/my_robot"
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 	},
 	"version" : 
@@ -186,6 +227,10 @@
 	}
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 =======
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
+>>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/my_robot/.cmake/api/v1/reply/codemodel-v2-fc00d6427c248379d835.json
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26

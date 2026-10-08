@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 [0.000000] (-) TimerEvent: {}
 [0.001800] (marge) JobQueued: {'identifier': 'marge', 'dependencies': OrderedDict()}
 [0.001919] (my_robot) JobQueued: {'identifier': 'my_robot', 'dependencies': OrderedDict()}
@@ -363,6 +364,8 @@
 =======
 =======
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 [0.000000] (-) TimerEvent: {}
 [0.001800] (marge) JobQueued: {'identifier': 'marge', 'dependencies': OrderedDict()}
 [0.001919] (my_robot) JobQueued: {'identifier': 'my_robot', 'dependencies': OrderedDict()}
@@ -724,6 +727,9 @@
 [4.640718] (spotarm_servo_gamepad) JobSkipped: {'identifier': 'spotarm_servo_gamepad'}
 [4.640749] (-) EventReactorShutdown: {}
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 =======
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26

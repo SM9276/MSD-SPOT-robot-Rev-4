@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Invoking command in '/home/msd/MSD2/REV4/build/robot_hardware': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/msd/MSD2/REV4/build/robot_hardware -- -j8 -l8
 Invoked command in '/home/msd/MSD2/REV4/build/robot_hardware' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/msd/MSD2/REV4/build/robot_hardware -- -j8 -l8
 Invoking command in '/home/msd/MSD2/REV4/build/robot_hardware': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/msd/MSD2/REV4/build/robot_hardware
@@ -7,11 +8,16 @@ Invoked command in '/home/msd/MSD2/REV4/build/robot_hardware' returned '0': CMAK
 =======
 =======
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 Invoking command in '/home/msd/MSD2/REV4/build/robot_hardware': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/msd/MSD2/REV4/build/robot_hardware -- -j8 -l8
 Invoked command in '/home/msd/MSD2/REV4/build/robot_hardware' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/msd/MSD2/REV4/build/robot_hardware -- -j8 -l8
 Invoking command in '/home/msd/MSD2/REV4/build/robot_hardware': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/msd/MSD2/REV4/build/robot_hardware
 Invoked command in '/home/msd/MSD2/REV4/build/robot_hardware' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/msd/MSD2/REV4/build/robot_hardware
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 =======
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26

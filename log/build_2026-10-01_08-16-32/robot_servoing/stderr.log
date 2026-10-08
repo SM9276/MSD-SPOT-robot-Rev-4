@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 [31mCMake Error at CMakeLists.txt:80 (add_library):
   Target "servo_controller_input" links to target
   "random_numbers::random_numbers" but the target was not found.  Perhaps a
@@ -17,6 +18,8 @@
 =======
 =======
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 [31mCMake Error at CMakeLists.txt:80 (add_library):
   Target "servo_controller_input" links to target
   "random_numbers::random_numbers" but the target was not found.  Perhaps a
@@ -32,6 +35,9 @@
 [0m
 [0mCMake Generate step failed.  Build files cannot be regenerated correctly.[0m
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 =======
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
