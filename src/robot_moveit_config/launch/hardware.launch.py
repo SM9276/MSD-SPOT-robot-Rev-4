@@ -1,4 +1,7 @@
+import json
 import os
+
+import yaml
 
 from launch import LaunchDescription
 from launch.actions import (
@@ -61,6 +64,12 @@ def generate_launch_description():
         package_share,
         "config",
         "moveit.rviz",
+    )
+
+    initial_positions_file = os.path.join(
+        package_share,
+        "config",
+        "initial_positions.yaml",
     )
 
 
@@ -195,6 +204,56 @@ def generate_launch_description():
 
 
     # ============================================================
+    # Move to the start pose
+    #
+    # on_activate() deliberately holds the arm wherever it is
+    # powered on, so nothing moves it to initial_positions.yaml
+    # by itself. After arm_controller is active, send one
+    # trajectory goal built from that file. All six joints are
+    # required (allow_partial_joints_goal: false).
+    # ============================================================
+
+    start_joint_names = [
+        "Revolute1",
+        "Revolute2",
+        "Revolute3",
+        "Revolute4",
+        "Revolute5",
+        "Revolute6",
+    ]
+
+    with open(initial_positions_file, "r") as f:
+        start_positions = yaml.safe_load(f)["initial_positions"]
+
+    start_goal = {
+        "trajectory": {
+            "joint_names": start_joint_names,
+            "points": [
+                {
+                    "positions": [
+                        float(start_positions[name])
+                        for name in start_joint_names
+                    ],
+                    "time_from_start": {"sec": 10},
+                }
+            ],
+        }
+    }
+
+    go_to_start_pose = ExecuteProcess(
+        cmd=[
+            "ros2",
+            "action",
+            "send_goal",
+            "/arm_controller/follow_joint_trajectory",
+            "control_msgs/action/FollowJointTrajectory",
+            json.dumps(start_goal),
+        ],
+        output="log",
+    )
+
+
+    # ============================================================
     # MoveIt move_group
     #
     # Do NOT explicitly set name="move_group".
@@ -306,6 +365,7 @@ def generate_launch_description():
         OnProcessExit(
             target_action=arm_controller_spawner,
             on_exit=[
+                go_to_start_pose,
                 move_group_node,
                 rviz_node,
 
