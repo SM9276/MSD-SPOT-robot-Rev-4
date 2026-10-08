@@ -66,7 +66,8 @@ NOTE: Package was left mostly untested due to time constraints.
       -p led_pin:=18 \
       -p brightness:=0.4 \
       -p moving_color:=F8F000 \
-      -p static_color:=00F8F0 
+      -p static_color:=00F8F0 \
+      -p blinking_color:=F000F8 
     '
    ```
  

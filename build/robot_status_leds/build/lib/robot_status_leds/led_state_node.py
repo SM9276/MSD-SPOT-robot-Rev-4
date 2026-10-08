@@ -376,5 +376,8 @@ def main(args=None):
     finally:
         node.destroy_node()
         if rclpy.ok():
+<<<<<<< HEAD
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
             rclpy.shutdown()

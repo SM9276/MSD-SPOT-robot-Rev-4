@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 [0.484s] Invoking command in '/home/msd/MSD2/REV4/build/my_robot': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/msd/MSD2/REV4/src/my_robot -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/msd/MSD2/REV4/install/my_robot
 [1.760s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
 [1.760s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
@@ -30,6 +31,8 @@
 [2.506s] -- Symlinking: /home/msd/MSD2/REV4/install/my_robot/share/my_robot/package.xml
 [2.550s] Invoked command in '/home/msd/MSD2/REV4/build/my_robot' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/msd/MSD2/REV4/build/my_robot
 =======
+=======
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 [0.484s] Invoking command in '/home/msd/MSD2/REV4/build/my_robot': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/msd/MSD2/REV4/src/my_robot -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/msd/MSD2/REV4/install/my_robot
 [1.760s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
 [1.760s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
@@ -60,4 +63,7 @@
 [2.483s] -- Symlinking: /home/msd/MSD2/REV4/install/my_robot/share/my_robot/cmake/my_robotConfig-version.cmake
 [2.506s] -- Symlinking: /home/msd/MSD2/REV4/install/my_robot/share/my_robot/package.xml
 [2.550s] Invoked command in '/home/msd/MSD2/REV4/build/my_robot' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/msd/MSD2/REV4/build/my_robot
+<<<<<<< HEAD
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26

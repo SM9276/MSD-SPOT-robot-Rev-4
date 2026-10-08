@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 running egg_info
 writing ../../build/robot_status_leds/robot_status_leds.egg-info/PKG-INFO
 writing dependency_links to ../../build/robot_status_leds/robot_status_leds.egg-info/dependency_links.txt
@@ -23,6 +24,8 @@ running install_scripts
 Installing led_state_node script to /home/msd/MSD2/REV4/install/robot_status_leds/lib/robot_status_leds
 writing list of installed files to '/home/msd/MSD2/REV4/build/robot_status_leds/install.log'
 =======
+=======
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 running egg_info
 writing ../../build/robot_status_leds/robot_status_leds.egg-info/PKG-INFO
 writing dependency_links to ../../build/robot_status_leds/robot_status_leds.egg-info/dependency_links.txt
@@ -46,4 +49,7 @@ Copying ../../build/robot_status_leds/robot_status_leds.egg-info to /home/msd/MS
 running install_scripts
 Installing led_state_node script to /home/msd/MSD2/REV4/install/robot_status_leds/lib/robot_status_leds
 writing list of installed files to '/home/msd/MSD2/REV4/build/robot_status_leds/install.log'
+<<<<<<< HEAD
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26

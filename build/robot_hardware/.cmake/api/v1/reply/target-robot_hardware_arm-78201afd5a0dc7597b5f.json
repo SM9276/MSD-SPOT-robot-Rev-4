@@ -10,7 +10,11 @@
 	{
 		"commands" : 
 		[
+<<<<<<<< HEAD:build/robot_hardware/.cmake/api/v1/reply/target-robot_hardware_arm-78201afd5a0dc7597b5f.json
 			"add_library",
+========
+			"add_executable",
+>>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/stepper_test/.cmake/api/v1/reply/target-motor_key-86707de4191344c2074e.json
 			"target_link_libraries",
 			"ament_target_dependencies",
 			"add_compile_options",
@@ -33,6 +37,7 @@
 				"parent" : 0
 			},
 			{
+<<<<<<<< HEAD:build/robot_hardware/.cmake/api/v1/reply/target-robot_hardware_arm-78201afd5a0dc7597b5f.json
 				"command" : 1,
 				"file" : 0,
 				"line" : 25,
@@ -45,12 +50,29 @@
 				"parent" : 0
 			},
 			{
+========
+				"command" : 2,
+				"file" : 0,
+				"line" : 14,
+				"parent" : 0
+			},
+			{
+>>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/stepper_test/.cmake/api/v1/reply/target-motor_key-86707de4191344c2074e.json
 				"command" : 1,
 				"file" : 1,
 				"line" : 145,
-				"parent" : 3
+				"parent" : 2
 			},
 			{
+<<<<<<<< HEAD:build/robot_hardware/.cmake/api/v1/reply/target-robot_hardware_arm-78201afd5a0dc7597b5f.json
+========
+				"command" : 1,
+				"file" : 0,
+				"line" : 15,
+				"parent" : 0
+			},
+			{
+>>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/stepper_test/.cmake/api/v1/reply/target-motor_key-86707de4191344c2074e.json
 				"command" : 3,
 				"file" : 0,
 				"line" : 5,
@@ -66,7 +88,7 @@
 				"command" : 4,
 				"file" : 1,
 				"line" : 141,
-				"parent" : 3
+				"parent" : 2
 			}
 		]
 	},
@@ -76,9 +98,12 @@
 			"compileCommandFragments" : 
 			[
 				{
+<<<<<<<< HEAD:build/robot_hardware/.cmake/api/v1/reply/target-robot_hardware_arm-78201afd5a0dc7597b5f.json
 					"fragment" : "-fPIC"
 				},
 				{
+========
+>>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/stepper_test/.cmake/api/v1/reply/target-motor_key-86707de4191344c2074e.json
 					"backtrace" : 5,
 					"fragment" : "-Wall"
 				},
@@ -94,15 +119,15 @@
 			"defines" : 
 			[
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"define" : "DEFAULT_RMW_IMPLEMENTATION=rmw_fastrtps_cpp"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"define" : "FASTCDR_DYN_LINK"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"define" : "RCUTILS_ENABLE_FAULT_INJECTION"
 				},
 				{
@@ -113,6 +138,7 @@
 			[
 				{
 					"backtrace" : 6,
+<<<<<<<< HEAD:build/robot_hardware/.cmake/api/v1/reply/target-robot_hardware_arm-78201afd5a0dc7597b5f.json
 					"path" : "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_hardware/include"
 				},
 				{
@@ -120,11 +146,17 @@
 					"path" : "/usr/include/modbus"
 				},
 				{
+========
+					"path" : "/home/msd/MSD2/REV4/src/stepper_test/include"
+				},
+				{
+>>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/stepper_test/.cmake/api/v1/reply/target-motor_key-86707de4191344c2074e.json
 					"backtrace" : 7,
 					"isSystem" : true,
 					"path" : "/opt/ros/humble/include/rclcpp"
 				},
 				{
+<<<<<<<< HEAD:build/robot_hardware/.cmake/api/v1/reply/target-robot_hardware_arm-78201afd5a0dc7597b5f.json
 					"backtrace" : 7,
 					"isSystem" : true,
 					"path" : "/opt/ros/humble/include/rclcpp_lifecycle"
@@ -141,121 +173,124 @@
 				},
 				{
 					"backtrace" : 4,
+========
+					"backtrace" : 3,
+>>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/stepper_test/.cmake/api/v1/reply/target-motor_key-86707de4191344c2074e.json
 					"isSystem" : true,
 					"path" : "/opt/ros/humble/include/ament_index_cpp"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"isSystem" : true,
 					"path" : "/opt/ros/humble/include/libstatistics_collector"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"isSystem" : true,
 					"path" : "/opt/ros/humble/include/builtin_interfaces"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"isSystem" : true,
 					"path" : "/opt/ros/humble/include/rosidl_runtime_c"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"isSystem" : true,
 					"path" : "/opt/ros/humble/include/rcutils"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"isSystem" : true,
 					"path" : "/opt/ros/humble/include/rosidl_typesupport_interface"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"isSystem" : true,
 					"path" : "/opt/ros/humble/include/fastcdr"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"isSystem" : true,
 					"path" : "/opt/ros/humble/include/rosidl_runtime_cpp"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"isSystem" : true,
 					"path" : "/opt/ros/humble/include/rosidl_typesupport_fastrtps_cpp"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"isSystem" : true,
 					"path" : "/opt/ros/humble/include/rmw"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"isSystem" : true,
 					"path" : "/opt/ros/humble/include/rosidl_typesupport_fastrtps_c"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"isSystem" : true,
 					"path" : "/opt/ros/humble/include/rosidl_typesupport_introspection_c"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"isSystem" : true,
 					"path" : "/opt/ros/humble/include/rosidl_typesupport_introspection_cpp"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"isSystem" : true,
 					"path" : "/opt/ros/humble/include/rcl"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"isSystem" : true,
 					"path" : "/opt/ros/humble/include/rcl_interfaces"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"isSystem" : true,
 					"path" : "/opt/ros/humble/include/rcl_logging_interface"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"isSystem" : true,
 					"path" : "/opt/ros/humble/include/rcl_yaml_param_parser"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"isSystem" : true,
 					"path" : "/opt/ros/humble/include/libyaml_vendor"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"isSystem" : true,
 					"path" : "/opt/ros/humble/include/tracetools"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"isSystem" : true,
 					"path" : "/opt/ros/humble/include/rcpputils"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"isSystem" : true,
 					"path" : "/opt/ros/humble/include/statistics_msgs"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"isSystem" : true,
 					"path" : "/opt/ros/humble/include/rosgraph_msgs"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"isSystem" : true,
 					"path" : "/opt/ros/humble/include/rosidl_typesupport_cpp"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"isSystem" : true,
 					"path" : "/opt/ros/humble/include/rosidl_typesupport_c"
 				},
@@ -318,7 +353,11 @@
 			]
 		}
 	],
+<<<<<<<< HEAD:build/robot_hardware/.cmake/api/v1/reply/target-robot_hardware_arm-78201afd5a0dc7597b5f.json
 	"id" : "robot_hardware_arm::@6890427a1f51a3e7e1df",
+========
+	"id" : "motor_key::@6890427a1f51a3e7e1df",
+>>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/stepper_test/.cmake/api/v1/reply/target-motor_key-86707de4191344c2074e.json
 	"link" : 
 	{
 		"commandFragments" : 
@@ -329,6 +368,7 @@
 			},
 			{
 				"fragment" : "-Wl,-rpath,/opt/ros/humble/lib",
+<<<<<<<< HEAD:build/robot_hardware/.cmake/api/v1/reply/target-robot_hardware_arm-78201afd5a0dc7597b5f.json
 				"role" : "libraries"
 			},
 			{
@@ -354,14 +394,24 @@
 			{
 				"backtrace" : 4,
 				"fragment" : "/opt/ros/humble/lib/librclcpp_lifecycle.so",
+========
+>>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/stepper_test/.cmake/api/v1/reply/target-motor_key-86707de4191344c2074e.json
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 4,
+				"backtrace" : 3,
 				"fragment" : "/opt/ros/humble/lib/librclcpp.so",
 				"role" : "libraries"
 			},
 			{
+<<<<<<<< HEAD:build/robot_hardware/.cmake/api/v1/reply/target-robot_hardware_arm-78201afd5a0dc7597b5f.json
+========
+				"backtrace" : 4,
+				"fragment" : "-lmodbus",
+				"role" : "libraries"
+			},
+			{
+>>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/stepper_test/.cmake/api/v1/reply/target-motor_key-86707de4191344c2074e.json
 				"fragment" : "/opt/ros/humble/lib/liblibstatistics_collector.so",
 				"role" : "libraries"
 			},

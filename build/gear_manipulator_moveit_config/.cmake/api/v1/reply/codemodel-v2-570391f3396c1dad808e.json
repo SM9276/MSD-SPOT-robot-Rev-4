@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:build/gear_manipulator_moveit_config/.cmake/api/v1/reply/codemodel-v2-101ce9ceb3bf02a278a2.json
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 {
 	"configurations" : 
 	[
@@ -10,6 +14,10 @@
 					"hasInstallRule" : true,
 <<<<<<<< HEAD:build/gear_manipulator_moveit_config/.cmake/api/v1/reply/codemodel-v2-101ce9ceb3bf02a278a2.json
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:build/gear_manipulator_moveit_config/.cmake/api/v1/reply/codemodel-v2-101ce9ceb3bf02a278a2.json
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 =======
 <<<<<<<< HEAD:build/gear_manipulator_moveit_config/.cmake/api/v1/reply/codemodel-v2-101ce9ceb3bf02a278a2.json
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
@@ -18,6 +26,12 @@
 					"jsonFile" : "directory-.-7d93982118d60ad7cbe8.json",
 >>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/gear_manipulator_moveit_config/.cmake/api/v1/reply/codemodel-v2-570391f3396c1dad808e.json
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+========
+					"jsonFile" : "directory-.-7d93982118d60ad7cbe8.json",
+>>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/gear_manipulator_moveit_config/.cmake/api/v1/reply/codemodel-v2-570391f3396c1dad808e.json
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 =======
 ========
 					"jsonFile" : "directory-.-7d93982118d60ad7cbe8.json",
@@ -83,7 +97,11 @@
 		"minor" : 3
 	}
 }
+<<<<<<< HEAD
 =======
+=======
+========
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 {
 	"configurations" : 
 	[
@@ -93,11 +111,15 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
+<<<<<<< HEAD
 <<<<<<<< HEAD:build/robot_bringup/.cmake/api/v1/reply/codemodel-v2-0be09ea2612883f00e6a.json
 					"jsonFile" : "directory-.-77ed4d496647ecd10369.json",
 ========
 					"jsonFile" : "directory-.-7d93982118d60ad7cbe8.json",
 >>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/gear_manipulator_moveit_config/.cmake/api/v1/reply/codemodel-v2-570391f3396c1dad808e.json
+=======
+					"jsonFile" : "directory-.-7d93982118d60ad7cbe8.json",
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.12"
@@ -119,7 +141,11 @@
 					[
 						0
 					],
+<<<<<<< HEAD
 					"name" : "robot_bringup",
+=======
+					"name" : "gear_manipulator_moveit_config",
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 					"targetIndexes" : 
 					[
 						0,
@@ -131,15 +157,25 @@
 			[
 				{
 					"directoryIndex" : 0,
+<<<<<<< HEAD
 					"id" : "robot_bringup_uninstall::@6890427a1f51a3e7e1df",
 					"jsonFile" : "target-robot_bringup_uninstall-cc1954442d213506b62d.json",
 					"name" : "robot_bringup_uninstall",
+=======
+					"id" : "gear_manipulator_moveit_config_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-gear_manipulator_moveit_config_uninstall-8ade4d4f7a382d8b4f71.json",
+					"name" : "gear_manipulator_moveit_config_uninstall",
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "uninstall::@6890427a1f51a3e7e1df",
+<<<<<<< HEAD
 					"jsonFile" : "target-uninstall-bdf62ca0284bad9831e3.json",
+=======
+					"jsonFile" : "target-uninstall-7a6e673f9d30ae64b13d.json",
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 					"name" : "uninstall",
 					"projectIndex" : 0
 				}
@@ -149,8 +185,13 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
+<<<<<<< HEAD
 		"build" : "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_bringup",
 		"source" : "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_bringup"
+=======
+		"build" : "/home/msd/MSD2/REV4/build/gear_manipulator_moveit_config",
+		"source" : "/home/msd/MSD2/REV4/src/gear_manipulator_moveit_config"
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 	},
 	"version" : 
 	{
@@ -158,4 +199,8 @@
 		"minor" : 3
 	}
 }
+<<<<<<< HEAD
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
+>>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/gear_manipulator_moveit_config/.cmake/api/v1/reply/codemodel-v2-570391f3396c1dad808e.json
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26

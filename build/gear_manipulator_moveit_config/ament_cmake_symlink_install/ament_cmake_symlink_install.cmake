@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # generated from
 # ament_cmake_core/cmake/symlink_install/ament_cmake_symlink_install.cmake.in
 
@@ -467,6 +468,8 @@ ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/gear_manipulator_move
 =======
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 =======
+=======
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 # generated from
 # ament_cmake_core/cmake/symlink_install/ament_cmake_symlink_install.cmake.in
 
@@ -834,4 +837,7 @@ ament_cmake_symlink_install_directory("/home/msd/MSD2/REV4/src/gear_manipulator_
 
 # install(FILES ".setup_assistant" "DESTINATION" "share/gear_manipulator_moveit_config")
 ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/gear_manipulator_moveit_config" FILES ".setup_assistant" "DESTINATION" "share/gear_manipulator_moveit_config")
+<<<<<<< HEAD
+>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+=======
 >>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
