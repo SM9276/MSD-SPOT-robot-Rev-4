@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/my_robot
+CMAKE_SOURCE_DIR = /home/msd/MSD2/REV4/src/my_robot
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/my_robot
+CMAKE_BINARY_DIR = /home/msd/MSD2/REV4/build/my_robot
 
 # Utility rule file for my_robot_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/my_robot_uninstall.dir/compiler_depend.make
 include CMakeFiles/my_robot_uninstall.dir/progress.make
 
 CMakeFiles/my_robot_uninstall:
-	/usr/bin/cmake -P /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/my_robot/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/msd/MSD2/REV4/build/my_robot/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 my_robot_uninstall: CMakeFiles/my_robot_uninstall
 my_robot_uninstall: CMakeFiles/my_robot_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/my_robot_uninstall.dir/clean:
 .PHONY : CMakeFiles/my_robot_uninstall.dir/clean
 
 CMakeFiles/my_robot_uninstall.dir/depend:
-	cd /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/my_robot && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/my_robot /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/my_robot /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/my_robot /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/my_robot /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/my_robot/CMakeFiles/my_robot_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/msd/MSD2/REV4/build/my_robot && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/msd/MSD2/REV4/src/my_robot /home/msd/MSD2/REV4/src/my_robot /home/msd/MSD2/REV4/build/my_robot /home/msd/MSD2/REV4/build/my_robot /home/msd/MSD2/REV4/build/my_robot/CMakeFiles/my_robot_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/my_robot_uninstall.dir/depend
 

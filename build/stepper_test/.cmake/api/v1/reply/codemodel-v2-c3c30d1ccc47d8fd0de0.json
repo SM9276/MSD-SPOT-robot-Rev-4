@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<<< HEAD:build/stepper_test/.cmake/api/v1/reply/codemodel-v2-1fe744e13cc6e3eefd23.json
->>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 {
 	"configurations" : 
 	[
@@ -13,21 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:build/stepper_test/.cmake/api/v1/reply/codemodel-v2-1fe744e13cc6e3eefd23.json
-					"jsonFile" : "directory-.-82283c6b4c8718ed54a3.json",
-=======
-<<<<<<<< HEAD:build/robot_commander/.cmake/api/v1/reply/codemodel-v2-3e83470181639c5763a4.json
-					"jsonFile" : "directory-.-a94555632220725d3a3b.json",
->>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
-=======
-<<<<<<<< HEAD:build/stepper_test/.cmake/api/v1/reply/codemodel-v2-1fe744e13cc6e3eefd23.json
-					"jsonFile" : "directory-.-82283c6b4c8718ed54a3.json",
->>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
-========
 					"jsonFile" : "directory-.-32e0dbe8432378e5be91.json",
->>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/stepper_test/.cmake/api/v1/reply/codemodel-v2-c3c30d1ccc47d8fd0de0.json
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.12"
@@ -50,15 +30,7 @@
 					[
 						0
 					],
-<<<<<<< HEAD
-<<<<<<< HEAD
 					"name" : "stepper_test",
-=======
-					"name" : "robot_commander",
->>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
-=======
-					"name" : "stepper_test",
->>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 					"targetIndexes" : 
 					[
 						0,
@@ -71,64 +43,22 @@
 			[
 				{
 					"directoryIndex" : 0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
-					"id" : "motor_key::@6890427a1f51a3e7e1df",
-<<<<<<<< HEAD:build/stepper_test/.cmake/api/v1/reply/codemodel-v2-1fe744e13cc6e3eefd23.json
-					"jsonFile" : "target-motor_key-a526e3b847f3509867ee.json",
-========
-					"jsonFile" : "target-motor_key-86707de4191344c2074e.json",
->>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/stepper_test/.cmake/api/v1/reply/codemodel-v2-c3c30d1ccc47d8fd0de0.json
-					"name" : "motor_key",
-<<<<<<< HEAD
-=======
-<<<<<<<< HEAD:build/robot_commander/.cmake/api/v1/reply/codemodel-v2-3e83470181639c5763a4.json
-					"id" : "commander::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-commander-2d1056731605ad678a95.json",
-					"name" : "commander",
-========
 					"id" : "motor_key::@6890427a1f51a3e7e1df",
 					"jsonFile" : "target-motor_key-86707de4191344c2074e.json",
 					"name" : "motor_key",
->>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/stepper_test/.cmake/api/v1/reply/codemodel-v2-c3c30d1ccc47d8fd0de0.json
->>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
-=======
->>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
-<<<<<<< HEAD
-<<<<<<< HEAD
 					"id" : "stepper_test_uninstall::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-stepper_test_uninstall-6579e0a3321837ed0d8a.json",
+					"jsonFile" : "target-stepper_test_uninstall-3892cbbaf7c56a1699f1.json",
 					"name" : "stepper_test_uninstall",
-=======
-					"id" : "robot_commander_uninstall::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-robot_commander_uninstall-1778b7455b13ebdfac45.json",
-					"name" : "robot_commander_uninstall",
->>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
-=======
-					"id" : "stepper_test_uninstall::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-stepper_test_uninstall-6579e0a3321837ed0d8a.json",
-					"name" : "stepper_test_uninstall",
->>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "uninstall::@6890427a1f51a3e7e1df",
-<<<<<<< HEAD
-<<<<<<< HEAD
 					"jsonFile" : "target-uninstall-1529c71ba91ab3e21adb.json",
-=======
-					"jsonFile" : "target-uninstall-3cb2c1497e237fe7e05b.json",
->>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
-=======
-					"jsonFile" : "target-uninstall-1529c71ba91ab3e21adb.json",
->>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 					"name" : "uninstall",
 					"projectIndex" : 0
 				}
@@ -138,18 +68,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-<<<<<<< HEAD
-<<<<<<< HEAD
-		"build" : "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/stepper_test",
-		"source" : "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/stepper_test"
-=======
-		"build" : "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_commander",
-		"source" : "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_commander"
->>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
-=======
-		"build" : "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/stepper_test",
-		"source" : "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/stepper_test"
->>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
+		"build" : "/home/msd/MSD2/REV4/build/stepper_test",
+		"source" : "/home/msd/MSD2/REV4/src/stepper_test"
 	},
 	"version" : 
 	{
@@ -157,165 +77,3 @@
 		"minor" : 3
 	}
 }
-<<<<<<< HEAD
-=======
-=======
-========
->>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
-=======
->>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
-{
-	"configurations" : 
-	[
-		{
-			"directories" : 
-			[
-				{
-					"build" : ".",
-					"hasInstallRule" : true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:build/robot_hardware/.cmake/api/v1/reply/codemodel-v2-6b718c997dfd1f48e32b.json
-					"jsonFile" : "directory-.-b64f39158d1036f2722b.json",
-========
-					"jsonFile" : "directory-.-32e0dbe8432378e5be91.json",
->>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/stepper_test/.cmake/api/v1/reply/codemodel-v2-c3c30d1ccc47d8fd0de0.json
-=======
-					"jsonFile" : "directory-.-32e0dbe8432378e5be91.json",
->>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
-=======
-					"jsonFile" : "directory-.-32e0dbe8432378e5be91.json",
->>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
-					"minimumCMakeVersion" : 
-					{
-						"string" : "3.12"
-					},
-					"projectIndex" : 0,
-					"source" : ".",
-					"targetIndexes" : 
-					[
-						0,
-						1,
-						2
-					]
-				}
-			],
-			"name" : "",
-			"projects" : 
-			[
-				{
-					"directoryIndexes" : 
-					[
-						0
-					],
-<<<<<<< HEAD
-<<<<<<< HEAD
-					"name" : "robot_hardware",
-=======
-					"name" : "stepper_test",
->>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
-=======
-					"name" : "stepper_test",
->>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
-					"targetIndexes" : 
-					[
-						0,
-						1,
-						2
-					]
-				}
-			],
-			"targets" : 
-			[
-				{
-					"directoryIndex" : 0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:build/robot_hardware/.cmake/api/v1/reply/codemodel-v2-6b718c997dfd1f48e32b.json
-					"id" : "robot_hardware_arm::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-robot_hardware_arm-78201afd5a0dc7597b5f.json",
-					"name" : "robot_hardware_arm",
-========
-					"id" : "motor_key::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-motor_key-86707de4191344c2074e.json",
-					"name" : "motor_key",
->>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/stepper_test/.cmake/api/v1/reply/codemodel-v2-c3c30d1ccc47d8fd0de0.json
-=======
-					"id" : "motor_key::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-motor_key-86707de4191344c2074e.json",
-					"name" : "motor_key",
->>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
-=======
-					"id" : "motor_key::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-motor_key-86707de4191344c2074e.json",
-					"name" : "motor_key",
->>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
-					"projectIndex" : 0
-				},
-				{
-					"directoryIndex" : 0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-					"id" : "robot_hardware_uninstall::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-robot_hardware_uninstall-fce6779127da9d8c4e09.json",
-					"name" : "robot_hardware_uninstall",
-=======
-					"id" : "stepper_test_uninstall::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-stepper_test_uninstall-3892cbbaf7c56a1699f1.json",
-					"name" : "stepper_test_uninstall",
->>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
-=======
-					"id" : "stepper_test_uninstall::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-stepper_test_uninstall-3892cbbaf7c56a1699f1.json",
-					"name" : "stepper_test_uninstall",
->>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
-					"projectIndex" : 0
-				},
-				{
-					"directoryIndex" : 0,
-					"id" : "uninstall::@6890427a1f51a3e7e1df",
-<<<<<<< HEAD
-<<<<<<< HEAD
-					"jsonFile" : "target-uninstall-7106c761dd896833bd47.json",
-=======
-					"jsonFile" : "target-uninstall-1529c71ba91ab3e21adb.json",
->>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
-=======
-					"jsonFile" : "target-uninstall-1529c71ba91ab3e21adb.json",
->>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
-					"name" : "uninstall",
-					"projectIndex" : 0
-				}
-			]
-		}
-	],
-	"kind" : "codemodel",
-	"paths" : 
-	{
-<<<<<<< HEAD
-<<<<<<< HEAD
-		"build" : "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_hardware",
-		"source" : "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_hardware"
-=======
-		"build" : "/home/msd/MSD2/REV4/build/stepper_test",
-		"source" : "/home/msd/MSD2/REV4/src/stepper_test"
->>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
-=======
-		"build" : "/home/msd/MSD2/REV4/build/stepper_test",
-		"source" : "/home/msd/MSD2/REV4/src/stepper_test"
->>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
-	},
-	"version" : 
-	{
-		"major" : 2,
-		"minor" : 3
-	}
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
-=======
->>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/stepper_test/.cmake/api/v1/reply/codemodel-v2-c3c30d1ccc47d8fd0de0.json
->>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
-=======
->>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26

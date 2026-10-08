@@ -23,7 +23,7 @@ function(ament_cmake_symlink_install_directory cmake_current_source_dir)
 
   # make destination absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_commander/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/msd/MSD2/REV4/install/robot_commander/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -55,6 +55,11 @@ function(ament_cmake_symlink_install_directory cmake_current_source_dir)
         # remove trailing slash
         string(SUBSTRING "${dir}" 0 ${offset} dir)
       endif()
+      
+      # Create destination directory.
+      # This does *not* solve the problem of empty directories WITHIN the install tree,
+      # but does make sure that the top-level directory specified by the caller gets created.
+      file(MAKE_DIRECTORY "${destination}")
 
       # glob recursive files
       set(relative_files "")
@@ -123,7 +128,7 @@ function(ament_cmake_symlink_install_files cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_commander/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/msd/MSD2/REV4/install/robot_commander/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -181,7 +186,7 @@ function(ament_cmake_symlink_install_programs cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_commander/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/msd/MSD2/REV4/install/robot_commander/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -251,7 +256,7 @@ function(ament_cmake_symlink_install_targets)
 
     # make destination an absolute path and ensure that it exists
     if(NOT IS_ABSOLUTE "${destination}")
-      set(destination "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_commander/${destination}")
+      set(destination "/home/msd/MSD2/REV4/install/robot_commander/${destination}")
     endif()
     if(NOT EXISTS "${destination}")
       file(MAKE_DIRECTORY "${destination}")
@@ -311,49 +316,49 @@ message(STATUS "Execute custom install script")
 # begin of custom install code
 
 # install("TARGETS" "commander" "DESTINATION" "lib/robot_commander")
-include("/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_commander/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+include("/home/msd/MSD2/REV4/build/robot_commander/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install(DIRECTORY "launch" "DESTINATION" "share/robot_commander" "OPTIONAL")
-ament_cmake_symlink_install_directory("/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_commander" DIRECTORY "launch" "DESTINATION" "share/robot_commander" "OPTIONAL")
+ament_cmake_symlink_install_directory("/home/msd/MSD2/REV4/src/robot_commander" DIRECTORY "launch" "DESTINATION" "share/robot_commander" "OPTIONAL")
 
-# install(FILES "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_commander/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/robot_commander" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
-ament_cmake_symlink_install_files("/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_commander" FILES "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_commander/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/robot_commander" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+# install(FILES "/home/msd/MSD2/REV4/build/robot_commander/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/robot_commander" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/robot_commander" FILES "/home/msd/MSD2/REV4/build/robot_commander/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/robot_commander" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 
-# install(FILES "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_commander/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/robot_commander" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
-ament_cmake_symlink_install_files("/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_commander" FILES "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_commander/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/robot_commander" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+# install(FILES "/home/msd/MSD2/REV4/build/robot_commander/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/robot_commander" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/robot_commander" FILES "/home/msd/MSD2/REV4/build/robot_commander/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/robot_commander" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
 
 # install(FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/robot_commander/environment")
-ament_cmake_symlink_install_files("/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_commander" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/robot_commander/environment")
+ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/robot_commander" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/robot_commander/environment")
 
-# install(FILES "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_commander/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/robot_commander/environment")
-ament_cmake_symlink_install_files("/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_commander" FILES "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_commander/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/robot_commander/environment")
+# install(FILES "/home/msd/MSD2/REV4/build/robot_commander/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/robot_commander/environment")
+ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/robot_commander" FILES "/home/msd/MSD2/REV4/build/robot_commander/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/robot_commander/environment")
 
 # install(FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/robot_commander/environment")
-ament_cmake_symlink_install_files("/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_commander" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/robot_commander/environment")
+ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/robot_commander" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/robot_commander/environment")
 
-# install(FILES "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_commander/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/robot_commander/environment")
-ament_cmake_symlink_install_files("/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_commander" FILES "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_commander/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/robot_commander/environment")
+# install(FILES "/home/msd/MSD2/REV4/build/robot_commander/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/robot_commander/environment")
+ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/robot_commander" FILES "/home/msd/MSD2/REV4/build/robot_commander/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/robot_commander/environment")
 
-# install(FILES "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_commander/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/robot_commander")
-ament_cmake_symlink_install_files("/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_commander" FILES "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_commander/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/robot_commander")
+# install(FILES "/home/msd/MSD2/REV4/build/robot_commander/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/robot_commander")
+ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/robot_commander" FILES "/home/msd/MSD2/REV4/build/robot_commander/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/robot_commander")
 
-# install(FILES "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_commander/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/robot_commander")
-ament_cmake_symlink_install_files("/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_commander" FILES "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_commander/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/robot_commander")
+# install(FILES "/home/msd/MSD2/REV4/build/robot_commander/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/robot_commander")
+ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/robot_commander" FILES "/home/msd/MSD2/REV4/build/robot_commander/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/robot_commander")
 
-# install(FILES "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_commander/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/robot_commander")
-ament_cmake_symlink_install_files("/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_commander" FILES "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_commander/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/robot_commander")
+# install(FILES "/home/msd/MSD2/REV4/build/robot_commander/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/robot_commander")
+ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/robot_commander" FILES "/home/msd/MSD2/REV4/build/robot_commander/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/robot_commander")
 
-# install(FILES "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_commander/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/robot_commander")
-ament_cmake_symlink_install_files("/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_commander" FILES "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_commander/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/robot_commander")
+# install(FILES "/home/msd/MSD2/REV4/build/robot_commander/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/robot_commander")
+ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/robot_commander" FILES "/home/msd/MSD2/REV4/build/robot_commander/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/robot_commander")
 
-# install(FILES "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_commander/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/robot_commander")
-ament_cmake_symlink_install_files("/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_commander" FILES "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_commander/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/robot_commander")
+# install(FILES "/home/msd/MSD2/REV4/build/robot_commander/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/robot_commander")
+ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/robot_commander" FILES "/home/msd/MSD2/REV4/build/robot_commander/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/robot_commander")
 
-# install(FILES "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_commander/ament_cmake_index/share/ament_index/resource_index/packages/robot_commander" "DESTINATION" "share/ament_index/resource_index/packages")
-ament_cmake_symlink_install_files("/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_commander" FILES "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_commander/ament_cmake_index/share/ament_index/resource_index/packages/robot_commander" "DESTINATION" "share/ament_index/resource_index/packages")
+# install(FILES "/home/msd/MSD2/REV4/build/robot_commander/ament_cmake_index/share/ament_index/resource_index/packages/robot_commander" "DESTINATION" "share/ament_index/resource_index/packages")
+ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/robot_commander" FILES "/home/msd/MSD2/REV4/build/robot_commander/ament_cmake_index/share/ament_index/resource_index/packages/robot_commander" "DESTINATION" "share/ament_index/resource_index/packages")
 
-# install(FILES "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_commander/ament_cmake_core/robot_commanderConfig.cmake" "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_commander/ament_cmake_core/robot_commanderConfig-version.cmake" "DESTINATION" "share/robot_commander/cmake")
-ament_cmake_symlink_install_files("/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_commander" FILES "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_commander/ament_cmake_core/robot_commanderConfig.cmake" "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_commander/ament_cmake_core/robot_commanderConfig-version.cmake" "DESTINATION" "share/robot_commander/cmake")
+# install(FILES "/home/msd/MSD2/REV4/build/robot_commander/ament_cmake_core/robot_commanderConfig.cmake" "/home/msd/MSD2/REV4/build/robot_commander/ament_cmake_core/robot_commanderConfig-version.cmake" "DESTINATION" "share/robot_commander/cmake")
+ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/robot_commander" FILES "/home/msd/MSD2/REV4/build/robot_commander/ament_cmake_core/robot_commanderConfig.cmake" "/home/msd/MSD2/REV4/build/robot_commander/ament_cmake_core/robot_commanderConfig-version.cmake" "DESTINATION" "share/robot_commander/cmake")
 
-# install(FILES "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_commander/package.xml" "DESTINATION" "share/robot_commander")
-ament_cmake_symlink_install_files("/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_commander" FILES "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_commander/package.xml" "DESTINATION" "share/robot_commander")
+# install(FILES "/home/msd/MSD2/REV4/src/robot_commander/package.xml" "DESTINATION" "share/robot_commander")
+ament_cmake_symlink_install_files("/home/msd/MSD2/REV4/src/robot_commander" FILES "/home/msd/MSD2/REV4/src/robot_commander/package.xml" "DESTINATION" "share/robot_commander")

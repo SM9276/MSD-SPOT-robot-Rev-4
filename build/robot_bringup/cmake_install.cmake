@@ -1,8 +1,8 @@
-# Install script for directory: /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_bringup
+# Install script for directory: /home/msd/MSD2/REV4/src/robot_bringup
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/robot_bringup")
+  set(CMAKE_INSTALL_PREFIX "/home/msd/MSD2/REV4/install/robot_bringup")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -43,7 +43,7 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_bringup/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
+  include("/home/msd/MSD2/REV4/build/robot_bringup/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -54,5 +54,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_bringup/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/msd/MSD2/REV4/build/robot_bringup/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

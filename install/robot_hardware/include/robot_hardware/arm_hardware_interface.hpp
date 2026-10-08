@@ -1,1 +1,1 @@
-/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_hardware/include/robot_hardware/arm_hardware_interface.hpp
+/home/msd/MSD2/REV4/src/robot_hardware/include/robot_hardware/arm_hardware_interface.hpp

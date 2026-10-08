@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 {
 	"cmake" : 
 	{
@@ -29,16 +26,7 @@
 	"objects" : 
 	[
 		{
-<<<<<<< HEAD
-<<<<<<<< HEAD:build/marge/.cmake/api/v1/reply/index-2026-09-30T15-29-05-0194.json
-			"jsonFile" : "codemodel-v2-c7d4b422923b3fe2c441.json",
-=======
-<<<<<<<< HEAD:build/robot_hardware/.cmake/api/v1/reply/index-2026-09-30T15-29-51-0965.json
-			"jsonFile" : "codemodel-v2-6b718c997dfd1f48e32b.json",
->>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
-========
 			"jsonFile" : "codemodel-v2-a4b96a5f5b718774ef6f.json",
->>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/marge/.cmake/api/v1/reply/index-2026-10-01T12-16-34-0721.json
 			"kind" : "codemodel",
 			"version" : 
 			{
@@ -53,16 +41,7 @@
 		{
 			"codemodel-v2" : 
 			{
-<<<<<<< HEAD
-<<<<<<<< HEAD:build/marge/.cmake/api/v1/reply/index-2026-09-30T15-29-05-0194.json
-				"jsonFile" : "codemodel-v2-c7d4b422923b3fe2c441.json",
-=======
-<<<<<<<< HEAD:build/robot_hardware/.cmake/api/v1/reply/index-2026-09-30T15-29-51-0965.json
-				"jsonFile" : "codemodel-v2-6b718c997dfd1f48e32b.json",
->>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
-========
 				"jsonFile" : "codemodel-v2-a4b96a5f5b718774ef6f.json",
->>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/marge/.cmake/api/v1/reply/index-2026-10-01T12-16-34-0721.json
 				"kind" : "codemodel",
 				"version" : 
 				{
@@ -73,93 +52,3 @@
 		}
 	}
 }
-=======
-=======
->>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
-=======
->>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
-{
-	"cmake" : 
-	{
-		"generator" : 
-		{
-			"multiConfig" : false,
-			"name" : "Unix Makefiles"
-		},
-		"paths" : 
-		{
-			"cmake" : "/usr/bin/cmake",
-			"cpack" : "/usr/bin/cpack",
-			"ctest" : "/usr/bin/ctest",
-			"root" : "/usr/share/cmake-3.22"
-		},
-		"version" : 
-		{
-			"isDirty" : false,
-			"major" : 3,
-			"minor" : 22,
-			"patch" : 1,
-			"string" : "3.22.1",
-			"suffix" : ""
-		}
-	},
-	"objects" : 
-	[
-		{
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:build/end_effector/.cmake/api/v1/reply/index-2026-09-30T17-56-32-0336.json
-			"jsonFile" : "codemodel-v2-4ae53f327ab3cface264.json",
-========
-			"jsonFile" : "codemodel-v2-a4b96a5f5b718774ef6f.json",
->>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/marge/.cmake/api/v1/reply/index-2026-10-01T12-16-34-0721.json
-=======
-			"jsonFile" : "codemodel-v2-a4b96a5f5b718774ef6f.json",
->>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
-=======
-			"jsonFile" : "codemodel-v2-a4b96a5f5b718774ef6f.json",
->>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
-			"kind" : "codemodel",
-			"version" : 
-			{
-				"major" : 2,
-				"minor" : 3
-			}
-		}
-	],
-	"reply" : 
-	{
-		"client-colcon-cmake" : 
-		{
-			"codemodel-v2" : 
-			{
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<<< HEAD:build/end_effector/.cmake/api/v1/reply/index-2026-09-30T17-56-32-0336.json
-				"jsonFile" : "codemodel-v2-4ae53f327ab3cface264.json",
-========
-				"jsonFile" : "codemodel-v2-a4b96a5f5b718774ef6f.json",
->>>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26:build/marge/.cmake/api/v1/reply/index-2026-10-01T12-16-34-0721.json
-=======
-				"jsonFile" : "codemodel-v2-a4b96a5f5b718774ef6f.json",
->>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
-=======
-				"jsonFile" : "codemodel-v2-a4b96a5f5b718774ef6f.json",
->>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
-				"kind" : "codemodel",
-				"version" : 
-				{
-					"major" : 2,
-					"minor" : 3
-				}
-			}
-		}
-	}
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
-=======
->>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
-=======
->>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26

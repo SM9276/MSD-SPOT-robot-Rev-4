@@ -1,6 +1,13 @@
 package.xml
 setup.cfg
 setup.py
+../../build/robot_status_leds/robot_status_leds.egg-info/PKG-INFO
+../../build/robot_status_leds/robot_status_leds.egg-info/SOURCES.txt
+../../build/robot_status_leds/robot_status_leds.egg-info/dependency_links.txt
+../../build/robot_status_leds/robot_status_leds.egg-info/entry_points.txt
+../../build/robot_status_leds/robot_status_leds.egg-info/requires.txt
+../../build/robot_status_leds/robot_status_leds.egg-info/top_level.txt
+../../build/robot_status_leds/robot_status_leds.egg-info/zip-safe
 resource/robot_status_leds
 robot_status_leds/__init__.py
 robot_status_leds/led_controller.py

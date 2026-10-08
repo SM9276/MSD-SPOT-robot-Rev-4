@@ -1,1 +1,1 @@
-/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/spotarm_servo_gamepad/launch/servo_gamepad.launch.py
+/home/msd/MSD2/REV4/src/spotarm_servo_gamepad/launch/servo_gamepad.launch.py

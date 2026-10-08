@@ -1,1 +1,1 @@
-/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/my_robot/ament_cmake_environment_hooks/local_setup.zsh
+/home/msd/MSD2/REV4/build/my_robot/ament_cmake_environment_hooks/local_setup.zsh

@@ -1,1 +1,1 @@
-/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/my_robot/launch/display.launch.py
+/home/msd/MSD2/REV4/src/my_robot/launch/display.launch.py

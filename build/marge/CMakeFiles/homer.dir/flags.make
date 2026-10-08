@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/marge/include
+CXX_INCLUDES = -I/home/msd/MSD2/REV4/src/marge/include
 
 CXX_FLAGS = -Wall -Wextra -Wpedantic
 

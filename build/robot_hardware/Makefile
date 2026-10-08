@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/robot_hardware
+CMAKE_SOURCE_DIR = /home/msd/MSD2/REV4/src/robot_hardware
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_hardware
+CMAKE_BINARY_DIR = /home/msd/MSD2/REV4/build/robot_hardware
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -142,9 +142,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_hardware/CMakeFiles /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_hardware//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/msd/MSD2/REV4/build/robot_hardware/CMakeFiles /home/msd/MSD2/REV4/build/robot_hardware//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/robot_hardware/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/msd/MSD2/REV4/build/robot_hardware/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

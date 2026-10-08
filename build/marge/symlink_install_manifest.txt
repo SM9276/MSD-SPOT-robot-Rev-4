@@ -1,33 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/lib/libicl_stepper.so
-/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/lib/marge/homer
-/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/include/marge/ICLStepper.h
-/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/share/marge/environment/library_path.sh
-/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/share/marge/environment/library_path.dsv
-/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/share/ament_index/resource_index/package_run_dependencies/marge
-/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/share/ament_index/resource_index/parent_prefix_path/marge
-/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/share/marge/environment/ament_prefix_path.sh
-/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/share/marge/environment/ament_prefix_path.dsv
-/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/share/marge/environment/path.sh
-/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/share/marge/environment/path.dsv
-/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/share/marge/local_setup.bash
-/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/share/marge/local_setup.sh
-/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/share/marge/local_setup.zsh
-/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/share/marge/local_setup.dsv
-/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/share/marge/package.dsv
-/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/share/ament_index/resource_index/packages/marge
-/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/share/marge/cmake/ament_cmake_export_include_directories-extras.cmake
-/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/share/marge/cmake/ament_cmake_export_libraries-extras.cmake
-/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/share/marge/cmake/margeConfig.cmake
-/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/share/marge/cmake/margeConfig-version.cmake
-/mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/install/marge/share/marge/package.xml
-=======
-=======
->>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
 /home/msd/MSD2/REV4/install/marge/lib/libicl_stepper.so
 /home/msd/MSD2/REV4/install/marge/lib/marge/homer
 /home/msd/MSD2/REV4/install/marge/include/marge/ICLStepper.h
@@ -50,41 +20,3 @@
 /home/msd/MSD2/REV4/install/marge/share/marge/cmake/margeConfig.cmake
 /home/msd/MSD2/REV4/install/marge/share/marge/cmake/margeConfig-version.cmake
 /home/msd/MSD2/REV4/install/marge/share/marge/package.xml
-<<<<<<< HEAD
->>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
-=======
->>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
-=======
-=======
->>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
-=======
->>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
-/home/msd/MSD2/REV4/install/marge/lib/libicl_stepper.so
-/home/msd/MSD2/REV4/install/marge/lib/marge/homer
-/home/msd/MSD2/REV4/install/marge/include/marge/ICLStepper.h
-/home/msd/MSD2/REV4/install/marge/share/marge/environment/library_path.sh
-/home/msd/MSD2/REV4/install/marge/share/marge/environment/library_path.dsv
-/home/msd/MSD2/REV4/install/marge/share/ament_index/resource_index/package_run_dependencies/marge
-/home/msd/MSD2/REV4/install/marge/share/ament_index/resource_index/parent_prefix_path/marge
-/home/msd/MSD2/REV4/install/marge/share/marge/environment/ament_prefix_path.sh
-/home/msd/MSD2/REV4/install/marge/share/marge/environment/ament_prefix_path.dsv
-/home/msd/MSD2/REV4/install/marge/share/marge/environment/path.sh
-/home/msd/MSD2/REV4/install/marge/share/marge/environment/path.dsv
-/home/msd/MSD2/REV4/install/marge/share/marge/local_setup.bash
-/home/msd/MSD2/REV4/install/marge/share/marge/local_setup.sh
-/home/msd/MSD2/REV4/install/marge/share/marge/local_setup.zsh
-/home/msd/MSD2/REV4/install/marge/share/marge/local_setup.dsv
-/home/msd/MSD2/REV4/install/marge/share/marge/package.dsv
-/home/msd/MSD2/REV4/install/marge/share/ament_index/resource_index/packages/marge
-/home/msd/MSD2/REV4/install/marge/share/marge/cmake/ament_cmake_export_include_directories-extras.cmake
-/home/msd/MSD2/REV4/install/marge/share/marge/cmake/ament_cmake_export_libraries-extras.cmake
-/home/msd/MSD2/REV4/install/marge/share/marge/cmake/margeConfig.cmake
-/home/msd/MSD2/REV4/install/marge/share/marge/cmake/margeConfig-version.cmake
-/home/msd/MSD2/REV4/install/marge/share/marge/package.xml
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
-=======
->>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26
-=======
->>>>>>> f6515614f97110be7e36a5fdeab81499e9790a26

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/marge
+CMAKE_SOURCE_DIR = /home/msd/MSD2/REV4/src/marge
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/marge
+CMAKE_BINARY_DIR = /home/msd/MSD2/REV4/build/marge
 
 # Utility rule file for uninstall.
 
@@ -78,6 +78,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/marge && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/marge /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/src/marge /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/marge /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/marge /mnt/c/Users/Oden2/Downloads/MSD-SPOT-robot-Rev-4/build/marge/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/msd/MSD2/REV4/build/marge && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/msd/MSD2/REV4/src/marge /home/msd/MSD2/REV4/src/marge /home/msd/MSD2/REV4/build/marge /home/msd/MSD2/REV4/build/marge /home/msd/MSD2/REV4/build/marge/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uninstall.dir/depend
 
