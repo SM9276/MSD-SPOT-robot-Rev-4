@@ -556,8 +556,10 @@ ArmHardwareInterface::on_error(
 hardware_interface::return_type
 ArmHardwareInterface::read(
   const rclcpp::Time &,
-  const rclcpp::Duration &)
+  const rclcpp::Duration & period)
 {
+  constexpr double VELOCITY_FILTER_ALPHA = 0.5;   // 1.0 = no smoothing
+
   for (std::size_t i = 0; i < joint_names_.size(); ++i) {
     // ----------------------------------------------------
     // Revolute6 currently has no physical motor.
@@ -642,6 +644,8 @@ ArmHardwareInterface::read(
     // Successful read
     // ----------------------------------------------------
 
+    const bool just_recovered = consecutive_read_failures_[i] > 0;
+
     if (consecutive_read_failures_[i] > 0) {
       RCLCPP_INFO(
         rclcpp::get_logger("ArmHardwareInterface"),
@@ -655,12 +659,24 @@ ArmHardwareInterface::read(
     consecutive_read_failures_[i] = 0;
 
 
-    pos_[i] =
+    const double new_pos =
       counts_to_ros_radians(
       i,
       raw_counts);
 
-    vel_[i] = 0.0;
+    const double dt = period.seconds();
+
+    if (just_recovered || dt <= 1e-6) {
+      vel_[i] = 0.0;
+    } else {
+      const double raw_vel = (new_pos - pos_[i]) / dt;
+
+      vel_[i] =
+        VELOCITY_FILTER_ALPHA * raw_vel +
+        (1.0 - VELOCITY_FILTER_ALPHA) * vel_[i];
+    }
+
+    pos_[i] = new_pos;
   }
 
 
