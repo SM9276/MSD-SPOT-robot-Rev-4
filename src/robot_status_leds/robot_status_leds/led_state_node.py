@@ -18,6 +18,8 @@ class LEDStateNode(Node):
         self.declare_parameter('static_color', '#00FF00')
         self.declare_parameter('moving_color', '#FF0000')
         self.declare_parameter('blinking_color', '#0000FF')
+        self.declare_parameter('startup_color', '#FFA500')
+        self.declare_parameter('ready_topic', '/spotarm/named_target')
         self.declare_parameter('velocity_threshold', 0.01)
         self.declare_parameter('moving_timeout_ms', 500)
         self.declare_parameter('update_rate_hz', 10.0)
@@ -79,9 +81,22 @@ class LEDStateNode(Node):
         except Exception as e:
             self.get_logger().error(
                 f'Invalid blinking_color parameter {self.blinking_color_hex}: {e}')
-            self.blinking_color = (255, 0, 0)
+            self.blinking_color = (0, 0, 255)
+
+        self.ready_topic = self.get_parameter('ready_topic').value
+
+        try:
+            self.startup_color = hex_to_rgb(
+                self.get_parameter('startup_color').value)
+        except Exception as e:
+            self.get_logger().error(
+                f'Invalid startup_color parameter: {e}')
+            self.startup_color = (255, 165, 0)
+
 
         # subscribe to joint_states topic
+        self.sub = self.create_subscription(JointState, self.joint_states_topic, self.joint_state_cb, 10)
+
         self.sub = self.create_subscription(JointState, self.joint_states_topic, self.joint_state_cb, 10)
 
         # periodic timer to update LEDs
@@ -133,6 +148,16 @@ class LEDStateNode(Node):
 
 
     def update_leds(self):
+        if self.count_subscribers(self.ready_topic) == 0:
+            self.is_blinking = 0
+            try:
+                self.controller.set_color(self.startup_color)
+            except Exception as e:
+                self.get_logger().error(f'Failed to set color: {e}')
+            return
+
+        if self.is_blinking > 0:
+            return
         moving = self.detect_moving()
         self.is_moving = moving
 

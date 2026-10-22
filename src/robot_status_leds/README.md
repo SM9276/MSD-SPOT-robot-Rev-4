@@ -49,9 +49,9 @@ NOTE: Package was left mostly untested due to time constraints.
       -p led_count:=60 \
       -p led_pin:=18 \
       -p brightness:=0.4 \
-      -p moving_color:=F8F000 \
-      -p static_color:=00F8F0 \
-      
+      -p moving_color:=FF0000 \
+      -p static_color:=00FF00 \
+      -p blinking_color:=FFFF00
    ```
 
    Example with parameters for Pi testing:
@@ -65,9 +65,9 @@ NOTE: Package was left mostly untested due to time constraints.
       -p led_count:=60 \
       -p led_pin:=18 \
       -p brightness:=0.4 \
-      -p moving_color:=FFFF00 \
-      -p static_color:=0000FF \
-      -p blinking_color:=FFF000 
+      -p moving_color:=FF0000 \
+      -p static_color:=00FF00 \
+      -p blinking_color:=FFFF00
     '
    ```
  
@@ -87,6 +87,13 @@ NOTE: Package was left mostly untested due to time constraints.
     ros2 node list
     ros2 topic info /joint_states
 
+
+6. Run robot but with bash
+   sudo bash -c '
+      source /opt/ros/humble/setup.bash
+      source /home/pi/MSD-SPOT-robot-Rev-4-main/install/setup.bash
+      ros2 launch robot_moveit_config hardware.launch.py
+   '
 
 ## Parameters
 - led_backend: 'rpi_neopixel' (default) or 'mock'
