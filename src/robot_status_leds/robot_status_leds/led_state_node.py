@@ -15,34 +15,39 @@ class LEDStateNode(Node):
         self.declare_parameter('led_count', 120)                 # number of LEDs
         self.declare_parameter('led_pin', 18)                  # GPIO number (e.g., 18 -> board.D18)
         self.declare_parameter('brightness', 0.5)              # 0.0 .. 1.0
+
         self.declare_parameter('static_color', '#00FF00')
-        self.declare_parameter('moving_color', '#FF0000')
+        self.declare_parameter('solid_color', '#FF0000')
         self.declare_parameter('blinking_color', '#0000FF')
+        self.declare_parameter('fading_color', '#FFFF00')
         self.declare_parameter('startup_color', '#FFA500')
-        self.declare_parameter('ready_topic', '/spotarm/named_target')
+
         self.declare_parameter('velocity_threshold', 0.01)
-        self.declare_parameter('moving_timeout_ms', 500)
         self.declare_parameter('update_rate_hz', 10.0)
         self.declare_parameter('joint_states_topic', 'joint_states')
+        self.declare_parameter('ready_topic', '/spotarm/named_target')
+
 
         # Read parameters
         self.led_backend = self.get_parameter('led_backend').value
         self.led_count = self.get_parameter('led_count').value
         self.led_pin = self.get_parameter('led_pin').value
-        self.brightness = self.get_parameter('brightness').value
+        self.brightness = self.get_parameter('brightness').value 
+
         self.static_color_hex = self.get_parameter('static_color').value
-        self.moving_color_hex = self.get_parameter('moving_color').value
+        self.solid_color_hex = self.get_parameter('solid_color').value
         self.blinking_color_hex = self.get_parameter('blinking_color').value
-        self.velocity_threshold = self.get_parameter('velocity_threshold').value
-        self.moving_timeout_ms = self.get_parameter('moving_timeout_ms').value
+        self.fading_color_hex = self.get_parameter('fading_color').value
+        self.startup_color_hex = self.get_parameter('startup_color').value
+
+        self.velocity_threshold = self.get_parameter('velocity_threshold').value        
         self.update_rate_hz = self.get_parameter('update_rate_hz').value
         self.joint_states_topic = self.get_parameter('joint_states_topic').value
         self.ready_topic = self.get_parameter('ready_topic').value
 
         # runtime state
-        self.last_moving_ts = 0.0
         self.is_moving = False
-        self.is_blinking = 0
+        self.led_state = 0 ## 0=solid, 1=blinking, 2=fading
         self.lock = threading.Lock()
         self.last_joint_vels = []
 
@@ -68,15 +73,15 @@ class LEDStateNode(Node):
         except Exception as e:
             self.get_logger().error(
                 f'Invalid static_color parameter {self.static_color_hex}: {e}')
-            self.static_color = (0, 0, 255)
+            self.static_color = (0, 255, 0)
 
 
         try:
-            self.moving_color = hex_to_rgb(self.moving_color_hex)
+            self.solid_color = hex_to_rgb(self.solid_color_hex)
         except Exception as e:
             self.get_logger().error(
-                f'Invalid moving_color parameter {self.moving_color_hex}: {e}')
-            self.moving_color = (0, 255, 0)
+                f'Invalid solid_color parameter {self.solid_color_hex}: {e}')
+            self.solid_color = (255, 0, 0) 
 
 
         try:
@@ -88,12 +93,19 @@ class LEDStateNode(Node):
 
 
         try:
-            self.startup_color = hex_to_rgb(
-                self.get_parameter('startup_color').value)
+            self.startup_color = hex_to_rgb(self.startup_color_hex)
         except Exception as e:
             self.get_logger().error(
-                f'Invalid startup_color parameter: {e}')
+                f'Invalid startup_color parameter {self.startup_color_hex}: {e}')
             self.startup_color = (255, 165, 0)
+
+
+        try:
+            self.fading_color = hex_to_rgb(self.fading_color_hex)
+        except Exception as e:
+            self.get_logger().error(
+                f'Invalid fading_color parameter {self.fading_color_hex}: {e}')
+            self.fading_color = (255, 255, 0)
 
 
         # subscribe to joint_states topic
@@ -105,6 +117,9 @@ class LEDStateNode(Node):
 
         periodB = 1.0 / float(10) ##float(frequency)
         self.timer = self.create_timer(periodB, self.blink_leds)
+
+        periodF = 1.0 / float(0.5) ##float(frequency)
+        self.timer = self.create_timer(periodF, self.fade_leds)
 
         self.get_logger().info(
             f'led_state_node initialized: backend={self.led_backend} '
@@ -129,41 +144,34 @@ class LEDStateNode(Node):
                 if max_vel > self.velocity_threshold:
                     if max_vel > 0.01:
                     ##Redundant condiitonal for possible seperation of blinking and moving commands            
-                        self.get_logger().info(f"MAX VELOCITY={max_vel}")  
-                        self.is_blinking = 1
+                        self.get_logger().info(f"MAX VELOCITY={max_vel}") 
+                        self.is_moving = True 
+                        self.led_state = 1
                     else:
-                        self.last_moving_ts = now
-                        self.is_blinking = 0
-                    
-
-
-
-    def detect_moving(self):
-        now = self.get_clock().now().nanoseconds / 1e9
-        with self.lock:
-            if (now - self.last_moving_ts) * 1000.0 <= self.moving_timeout_ms:
-                return True
-            return False
-
+                        self.is_moving = False
+                        self.led_state = 0
+                     
 
 
     def update_leds(self):
         ready = self.count_subscribers(self.ready_topic) > 0
-        moving = self.detect_moving()
+
     
         if not ready:
             color = self.startup_color
             state = 'STARTUP'
-        elif self.is_blinking == 1:
-            color = self.blinking_color
-            state = 'BLINKING'
-        elif moving == True:
-            color = self.moving_color
-            state = 'MOVING'
-        else:
+        elif self.is_moving == False:
             color = self.static_color
             state = 'STATIC'
-        self.is_moving = moving
+        elif self.led_state == 1:
+            color = self.blinking_color
+            state = 'BLINKING'
+        elif self.led_state == 2:
+            color = self.fading_color
+            state = 'FADING'
+        else:
+            color = self.solid_color
+            state = 'SOLiD'
         self.get_logger().info(f'Motion state changed: {state}')
 
         try:
@@ -173,17 +181,26 @@ class LEDStateNode(Node):
 
 
     def blink_leds(self):  
-        color = self.blinking_color
         try:
+            color = self.controller.get_color()
 
-            if(self.is_blinking == 1):
+            if(color == self.blinking_color):
                 self.controller.set_color((0, 0, 0))                
-                self.is_blinking = 2
+            else:
+                self.controller.set_color(self.blinking_color)
 
-            elif(self.is_blinking == 2):
-                self.controller.set_color(color)
-                self.is_blinking = 1
+        except Exception as e:
+            self.get_logger().error(f'Failed to set color: {e}')
 
+
+    def fade_leds(self):  
+        try:
+            color = self.controller.get_color()
+
+            if(color == self.blinking_color):
+                self.controller.set_color((0, 0, 0))                
+            else:
+                self.controller.set_color(self.blinking_color)
 
         except Exception as e:
             self.get_logger().error(f'Failed to set color: {e}')

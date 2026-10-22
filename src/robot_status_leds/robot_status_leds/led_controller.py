@@ -36,6 +36,9 @@ class MockController(LEDControllerBase):
     def set_color(self, rgb):
         logger.info("MockController set_color: rgb=%s, count=%d", rgb, self.led_count)
 
+    def get_color(self):
+        return (0, 0, 0)  # MockController does not store color
+
 class RpiNeoPixelController(LEDControllerBase):
     """
     Uses Adafruit CircuitPython NeoPixel library.
@@ -84,6 +87,14 @@ class RpiNeoPixelController(LEDControllerBase):
         self.pixels.fill(color)
         if not self.auto_write:
             self.pixels.show()
+
+    def get_color(self) -> tuple[int, int, int]:
+        """Return the RGB color of the first LED, or black for an empty strip."""
+        if len(self.pixels) == 0:
+            return (0, 0, 0)
+
+        red, green, blue = self.pixels[0]
+        return (int(red), int(green), int(blue))
 
     def show(self):
         if not self.auto_write:
