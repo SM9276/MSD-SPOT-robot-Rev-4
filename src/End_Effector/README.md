@@ -44,7 +44,7 @@ ros2 run end_effector pwm_output_node --ros-args \
 sudo bash -c '
     source /opt/ros/humble/setup.bash
     source /home/pi/MSD-SPOT-robot-Rev-4-main/install/setup.bash
-    ros2 topic pub --once /end_effector/duty_cycle std_msgs/msg/Float32 "{data: 0.125}"
+    ros2 topic pub --once /end_effector std_msgs/msg/Float32 "{data: 0.125}"
   '
 ```
 use these for the "/usr/bin/env: ‘python3\r’: No such file or directory

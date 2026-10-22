@@ -14,7 +14,7 @@ class PwmOutputNode(Node):
         self.declare_parameter('backend', 'mock')
         self.declare_parameter('gpio_pin', -1)
         self.declare_parameter('frequency_hz', 100.0)
-        self.declare_parameter('command_topic', '/end_effector/duty_cycle')
+        self.declare_parameter('command_topic', '/end_effector')
 
         self.backend = self.get_parameter('backend').value
         self.gpio_pin = self.get_parameter('gpio_pin').value

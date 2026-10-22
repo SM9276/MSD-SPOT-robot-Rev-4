@@ -100,7 +100,7 @@ class LEDStateNode(Node):
     def joint_state_cb(self, msg: JointState):
         # joint velocities array may be empty depending on publisher; guard
         self.get_logger().info(f"JOINT CALLBACK RECEIVED: velocity={list(msg.velocity)}")
-        self.get_logger().info(f"JOINT CALLBACK RECEIVED: velocity={list(msg.velocity)}")
+        
         if msg.velocity:
             with self.lock:
                 self.last_joint_vels = list(msg.velocity)
@@ -112,10 +112,9 @@ class LEDStateNode(Node):
 
                 now = self.get_clock().now().nanoseconds / 1e9
                 if max_vel > self.velocity_threshold:
-                    if max_vel == 0.3 and self.is_blinking == 0:
-                        self.get_logger().info(
-                            f"MAX VELOCITY={max_vel}, BLINK VELOCITY=0.3"
-                        )  
+                    if max_vel > 0.01:
+                    ##Redundant condiitonal for possible seperation of blinking and moving commands            
+                        self.get_logger().info(f"MAX VELOCITY={max_vel}")  
                         self.is_blinking = 1
                     else:
                         self.last_moving_ts = now
@@ -134,14 +133,21 @@ class LEDStateNode(Node):
 
 
     def update_leds(self):
-        if self.is_blinking > 0:
-            return
         moving = self.detect_moving()
-        if moving != self.is_moving:
-            self.is_moving = moving
-            state = 'MOVING' if moving else 'STATIC'
-            self.get_logger().info(f'Motion state changed: {state}')
-        color = self.moving_color if moving else self.static_color
+        self.is_moving = moving
+
+        if self.is_blinking == 1:
+            color = self.blinking_color
+            state = 'BLINKING'
+        elif moving == True:
+            color = self.moving_color
+            state = 'MOVING'
+        else:
+            color = self.static_color
+            state = 'STATIC'
+
+        self.get_logger().info(f'Motion state changed: {state}')
+
         try:
             self.controller.set_color(color)
         except Exception as e:
@@ -155,6 +161,7 @@ class LEDStateNode(Node):
             if(self.is_blinking == 1):
                 self.controller.set_color((0, 0, 0))                
                 self.is_blinking = 2
+
             elif(self.is_blinking == 2):
                 self.controller.set_color(color)
                 self.is_blinking = 1
