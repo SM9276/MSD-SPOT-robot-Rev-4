@@ -37,6 +37,7 @@ class LEDStateNode(Node):
         self.moving_timeout_ms = self.get_parameter('moving_timeout_ms').value
         self.update_rate_hz = self.get_parameter('update_rate_hz').value
         self.joint_states_topic = self.get_parameter('joint_states_topic').value
+        self.ready_topic = self.get_parameter('ready_topic').value
 
         # runtime state
         self.last_moving_ts = 0.0
@@ -69,12 +70,14 @@ class LEDStateNode(Node):
                 f'Invalid static_color parameter {self.static_color_hex}: {e}')
             self.static_color = (0, 0, 255)
 
+
         try:
             self.moving_color = hex_to_rgb(self.moving_color_hex)
         except Exception as e:
             self.get_logger().error(
                 f'Invalid moving_color parameter {self.moving_color_hex}: {e}')
             self.moving_color = (0, 255, 0)
+
 
         try:
             self.blinking_color = hex_to_rgb(self.blinking_color_hex)
@@ -83,7 +86,6 @@ class LEDStateNode(Node):
                 f'Invalid blinking_color parameter {self.blinking_color_hex}: {e}')
             self.blinking_color = (0, 0, 255)
 
-        self.ready_topic = self.get_parameter('ready_topic').value
 
         try:
             self.startup_color = hex_to_rgb(
@@ -95,8 +97,6 @@ class LEDStateNode(Node):
 
 
         # subscribe to joint_states topic
-        self.sub = self.create_subscription(JointState, self.joint_states_topic, self.joint_state_cb, 10)
-
         self.sub = self.create_subscription(JointState, self.joint_states_topic, self.joint_state_cb, 10)
 
         # periodic timer to update LEDs
@@ -148,20 +148,13 @@ class LEDStateNode(Node):
 
 
     def update_leds(self):
-        if self.count_subscribers(self.ready_topic) == 0:
-            self.is_blinking = 0
-            try:
-                self.controller.set_color(self.startup_color)
-            except Exception as e:
-                self.get_logger().error(f'Failed to set color: {e}')
-            return
-
-        if self.is_blinking > 0:
-            return
+        ready = self.count_subscribers(self.ready_topic) > 0
         moving = self.detect_moving()
-        self.is_moving = moving
-
-        if self.is_blinking == 1:
+    
+        if not ready:
+            color = self.startup_color
+            state = 'STARTUP'
+        elif self.is_blinking == 1:
             color = self.blinking_color
             state = 'BLINKING'
         elif moving == True:
@@ -170,7 +163,7 @@ class LEDStateNode(Node):
         else:
             color = self.static_color
             state = 'STATIC'
-
+        self.is_moving = moving
         self.get_logger().info(f'Motion state changed: {state}')
 
         try:
