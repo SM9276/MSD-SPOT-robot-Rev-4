@@ -50,7 +50,7 @@ class LEDStateNode(Node):
         self.last_motion_time = 0
         self.led_state = 0 ## 0=solid, 1=blinking, 2=fading
         self.lock = threading.Lock()
-        self.last_joint_vels = []
+        self.timeout = 0.5 # LED state change timeout in seconds
 
         # init controller
         try:
@@ -142,7 +142,7 @@ class LEDStateNode(Node):
                 )   
 
                 now = self.get_clock().now().nanoseconds / 1e9
-                if max_vel > self.velocity_threshold & now > self.last_motion_time:
+                if max_vel > self.velocity_threshold and now - self.last_motion_time > self.timeout:
                     if max_vel > 0.01:
                     ##Redundant condiitonal for possible seperation of blinking and moving commands            
                         self.is_moving = True 
@@ -156,39 +156,41 @@ class LEDStateNode(Node):
 
     def update_leds(self):
         ready = self.count_subscribers(self.ready_topic) > 0
+        now = self.get_clock().now().nanoseconds / 1e9
 
-    
-        if not ready:
-            color = self.startup_color
-            state = 'STARTUP'
-        elif self.is_moving == False:
-            color = self.static_color
-            state = 'STATIC'
-        elif self.led_state == 1:
-            color = self.blinking_color
-            state = 'BLINKING'
-        elif self.led_state == 2:
-            color = self.fading_color
-            state = 'FADING'
-        else:
-            color = self.solid_color
-            state = 'SOLiD'
-        self.get_logger().info(f'Motion state changed: {state}')
+        if now - self.last_motion_time >= self.timeout:
+            if not ready:
+                color = self.startup_color 
+                state = 'STARTUP'
+            elif self.is_moving == False:
+                color = self.static_color
+                state = 'STATIC'
+            elif self.led_state == 1:
+                color = self.blinking_color
+                state = 'BLINKING'
+            elif self.led_state == 2:
+                color = self.fading_color            
+                state = 'FADING'
+            else:
+                color = self.solid_color                
+                state = 'SOLiD'
+            self.get_logger().info(f'Motion state changed: {state}')
 
-        try:
-            self.controller.set_color(color)
-        except Exception as e:
-            self.get_logger().error(f'Failed to set color: {e}')
+            try:
+                self.controller.set_color(color)
+            except Exception as e:
+                self.get_logger().error(f'Failed to set color: {e}')
 
 
     def blink_leds(self):  
         try:
-            color = self.controller.get_color()
+            if(self.led_state == 1):
+                color = self.controller.get_color()
 
-            if(color == self.blinking_color):
-                self.controller.set_color((0, 0, 0))                
-            else:
-                self.controller.set_color(self.blinking_color)
+                if(color == self.blinking_color):
+                    self.controller.set_color((0, 0, 0))                
+                else:
+                    self.controller.set_color(self.blinking_color)
 
         except Exception as e:
             self.get_logger().error(f'Failed to set color: {e}')
