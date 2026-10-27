@@ -116,7 +116,7 @@ class LEDStateNode(Node):
         period = 1.0 / float(self.update_rate_hz)
         self.timer = self.create_timer(period, self.update_leds)
 
-        periodB = 1.0 / float(10) ##float(frequency)
+        periodB = 1.0 / float(3) ##float(frequency)
         self.timer = self.create_timer(periodB, self.blink_leds)
 
         periodF = 1.0 / float(0.5) ##float(frequency)
@@ -143,7 +143,7 @@ class LEDStateNode(Node):
 
                 now = self.get_clock().now().nanoseconds / 1e9
                 if max_vel > self.velocity_threshold and now - self.last_motion_time > self.timeout:
-                    if max_vel > 0.01:
+                    if max_vel > self.velocity_threshold:
                     ##Redundant condiitonal for possible seperation of blinking and moving commands            
                         self.is_moving = True 
                         self.led_state = 1
