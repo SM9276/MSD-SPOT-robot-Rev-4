@@ -22,7 +22,7 @@ class LEDStateNode(Node):
         self.declare_parameter('fading_color', '#FFFF00')
         self.declare_parameter('startup_color', '#FFA500')
 
-        self.declare_parameter('velocity_threshold', 0.01)
+        self.declare_parameter('velocity_threshold', 0.0001)
         self.declare_parameter('update_rate_hz', 10.0)
         self.declare_parameter('joint_states_topic', 'joint_states')
         self.declare_parameter('ready_topic', '/spotarm/named_target')
@@ -47,6 +47,7 @@ class LEDStateNode(Node):
 
         # runtime state
         self.is_moving = False
+        self.refreshed = False
         self.last_motion_time = 0
         self.led_state = 0 ## 0=solid, 1=blinking, 2=fading
         self.lock = threading.Lock()
@@ -110,16 +111,16 @@ class LEDStateNode(Node):
 
 
         # subscribe to joint_states topic
-        self.sub = self.create_subscription(JointState, self.joint_states_topic, self.joint_state_cb, 10)
+        self.sub = self.create_subscription(JointState, self.joint_states_topic, self.joint_state_cb, 10) ##10 = QoS depth not Hz
 
         # periodic timer to update LEDs
         period = 1.0 / float(self.update_rate_hz)
         self.timer = self.create_timer(period, self.update_leds)
 
-        periodB = 1.0 / float(3) ##float(frequency)
+        periodB = 1.0 / float(self.update_rate_hz/2) ##float(frequency)
         self.timer = self.create_timer(periodB, self.blink_leds)
 
-        periodF = 1.0 / float(0.5) ##float(frequency)
+        periodF = 1.0 / float(self.update_rate_hz) ##float(frequency)
         self.timer = self.create_timer(periodF, self.fade_leds)
 
         self.get_logger().info(
@@ -131,9 +132,12 @@ class LEDStateNode(Node):
     def joint_state_cb(self, msg: JointState):
         # joint velocities array may be empty depending on publisher; guard
         self.get_logger().info(f"JOINT CALLBACK RECEIVED: velocity={list(msg.velocity)}")
+        self.get_logger().info(f"{10//3}")
+        self.get_logger().info(f"{10/3}")
         
         if msg.velocity:
-            with self.lock:
+            with self.lock:                                
+
                 self.last_joint_vels = list(msg.velocity)
                 max_vel = max(abs(v) for v in self.last_joint_vels)
                 
@@ -142,63 +146,72 @@ class LEDStateNode(Node):
                 )   
 
                 now = self.get_clock().now().nanoseconds / 1e9
-                if max_vel > self.velocity_threshold and now - self.last_motion_time > self.timeout:
-                    if max_vel > self.velocity_threshold:
-                    ##Redundant condiitonal for possible seperation of blinking and moving commands            
-                        self.is_moving = True 
-                        self.led_state = 1
-                        self.last_motion_time = now
-                    else:
-                        self.is_moving = False
-                        self.led_state = 0
+                if max_vel > self.velocity_threshold: 
+                    if(not self.is_moving):
+                        self.refreshed = True  
+
+                    self.is_moving = True 
+                    self.led_state = 1
+                    self.last_motion_time = now                
+                    self.get_logger().info(f"\tFact Check: True")                 
+                elif (now - self.last_motion_time) > self.timeout:
+                    if(self.is_moving):
+                        self.refreshed = True
+
+                    self.is_moving = False
+                    self.led_state = 0
+                    self.get_logger().info(f"\tFact Check: False")
+                
                      
 
 
     def update_leds(self):
-        ready = self.count_subscribers(self.ready_topic) > 0
-        now = self.get_clock().now().nanoseconds / 1e9
-
-        if now - self.last_motion_time >= self.timeout:
+        if self.refreshed == True:
+            ready = self.count_subscribers(self.ready_topic) > 0
+            self.refreshed = False
             if not ready:
-                color = self.startup_color 
+                color = self.startup_color
                 state = 'STARTUP'
-            elif self.is_moving == False:
+            if self.is_moving == False:
                 color = self.static_color
-                state = 'STATIC'
-            elif self.led_state == 1:
-                color = self.blinking_color
-                state = 'BLINKING'
-            elif self.led_state == 2:
-                color = self.fading_color            
-                state = 'FADING'
-            else:
+                state = 'STATIC' 
+            elif self.led_state == 0: ##COLOR TYPES
                 color = self.solid_color                
-                state = 'SOLiD'
+                state = 'SOLID' 
+            elif self.led_state == 1:
+                state = 'BLINKING'
+                self.get_logger().info(f'Motion state changed: {state}')
+                return
+            elif self.led_state == 2:           
+                state = 'FADING'
+                self.get_logger().info(f'Motion state changed: {state}')
+                return
+
             self.get_logger().info(f'Motion state changed: {state}')
 
             try:
                 self.controller.set_color(color)
             except Exception as e:
                 self.get_logger().error(f'Failed to set color: {e}')
+        
 
 
     def blink_leds(self):  
-        try:
-            if(self.led_state == 1):
+        if(self.led_state == 1):
+            try:            
                 color = self.controller.get_color()
-
                 if(color == self.blinking_color):
                     self.controller.set_color((0, 0, 0))                
                 else:
                     self.controller.set_color(self.blinking_color)
 
-        except Exception as e:
-            self.get_logger().error(f'Failed to set color: {e}')
+            except Exception as e:
+                self.get_logger().error(f'Failed to set color: {e}')
 
 
     def fade_leds(self):  
-        try:
-            if(self.led_state == 2):
+        if(self.led_state == 2):
+            try:
                 color = self.controller.get_color()
 
                 if(color == self.blinking_color):
@@ -206,8 +219,8 @@ class LEDStateNode(Node):
                 else:
                     self.controller.set_color(self.fading_color)
 
-        except Exception as e:
-            self.get_logger().error(f'Failed to set color: {e}')
+            except Exception as e:
+                self.get_logger().error(f'Failed to set color: {e}')
 
 
     def destroy_node(self):

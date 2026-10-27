@@ -41,8 +41,8 @@ NOTE: Package was left mostly untested due to time constraints.
 
    Example with parameters for PC testing:
    ```bash
-    source setup.bash
-    source install/setup.bash
+   source install/setup.bash
+   source /opt/ros/humble/setup.bash
 
     ros2 run robot_status_leds led_state_node --ros-args \
       -p led_backend:=mock \
@@ -73,9 +73,9 @@ NOTE: Package was left mostly untested due to time constraints.
  
 5. Simulate State Change (1 Hz):
    ```bash
-   source setup.bash
    source install/setup.bash
-   ros2 topic pub /joint_states sensor_msgs/msg/JointState   "{velocity: [1.0], blink: [0.1]}" -r 1
+   source /opt/ros/humble/setup.bash
+   ros2 topic pub /joint_states sensor_msgs/msg/JointState   "{velocity: [1.0]}" -r 1
    ```
        ```bash 
     sudo bash -c '
