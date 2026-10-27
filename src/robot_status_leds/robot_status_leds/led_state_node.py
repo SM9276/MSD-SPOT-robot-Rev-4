@@ -198,12 +198,13 @@ class LEDStateNode(Node):
 
     def fade_leds(self):  
         try:
-            color = self.controller.get_color()
+            if(self.led_state == 2):
+                color = self.controller.get_color()
 
-            if(color == self.blinking_color):
-                self.controller.set_color((0, 0, 0))                
-            else:
-                self.controller.set_color(self.blinking_color)
+                if(color == self.blinking_color):
+                    self.controller.set_color((0, 0, 0))                
+                else:
+                    self.controller.set_color(self.fading_color)
 
         except Exception as e:
             self.get_logger().error(f'Failed to set color: {e}')
