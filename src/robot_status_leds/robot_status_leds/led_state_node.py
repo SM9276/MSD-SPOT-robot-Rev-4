@@ -47,6 +47,7 @@ class LEDStateNode(Node):
 
         # runtime state
         self.is_moving = False
+        self.last_motion_time = 0
         self.led_state = 0 ## 0=solid, 1=blinking, 2=fading
         self.lock = threading.Lock()
         self.last_joint_vels = []
@@ -141,12 +142,12 @@ class LEDStateNode(Node):
                 )   
 
                 now = self.get_clock().now().nanoseconds / 1e9
-                if max_vel > self.velocity_threshold:
+                if max_vel > self.velocity_threshold & now > self.last_motion_time:
                     if max_vel > 0.01:
                     ##Redundant condiitonal for possible seperation of blinking and moving commands            
-                        self.get_logger().info(f"MAX VELOCITY={max_vel}") 
                         self.is_moving = True 
                         self.led_state = 1
+                        self.last_motion_time = now
                     else:
                         self.is_moving = False
                         self.led_state = 0
