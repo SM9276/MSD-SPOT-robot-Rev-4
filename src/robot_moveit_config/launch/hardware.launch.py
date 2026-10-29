@@ -96,6 +96,28 @@ def generate_launch_description():
 
 
     # ============================================================
+    # Joystick driver
+    #
+    # joy_linux_node retries every second if /dev/input/js0 is
+    # missing, so it can start before the controller is connected.
+    # ============================================================
+
+    joy_node = Node(
+        package="joy_linux",
+        executable="joy_linux_node",
+        name="joy_node",
+        output="screen",
+        parameters=[
+            {
+                "dev": "/dev/input/js0",
+                "autorepeat_rate": 20.0,
+                "deadzone": 0.05,
+            }
+        ],
+    )
+
+
+    # ============================================================
     # Robot State Publisher
     # ============================================================
 
@@ -404,6 +426,7 @@ def generate_launch_description():
 
             # Initial processes
             static_tf_node,
+            joy_node,
             robot_state_publisher,
             ros2_control_node,
 
