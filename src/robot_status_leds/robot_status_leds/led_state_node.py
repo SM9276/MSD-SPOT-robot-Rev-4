@@ -1,7 +1,7 @@
 import rclpy
 from rclpy.node import Node
 from rclpy.executors import ExternalShutdownException
-from sensor_msgs.msg import JointState
+from sensor_msgs.msg import JointState, Joy
 import threading
 
 from .led_controller import MockController, RpiNeoPixelController, hex_to_rgb
@@ -19,13 +19,16 @@ class LEDStateNode(Node):
         self.declare_parameter('static_color', '#00FF00')
         self.declare_parameter('solid_color', '#FF0000')
         self.declare_parameter('blinking_color', '#0000FF')
-        self.declare_parameter('fading_color', '#FFFF00')
+        self.declare_parameter('fading_color', '#00FF00')
         self.declare_parameter('startup_color', '#FFA500')
 
         self.declare_parameter('velocity_threshold', 0.0001)
         self.declare_parameter('update_rate_hz', 10.0)
         self.declare_parameter('joint_states_topic', 'joint_states')
         self.declare_parameter('ready_topic', '/spotarm/named_target')
+        self.declare_parameter('joy_topic', '/joy')
+        self.declare_parameter('joy_timeout_s', 2.0)
+        self.declare_parameter('calibration_hold_s', 3.0)
 
 
         # Read parameters
@@ -44,14 +47,20 @@ class LEDStateNode(Node):
         self.update_rate_hz = self.get_parameter('update_rate_hz').value
         self.joint_states_topic = self.get_parameter('joint_states_topic').value
         self.ready_topic = self.get_parameter('ready_topic').value
+        self.joy_topic = self.get_parameter('joy_topic').value
+        self.joy_timeout = self.get_parameter('joy_timeout_s').value
+        self.calibration_hold = self.get_parameter('calibration_hold_s').value
 
         # runtime state
         self.is_moving = False
         self.refreshed = False
         self.last_motion_time = 0
-        self.led_state = 0 ## 0=solid, 1=blinking, 2=fading
+        self.led_state = 0 ## 0=solid, 1=moving blink, 2=controller blink, 3=calibrating blink
         self.lock = threading.Lock()
         self.timeout = 0.5 # LED state change timeout in seconds
+        self.last_joy_time = 0.0
+        self.last_ready = None
+        self.last_connected = None
 
         # init controller
         try:
@@ -113,6 +122,8 @@ class LEDStateNode(Node):
         # subscribe to joint_states topic
         self.sub = self.create_subscription(JointState, self.joint_states_topic, self.joint_state_cb, 10) ##10 = QoS depth not Hz
 
+        self.joy_sub = self.create_subscription(Joy, self.joy_topic, self.joy_cb, 10)
+
         # periodic timer to update LEDs
         period = 1.0 / float(self.update_rate_hz)
         self.timer = self.create_timer(period, self.update_leds)
@@ -120,8 +131,11 @@ class LEDStateNode(Node):
         periodB = 1.0 / float(self.update_rate_hz/2) ##float(frequency)
         self.timer = self.create_timer(periodB, self.blink_leds)
 
-        periodF = 1.0 / float(self.update_rate_hz) ##float(frequency)
+        periodF = 1.0 / float(self.update_rate_hz/4) ##controller-disconnected green blink
         self.timer = self.create_timer(periodF, self.fade_leds)
+
+        periodS = 1.0 / float(self.update_rate_hz/4) ##calibrating yellow blink
+        self.timer = self.create_timer(periodS, self.startup_blink_leds)
 
         self.get_logger().info(
             f'led_state_node initialized: backend={self.led_backend} '
@@ -154,38 +168,55 @@ class LEDStateNode(Node):
                     self.led_state = 1
                     self.last_motion_time = now                
                     self.get_logger().info(f"\tFact Check: True")                 
-                elif (now - self.last_motion_time) > self.timeout:
+                elif (now - self.last_motion_time) > (
+                        self.timeout
+                        if self.count_subscribers(self.ready_topic) > 0
+                        else self.calibration_hold):
                     if(self.is_moving):
                         self.refreshed = True
 
-                    self.is_moving = False
-                    self.led_state = 0
+                    if self.is_moving:
+                        self.is_moving = False
+                        self.led_state = 0
                     self.get_logger().info(f"\tFact Check: False")
                 
                      
 
 
+    def joy_cb(self, msg: Joy):
+        self.last_joy_time = self.get_clock().now().nanoseconds / 1e9
+
+
     def update_leds(self):
+        now = self.get_clock().now().nanoseconds / 1e9
+        ready = self.count_subscribers(self.ready_topic) > 0
+        connected = (now - self.last_joy_time) <= self.joy_timeout
+
+        if ready != self.last_ready or connected != self.last_connected:
+            self.last_ready = ready
+            self.last_connected = connected
+            self.refreshed = True
+
         if self.refreshed == True:
-            ready = self.count_subscribers(self.ready_topic) > 0
             self.refreshed = False
+
+            if self.is_moving:
+                self.led_state = 1
+                self.get_logger().info('Motion state changed: BLINKING')
+                return
+
             if not ready:
-                color = self.startup_color
-                state = 'STARTUP'
-            if self.is_moving == False:
+                self.led_state = 3
+                self.get_logger().info('Motion state changed: CALIBRATING')
+                return
+            elif not connected:
+                self.led_state = 2
+                self.get_logger().info('Motion state changed: CONTROLLER DISCONNECTED')
+                return
+            else:
+                self.led_state = 0
                 color = self.static_color
-                state = 'STATIC' 
-            elif self.led_state == 0: ##COLOR TYPES
-                color = self.solid_color                
-                state = 'SOLID' 
-            elif self.led_state == 1:
-                state = 'BLINKING'
-                self.get_logger().info(f'Motion state changed: {state}')
-                return
-            elif self.led_state == 2:           
-                state = 'FADING'
-                self.get_logger().info(f'Motion state changed: {state}')
-                return
+                state = 'STATIC'
 
             self.get_logger().info(f'Motion state changed: {state}')
 
@@ -193,7 +224,7 @@ class LEDStateNode(Node):
                 self.controller.set_color(color)
             except Exception as e:
                 self.get_logger().error(f'Failed to set color: {e}')
-        
+
 
 
     def blink_leds(self):  
@@ -214,10 +245,24 @@ class LEDStateNode(Node):
             try:
                 color = self.controller.get_color()
 
-                if(color == self.blinking_color):
+                if(color == self.fading_color):
                     self.controller.set_color((0, 0, 0))                
                 else:
                     self.controller.set_color(self.fading_color)
+
+            except Exception as e:
+                self.get_logger().error(f'Failed to set color: {e}')
+
+
+    def startup_blink_leds(self):
+        if(self.led_state == 3):
+            try:
+                color = self.controller.get_color()
+
+                if(color == self.startup_color):
+                    self.controller.set_color((0, 0, 0))
+                else:
+                    self.controller.set_color(self.startup_color)
 
             except Exception as e:
                 self.get_logger().error(f'Failed to set color: {e}')
