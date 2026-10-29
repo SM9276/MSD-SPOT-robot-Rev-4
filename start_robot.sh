@@ -2,7 +2,7 @@
 # Opens three terminals: the LED status node, the arm hardware launch, and the target gamepad.
 # Usage: ./start_robot.sh
 
-WS="${WS:-/home/pi/MSD-SPOT-robot-Rev4-live-main}"
+WS="${WS:-/home/pi/MSD-SPOT-robot-Rev4-main}"
 
 if [ ! -f "$WS/install/setup.bash" ]; then
   echo "Cannot find $WS/install/setup.bash - build the workspace first (or set WS=/path)."
