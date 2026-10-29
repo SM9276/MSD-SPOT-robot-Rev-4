@@ -9,6 +9,10 @@ if [ ! -f "$WS/install/setup.bash" ]; then
   exit 1
 fi
 
+echo "Binding 8BitDo controller (2dc8:3106) to xpad..."
+sudo modprobe xpad
+echo "2dc8 3106" | sudo tee /sys/bus/usb/drivers/xpad/new_id > /dev/null || true
+
 TMP="$(mktemp -d)"
 
 cat > "$TMP/leds.sh" <<EOF
