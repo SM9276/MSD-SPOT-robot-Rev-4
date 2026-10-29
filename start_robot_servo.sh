@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # Servo (live joystick driving) startup, no RViz.
-# Opens three terminals: the LED status node, the arm hardware launch (RViz off),
-# and MoveIt Servo with the servo gamepad (starts once move_group is up).
+# Starts the LED status node in the background, then opens two terminals: the arm
+# hardware launch (RViz off) and MoveIt Servo with the servo gamepad (starts once
+# move_group is up).
 # Usage: ./start_robot_servo.sh
 
 WS="${WS:-/home/pi/MSD-SPOT-robot-Rev-4-main}"
@@ -25,11 +26,12 @@ fi
 
 TMP="$(mktemp -d)"
 
-cat > "$TMP/leds.sh" <<EOF
-#!/usr/bin/env bash
-sudo bash -c 'source $WS/install/setup.bash && ros2 run robot_status_leds led_state_node --ros-args -p led_backend:=rpi_neopixel -p led_count:=60 -p led_pin:=18 -p brightness:=0.4 -p moving_color:=FF0000 -p static_color:=00FF00 -p blinking_color:=FF0000'
-exec bash
-EOF
+# LED status node runs in the background (no terminal). Output: /tmp/led_node.log
+# Stop it with: sudo pkill -f '[l]ed_state_node'
+sudo pkill -f '[l]ed_state_node' 2>/dev/null || true
+sudo -v
+setsid nohup sudo -n bash -c "source $WS/install/setup.bash && ros2 run robot_status_leds led_state_node --ros-args -p led_backend:=rpi_neopixel -p led_count:=60 -p led_pin:=18 -p brightness:=0.4 -p moving_color:=FF0000 -p static_color:=00FF00 -p blinking_color:=FF0000" > /tmp/led_node.log 2>&1 &
+echo "LED node started in the background (log: /tmp/led_node.log)"
 
 cat > "$TMP/hardware.sh" <<EOF
 #!/usr/bin/env bash
@@ -47,7 +49,7 @@ ros2 launch spotarm_servo_gamepad servo_gamepad.launch.py'
 exec bash
 EOF
 
-chmod +x "$TMP/leds.sh" "$TMP/hardware.sh" "$TMP/servo.sh"
+chmod +x "$TMP/hardware.sh" "$TMP/servo.sh"
 
 open_terminal() {
   local title="$1" script="$2"
@@ -70,7 +72,7 @@ open_terminal() {
 }
 
 if [ -n "$DISPLAY" ] || [ -n "$WAYLAND_DISPLAY" ]; then
-  if open_terminal "LED node" "$TMP/leds.sh" && open_terminal "Arm hardware" "$TMP/hardware.sh" && open_terminal "Servo gamepad" "$TMP/servo.sh"; then
+  if open_terminal "Arm hardware" "$TMP/hardware.sh" && open_terminal "Servo gamepad" "$TMP/servo.sh"; then
     exit 0
   fi
 fi
@@ -86,7 +88,6 @@ if tmux has-session -t robot 2>/dev/null; then
   exit 1
 fi
 
-tmux new-session -d -s robot -n leds "bash $TMP/leds.sh"
-tmux new-window -t robot -n hardware "bash $TMP/hardware.sh"
+tmux new-session -d -s robot -n hardware "bash $TMP/hardware.sh"
 tmux new-window -t robot -n servo "bash $TMP/servo.sh"
 echo "Started in tmux. Attach with: tmux attach -t robot   (Ctrl+b then n switches windows)"
