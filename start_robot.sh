@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Opens two terminals: the LED status node and the arm hardware launch.
+# Opens three terminals: the LED status node, the arm hardware launch, and the target gamepad.
 # Usage: ./start_robot.sh
 
 WS="${WS:-/home/pi/MSD-SPOT-robot-Rev-4-main}"
@@ -27,7 +27,13 @@ sudo bash -c 'source $WS/install/setup.bash && ros2 launch robot_moveit_config h
 exec bash
 EOF
 
-chmod +x "$TMP/leds.sh" "$TMP/hardware.sh"
+cat > "$TMP/target.sh" <<EOF
+#!/usr/bin/env bash
+sudo bash -c 'source $WS/install/setup.bash && ros2 launch spotarm_target_gamepad target_gamepad.launch.py'
+exec bash
+EOF
+
+chmod +x "$TMP/leds.sh" "$TMP/hardware.sh" "$TMP/target.sh"
 
 open_terminal() {
   local title="$1" script="$2"
@@ -50,7 +56,7 @@ open_terminal() {
 }
 
 if [ -n "$DISPLAY" ] || [ -n "$WAYLAND_DISPLAY" ]; then
-  if open_terminal "LED node" "$TMP/leds.sh" && open_terminal "Arm hardware" "$TMP/hardware.sh"; then
+  if open_terminal "LED node" "$TMP/leds.sh" && open_terminal "Arm hardware" "$TMP/hardware.sh" && open_terminal "Target gamepad" "$TMP/target.sh"; then
     exit 0
   fi
 fi
@@ -68,4 +74,5 @@ fi
 
 tmux new-session -d -s robot -n leds "bash $TMP/leds.sh"
 tmux new-window -t robot -n hardware "bash $TMP/hardware.sh"
+tmux new-window -t robot -n target "bash $TMP/target.sh"
 echo "Started in tmux. Attach with: tmux attach -t robot   (Ctrl+b then n switches windows)"
