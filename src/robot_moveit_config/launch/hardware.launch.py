@@ -11,7 +11,7 @@ from launch.actions import (
     TimerAction,
 )
 from launch.conditions import IfCondition
-from launch.event_handlers import OnProcessExit
+from launch.event_handlers import OnProcessExit, OnProcessIO
 from launch.substitutions import LaunchConfiguration
 
 from launch_ros.actions import Node
@@ -381,15 +381,34 @@ def generate_launch_description():
     )
 
 
+    # Start RViz only once move_group reports it is ready, so the
+    # MotionPlanning display finds the planning scene and actions.
+    rviz_started = {"done": False}
+
+    def start_rviz_when_ready(event):
+        text = event.text.decode(errors="ignore")
+        if "You can start planning now" in text and not rviz_started["done"]:
+            rviz_started["done"] = True
+            return [rviz_node]
+        return None
+
+    rviz_after_move_group = RegisterEventHandler(
+        OnProcessIO(
+            target_action=move_group_node,
+            on_stdout=start_rviz_when_ready,
+            on_stderr=start_rviz_when_ready,
+        )
+    )
+
+
     # After arm_controller is loaded/configured/activated,
-    # start MoveIt and RViz.
+    # start MoveIt.
     controller_to_moveit = RegisterEventHandler(
         OnProcessExit(
             target_action=arm_controller_spawner,
             on_exit=[
                 go_to_start_pose,
                 move_group_node,
-                rviz_node,
 
                 # Give move_group several seconds to become ready
                 # before starting our custom commander.
@@ -438,5 +457,6 @@ def generate_launch_description():
             activate_to_joint_states,
             joint_states_to_arm_controller,
             controller_to_moveit,
+            rviz_after_move_group,
         ]
     )
