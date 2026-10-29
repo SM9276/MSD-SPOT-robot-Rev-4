@@ -2,7 +2,7 @@
 # Opens three terminals: the LED status node, the arm hardware launch, and the target gamepad.
 # Usage: ./start_robot.sh
 
-WS="${WS:-/home/pi/MSD-SPOT-robot-Rev-4-main}"
+WS="${WS:-/home/pi/MSD-SPOT-robot-Rev4-live-main}"
 
 if [ ! -f "$WS/install/setup.bash" ]; then
   echo "Cannot find $WS/install/setup.bash - build the workspace first (or set WS=/path)."
@@ -12,6 +12,14 @@ fi
 echo "Binding 8BitDo controller (2dc8:3106) to xpad..."
 sudo modprobe xpad
 echo "2dc8 3106" | sudo tee /sys/bus/usb/drivers/xpad/new_id > /dev/null || true
+
+# FTDI USB-serial adapters default to a 16 ms latency timer, which makes every
+# Modbus reply take ~16 ms. Drop it to 1 ms. Does nothing if the adapter has no such setting.
+LAT=/sys/bus/usb-serial/devices/ttyUSB0/latency_timer
+if [ -e "$LAT" ]; then
+  echo "ttyUSB0 latency_timer was $(cat "$LAT") ms, setting to 1 ms"
+  echo 1 | sudo tee "$LAT" > /dev/null || true
+fi
 
 TMP="$(mktemp -d)"
 
