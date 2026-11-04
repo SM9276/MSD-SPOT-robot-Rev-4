@@ -14,6 +14,8 @@ from std_srvs.srv import Trigger
 
 from sensor_msgs.msg import JointState
 
+from control_msgs.msg import JointJog
+
 from rclpy.action import ActionClient
 
 from builtin_interfaces.msg import Duration
@@ -85,9 +87,19 @@ class SpotArmServoGamepad(Node):
 
         # Pose buttons (only act while the deadman is held).
         # B = stand up straight, X = go to the startup pose.
-        self.declare_parameter('up_button', 1)
+        self.declare_parameter('up_button', 7)
 
-        self.declare_parameter('start_button', 2)
+        self.declare_parameter('start_button', 6)
+
+
+        # Motor 5 jog: Y = positive, A = negative (hold the deadman).
+        self.declare_parameter('joint5_name', 'Revolute5')
+
+        self.declare_parameter('joint5_pos_button', 3)
+
+        self.declare_parameter('joint5_neg_button', 0)
+
+        self.declare_parameter('joint5_sign', 1.0)
 
         self.declare_parameter(
             'joint_names',
@@ -154,6 +166,14 @@ class SpotArmServoGamepad(Node):
 
         self.start_button = int(self.get_parameter('start_button').value)
 
+        self.joint5_name = str(self.get_parameter('joint5_name').value)
+
+        self.joint5_pos_button = int(self.get_parameter('joint5_pos_button').value)
+
+        self.joint5_neg_button = int(self.get_parameter('joint5_neg_button').value)
+
+        self.joint5_sign = float(self.get_parameter('joint5_sign').value)
+
         self.joint_names = list(self.get_parameter('joint_names').value)
 
         self.up_pose = [float(v) for v in self.get_parameter('up_pose').value]
@@ -180,6 +200,8 @@ class SpotArmServoGamepad(Node):
         self.start_request_pending = False
 
         self.zero_sent = 0
+
+        self.jog_zero_sent = 0
 
         self.max_zero_msgs = 5
 
@@ -227,6 +249,8 @@ class SpotArmServoGamepad(Node):
 
         self.twist_pub = self.create_publisher(TwistStamped, '/servo_node/delta_twist_cmds', 20)
 
+        self.joint_pub = self.create_publisher(JointJog, '/servo_node/delta_joint_cmds', 20)
+
 
         # ==========================================================
         # START SERVO SERVICE
@@ -261,11 +285,13 @@ class SpotArmServoGamepad(Node):
 
         self.get_logger().info('RB = fast mode')
 
-        self.get_logger().info('LB + B = stand up, LB + X = startup pose')
+        self.get_logger().info('LB + (+) = stand up, LB + (-) = startup pose')
 
         self.get_logger().info('Left stick = X/Y')
 
         self.get_logger().info('Right stick Y = Z')
+
+        self.get_logger().info('LB + Y / A = motor 5 up / down')
 
         self.get_logger().info('Waiting for MoveIt Servo start service...')
 
@@ -618,12 +644,32 @@ class SpotArmServoGamepad(Node):
         # Servo needs a few zero commands to halt cleanly. After that
         # stay silent: a constant stream of zeros keeps Servo
         # publishing "hold" trajectories that cancel pose-move goals.
-        if self.zero_sent >= self.max_zero_msgs:
-            return
+        if self.zero_sent < self.max_zero_msgs:
 
-        self.zero_sent += 1
+            self.zero_sent += 1
 
-        self.twist_pub.publish(self.create_zero_command())
+            self.twist_pub.publish(self.create_zero_command())
+
+        if self.jog_zero_sent < self.max_zero_msgs:
+
+            self.jog_zero_sent += 1
+
+            self.publish_jog(0.0)
+
+
+    def publish_jog(self, velocity):
+
+        msg = JointJog()
+
+        msg.header.stamp = self.get_clock().now().to_msg()
+
+        msg.header.frame_id = self.command_frame
+
+        msg.joint_names = [self.joint5_name]
+
+        msg.velocities = [float(velocity)]
+
+        self.joint_pub.publish(msg)
 
 
     def publish_command(self):
@@ -769,15 +815,35 @@ class SpotArmServoGamepad(Node):
         msg.twist.angular.z = 0.0
 
 
-        if x == 0.0 and y == 0.0 and z == 0.0:
+        # Motor 5 jog (Y = positive, A = negative). A Cartesian command
+        # takes priority; Servo ignores joint jogs while one is active.
+        jog = 0.0
 
-            self.publish_zero()
+        if self.get_button(self.joint5_pos_button):
+            jog += 1.0
 
-        else:
+        if self.get_button(self.joint5_neg_button):
+            jog -= 1.0
+
+        jog *= self.joint5_sign * gain
+
+        twist_zero = (x == 0.0 and y == 0.0 and z == 0.0)
+
+        if not twist_zero:
 
             self.zero_sent = 0
 
             self.twist_pub.publish(msg)
+
+        elif jog != 0.0:
+
+            self.jog_zero_sent = 0
+
+            self.publish_jog(jog)
+
+        else:
+
+            self.publish_zero()
 
 
 # ==================================================================
