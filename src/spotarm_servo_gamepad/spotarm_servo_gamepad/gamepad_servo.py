@@ -230,6 +230,12 @@ class SpotArmServoGamepad(Node):
 
         self.start_servo_client = (self.create_client(Trigger, '/servo_node/start_servo'))
 
+        # Servo is paused during pose moves so its trajectory messages
+        # don't cancel the action goal on the controller.
+        self.pause_servo_client = self.create_client(Trigger, '/servo_node/pause_servo')
+
+        self.unpause_servo_client = self.create_client(Trigger, '/servo_node/unpause_servo')
+
 
         # ==========================================================
         # TIMERS
@@ -391,15 +397,43 @@ class SpotArmServoGamepad(Node):
 
         self.pose_cancel_requested = False
 
+        self.get_logger().info(
+            f'Moving to {label} pose over {duration:.1f} s '
+            '(hold LB to keep moving).'
+        )
+
+        # Pause Servo first, then send the goal.
+        self.pause_servo_then(lambda: self.send_pose_goal(goal))
+
+
+    def send_pose_goal(self, goal):
+
         future = self.pose_client.send_goal_async(goal)
 
         future.add_done_callback(self.pose_goal_response)
 
 
-        self.get_logger().info(
-            f'Moving to {label} pose over {duration:.1f} s '
-            '(hold LB to keep moving).'
-        )
+    def pause_servo_then(self, send):
+
+        if not self.pause_servo_client.service_is_ready():
+
+            self.get_logger().warn('pause_servo not available; Servo may cancel the move.')
+
+            send()
+
+            return
+
+        future = self.pause_servo_client.call_async(Trigger.Request())
+
+        future.add_done_callback(lambda f: send())
+
+
+    def resume_servo(self):
+
+        if self.unpause_servo_client.service_is_ready():
+            self.unpause_servo_client.call_async(Trigger.Request())
+        else:
+            self.get_logger().warn('unpause_servo not available; Servo may stay paused.')
 
 
     def pose_goal_response(self, future):
@@ -409,6 +443,8 @@ class SpotArmServoGamepad(Node):
         if not handle.accepted:
 
             self.pose_moving = False
+
+            self.resume_servo()
 
             self.get_logger().warn('Pose move was rejected by arm_controller.')
 
@@ -439,6 +475,8 @@ class SpotArmServoGamepad(Node):
 
         self.pose_goal_handle = None
 
+        self.resume_servo()
+
         self.get_logger().info('Pose move finished.')
 
 
@@ -455,6 +493,8 @@ class SpotArmServoGamepad(Node):
             self.pose_moving = False
 
             self.pose_cancel_requested = False
+
+            self.resume_servo()
 
             self.get_logger().info('Pose move cancelled (deadman released).')
 
