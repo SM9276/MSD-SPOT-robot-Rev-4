@@ -189,7 +189,7 @@
         -->
         <param name="offset">0.000012566370614359173</param>
 
-        <param name="default_velocity">0.05</param>
+        <param name="default_velocity">0.12</param>
 
       </joint>
 
@@ -223,7 +223,7 @@
         -->
         <param name="offset">0.000025132741228718347</param>
 
-        <param name="default_velocity">0.05</param>
+        <param name="default_velocity">0.12</param>
 
       </joint>
 
