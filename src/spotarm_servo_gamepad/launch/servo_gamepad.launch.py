@@ -164,10 +164,10 @@ def generate_launch_description():
                 0.15,
 
 
-            # Normal mode uses only 35% of Servo's configured
+            # Normal mode uses 50% of Servo's configured
             # maximum velocity.
             'normal_gain':
-                1.0,
+                0.5,
 
 
             # Hold RB for full configured Servo speed.
@@ -205,6 +205,21 @@ def generate_launch_description():
 
             'axis_z_sign':
                 1.0,
+
+
+            # D-pad (hat) axes. Up/down -> X, left/right -> Y.
+            # Flip the signs if a direction feels backwards.
+            'dpad_x_axis':
+                7,
+
+            'dpad_y_axis':
+                6,
+
+            'dpad_x_sign':
+                1.0,
+
+            'dpad_y_sign':
+                -1.0,
 
 
             # LB
