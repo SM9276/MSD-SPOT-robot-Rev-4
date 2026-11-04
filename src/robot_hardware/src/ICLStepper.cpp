@@ -43,6 +43,10 @@ int ICLStepper::disable_motor() {
     return 0;
 }
 
+
+static constexpr useconds_t PR0_TRIGGER_DELAY_US = 3000;
+
+
 int ICLStepper::set_position(int position, int velocity_rpm, int acc, int dec) {
     modbus_set_slave(ctx_, slave_id_);
     usleep(delay_us_);
@@ -64,7 +68,7 @@ int ICLStepper::set_position(int position, int velocity_rpm, int acc, int dec) {
         return -1;
     }
     std::cout << "Configured PR0 registers (mode, position, velocity, acc/dec)" << std::endl;
-    usleep(delay_us_);
+    usleep(PR0_TRIGGER_DELAY_US);
 
     // Trigger PR0 motion
     if (modbus_write_register(ctx_, 0x6002, 0x0010) == -1) {
@@ -84,30 +88,23 @@ int ICLStepper::set_position_radians(double position_radians, double radians_per
     return set_position(target_position, velocity_rpm, 4000, 4000);
 }
 
+
 int32_t ICLStepper::read_position() {
     modbus_set_slave(ctx_, slave_id_);
     usleep(delay_us_);
 
-    uint16_t pos_high;
-    uint16_t pos_low;
+    uint16_t regs[2];
 
-    if (modbus_read_registers(ctx_, 0x602C, 1, &pos_high) == -1) {
-        std::cerr << "[Slave " << slave_id_ << "] Failed to read position high bits: "
-                  << modbus_strerror(errno) << std::endl;
+    if (modbus_read_registers(ctx_, 0x602C, 2, regs) == -1) {
+        std::cerr << "[Slave " << slave_id_ << "] Failed to read position: " << modbus_strerror(errno) << std::endl;
         return INT32_MIN;
     }
     usleep(delay_us_);
 
-    if (modbus_read_registers(ctx_, 0x602D, 1, &pos_low) == -1) {
-        std::cerr << "[Slave " << slave_id_ << "] Failed to read position low bits: "
-                  << modbus_strerror(errno) << std::endl;
-        return INT32_MIN;
-    }
-    usleep(delay_us_);
-
-    int32_t high = static_cast<int32_t>(static_cast<int16_t>(pos_high));
-    return (high << 16) | static_cast<int32_t>(pos_low);
+    int32_t high = static_cast<int32_t>(static_cast<int16_t>(regs[0]));
+    return (high << 16) | static_cast<int32_t>(regs[1]);
 }
+
 
 double ICLStepper::get_position_radians(){
     int32_t position = read_position();
