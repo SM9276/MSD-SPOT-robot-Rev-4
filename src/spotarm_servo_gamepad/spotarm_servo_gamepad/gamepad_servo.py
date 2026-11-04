@@ -179,6 +179,10 @@ class SpotArmServoGamepad(Node):
 
         self.start_request_pending = False
 
+        self.zero_sent = 0
+
+        self.max_zero_msgs = 5
+
         self.joint_positions = {}
 
         self.prev_up = False
@@ -229,12 +233,6 @@ class SpotArmServoGamepad(Node):
         # ==========================================================
 
         self.start_servo_client = (self.create_client(Trigger, '/servo_node/start_servo'))
-
-        # Servo is paused during pose moves so its trajectory messages
-        # don't cancel the action goal on the controller.
-        self.pause_servo_client = self.create_client(Trigger, '/servo_node/pause_servo')
-
-        self.unpause_servo_client = self.create_client(Trigger, '/servo_node/unpause_servo')
 
 
         # ==========================================================
@@ -402,38 +400,9 @@ class SpotArmServoGamepad(Node):
             '(hold LB to keep moving).'
         )
 
-        # Pause Servo first, then send the goal.
-        self.pause_servo_then(lambda: self.send_pose_goal(goal))
-
-
-    def send_pose_goal(self, goal):
-
         future = self.pose_client.send_goal_async(goal)
 
         future.add_done_callback(self.pose_goal_response)
-
-
-    def pause_servo_then(self, send):
-
-        if not self.pause_servo_client.service_is_ready():
-
-            self.get_logger().warn('pause_servo not available; Servo may cancel the move.')
-
-            send()
-
-            return
-
-        future = self.pause_servo_client.call_async(Trigger.Request())
-
-        future.add_done_callback(lambda f: send())
-
-
-    def resume_servo(self):
-
-        if self.unpause_servo_client.service_is_ready():
-            self.unpause_servo_client.call_async(Trigger.Request())
-        else:
-            self.get_logger().warn('unpause_servo not available; Servo may stay paused.')
 
 
     def pose_goal_response(self, future):
@@ -443,8 +412,6 @@ class SpotArmServoGamepad(Node):
         if not handle.accepted:
 
             self.pose_moving = False
-
-            self.resume_servo()
 
             self.get_logger().warn('Pose move was rejected by arm_controller.')
 
@@ -475,8 +442,6 @@ class SpotArmServoGamepad(Node):
 
         self.pose_goal_handle = None
 
-        self.resume_servo()
-
         self.get_logger().info('Pose move finished.')
 
 
@@ -493,8 +458,6 @@ class SpotArmServoGamepad(Node):
             self.pose_moving = False
 
             self.pose_cancel_requested = False
-
-            self.resume_servo()
 
             self.get_logger().info('Pose move cancelled (deadman released).')
 
@@ -650,6 +613,19 @@ class SpotArmServoGamepad(Node):
     # PUBLISH SERVO COMMAND
     # ==============================================================
 
+    def publish_zero(self):
+
+        # Servo needs a few zero commands to halt cleanly. After that
+        # stay silent: a constant stream of zeros keeps Servo
+        # publishing "hold" trajectories that cancel pose-move goals.
+        if self.zero_sent >= self.max_zero_msgs:
+            return
+
+        self.zero_sent += 1
+
+        self.twist_pub.publish(self.create_zero_command())
+
+
     def publish_command(self):
 
         self.handle_pose_buttons()
@@ -662,7 +638,7 @@ class SpotArmServoGamepad(Node):
         # While a pose move runs, keep Servo quiet.
         if self.pose_moving:
 
-            self.twist_pub.publish(self.create_zero_command())
+            self.publish_zero()
 
             return
 
@@ -675,7 +651,7 @@ class SpotArmServoGamepad(Node):
 
         if self.latest_joy is None:
 
-            self.twist_pub.publish(self.create_zero_command())
+            self.publish_zero()
 
             return
 
@@ -689,7 +665,7 @@ class SpotArmServoGamepad(Node):
 
         if not deadman:
 
-            self.twist_pub.publish(self.create_zero_command())
+            self.publish_zero()
 
             return
 
@@ -793,7 +769,15 @@ class SpotArmServoGamepad(Node):
         msg.twist.angular.z = 0.0
 
 
-        self.twist_pub.publish(msg)
+        if x == 0.0 and y == 0.0 and z == 0.0:
+
+            self.publish_zero()
+
+        else:
+
+            self.zero_sent = 0
+
+            self.twist_pub.publish(msg)
 
 
 # ==================================================================
