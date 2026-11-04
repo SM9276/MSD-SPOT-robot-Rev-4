@@ -76,7 +76,7 @@ command_out_topic: /arm_controller/joint_trajectory
 # Your current controller_manager runs slowly.
 #
 # 0.5 s = 2 Hz.
-publish_period: 0.5
+publish_period: 0.3 #0.1
 
 
 command_out_type: trajectory_msgs/JointTrajectory
@@ -143,9 +143,9 @@ halt_all_joints_in_cartesian_mode: true
   # Singularity protection
   # ------------------------------------------------
 
-lower_singularity_threshold: 17.0
+lower_singularity_threshold: 25.0 #was 17.0
 
-hard_stop_singularity_threshold: 30.0
+hard_stop_singularity_threshold: 60.0 #was 30.0
 
 leaving_singularity_threshold_multiplier: 2.0
 
@@ -161,7 +161,7 @@ low_latency_mode: false
   # Collision checking
   # ------------------------------------------------
 
-check_collisions: true
+check_collisions: false
 
 
   # Match the initial slow hardware setup.
