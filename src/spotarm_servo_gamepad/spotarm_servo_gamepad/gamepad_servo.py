@@ -103,6 +103,29 @@ class SpotArmServoGamepad(Node):
         )
 
 
+        # D-pad (hat) axes: digital -1 / 0 / +1.
+        # Up/down drives X, left/right drives Y.
+        self.declare_parameter(
+            'dpad_x_axis',
+            7
+        )
+
+        self.declare_parameter(
+            'dpad_y_axis',
+            6
+        )
+
+        self.declare_parameter(
+            'dpad_x_sign',
+            1.0
+        )
+
+        self.declare_parameter(
+            'dpad_y_sign',
+            -1.0
+        )
+
+
         # ==========================================================
         # READ PARAMETERS
         # ==========================================================
@@ -185,6 +208,31 @@ class SpotArmServoGamepad(Node):
         self.fast_button = int(
             self.get_parameter(
                 'fast_button'
+            ).value
+        )
+
+
+        self.dpad_x_axis = int(
+            self.get_parameter(
+                'dpad_x_axis'
+            ).value
+        )
+
+        self.dpad_y_axis = int(
+            self.get_parameter(
+                'dpad_y_axis'
+            ).value
+        )
+
+        self.dpad_x_sign = float(
+            self.get_parameter(
+                'dpad_x_sign'
+            ).value
+        )
+
+        self.dpad_y_sign = float(
+            self.get_parameter(
+                'dpad_y_sign'
             ).value
         )
 
@@ -593,6 +641,34 @@ class SpotArmServoGamepad(Node):
         y *= self.axis_y_sign
 
         z *= self.axis_z_sign
+
+
+        # ----------------------------------------------------------
+        # D-pad override
+        #
+        # The D-pad is digital, so it moves exactly one axis at a
+        # time. When pressed it replaces the stick on that axis.
+        # ----------------------------------------------------------
+
+        dpad_x = self.get_axis(
+            self.dpad_x_axis
+        )
+
+        dpad_y = self.get_axis(
+            self.dpad_y_axis
+        )
+
+        if abs(dpad_x) > 0.5:
+            x = math.copysign(
+                1.0,
+                dpad_x
+            ) * self.dpad_x_sign
+
+        if abs(dpad_y) > 0.5:
+            y = math.copysign(
+                1.0,
+                dpad_y
+            ) * self.dpad_y_sign
 
 
         # ----------------------------------------------------------
