@@ -84,6 +84,47 @@ def generate_launch_description():
 
 
     # ============================================================
+    # STARTUP POSE (for the X button)
+    #
+    # Read from the same file the hardware launch uses for its
+    # startup move, so X always returns to that pose.
+    # ============================================================
+
+    pose_joint_names = [
+        'Revolute1',
+        'Revolute2',
+        'Revolute3',
+        'Revolute4',
+        'Revolute5',
+        'Revolute6',
+    ]
+
+    try:
+
+        initial_positions = load_yaml_file(
+            os.path.join(
+                get_package_share_directory(
+                    'robot_moveit_config'
+                ),
+                'config',
+                'initial_positions.yaml'
+            )
+        )['initial_positions']
+
+        start_pose = [
+            float(initial_positions[name])
+            for name in pose_joint_names
+        ]
+
+    except Exception:
+
+        # Fall back to the node's built-in default.
+        start_pose = [
+            0.4745, -2.0161, -1.5595, 0.0, 1.2, 0.0
+        ]
+
+
+    # ============================================================
     # JOYSTICK DRIVER
     # ============================================================
 
@@ -220,6 +261,25 @@ def generate_launch_description():
 
             'dpad_y_sign':
                 -1.0,
+
+
+            # B = stand straight up, X = startup pose.
+            # Both only work while the deadman (LB) is held, and
+            # releasing LB stops the move.
+            'up_button':
+                1,
+
+            'start_button':
+                2,
+
+            'up_pose':
+                [0.4745, -1.5707, 0.0, 0.0, 0.0, 0.0],
+
+            'start_pose':
+                start_pose,
+
+            'pose_move_speed':
+                0.1,
 
 
             # LB
