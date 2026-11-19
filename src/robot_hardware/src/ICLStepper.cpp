@@ -9,29 +9,13 @@
 ICLStepper::ICLStepper(int slave_id, modbus_t* ctx, int pulses_per_revolution, int gear_ratio)
     : slave_id_(slave_id),
       ctx_(ctx),
-      current_position_(0),
-      delay_us_(10),
       pulses_per_revolution_(pulses_per_revolution),
-      gear_ratio_(gear_ratio) {}
-
-// Pr5.13 "Auto-tuning at power on" (0 = disable, 1 = enable, factory default 1)
-static constexpr int REG_AUTOTUNE_AT_POWER_ON = 0x01AB;
-// Control word: 0x2211 = save all parameters to EEPROM
-static constexpr int REG_CONTROL_WORD = 0x1801;
-static constexpr uint16_t CMD_SAVE_PARAMS_TO_EEPROM = 0x2211;
-// Save status word: 0x5555 = save OK, 0xAAAA = save fault
-static constexpr int REG_SAVE_STATUS = 0x1901;
-static constexpr uint16_t SAVE_STATUS_OK = 0x5555;
-static constexpr uint16_t SAVE_STATUS_FAULT = 0xAAAA;
+      gear_ratio_(gear_ratio),
+      delay_us_(10) {}
 
 int ICLStepper::initialize() {
     modbus_set_slave(ctx_, slave_id_);
     usleep(delay_us_);
-
-    // Turn off power-on auto-tuning (persisted to EEPROM, takes effect next power cycle)
-    if (disable_power_on_autotune() != 0) {
-        return -1;
-    }
 
     // Enable motor
     if (modbus_write_register(ctx_, 0x000F, 1) == -1) {
@@ -40,66 +24,6 @@ int ICLStepper::initialize() {
         return -1;
     }
     usleep(delay_us_);
-
-    return 0;
-}
-
-// Auto-tuning only runs at drive power-up, so the setting must live in EEPROM.
-// Only writes/saves when the drive still has it enabled, to avoid an EEPROM
-// write on every startup.
-int ICLStepper::disable_power_on_autotune() {
-    modbus_set_slave(ctx_, slave_id_);
-    usleep(delay_us_);
-
-    uint16_t autotune = 0;
-    if (modbus_read_registers(ctx_, REG_AUTOTUNE_AT_POWER_ON, 1, &autotune) == -1) {
-        std::cerr << "[Slave " << slave_id_ << "] Failed to read auto-tuning setting (Pr5.13): "
-                  << modbus_strerror(errno) << std::endl;
-        return -1;
-    }
-    usleep(delay_us_);
-
-    if (autotune == 0) {
-        return 0;  // already disabled
-    }
-
-    if (modbus_write_register(ctx_, REG_AUTOTUNE_AT_POWER_ON, 0) == -1) {
-        std::cerr << "[Slave " << slave_id_ << "] Failed to disable auto-tuning (Pr5.13): "
-                  << modbus_strerror(errno) << std::endl;
-        return -1;
-    }
-    usleep(delay_us_);
-
-    if (modbus_write_register(ctx_, REG_CONTROL_WORD, CMD_SAVE_PARAMS_TO_EEPROM) == -1) {
-        std::cerr << "[Slave " << slave_id_ << "] Failed to save parameters to EEPROM: "
-                  << modbus_strerror(errno) << std::endl;
-        return -1;
-    }
-
-    // Wait for the drive to report the save result (up to ~1 s)
-    uint16_t save_status = 0;
-    for (int attempt = 0; attempt < 20; ++attempt) {
-        usleep(50000);
-        if (modbus_read_registers(ctx_, REG_SAVE_STATUS, 1, &save_status) == -1) {
-            continue;  // drive may be busy writing EEPROM
-        }
-        if (save_status == SAVE_STATUS_OK || save_status == SAVE_STATUS_FAULT) {
-            break;
-        }
-    }
-
-    if (save_status == SAVE_STATUS_FAULT) {
-        std::cerr << "[Slave " << slave_id_ << "] Drive reported EEPROM save fault after disabling auto-tuning"
-                  << std::endl;
-        return -1;
-    }
-    if (save_status != SAVE_STATUS_OK) {
-        std::cerr << "[Slave " << slave_id_ << "] Auto-tuning disabled, but EEPROM save was not confirmed "
-                  << "(status 0x" << std::hex << save_status << std::dec << ")" << std::endl;
-    } else {
-        std::cout << "[Slave " << slave_id_ << "] Auto-tuning at power-on disabled and saved to EEPROM. "
-                  << "Power-cycle the drive for it to take effect." << std::endl;
-    }
 
     return 0;
 }
@@ -299,13 +223,13 @@ int ICLStepper::home(double home_switch_position, double position_after_homing_r
 
     // Configure homing parameters
     uint16_t homing_params[] = {
-        static_cast<uint16_t>(clockwise ? 0b111 : 0b110), // Homing mode
+        (clockwise ? 0b111 : 0b110), // Homing mode
         pos_high_switch, // Home Switch position high bits
         pos_low_switch, // Home Switch position low bits
         pos_high_stop, // Homing stop position high bits
         pos_low_stop,  // Homing stop position low bits
-        static_cast<uint16_t>(high_velocity_rpm),    // Homing high velocity
-        static_cast<uint16_t>(low_velocity_rpm),      // Homing low velocity
+        high_velocity_rpm,    // Homing high velocity
+        low_velocity_rpm,      // Homing low velocity
         2000,     // Homing acceleration
         2000      // Homing deceleration
     };
@@ -360,7 +284,4 @@ int ICLStepper::set_as_home() {
                   << modbus_strerror(errno) << std::endl;
         return -1;
     }
-    usleep(delay_us_);
-
-    return 0;
 }
