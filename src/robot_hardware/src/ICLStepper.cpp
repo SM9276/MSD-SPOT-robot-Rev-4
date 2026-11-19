@@ -9,9 +9,10 @@
 ICLStepper::ICLStepper(int slave_id, modbus_t* ctx, int pulses_per_revolution, int gear_ratio)
     : slave_id_(slave_id),
       ctx_(ctx),
+      current_position_(0),
+      delay_us_(10),
       pulses_per_revolution_(pulses_per_revolution),
-      gear_ratio_(gear_ratio),
-      delay_us_(10) {}
+      gear_ratio_(gear_ratio) {}
 
 // Pr5.13 "Auto-tuning at power on" (0 = disable, 1 = enable, factory default 1)
 static constexpr int REG_AUTOTUNE_AT_POWER_ON = 0x01AB;
@@ -298,13 +299,13 @@ int ICLStepper::home(double home_switch_position, double position_after_homing_r
 
     // Configure homing parameters
     uint16_t homing_params[] = {
-        (clockwise ? 0b111 : 0b110), // Homing mode
+        static_cast<uint16_t>(clockwise ? 0b111 : 0b110), // Homing mode
         pos_high_switch, // Home Switch position high bits
         pos_low_switch, // Home Switch position low bits
         pos_high_stop, // Homing stop position high bits
         pos_low_stop,  // Homing stop position low bits
-        high_velocity_rpm,    // Homing high velocity
-        low_velocity_rpm,      // Homing low velocity
+        static_cast<uint16_t>(high_velocity_rpm),    // Homing high velocity
+        static_cast<uint16_t>(low_velocity_rpm),      // Homing low velocity
         2000,     // Homing acceleration
         2000      // Homing deceleration
     };
@@ -359,4 +360,7 @@ int ICLStepper::set_as_home() {
                   << modbus_strerror(errno) << std::endl;
         return -1;
     }
+    usleep(delay_us_);
+
+    return 0;
 }
