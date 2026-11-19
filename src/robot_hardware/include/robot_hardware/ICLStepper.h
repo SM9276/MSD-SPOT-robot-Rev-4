@@ -8,6 +8,7 @@ class ICLStepper {
 public:
     ICLStepper(int slave_id, modbus_t* ctx, int pulses_per_revolution = 10000, int gear_ratio = 100);
     int initialize();
+    int disable_power_on_autotune();
     int disable_motor();
     int32_t read_position();
     double get_position_radians();
